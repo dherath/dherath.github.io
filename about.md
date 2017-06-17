@@ -23,7 +23,7 @@ permalink: /about/
 
 - **Herath, D.** and Jayananda, K. (2017). [Simulation of Symmetric and Asymmetric movement gaits for Lateral Undulation in Serial Snake Robots](https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots){:target="blank"}. In: 2017 International Conference on Computational Modeling & Simulation (ICCMS-2017).
 
-- **Herath, D.** and Jayananda, K. (2016). [Comparison of Serial and Parallel Snake Robots for Lateral Undulation Motion Using Gazebo](https://www.researchgate.net/publication/311716282_Comparison_of_Serial_and_Parallel_Snake_Robots_for_Lateral_Undulation_Motion_using_Gazebo){:target="blank"}. In: 2016 IEEE International Conference on Information and Automation for Sustainability (ICIAfS-2016).
+- **Herath, D.** and Jayananda, K. (2016). [Comparison of Serial and Parallel Snake Robots for Lateral Undulation Motion Using Gazebo](https://www.researchgate.net/publication/311716282_Comparison_of_Serial_and_Parallel_Snake_Robots_for_Lateral_Undulation_Motion_using_Gazebo){:target="blank"}. In: 2016 IEEE International Conference on Information and Automation for Sustainability (ICIAfS-2016). (DOI -  10.1109/ICIAFS.2016.7946540)
 
 ## Scholarships
 
