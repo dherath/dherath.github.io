@@ -3,10 +3,10 @@
  <!-- <channel>
     <title>dinal</title>
     <description>Home</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Jun 2017 06:00:08 +0530</pubDate>
-    <lastBuildDate>Sat, 17 Jun 2017 06:00:08 +0530</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 04 Jul 2017 22:25:53 +0530</pubDate>
+    <lastBuildDate>Tue, 04 Jul 2017 22:25:53 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
 
