@@ -5,9 +5,27 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 04 Jul 2017 22:25:53 +0530</pubDate>
-    <lastBuildDate>Tue, 04 Jul 2017 22:25:53 +0530</lastBuildDate>
+    <pubDate>Tue, 04 Jul 2017 22:27:01 +0530</pubDate>
+    <lastBuildDate>Tue, 04 Jul 2017 22:27:01 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Hello World :)</title>
+        <description>&lt;p&gt;Hello Everyone, My name is &lt;strong&gt;&lt;em&gt;Dinal Herath&lt;/em&gt;&lt;/strong&gt; and welcome to my blog. Here I’ll  essentially be writing about projects I work on , my experiences and well anything I feel I’d be interested to read on-line. I’m natively from &lt;strong&gt;Sri Lanka&lt;/strong&gt; a beautiful tropical island in the middle of the Indian ocean. If you don’t know anything about Sri Lanka  click 
+&lt;a href=&quot;http://bestoflanka.com/best-things-to-do-in-sri-lanka.php&quot; target=&quot;blank&quot;&gt;here&lt;/a&gt; &amp;amp; if your planning you’re next vacation to a tropical paradise you should definitely visit.&lt;/p&gt;
+
+&lt;p&gt;I’m a graduate from &lt;strong&gt;University of Colombo with a specialization in Computational Physics&lt;/strong&gt; and now in the processes of migrating to &lt;em&gt;Computer Science&lt;/em&gt; for my PHD. This being the case most of the projects I work on would have some code in them, so ill be posting links to my github for anyone who wants to work on them more. This blog will probably be the place where Ill share most of the experiences that I’m bound to face while I make this transition and I hope would probably help anyone out there, who like me would want to switch.&lt;/p&gt;
+
+&lt;p&gt;So there you have it, my first blog post :).  I guess thats a sufficient introduction about what my blog will be all about :) I hope you find the upcoming posts informative and enjoyable.&lt;/p&gt;
+
+&lt;h4 id=&quot;cheers&quot;&gt;Cheers!&lt;/h4&gt;
+</description>
+        <pubDate>Tue, 04 Jul 2017 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2017/hello-world/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hello-world/</guid>
+        
+        
+      </item>
     
 
   -->
