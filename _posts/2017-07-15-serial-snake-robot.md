@@ -19,7 +19,7 @@ Before I go further into what I've done, here are some things you'll need to kno
 
 #### The serial snake robot model
 
-
+![snakeRobot2](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/snakeRobot2.gif)
 
 
 
