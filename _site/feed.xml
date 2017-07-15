@@ -5,13 +5,15 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Jul 2017 21:59:31 +0530</pubDate>
-    <lastBuildDate>Sat, 15 Jul 2017 21:59:31 +0530</lastBuildDate>
+    <pubDate>Sat, 15 Jul 2017 22:27:34 +0530</pubDate>
+    <lastBuildDate>Sat, 15 Jul 2017 22:27:34 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Simulation of a serial snake robot</title>
-        <description>&lt;p&gt;I’ve always been fascinated by robots and well snakes. When it came to selecting a theme for my undergraduate research project I naturally ended up selecting an option which fits well with both. What started out as a research project sort of ended up being one my hobbies, so I’ll time and again update on my snake robot progress through my blog.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/gazebo.png&quot; alt=&quot;gazebo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve always been fascinated by robots and well snakes. When it came to selecting a theme for my undergraduate research project I naturally ended up selecting an option which fits well with both. What started out as a research project sort of ended up being one my hobbies, so I’ll time and again update on my snake robot progress through my blog.&lt;/p&gt;
 
 &lt;p&gt;Now first to start off, essentially what I have been trying to do is to replicate serpentine motion in robots using simulations. Note that none of the methods I have developed have been experimentally tested. Maybe I’ll do it someday but there is still a long way to go before that… u’ll see why.&lt;/p&gt;
 

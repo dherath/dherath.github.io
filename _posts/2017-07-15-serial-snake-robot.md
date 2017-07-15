@@ -5,6 +5,8 @@ comments: false
 description: "Snake robots : serial snake robot"
 keywords: "Gazebo ,snake robot ,serial ,simulation"
 ---
+![gazebo](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/gazebo.png)
+
 I've always been fascinated by robots and well snakes. When it came to selecting a theme for my undergraduate research project I naturally ended up selecting an option which fits well with both. What started out as a research project sort of ended up being one my hobbies, so I'll time and again update on my snake robot progress through my blog.
 
 Now first to start off, essentially what I have been trying to do is to replicate serpentine motion in robots using simulations. Note that none of the methods I have developed have been experimentally tested. Maybe I'll do it someday but there is still a long way to go before that... u'll see why.
