@@ -5,7 +5,7 @@ comments: false
 description: "Snake robots : serial snake robot"
 keywords: "Gazebo ,snake robot ,serial ,simulation"
 ---
-![gazebo](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/gazebo.png)
+![gazebo](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/gazebo.png){: width="500px"}
 
 I've always been fascinated by robots and well snakes. When it came to selecting a theme for my undergraduate research project I naturally ended up selecting an option which fits well with both. What started out as a research project sort of ended up being one my hobbies, so I'll time and again update on my snake robot progress through my blog.
 
@@ -19,7 +19,7 @@ Before I go further into what I've done, here are some things you'll need to kno
 
 #### The serial snake robot model
 
-![snakeRobot2](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/snakeRobot2.gif)
+![snakeRobot2](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/snakeRobot2.gif){: width="500px"}
 
 
 

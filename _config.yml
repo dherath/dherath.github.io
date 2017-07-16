@@ -3,7 +3,7 @@
 title: "dinal"
 title2: "Herath" # default: ""
 description: "Home"
-keywords: "Jekyll, theme, jerome, dinal, herath, Sri Lanka, Binghamton, colombo, univerisyt, uoc, computer, science, blog"
+keywords: "Jekyll, theme, jerome, dinal, herath, Sri Lanka, Binghamton, colombo, univeristy, uoc, computer, science, blog"
 # url: http://heiswayi.github.io/thinkspace # site url
 baseurl: "" # apply repo name if use it under gh-pages branch
 # baseurl: null # apply null if repo name is something like username.github.io
@@ -56,5 +56,7 @@ navbar:
     title: About
   - slug : blog
     title: Blog
+  - slug : contact
+    title: Contact
 
 exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]

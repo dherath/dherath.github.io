@@ -71,7 +71,8 @@ hr {
 
 img,
 picture {
-  margin: 0;
+  display: block;
+  margin: auto;
   max-width: 100%;
 }
 
@@ -121,7 +122,6 @@ em {
 }
 
 ul,
-ol,
 dl {
     margin-top: 0;
     margin-left: 1.2em;
@@ -129,4 +129,13 @@ dl {
     list-style-type: square;
     list-style-position: outside;
     list-style-image: none;
+}
+
+ol {
+    margin-top: 0;
+    margin-left: 1.2em;
+    margin-bottom: 1rem;
+    list-style-type: decimal;
+    list-style-position: outside;
+    list-style-image: none;  
 }
