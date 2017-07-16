@@ -173,12 +173,22 @@ select {
   width: auto;
 }
 
-ul,
-ol {
-  list-style-type: none;
+ul {
   margin: 0;
   padding: 0;
+  list-style: disc;
+  margin-bottom: 0.75em;
+  padding-left: 1.5em;
 }
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: decimal;
+  margin-bottom: 0.75em;
+  padding-left: 1.5em;
+}
+
 dl {
   margin-bottom: 0.75em;
 }
@@ -284,6 +294,12 @@ hr {
 
 img,
 picture {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+img-icon {
   margin: 0;
   max-width: 100%;
 }
@@ -333,7 +349,6 @@ em {
 }
 
 ul,
-ol,
 dl {
   margin-top: 0;
   margin-left: 1.2em;
@@ -341,6 +356,16 @@ dl {
   list-style-type: square;
   list-style-position: outside;
   list-style-image: none;
+}
+
+ol {
+  margin-top: 0;
+  margin-left: 1.2em;
+  margin-bottom: 1rem;
+  list-style-type: decimal;
+  list-style-position: outside;
+  list-style-image: none;
+  font-weigth: bold;
 }
 
 *, *:before, *:after {
