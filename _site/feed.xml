@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Jul 2017 13:16:30 +0530</pubDate>
-    <lastBuildDate>Sun, 16 Jul 2017 13:16:30 +0530</lastBuildDate>
+    <pubDate>Sun, 16 Jul 2017 13:18:26 +0530</pubDate>
+    <lastBuildDate>Sun, 16 Jul 2017 13:18:26 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -310,7 +310,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;And thats it, The gif below shows the snake robot simulation as described by the code above. So basically it is in-fact possible to replicate complex biological motion from simple methods like this instead of relying purely on mathematical computations. However this is far from perfect. Right now this snake has no idea where its going, and neither is it capable of controlling its speed or optimizing its movement based on environmental constraints. So in future I’d probably try to implement this method on other designs and try to increase the efficiency of the movement.&lt;/p&gt;
+&lt;p&gt;And thats it, The &lt;code class=&quot;highlighter-rouge&quot;&gt;gif&lt;/code&gt; below shows the snake robot simulation as described by the code above. So basically it is in-fact possible to replicate complex biological motion from simple methods like this instead of relying purely on mathematical computations. However this is far from perfect. Right now this snake has no idea where its going, and neither is it capable of controlling its speed or optimizing its movement based on environmental constraints. So in future I’d probably try to implement this method on other designs and try to increase the efficiency of the movement.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/snakeRobot2.gif&quot; alt=&quot;snakeRobot2&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
 
