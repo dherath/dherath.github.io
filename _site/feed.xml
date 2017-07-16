@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Jul 2017 12:36:23 +0530</pubDate>
-    <lastBuildDate>Sun, 16 Jul 2017 12:36:23 +0530</lastBuildDate>
+    <pubDate>Sun, 16 Jul 2017 13:16:30 +0530</pubDate>
+    <lastBuildDate>Sun, 16 Jul 2017 13:16:30 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -178,11 +178,146 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;The Table below represents the states and the code for the counter method I used to transition from one state to another. For every 150 iterations the sequence jumps one step forward(1-&amp;gt;2 ect).&lt;/p&gt;
+&lt;p&gt;The Table below represents the states and the code for the counter method I used to transition from one state to another. For every 150 iterations the sequence jumps one step forward(1-&amp;gt;2 ect). Of all the 8 states, the first 4 are the initial configurations. These configurations &lt;strong&gt;&lt;em&gt;(Config 1-4)&lt;/em&gt;&lt;/strong&gt; were used to set initial positions of the links such that a stationary sine wave was shown when considering the overall snake robot shape. Afterwards the configurations from &lt;strong&gt;&lt;em&gt;5-8&lt;/em&gt;&lt;/strong&gt; were iteratively looped with each update cycle in the plugin.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Configurations&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Head (M1-M5)&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Body1 (M6-M10)&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Body2 (M11-M15)&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Tail (M16-M21)&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Configuration 1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Configuration 2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Configuration 3&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Configuration 4&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Configuration 5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Configuration 6&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Configuration 7&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Configuration 8&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// The OnUpdate() function runs continuously  
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movementPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnUpdate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//------[ B1-&amp;gt; B2 -&amp;gt; B3 -&amp;gt; B4 ]---------------------------
+&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//-------initial config (1-4)-----------------------------
+&lt;/span&gt;	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initialConfigCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;initialConfigCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initialConfigCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;initialConfigCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initialConfigCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;450&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;initialConfigCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initialConfigCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;initialConfigCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//-------continues config (5-8)-------------------------
+&lt;/span&gt;		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequenceCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequenceCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequenceCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequenceCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;nf&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//----------seconds counter-----------------------
+&lt;/span&gt;	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;sequenceCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequenceCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)%&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And thats it, The gif below shows the snake robot simulation as described by the code above. So basically it is in-fact possible to replicate complex biological motion from simple methods like this instead of relying purely on mathematical computations. However this is far from perfect. Right now this snake has no idea where its going, and neither is it capable of controlling its speed or optimizing its movement based on environmental constraints. So in future I’d probably try to implement this method on other designs and try to increase the efficiency of the movement.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/snakeRobot2.gif&quot; alt=&quot;snakeRobot2&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;cheers&quot;&gt;Cheers!&lt;/h4&gt;
+&lt;p&gt;If you’d like to work on this code or need this for some other project feel free to get it from &lt;a href=&quot;https://github.com/dherath/Snake_Robots/tree/master/serial_snake_robot&quot; target=&quot;blank&quot;&gt;here&lt;/a&gt; and if you want more recent updates on my snake robots before it becomes a post follow the project on &lt;a href=&quot;https://www.researchgate.net/project/Snake-Robots&quot; target=&quot;blank&quot;&gt;ResearchGate&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So until next time,&lt;/p&gt;
+&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Sat, 15 Jul 2017 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/2017/serial-snake-robot/</link>

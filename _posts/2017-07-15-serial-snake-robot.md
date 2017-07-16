@@ -145,12 +145,85 @@ void movementPlugin::shrink(int k,int limit)
 	}
 }
 ```
- The Table below represents the states and the code for the counter method I used to transition from one state to another. For every 150 iterations the sequence jumps one step forward(1->2 ect).
+ The Table below represents the states and the code for the counter method I used to transition from one state to another. For every 150 iterations the sequence jumps one step forward(1->2 ect). Of all the 8 states, the first 4 are the initial configurations. These configurations **_(Config 1-4)_** were used to set initial positions of the links such that a stationary sine wave was shown when considering the overall snake robot shape. Afterwards the configurations from **_5-8_** were iteratively looped with each update cycle in the plugin.
 
+|---------------------|:----------------:|:------------------:|:-------------------:|:------------------:|
+| **Configurations**  | **Head (M1-M5)** | **Body1 (M6-M10)** | **Body2 (M11-M15)** | **Tail (M16-M21)** |
+|---------------------|:----------------:|:------------------:|:-------------------:|:------------------:|
+| **Configuration 1** |                  |                    |                     |       +2           |
+| **Configuration 2** |                  |                    |                  +2 |                 +1 |
+| **Configuration 3** |                  |                 +2 |                  -1 |                 -2 |
+| **Configuration 4** |               +2 |                 -1 |                  -2 |                 -1 |
+| **Configuration 5** |               -1 |                 -2 |                  +1 |                 +2 |
+| **Configuration 6** |               -2 |                 +1 |                  +2 |                 +2 |
+| **Configuration 7** |               +1 |                +2  |                  -1 |                 +2 |
+| **Configuration 8** |               +2 |                 -1 |                  -2 |                 +2 |
 
+``` csharp
+// The OnUpdate() function runs continuously  
+void movementPlugin::OnUpdate()
+{
+	//------[ B1-> B2 -> B3 -> B4 ]---------------------------
+	//-------initial config (1-4)-----------------------------
+	if(initialConfigCount<150){
+		left(k0,5);
+		initialConfigCount++;
+	}else if(initialConfigCount<300){
+		shrink(k0,5);
+		left(k1,5);
+		initialConfigCount++;
+	}else if(initialConfigCount<450){
+		right(k0,5);
+		shrink(k1,5);
+		left(k2,5);
+		initialConfigCount++;
+	}else if(initialConfigCount<600){
+		shrink(k0,5);
+		right(k1,5);
+		shrink(k2,5);
+		left(k3,5);
+		initialConfigCount++;
+	}else{
+	//-------continues config (5-8)-------------------------
+		if(sequenceCount==0){
+			left(k0,5);
+			shrink(k1,5);
+			right(k2,5);
+			shrink(k3,5);
+			count++;
+		}else if(sequenceCount==1){
+			shrink(k0,5);
+			left(k1,5);
+			shrink(k2,5);
+			right(k3,5);
+			count++;
+		}else if(sequenceCount==2){
+			right(k0,5);
+			shrink(k1,5);
+			left(k2,5);
+			shrink(k3,5);
+			count++;
+		}else if(sequenceCount==3){
+			shrink(k0,5);
+			right(k1,5);
+			shrink(k2,5);
+			left(k3,5);
+			count++;
+		}
+	}
+	//----------seconds counter-----------------------
+	if(count>150){
+		count=0;
+		sequenceCount=(sequenceCount+1)%4;
+	}
+}
+```
+
+And thats it, The gif below shows the snake robot simulation as described by the code above. So basically it is in-fact possible to replicate complex biological motion from simple methods like this instead of relying purely on mathematical computations. However this is far from perfect. Right now this snake has no idea where its going, and neither is it capable of controlling its speed or optimizing its movement based on environmental constraints. So in future I'd probably try to implement this method on other designs and try to increase the efficiency of the movement.
 
 ![snakeRobot2](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/snakeRobot2.gif){: width="500px"}
 
+If you'd like to work on this code or need this for some other project feel free to get it from [here](https://github.com/dherath/Snake_Robots/tree/master/serial_snake_robot){: target="blank"} and if you want more recent updates on my snake robots before it becomes a post follow the project on [ResearchGate](https://www.researchgate.net/project/Snake-Robots){: target="blank"}.
 
-
-#### Cheers!
+So until next time,
+##### Cheers!
