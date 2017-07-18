@@ -3,10 +3,10 @@
  <!-- <channel>
     <title>dinal</title>
     <description>Home</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Jul 2017 15:52:29 +0530</pubDate>
-    <lastBuildDate>Sun, 16 Jul 2017 15:52:29 +0530</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 18 Jul 2017 09:37:52 +0530</pubDate>
+    <lastBuildDate>Tue, 18 Jul 2017 09:37:52 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -203,7 +203,7 @@
       &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;+1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Configuration 3&lt;/strong&gt;&lt;/td&gt;
@@ -217,7 +217,7 @@
       &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;-2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+1&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Configuration 5&lt;/strong&gt;&lt;/td&gt;
@@ -231,21 +231,21 @@
       &lt;td style=&quot;text-align: center&quot;&gt;-2&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;+1&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Configuration 7&lt;/strong&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;+1&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-2&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Configuration 8&lt;/strong&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;-1&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;-2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;+2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;+1&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -320,8 +320,8 @@
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Sat, 15 Jul 2017 00:00:00 +0530</pubDate>
-        <link>/2017/serial-snake-robot/</link>
-        <guid isPermaLink="true">/2017/serial-snake-robot/</guid>
+        <link>http://localhost:4000/2017/serial-snake-robot/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/serial-snake-robot/</guid>
         
         
       </item>
@@ -338,8 +338,8 @@
 &lt;h4 id=&quot;cheers&quot;&gt;Cheers!&lt;/h4&gt;
 </description>
         <pubDate>Tue, 04 Jul 2017 00:00:00 +0530</pubDate>
-        <link>/2017/hello-world/</link>
-        <guid isPermaLink="true">/2017/hello-world/</guid>
+        <link>http://localhost:4000/2017/hello-world/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hello-world/</guid>
         
         
       </item>

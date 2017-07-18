@@ -150,14 +150,14 @@ void movementPlugin::shrink(int k,int limit)
 |---------------------|:----------------:|:------------------:|:-------------------:|:------------------:|
 | **Configurations**  | **Head (M1-M5)** | **Body1 (M6-M10)** | **Body2 (M11-M15)** | **Tail (M16-M21)** |
 |---------------------|:----------------:|:------------------:|:-------------------:|:------------------:|
-| **Configuration 1** |                  |                    |                     |       +2           |
-| **Configuration 2** |                  |                    |                  +2 |                 +1 |
+| **Configuration 1** |                  |                    |                     |                 +2 |
+| **Configuration 2** |                  |                    |                  +2 |                 -1 |
 | **Configuration 3** |                  |                 +2 |                  -1 |                 -2 |
-| **Configuration 4** |               +2 |                 -1 |                  -2 |                 -1 |
+| **Configuration 4** |               +2 |                 -1 |                  -2 |                 +1 |
 | **Configuration 5** |               -1 |                 -2 |                  +1 |                 +2 |
-| **Configuration 6** |               -2 |                 +1 |                  +2 |                 +2 |
-| **Configuration 7** |               +1 |                +2  |                  -1 |                 +2 |
-| **Configuration 8** |               +2 |                 -1 |                  -2 |                 +2 |
+| **Configuration 6** |               -2 |                 +1 |                  +2 |                 -1 |
+| **Configuration 7** |               +1 |                +2  |                  -1 |                 -2 |
+| **Configuration 8** |               +2 |                 -1 |                  -2 |                 +1 |
 
 ``` csharp
 // The OnUpdate() function runs continuously  
