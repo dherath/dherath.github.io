@@ -17,10 +17,15 @@ First of all a brief introduction to images. I'm sure you all know something abo
 
 ![rgb_seperated](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/images/rgb_seperated.png)
 
-Now if you look closely at the character image it's mostly red, therefore the red-channel has values closer to 255 which is why that channel looks brighter as opposed to the blue-channel which is very dark. Similarly for the background, the green-channel is th brightest image because the original shows a forest.
+Now if you look closely at the character image it's mostly red, therefore the red-channel has values closer to 255 which is why that channel looks brighter as opposed to the blue-channel which is very dark. Similarly for the background, the green-channel is th brightest image because the original background shows a forest.
 
 #### Logical operations in Image Processing
 
+The basic logical operations in image processing are the same as in arithmetic **`AND, NOT and OR`**.
+
+![truth-table](https://upload.wikimedia.org/wikipedia/commons/4/4a/Truth_table_for_AND%2C_OR%2C_and_NOT.png){: width="300px"}
+
+For logical operations to work on images, the images need to be of a specific type called `binary`. As the name suggests the pixels of these images could only have two values **1(for white) or 0(for black)**.
 
 
 ``` matlab
