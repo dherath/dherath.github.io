@@ -9,7 +9,7 @@ keywords: "image processing, logic, operations, AND, NOT, OR, example"
 
 Today I'm going to explain how different video-game sprites(_or any image_) can be combined together like whats shown above using logical operations like **AND, OR, NOT** in the realm of `Image Processing`. This is an extremely interesting area I got to sample during my undergrad days, and I thought of making my second post from a memorable part of it. For the demonstrations I thought of  using sprites from one of my all time favourte pokemon games, [pokemon silver](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_Versions){: target="blank"} from Generation 2 which I played first :).
 
-### Some Basics ( Skip if you're not new to Image Processing)
+### Some Basics ( <a href="#ref1">Skip</a> if you're not new to Image Processing)
 
 First of all a brief introduction to images. I'm sure you all know something about different types of screen resolutions like HD, 488p and so on. The difference between these types of resolutions are the number of **pixels** in a given view. Think of an image as a 2D grid of small squares where each square represents a dot of color, and higher the resolution the larger the number of squares in a picture. These squares are called **_pixels_**. In a digital image a pixel stores some kind of numeric value, where each numeric value represents some color. `For example in grayscale images the value 0 represents black and 255 white and all integers between are shades of gray.`
 
@@ -23,9 +23,34 @@ Now if you look closely at the character image it's mostly red, therefore the re
 
 The basic logical operations in image processing are the same as in arithmetic **`AND, NOT and OR`**.
 
-![truth-table](https://upload.wikimedia.org/wikipedia/commons/4/4a/Truth_table_for_AND%2C_OR%2C_and_NOT.png){: width="300px"}
+![truth-table](https://upload.wikimedia.org/wikipedia/commons/4/4a/Truth_table_for_AND%2C_OR%2C_and_NOT.png){: width="400px"}
 
-For logical operations to work on images, the images need to be of a specific type called `binary`. As the name suggests the pixels of these images could only have two values **1(for white) or 0(for black)**.
+For logical operations to work on images, the images need to be of a specific type called `binary`. As the name suggests the pixels of these images could only have two values **1(for white) or 0(for black)**. So basically these are the main operations I'll be using to combine the pokemon game sprites. The images below illustrate the outcome of logical operations on binary images.
+
+#### 1) NOT operation
+
+![not-image-example](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/theory_examples/not_image.png)
+
+The **NOT** operation inverts a given input value(0 to 1 & vice-versa), its the same principle for images where instead of one single point or location entire regions get inverted depending on their pixel values; so a black area become white or a white area becomes black respectively.
+
+#### 2) AND operation
+
+#### 3) OR operation
+
+### <a name="ref1">Combining game sprites</a>
+
+From here on, I'll be explaining the main steps in combining image sprites. I've used the software platform **`Matlab`** for this demonstration. Also note that in the code examples I've used a function, the reason being the steps I explain below need to be operated three times iteratively for all red, blue and green channels of a given image. Instead of repeating the same code, I figured using functions would make my life more easier. `If you have no idea about the Matlab image processing toolbox click` **[here](https://in.mathworks.com/help/images/getting-started-with-image-processing-toolbox.html){:target="blank"}** `and if you need a refresher on Matlab functions click `**[here](https://in.mathworks.com/help/matlab/matlab_prog/create-functions-in-files.html){:taget="blank"} :)**.
+
+##### Step 1 : Converting RGB(Color) images to Binary images
+
+The first step is to convert our input images to a binary format so that we can use logical operations. Initially we separate the three channels of red, green and blue and afterwards convert them to purely black and white. In **`matlab`** we can do this using a function called `im2bw()`.
+
+##### Step 1 : Converting RGB(Color) images to Binary images
+
+
+ What you need to remember is that at unlike in a standard arithmetic problem, when it comes to images the output of these operations will also be images.
+
+
 
 
 ``` matlab
