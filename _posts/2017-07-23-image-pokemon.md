@@ -51,7 +51,7 @@ The first step is to convert our input images to a binary format so that we can 
 
 The second step is to create a temporary image or mask which is an inverted output of the binary background image.
 
-
+![inverted-binary-background]()
 
 
  What you need to remember is that at unlike in a standard arithmetic problem, when it comes to images the output of these operations will also be images.
