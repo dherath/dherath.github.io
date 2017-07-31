@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Jul 2017 09:38:38 +0530</pubDate>
-    <lastBuildDate>Tue, 18 Jul 2017 09:38:38 +0530</lastBuildDate>
+    <pubDate>Mon, 31 Jul 2017 08:37:03 +0530</pubDate>
+    <lastBuildDate>Mon, 31 Jul 2017 08:37:03 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -17,7 +17,7 @@
 
 &lt;p&gt;Now first to start off, essentially what I have been trying to do is to replicate serpentine motion in robots using simulations. Note that none of the methods I have developed have been experimentally tested. Maybe I’ll do it someday but there is still a long way to go before that… u’ll see why.&lt;/p&gt;
 
-&lt;h4 id=&quot;prerequisites-skip-if-youve-used-gazebo-or-know-some-robotics&quot;&gt;Prerequisites (Skip if you’ve used Gazebo or know some robotics)&lt;/h4&gt;
+&lt;h4 id=&quot;prerequisites-skip-if-youve-used-gazebo-or-know-some-robotics&quot;&gt;Prerequisites (&lt;a href=&quot;#ref1&quot;&gt;Skip&lt;/a&gt; if you’ve used Gazebo or know some robotics)&lt;/h4&gt;
 
 &lt;p&gt;Before I go further into what I’ve done, here are some things you’ll need to know.&lt;/p&gt;
 &lt;ul&gt;
@@ -25,7 +25,7 @@
   &lt;li&gt;Also you’ll need to have some idea about robotics in general. &lt;a href=&quot;https://www.amazon.com/Theory-Applied-Robotics-Kinematics-Dynamics/dp/1441917497&quot; target=&quot;blank&quot;&gt;Theory of Applied Robotics: Kinematics, Dynamics and Control&lt;/a&gt; is a great book you could use as a reference, but for now just knowing how to use Gazebo would be sufficient to understand what I’ve done.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;the-serial-snake-robot-model&quot;&gt;The serial snake robot model&lt;/h4&gt;
+&lt;h4 id=&quot;the-serial-snake-robot-model&quot;&gt;&lt;a name=&quot;ref1&quot;&gt;The serial snake robot model&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;I made some assumptions when designing my initial snake robots purely to reduce the complexity of the motion. I assume that biological snakes move in a planar surface (2D) replicating a sinusoidal pattern, that scales don’t contribute to overall motion (&lt;em&gt;which is false :)&lt;/em&gt;)  and that a snakes body could be approximated by a linear combination of cuboids which are linked by revolute joints which rotate about the &lt;em&gt;Z axis&lt;/em&gt; as shown below.&lt;/p&gt;
 
