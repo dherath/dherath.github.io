@@ -47,12 +47,21 @@ The first step is to convert our input images to a binary format so that we can 
 
 ![binary-images](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/step1.png)
 
-##### Step 2 : Create a inverted mask of the binary background image
+##### Step 2 : Create an inverted mask of the binary background image
 
 The second step is to create a temporary image or mask which is an inverted output of the binary background image.
 
 ![inverted-binary-background]()
 
+##### Step 3 : Create temporary Mask 1
+
+##### Step 4 : Create temporary Mask 2
+
+##### Step 5 : Process Masks with original images
+
+##### Step 6 : Combine the character image and background image
+
+##### Step 7 : Combine separate channels (R,G,B) into a color(RGB) image
 
  What you need to remember is that at unlike in a standard arithmetic problem, when it comes to images the output of these operations will also be images.
 
