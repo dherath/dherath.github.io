@@ -9,7 +9,7 @@ keywords: "image processing, logic, operations, AND, NOT, OR, example"
 
 Today I'm going to explain how different video-game sprites(_or any image_) can be combined together like whats shown above using logical operations like **AND, OR, NOT** in the realm of `Image Processing`. This is an extremely interesting area I got to sample during my undergrad days, and I thought of making my second post from a memorable part of it. For the demonstrations I thought of  using sprites from one of my all time favourte pokemon games, [pokemon silver](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_Versions){: target="blank"} from Generation 2 which I played first :).
 
-### Some Basics ( <a href="#ref1">Skip</a> if you're not new to Image Processing)
+### Some Basics(<a href="#ref1">Skip</a> if you're not new to Image Processing)
 
 First of all a brief introduction to images. I'm sure you all know something about different types of screen resolutions like HD, 488p and so on. The difference between these types of resolutions are the number of **pixels** in a given view. Think of an image as a 2D grid of small squares where each square represents a dot of color, and higher the resolution the larger the number of squares in a picture. These squares are called **_pixels_**. In a digital image a pixel stores some kind of numeric value, where each numeric value represents some color. `For example in grayscale images the value 0 represents black and 255 white and all integers between are shades of gray.`
 
@@ -29,7 +29,7 @@ For logical operations to work on images, the images need to be of a specific ty
 
 #### 1) NOT operation
 
-![not-image-example](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/theory_examples/not_image.png)
+![not-image-example](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/theory_examples/not_image.png){:height="200px"}
 
 The **NOT** operation inverts a given input value(0 to 1 & vice-versa), its the same principle for images where instead of one single point or location entire regions get inverted depending on their pixel values; so a black area become white or a white area becomes black respectively.
 
@@ -43,9 +43,15 @@ From here on, I'll be explaining the main steps in combining image sprites. I've
 
 ##### Step 1 : Converting RGB(Color) images to Binary images
 
-The first step is to convert our input images to a binary format so that we can use logical operations. Initially we separate the three channels of red, green and blue and afterwards convert them to purely black and white. In **`matlab`** we can do this using a function called `im2bw()`.
+The first step is to convert our input images to a binary format so that we can use logical operations. Initially we separate the three channels of red, green and blue and afterwards convert them to purely black and white. In **`matlab`** we can do this using a function called `im2bw()`. The images below show the output for this step.
 
-##### Step 1 : Converting RGB(Color) images to Binary images
+![binary-images](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/step1.png)
+
+##### Step 2 : Create a inverted mask of the binary background image
+
+The second step is to create a temporary image or mask which is an inverted output of the binary background image.
+
+
 
 
  What you need to remember is that at unlike in a standard arithmetic problem, when it comes to images the output of these operations will also be images.
