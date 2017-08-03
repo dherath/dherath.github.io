@@ -25,8 +25,9 @@ permalink: /about/
 
 - **Herath, D.** and Jayananda, K. (2016). [Comparison of Serial and Parallel Snake Robots for Lateral Undulation Motion Using Gazebo](https://www.researchgate.net/publication/311716282_Comparison_of_Serial_and_Parallel_Snake_Robots_for_Lateral_Undulation_Motion_using_Gazebo){:target="blank"}. In: 2016 IEEE International Conference on Information and Automation for Sustainability (ICIAfS-2016). (DOI -  10.1109/ICIAFS.2016.7946540)
 
-## Scholarships
+## Awards and Scholarships
 
+- Dr. Sarath Gunapala Gold Medal for Computational Physics (2016).
 - MIND (Munasinghe Institute for Development) scholarship (2015-2016).[www.mindlanka.org](http://www.mindlanka.org/past.cfm?page=aa){:target="blank"}
 
 ## Experience
