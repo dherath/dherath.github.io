@@ -5,13 +5,26 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Aug 2017 10:32:29 -0400</pubDate>
-    <lastBuildDate>Thu, 10 Aug 2017 10:32:29 -0400</lastBuildDate>
+    <pubDate>Thu, 10 Aug 2017 11:42:02 -0400</pubDate>
+    <lastBuildDate>Thu, 10 Aug 2017 11:42:02 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Simulation of Hard Disks : Part 1</title>
-        <description>
+        <description>&lt;p&gt;Hey guys !!! Hope all of you are doing great :), In todays post I’ll be demonstrating a very interesting problem of simulating the behavior of hard disks. Now first of all &lt;code class=&quot;highlighter-rouge&quot;&gt;what are hard disks? and why is this even important?&lt;/code&gt; We all know that matter around us are either solid,liquid or gaseous. All of these states are some combination of particles, without going in too deep we can simply assume these particles are like spheres in 3-dimensions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;put image of solid,liquid, gas&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine you suddenly found out some new gas, or liquid and you have it in some container, but you don’t know any of its properties maybe except its mass or the current room temperature. Now how can you predict what will happen when the temperature changes? or when the the number of particles increase? will it become a liquid or become a solid straight away? Those days these sort of problems required experimentation, but now since we have computers we can run simulations and predict their behavior.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Today I’ll be demonstrating something along these lines&lt;/em&gt;.&lt;/strong&gt; Imagine you have a container filed with some gas, and you want to know the behavior of it. &lt;code class=&quot;highlighter-rouge&quot;&gt;By behavior I mean what sort of distribution would the velocities &amp;amp; positions of each particle take? Is there some pattern Or is it completely random?&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;as-its-with-any-simulation-ill-start-with-the-assumptions-first&quot;&gt;As it’s with any simulation I’ll start with the assumptions first.&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It’s assumed that the temperature,pressure and volume are constant for the entire duration of the simulation. Therefore any change in particle velocity or position would be only because of some collision.&lt;/li&gt;
+  &lt;li&gt;The simulation will only have 4 particles, each a 2-D hard disk. A 2-D space inclusive of only 4 particles are considered purely to reduce the computational complexity of the simulation, which you probably will understand when we get into the code. As for the &lt;code class=&quot;highlighter-rouge&quot;&gt;hard contact&lt;/code&gt; part, this means that the collisions are not damped and therefore it follows the rule on conservation of energy.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/hard-disks-1/</link>
