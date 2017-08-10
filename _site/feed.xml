@@ -3,11 +3,22 @@
  <!-- <channel>
     <title>dinal</title>
     <description>Home</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Aug 2017 04:41:27 +0530</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 04:41:27 +0530</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 10 Aug 2017 10:32:29 -0400</pubDate>
+    <lastBuildDate>Thu, 10 Aug 2017 10:32:29 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Simulation of Hard Disks : Part 1</title>
+        <description>
+</description>
+        <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2017/hard-disks-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-1/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Combining video-game sprites using logical operations</title>
@@ -159,9 +170,9 @@
 &lt;h6 id=&quot;so-until-next-time&quot;&gt;So until next time.&lt;/h6&gt;
 &lt;h4 id=&quot;cheers-&quot;&gt;Cheers !!&lt;/h4&gt;
 </description>
-        <pubDate>Sun, 23 Jul 2017 00:00:00 +0530</pubDate>
-        <link>/2017/image-pokemon/</link>
-        <guid isPermaLink="true">/2017/image-pokemon/</guid>
+        <pubDate>Sun, 23 Jul 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2017/image-pokemon/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/image-pokemon/</guid>
         
         
       </item>
@@ -476,9 +487,9 @@
 &lt;p&gt;So until next time,&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
-        <pubDate>Sat, 15 Jul 2017 00:00:00 +0530</pubDate>
-        <link>/2017/serial-snake-robot/</link>
-        <guid isPermaLink="true">/2017/serial-snake-robot/</guid>
+        <pubDate>Sat, 15 Jul 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2017/serial-snake-robot/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/serial-snake-robot/</guid>
         
         
       </item>
@@ -494,9 +505,9 @@
 
 &lt;h4 id=&quot;cheers&quot;&gt;Cheers!&lt;/h4&gt;
 </description>
-        <pubDate>Tue, 04 Jul 2017 00:00:00 +0530</pubDate>
-        <link>/2017/hello-world/</link>
-        <guid isPermaLink="true">/2017/hello-world/</guid>
+        <pubDate>Tue, 04 Jul 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2017/hello-world/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hello-world/</guid>
         
         
       </item>
