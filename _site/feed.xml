@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 12 Aug 2017 14:37:31 -0400</pubDate>
-    <lastBuildDate>Sat, 12 Aug 2017 14:37:31 -0400</lastBuildDate>
+    <pubDate>Sat, 12 Aug 2017 14:49:11 -0400</pubDate>
+    <lastBuildDate>Sat, 12 Aug 2017 14:49:11 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -66,7 +66,7 @@
 
 &lt;p&gt;&lt;strong&gt;put image of a disk collision&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Now this situation is fairly tricky. Because the number of possible types of collisions that could happen depend on the number of disks. Now its true for the previous case as well. &lt;em&gt;However&lt;/em&gt; since we took the sample space as 2-D a given disk could only have one of four collisions since there are only four walls. Since we took only four disks in our sample there are only &lt;strong&gt;7 types&lt;/strong&gt; of disk-disk collisions. The table below illustrates the possibilities.&lt;/p&gt;
+&lt;p&gt;Now this situation is fairly tricky. Because the number of possible types of collisions that could happen depend on the number of disks. Now its true for the previous case as well. &lt;em&gt;However&lt;/em&gt; since we took the sample space as 2-D a given disk could only have one of four collisions since there are only four walls. Since we took only four disks in our sample there are only &lt;strong&gt;6 types&lt;/strong&gt; of disk-disk collisions. The table below illustrates the possibilities.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -95,12 +95,12 @@
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Total No.of collisions&lt;/strong&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;7&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;6&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Here a collision between disk 1 &amp;amp; 2 or a collision between disk 2 &amp;amp; 1 are considered the same. Therefore for 4 disks there are only 7 possibilities as shown above. What we do here is we compute the time for all the collisions and use that set to find the first pair collision. As per the code below, a collision occurs between two disks when the norm of the spatial distance vector equals twice the radius of a disk.&lt;/p&gt;
+&lt;p&gt;Here a collision between disk 1 &amp;amp; 2 or a collision between disk 2 &amp;amp; 1 are considered the same. Therefore for 4 disks there are only 6 possibilities as shown above. What we do here is we compute the time for all the collisions and use that set to find the first pair collision. As per the code below, a collision occurs between two disks when the norm of the spatial distance vector equals twice the radius of a disk.&lt;/p&gt;
 
 &lt;div class=&quot;language-matlab highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pairTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vela&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;velb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;delx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)];&lt;/span&gt;
