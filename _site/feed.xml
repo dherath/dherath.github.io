@@ -5,15 +5,15 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Aug 2017 07:08:54 -0400</pubDate>
-    <lastBuildDate>Sun, 13 Aug 2017 07:08:54 -0400</lastBuildDate>
+    <pubDate>Sun, 13 Aug 2017 11:42:28 -0400</pubDate>
+    <lastBuildDate>Sun, 13 Aug 2017 11:42:28 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Simulation of Hard Disks : Part 1</title>
         <description>&lt;p&gt;Hey guys !!! Hope all of you are doing great :), In todays post I’ll be demonstrating a very interesting problem of simulating the behavior of hard disks. Now first of all &lt;code class=&quot;highlighter-rouge&quot;&gt;what are hard disks? and why is this even important?&lt;/code&gt; We all know that matter around us are either solid,liquid or gaseous. All of these states are some combination of particles, without going in too deep we can simply assume these particles are like spheres in 3-dimensions.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://teachbesideme.com/wp-content/uploads/2015/02/solid-liquid-gas-1024x346.jpg&quot; alt=&quot;intro-image&quot; height=&quot;250px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://teachbesideme.com/wp-content/uploads/2015/02/solid-liquid-gas-1024x346.jpg&quot; alt=&quot;intro-image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Imagine you suddenly found out some new gas, or liquid and you have it in some container, but you don’t know any of its properties maybe except its mass or the current room temperature. Now how can you predict what will happen when the temperature changes? or when the the number of particles increase? will it become a liquid or become a solid straight away? Those days these sort of problems required experimentation, but now since we have computers we can run simulations and predict their behavior.&lt;/p&gt;
 
@@ -31,7 +31,7 @@
 
 &lt;h3 id=&quot;simulating-hard-disks-with-newtonian-deterministic-mechanics&quot;&gt;Simulating hard disks with Newtonian deterministic mechanics&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;put gif image&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/MD_animation.gif&quot; alt=&quot;hard-disks-gif&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In order to numerically solve the equations of motion for all disks, from a given initial condition we need to propagate all disks up to a next collision in the whole system.Then calculate the new velocities of the collided disks and then continue this process until we decide to stop. Ive coded this simulation using &lt;code class=&quot;highlighter-rouge&quot;&gt;Matlab&lt;/code&gt; and used functions extensively. If you’re new to matlab functions click &lt;a href=&quot;https://in.mathworks.com/help/matlab/matlab_prog/create-functions-in-files.html&quot; taget=&quot;blank&quot;&gt;here&lt;/a&gt; for a quick introduction.&lt;/p&gt;
 
@@ -46,7 +46,7 @@
 
 &lt;h4 id=&quot;case-1--a-disk-collides-with-a-wall&quot;&gt;Case 1 : A disk collides with a wall&lt;/h4&gt;
 
-&lt;p&gt;&lt;strong&gt;put image of a wall collision&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disk-wall.png&quot; alt=&quot;disk-wall-collision&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This case is fairly simple. As per the code snippet below the time for a possible collision is computed based on three cases. In this simulation I’ve considered that a side of the boundary is of unit 1.0 so the coordinates in either x or y directions would be between 0 and 1.0 where as a wall is defined when either x or y is 0 or 1 respectively.&lt;/p&gt;
 
@@ -64,7 +64,7 @@
 
 &lt;h4 id=&quot;case-2--a-disk-collides-with-another-disk&quot;&gt;Case 2 : A disk collides with another disk&lt;/h4&gt;
 
-&lt;p&gt;&lt;strong&gt;put image of a disk collision&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disk-disk.png&quot; alt=&quot;disk-disk-collision&quot; width=&quot;250px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now this situation is fairly tricky. Because the number of possible types of collisions that could happen depend on the number of disks. Now its true for the previous case as well. &lt;em&gt;However&lt;/em&gt; since we took the sample space as 2-D a given disk could only have one of four collisions since there are only four walls. Since we took only four disks in our sample there are only &lt;strong&gt;6 types&lt;/strong&gt; of disk-disk collisions. The table below illustrates the possibilities.&lt;/p&gt;
 
@@ -237,9 +237,11 @@
 
 &lt;p&gt;First, lets look at the position data for all the disks. The histograms below represent the binned values for the x coordinate positions &amp;amp; the y coordinate positions for all 4 disks respectively.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;put x coord&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;histogram of x coordinates for all disks&lt;/strong&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disks_X_position.jpg&quot; alt=&quot;x-coordinate-sample&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;put y coord&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;histogram for y coordinates for all disks&lt;/strong&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disks_Y_position.jpg&quot; alt=&quot;y-coordinate-sample&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now usually you’d expect the histogram to have peaks at the middle between 0 &amp;amp; 1 because particles when in the middle have more room to spread out, but the observation here is the opposite. The disks seem to be near the edges/walls more than at the middle.&lt;/p&gt;
 
@@ -252,13 +254,13 @@
 
 &lt;p&gt;This is the reason you see a histogram like this. I’ll go in detail into this phenomena in a future post with more mathematical rigor :), so this explanation will have to do for now.&lt;/p&gt;
 
-&lt;p&gt;Now if you look at the velocity distribution below you’ll see it’s in fact a Boltzmann distribution which is pretty close to how velocities get distributed for particles(like gasses) in a box. So there is in fact some pattern to the particle behavior within the classical limits we defined.&lt;/p&gt;
+&lt;p&gt;Now if you look at the velocity distribution below you’ll see it’s in fact a Boltzmann distribution which is pretty close to how velocities get distributed for particles(like gases) in a box. So there is in fact some pattern to the particle behavior within the classical limits we defined.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;put velocity image&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disks_Velocity.jpg&quot; alt=&quot;velocity-sample&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I know the code was a bit complex here, but this goes to show that simulations can in fact be used to predict behavior of matter. &lt;code class=&quot;highlighter-rouge&quot;&gt;However there are some limitations in this method&lt;/code&gt;. Don’t worry, I wont explain it here and make this post any longer, instead I’ll talk about them in my next post and show an easier method to simulate this very same problem with half the code.&lt;/p&gt;
 
-&lt;p&gt;So until next time,&lt;/p&gt;
+&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
