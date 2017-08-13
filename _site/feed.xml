@@ -5,15 +5,15 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 12 Aug 2017 20:34:22 -0400</pubDate>
-    <lastBuildDate>Sat, 12 Aug 2017 20:34:22 -0400</lastBuildDate>
+    <pubDate>Sat, 12 Aug 2017 21:55:46 -0400</pubDate>
+    <lastBuildDate>Sat, 12 Aug 2017 21:55:46 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Simulation of Hard Disks : Part 1</title>
         <description>&lt;p&gt;Hey guys !!! Hope all of you are doing great :), In todays post I’ll be demonstrating a very interesting problem of simulating the behavior of hard disks. Now first of all &lt;code class=&quot;highlighter-rouge&quot;&gt;what are hard disks? and why is this even important?&lt;/code&gt; We all know that matter around us are either solid,liquid or gaseous. All of these states are some combination of particles, without going in too deep we can simply assume these particles are like spheres in 3-dimensions.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;put image of solid,liquid, gas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://teachbesideme.com/wp-content/uploads/2015/02/solid-liquid-gas-1024x346.jpg&quot; alt=&quot;intro-image&quot; height=&quot;250px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Imagine you suddenly found out some new gas, or liquid and you have it in some container, but you don’t know any of its properties maybe except its mass or the current room temperature. Now how can you predict what will happen when the temperature changes? or when the the number of particles increase? will it become a liquid or become a solid straight away? Those days these sort of problems required experimentation, but now since we have computers we can run simulations and predict their behavior.&lt;/p&gt;
 
@@ -256,7 +256,7 @@
 
 &lt;p&gt;&lt;strong&gt;put velocity image&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;I know the code was a bit complex here, but this goes to show that simulations can in fact be used to predict behavior of matter. &lt;code class=&quot;highlighter-rouge&quot;&gt;However there are some limitations in this method&lt;/code&gt;. Don’t worry, I wont explain it her and make this post any longer, instead I’ll talk about them in my next post and show an easier method to simulate this very same problem with half the code.&lt;/p&gt;
+&lt;p&gt;I know the code was a bit complex here, but this goes to show that simulations can in fact be used to predict behavior of matter. &lt;code class=&quot;highlighter-rouge&quot;&gt;However there are some limitations in this method&lt;/code&gt;. Don’t worry, I wont explain it here and make this post any longer, instead I’ll talk about them in my next post and show an easier method to simulate this very same problem with half the code.&lt;/p&gt;
 
 &lt;p&gt;So until next time,&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
