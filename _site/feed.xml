@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 12 Aug 2017 14:49:11 -0400</pubDate>
-    <lastBuildDate>Sat, 12 Aug 2017 14:49:11 -0400</lastBuildDate>
+    <pubDate>Sat, 12 Aug 2017 20:34:22 -0400</pubDate>
+    <lastBuildDate>Sat, 12 Aug 2017 20:34:22 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -116,7 +116,7 @@
   	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;h4 id=&quot;computing-the-time-for-next-event&quot;&gt;Computing the time for next event&lt;/h4&gt;
+&lt;h4 id=&quot;computing-the-time-until-the-next-event&quot;&gt;Computing the time until the next event&lt;/h4&gt;
 
 &lt;p&gt;The code below combines the two functions I described above in order to find the next collision event. The objective of this simulation is to record the state of a system for a given time period. And we know now the state of a system changes when a disk collides with a wall or another disk. The code below explains how the above two functions are combined together to find the &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;time&lt;/code&gt;&lt;/strong&gt; when the next event occurs.&lt;/p&gt;
 
@@ -148,7 +148,7 @@
 	&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minPairTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minWallTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;h4 id=&quot;running-the-simulation&quot;&gt;Running the simulation&lt;/h4&gt;
+&lt;h3 id=&quot;running-the-simulation&quot;&gt;Running the simulation&lt;/h3&gt;
 
 &lt;p&gt;So intuitively this is how the program collects data. Say the simulations starts at time t=0 and it’s supposed to collect data every 0.10 seconds. The first thing to do is calculate the time for the next event. Using the function above. In our case we get that the next event occurs at t=0.15 seconds. In such a case the program will iterate a step to 0.10 seconds and then compute the new positions of the disks(&lt;em&gt;Note that the velocities wont change&lt;/em&gt;) afterwards the new velocities &amp;amp; positions at 0.15s will be computed. &lt;strong&gt;Because&lt;/strong&gt; we already found out that a collision will occur at this time step. These new velocities and positions will be again used at the next iteration at 0.20s not the ones before. This process needs to iterate until we have enough samples for our data set.&lt;/p&gt;
 
@@ -231,7 +231,35 @@
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;From this point on you can either decide to draw the disks at each time step which will give a nice graphical output like in the &lt;em&gt;gif&lt;/em&gt; above Or more importantly you can visualize the position and velocity data of these disks(particles). First off lets look at the position data&lt;/p&gt;
+&lt;p&gt;From this point on you can either decide to draw the disks at each time step which will give a nice graphical output like in the &lt;em&gt;gif&lt;/em&gt; above Or more importantly you can visualize the position and velocity data of these disks(particles).&lt;/p&gt;
+
+&lt;h3 id=&quot;the-results&quot;&gt;The Results&lt;/h3&gt;
+
+&lt;p&gt;First, lets look at the position data for all the disks. The histograms below represent the binned values for the x coordinate positions &amp;amp; the y coordinate positions for all 4 disks respectively.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;put x coord&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;put y coord&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now usually you’d expect the histogram to have peaks at the middle between 0 &amp;amp; 1 because particles when in the middle have more room to spread out, but the observation here is the opposite. The disks seem to be near the edges/walls more than at the middle.&lt;/p&gt;
+
+&lt;h5 id=&quot;why-does-this-happen-&quot;&gt;why does this happen ?&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;an interesting question&lt;/em&gt;. This phenomena is explained using findings from &lt;em&gt;Asakura &amp;amp; Osawa&lt;/em&gt; but I wont go in-depth about that here, instead let me explain it simply.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The reason for this unusual behavior is this, now lets say at some given moment disk 1 is at some edge(near a wall) then the region(area) that the other disks could move in without a collision is much larger than when disk 1 would be in the middle. Therefore increasing the ability of the other disks to move freely without a collision.(In other words it increases the entropy of the entire system). Likewise all the disks try to move closer to the edges so as to free more space for the others. Because the disks like to have as much free space to move for themselves.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is the reason you see a histogram like this. I’ll go in detail into this phenomena in a future post with more mathematical rigor :), so this explanation will have to do for now.&lt;/p&gt;
+
+&lt;p&gt;Now if you look at the velocity distribution below you’ll see it’s in fact a Boltzmann distribution which is pretty close to how velocities get distributed for particles(like gasses) in a box. So there is in fact some pattern to the particle behavior within the classical limits we defined.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;put velocity image&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I know the code was a bit complex here, but this goes to show that simulations can in fact be used to predict behavior of matter. &lt;code class=&quot;highlighter-rouge&quot;&gt;However there are some limitations in this method&lt;/code&gt;. Don’t worry, I wont explain it her and make this post any longer, instead I’ll talk about them in my next post and show an easier method to simulate this very same problem with half the code.&lt;/p&gt;
+
+&lt;p&gt;So until next time,&lt;/p&gt;
+&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/hard-disks-1/</link>
