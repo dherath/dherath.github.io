@@ -30,7 +30,7 @@ sass:
 # Author settings
 author:
   name     : "Dinal Herath"
-  job      : "Computer Science PHD candidate at SUNY Binghamton"
+  job      : "Computer Science PHD candidate at State University of New York Binghamton."
   greeting : "welcome to my blog"
   bio      : "I like everything from pokemon and manga to IoT and robotics."
   thumb    : #/assets/images/sherlock.jpg
