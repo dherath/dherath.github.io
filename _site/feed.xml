@@ -5,19 +5,25 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Aug 2017 14:17:16 -0400</pubDate>
-    <lastBuildDate>Sat, 19 Aug 2017 14:17:16 -0400</lastBuildDate>
+    <pubDate>Sun, 27 Aug 2017 15:54:46 -0400</pubDate>
+    <lastBuildDate>Sun, 27 Aug 2017 15:54:46 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Simulation of Hard Disks : Part 2</title>
-        <description>&lt;p&gt;Hello Everyone !!! This is a continuation from my previous post where I simulated behavior of hard disks in a given 2-D space using Newtonian deterministic mechanics. If this is the first time you’re hearing about &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Hard disks&lt;/code&gt;&lt;/strong&gt; I suggest you read my previous post (&lt;code class=&quot;highlighter-rouge&quot;&gt;Simulation of Hard Disks : Part 1&lt;/code&gt;)[] where I explain the basics of these sort of simulations and the rational to even attempt them in the first place.&lt;/p&gt;
+        <description>&lt;p&gt;Hello Everyone !!! Hope you all had an amazing week, If you’re in college the new semester just started and I hope you’re first week was awesome, I just started grad school and my week was pretty good :). Now moving on with my post, this will be a continuation from my previous post &lt;a href=&quot;https://dherath.github.io/2017/hard-disks-1/&quot;&gt;&lt;strong&gt;‘Simulation of Hard Disks - Part 1’&lt;/strong&gt;&lt;/a&gt; where I tackled this very same problem using &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Newtonian deterministic mechanics&lt;/code&gt;&lt;/strong&gt;. Ok, so if this is the first time you’re hearing the word &lt;em&gt;&lt;strong&gt;Hard disks&lt;/strong&gt;&lt;/em&gt; I do suggest to read my first post where I explain the terms and the rationale behind simulations of this sort.&lt;/p&gt;
 
-&lt;p&gt;So continuing from my previous post today I’ll be focusing on  simulations of hard disks which utilize the concept of randomness. But first, &lt;strong&gt;&lt;em&gt;Why do even need some other technique?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In my last post I ended on a note that suggested the previous simulation technique has some limitations. So today I’ll start from there, the entire point of simulations for this sort is to predict the behavior of particle systems that we might find in the real world. However such systems have more than 4 particles, and in the previous technique we had to solve the &lt;strong&gt;equations of motion for the entire system for every step&lt;/strong&gt;. While this was possible for 4 particles it would be ridiculously time consuming for a system with 1,000,000s of particles. &lt;code class=&quot;highlighter-rouge&quot;&gt;That in itself is the flaw with this method&lt;/code&gt;. This exponential increase in computational complexity drove many scientists to find better ways of simulating hard disk problems.&lt;/p&gt;
 
-&lt;p&gt;If you read my previous post on hard disks, you’d notice that the code itself was pretty complex even though the simulation had only 4 disks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;So the questions is, what is this better way to simulate hard disks?&lt;/code&gt;&lt;/strong&gt; that’s what todays post is all about.&lt;/p&gt;
 
-&lt;p&gt;The reason behind this complexity is because we needed to solve the equations related to the motion for all the disks in our defined space. But when we actually need to predict behavior of entities like gases, there are thousands or millions of particles(Disks), so the computational complexity increases exponentially as well.&lt;/p&gt;
+&lt;h3 id=&quot;simulating-hard-disks-using-direct-sampling&quot;&gt;Simulating hard disks using direct sampling&lt;/h3&gt;
+
+&lt;p&gt;As per the title the simulations I will be presenting today are based on a technique called &lt;strong&gt;‘direct sampling’&lt;/strong&gt;. So what is this &lt;em&gt;direct sampling?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you look closely at the gif below, you would notice a clear difference with respect to the earlier technique.  In Newtonian mechanics the simulation revolves with time which means that some state &lt;em&gt;i&lt;/em&gt; is directly dependent on its previous &lt;em&gt;i-1&lt;/em&gt; state. So in a &lt;code class=&quot;highlighter-rouge&quot;&gt;gif&lt;/code&gt; it looks as if the particles are moving and colliding in real time. However, in this case the the &lt;code class=&quot;highlighter-rouge&quot;&gt;gif&lt;/code&gt; just shows different &lt;em&gt;configurations(or samples)&lt;/em&gt; of some state that could occur at any time. To explain it in a different way, all the samples you see in the &lt;em&gt;gif&lt;/em&gt; below are configurations that the disks could take at some point in time(&lt;em&gt;we don’t know when)&lt;/em&gt; that are valid.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;So what does it mean to have a valid configuration?&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
