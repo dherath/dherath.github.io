@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Sep 2017 22:30:29 -0400</pubDate>
-    <lastBuildDate>Sun, 03 Sep 2017 22:30:29 -0400</lastBuildDate>
+    <pubDate>Sun, 03 Sep 2017 22:30:59 -0400</pubDate>
+    <lastBuildDate>Sun, 03 Sep 2017 22:30:59 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -139,6 +139,142 @@
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2017/hard-disks-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-2/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Simulation of Hard Disks : Part 2</title>
+        <description>&lt;p&gt;Hello Everyone !!! Hope you all had an amazing week, If you’re in college the new semester probably just started and I hope you’re first few weeks were awesome, I just started grad school and my week was pretty good :). Now moving on with my post, this will be a continuation from my previous post &lt;a href=&quot;https://dherath.github.io/2017/hard-disks-1/&quot; target=&quot;blank&quot;&gt;&lt;strong&gt;‘Simulation of Hard Disks - Part 1’&lt;/strong&gt;&lt;/a&gt; where I tackled this very same problem using &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Newtonian deterministic mechanics&lt;/code&gt;&lt;/strong&gt;. Ok, so if this is the first time you’re hearing the word &lt;em&gt;&lt;strong&gt;Hard disks&lt;/strong&gt;&lt;/em&gt; I do suggest reading my first post where I explain the terms and the rationale behind simulations of this sort.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://figures.boundless-cdn.com/9309/full/cg10c2-008.png&quot; alt=&quot;intro-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In my last post I ended on a note that suggested the previous simulation technique has some limitations. So today I’ll start from there, the entire point of simulating hard disks is to predict the behavior of particle systems that we might find in the real world. However such systems have more than 4 particles, and in the previous technique we had to solve the &lt;strong&gt;equations of motion for the entire system for every step&lt;/strong&gt;. While this was possible for 4 particles it would be ridiculously time consuming for a system with 1,000,000s of particles. &lt;code class=&quot;highlighter-rouge&quot;&gt;That in itself is the flaw with this method&lt;/code&gt;. This exponential increase in computational complexity drove many scientists to find better ways of simulating hard disk problems.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;So the questions is, what is this better way to simulate hard disks?&lt;/code&gt;&lt;/strong&gt; that’s what todays post is all about.&lt;/p&gt;
+
+&lt;h3 id=&quot;simulating-hard-disks-using-direct-sampling&quot;&gt;Simulating hard disks using direct sampling&lt;/h3&gt;
+
+&lt;p&gt;As per the title the simulations I will be presenting today are based on a technique called &lt;strong&gt;‘direct sampling’&lt;/strong&gt; which is an interesting concept which stems from the idea of &lt;code class=&quot;highlighter-rouge&quot;&gt;randomness&lt;/code&gt;. So what is this &lt;em&gt;&lt;strong&gt;direct sampling?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In a nutshell, direct sampling is sort of like randomly picking an apple from a basket of apples and hoping its ripe.  However, note that the ripeness of apples will vary according to some distribution(&lt;em&gt;Uniform, Poisson,…&lt;/em&gt;). The interesting thing here being there is always some &lt;strong&gt;probability&lt;/strong&gt; that an apple we picked is ripe, so sometimes we might get a good one sometimes we might not luck out.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This idea of using randomness is a corner stone of modern day statistical mechanics. The gif below shows the output from the simulation technique I’ll be discussing today.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_5_hard_disks_2/directDisks_animation.gif&quot; alt=&quot;hard-disks-gif&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you look closely at the gif above, you would notice a clear difference with respect to the earlier technique.  In Newtonian mechanics the simulation revolves with time which means that some state &lt;em&gt;i&lt;/em&gt; is directly dependent on its previous &lt;em&gt;i-1&lt;/em&gt; state. So in a &lt;code class=&quot;highlighter-rouge&quot;&gt;gif&lt;/code&gt; it looks as if the particles are moving and colliding in real time. However, in this case the the &lt;code class=&quot;highlighter-rouge&quot;&gt;gif&lt;/code&gt; just shows different &lt;em&gt;configurations(or samples)&lt;/em&gt; of some state that could occur at any time. To explain it in a different way, all the samples you see in the &lt;em&gt;gif&lt;/em&gt; above are configurations that the disks could take at some point in time(&lt;em&gt;we don’t know when)&lt;/em&gt; that are valid.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;So what does it mean to have a valid configuration?&lt;/code&gt;&lt;/strong&gt;
+ A valid configuration, is some placement of the disks within the boundary of the box that doesn’t overlap with each other.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So basically, the &lt;em&gt;gif&lt;/em&gt; above just shows some set of legal configurations that the disks could take, it doesn’t necessarily show how the system evolves with time. This is both good and bad.  The surprising thing about random sampling is that in terms of simulating hard disks, its possible to replicate the same results we observed from running simulations using Newtonian Mechanics. Before I go into detail about that, first I’ll go through the code for this technique.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-code&quot;&gt;The Code&lt;/h4&gt;
+
+&lt;p&gt;I’ll be demonstrating this technique using Matlab, and unlike the previous method this does not require the use of functions. Since the simulation contains only 4 disks, there can be only 4 possibilities for wall-disk collisions and 6 possibilities for disk-disk collisions as per the table below.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Disk type A&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Disk Type B&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Number of collisions&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2, 3, 4&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3, 4&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Total No.of collisions&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;6&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Within the code snippet below, the first few lines of the code determine the initial conditions such as the radius, number of disks, their respective locations and the set of possible collisions of all the disks &lt;em&gt;(which is 6 disk-disk collision pairs &amp;amp; 4 wall-disk collision pairs)&lt;/em&gt;. Afterwards for a given number of iterations(&lt;em&gt;defined by n&lt;/em&gt;) a loop is run for each sample state where each turn 4 random locations for the disks are computed such that the &lt;strong&gt;minimum distance between any two disks is greater than the diameter of a disk&lt;/strong&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;This condition ensures that no two disks overlap with each other.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The step for the simulation is not increased until this condition is met, say for an example if the 100th iteration computes an invalid configuration where an overlap is only present between the 1st &amp;amp; 3rd disks where as the 2nd &amp;amp; 4th disks are valid; even then the &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;entire set is rejected resulting in the sample space being completely erased&lt;/code&gt;&lt;/strong&gt;. This form of rejections are called the &lt;strong&gt;&lt;em&gt;tabula rasa rejections&lt;/em&gt;&lt;/strong&gt;. These continues rejections occur until a valid set of configurations are obtained, only then would the iteration &lt;code class=&quot;highlighter-rouge&quot;&gt;count&lt;/code&gt; be increased from 100 to 101.&lt;/p&gt;
+
+&lt;div class=&quot;language-matlab highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;clc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;diamtr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;wall&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;%number of samples&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;distanceVals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;%------positions for disks -----------------------&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.*&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.*&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dxa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dya&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dxb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dyb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;distanceVals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dxa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dxb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dya&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dyb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        	
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;distanceVals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diamtr&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h4 id=&quot;the-results&quot;&gt;The Results&lt;/h4&gt;
+
+&lt;p&gt;The biggest question you’d probably have after reading thus far about this technique would be &lt;code class=&quot;highlighter-rouge&quot;&gt;How could this even work?&lt;/code&gt;. Which is a completely reasonable question, because in Newtonian mechanics the actual equations of motion were computed. Therefore, within the classical boundary the simulation replicates particle motion.&lt;/p&gt;
+
+&lt;p&gt;However, here in simple terms all we do is randomly place the particles in a given space for some number of rounds and then bin their locations and now supposedly &lt;strong&gt;I say&lt;/strong&gt; it shows the same behavior as the previous case. The graphs below show a comparison between the histograms for the disk locations for simulations run using Newtonian mechanics and direct sampling for disks 1 &amp;amp; 2(&lt;em&gt;disks 3 &amp;amp; 4 show the same behavior&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01) histogram of X &amp;amp; Y coordinates for disk 1 (MD-Molecular Dynamics, Direct- direct sampling)&lt;/strong&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_5_hard_disks_2/comparison_disk1.jpg&quot; alt=&quot;disk-1-coordinate-sample&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;02) histogram of X &amp;amp; Y coordinates for disk 2 (MD-Molecular Dynamics, Direct- direct sampling)&lt;/strong&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_5_hard_disks_2/comparison_disk2.jpg&quot; alt=&quot;disk-2-coordinate-sample&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The position distributions show the same behavior where the disks seem to be more attracted towards the edges. As I explained in my previous post the reason behind this phenomena is primarily due to an entropic interaction where at each instance the disks individually try to make more room for the others. The interesting thing here is that even without resorting to complex computations, behavior of complex systems could be replicated using this idea of &lt;code class=&quot;highlighter-rouge&quot;&gt;randomness&lt;/code&gt;. However this technique does have its own limitations.&lt;/p&gt;
+
+&lt;p&gt;Since the simulation doesn’t evolve with time this technique alone is not sufficient to obtain any idea about how the velocities of the disks vary unlike in the previous case where we saw a Boltzmann distribution for the velocities.  Even amidst this, the significant improvement with regards to reducing the computational complexity is very attractive specifically when considering systems with millions of particles. So with that being said I’ll end my post here hoping you all have a newfound appreciation for the power of &lt;code class=&quot;highlighter-rouge&quot;&gt;randomness&lt;/code&gt;. (&lt;em&gt;At least in the realm of scientific computing&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
+&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+</description>
+        <pubDate>Sat, 19 Aug 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/hard-disks-2/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-2/</guid>
         
