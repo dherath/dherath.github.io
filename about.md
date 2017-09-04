@@ -9,13 +9,19 @@ permalink: /about/
     <img src="/assets/img/image.jpg" style="width:270px;padding:30px;border-radius:48px;" align="right">
   </div>
   <div class="post-content">
-    <p align="justify" style="width:500px">Hi! I'm Dinal Herath a computer science graduate student at State University of New York (SUNY) Binghamton coming Fall 2017.I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics.</p>
+    <p align="justify" style="width:500px">Hi! I'm Dinal Herath a computer science graduate student at State University of New York (SUNY) Binghamton. I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics.</p>
   </div>
 </div>
 
 ## Research Interests
 
-<p align="justify">My research work at SUNY Binghamton would generally fall under the categories of Internet of Things(IoT), smart grids while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.--></p>
+<p align="justify">My research work at SUNY Binghamton would generally fall under the categories of Networking & Internet of Things(IoT) while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.--></p>
+
+## Education
+
+- Bsc. Special Degree in Computational Physics(Hons), University of Colombo, Sri Lanka.(2016)
+- Professional Postgraduate Diploma in Marketing, Chartered Institute of Marketing(CIM),United Kindom(UK).(2015)
+- st.Joseph's College, Colombo-10, Sri Lanka.(2011)
 
 ## Publications
 
@@ -32,4 +38,5 @@ permalink: /about/
 
 ## Experience
 
+- Graduate Assitant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2017)
 - Temporary Lecturer, Department of Physics, University of Colombo.(2017)

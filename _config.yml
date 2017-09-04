@@ -3,7 +3,7 @@
 title: "dinal"
 title2: "Herath" # default: ""
 description: "Home"
-keywords: "Jekyll, theme, jerome, dinal, herath, Sri Lanka, Binghamton, colombo, univeristy, uoc, computer, science, blog"
+keywords: "jerome, dinal, herath, Sri Lanka, Binghamton, colombo, univeristy, uoc, computer, science, blog, SUNY"
 # url: http://heiswayi.github.io/thinkspace # site url
 baseurl: "" # apply repo name if use it under gh-pages branch
 # baseurl: null # apply null if repo name is something like username.github.io
@@ -31,7 +31,7 @@ sass:
 author:
   name     : "Dinal Herath"
   job      : "Computer Science PHD candidate at State University of New York Binghamton."
-  greeting : "welcome to my blog"
+  greeting : "welcome to my site"
   bio      : "I like everything from pokemon and manga to IoT and robotics."
   thumb    : #/assets/images/sherlock.jpg
   email    : #hnrird@gmail.com
