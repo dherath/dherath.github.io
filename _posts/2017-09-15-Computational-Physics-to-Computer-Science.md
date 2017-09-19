@@ -28,3 +28,9 @@ GPA isn't really a measure of your intelligence(_well to a certain extent it is_
 `In a nutshell if you are a freshman or Sophomore focus on your grades`. You don't need to worry about what area you want to apply for or the universities you'd want to attend for grad school. Because a lot of things change, I remember back when I was in 1st year I wanted to specialize in **chemistry** and look where I am now. :)
 
 ## Case 2: You're a Junior(3rd year)
+
+Alright, now if you are a junior(3rd year) then you are either following some major or have an area you like. The workload you probably have now far exceeds what you were used to during the first two years in university. So prioritizing tasks would be an intelligent way to go about it. This all depends on these factors,
+
+1. `Your GPA`. Ask yourself the question "_is my GPA good?_", what do I mean by **good**. Imagine a worse case scenario, where you perform extremely poorly during some examination, then what is the capacity of your GPA to buffer the new results such that your **class**(_I am assuming you have some class, if not you should really focus on your grades_) is still maintained.
+2. `You have some idea of what you like, but you definitely know what you don't like`. This is the building block of deciding whether a switch to some other field is necessary or not. Most of the time its really hard to find what we like, but more often than not a simple **process of elimination**  can get us very close. In my case I remember my _sub-fields I didn't like in physics(like astronomy)_ kept on increasing and where as I remember being drawn to all the `Computer Science` courses I took.
+3. `When will you apply for grad school?`. This all depends on you, either you can apply during 4th year or wait until you have a complete transcript.
