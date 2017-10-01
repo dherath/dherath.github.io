@@ -5,15 +5,15 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Sep 2017 22:37:11 -0400</pubDate>
-    <lastBuildDate>Mon, 18 Sep 2017 22:37:11 -0400</lastBuildDate>
+    <pubDate>Sat, 30 Sep 2017 23:31:16 -0400</pubDate>
+    <lastBuildDate>Sat, 30 Sep 2017 23:31:16 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>From Computational Physics to Computer Science</title>
-        <description>&lt;p&gt;Hello Everyone !! Sorry I was MIA &lt;strong&gt;:)&lt;/strong&gt;, as you all probably know if you read my previous posts I’ve just started grad school and while everything I learn here is extremely interesting it’s kind of a grind so I haven’t had time to write anything new. Now coming back to my post a lot of my friends and students from my home country Sri Lanka have been asking about my experience about switching fields from Computational Physics to Computer Science. To those who don’t know I have a bachelors degree in Computational Physics and I switched to Computer Science for my PHD.&lt;/p&gt;
+        <description>&lt;p&gt;Hello Everyone !! Sorry I was MIA &lt;strong&gt;:)&lt;/strong&gt;, as you all probably know if you read my previous posts I’ve just started grad school. While everything I learn here is extremely interesting it’s kind of a grind so I haven’t had time to write anything new. Now coming back to my post a lot of my friends and students from  Sri Lanka have been asking about my experience about switching fields from Computational Physics to Computer Science. To those who don’t know I have a bachelors degree in Computational Physics and I switched to Computer Science for my PHD.&lt;/p&gt;
 
-&lt;p&gt;This post is for you if you’re a &lt;strong&gt;student following a bachelors degree or someone who just finished a degree and planing to apply for grad school, but don’t really like your current field and wants to switch&lt;/strong&gt;. Now first of all switching fields is not an easy thing, and it requires a lot of planing and preparation. But thats not the hardest part, the &lt;code class=&quot;highlighter-rouge&quot;&gt;hardest part is deciding that you want to switch&lt;/code&gt;. Because most everyone you will meet or ask advice from would tell you it’s risky and hard. &lt;strong&gt;Yes&lt;/strong&gt; it is &lt;em&gt;risky and hard&lt;/em&gt; but not impossible. I decided for my own personal reasons to switch fields back in 2015 and it was one of the best decisions I’ve taken so far amidst a bunch of horrible ones.&lt;/p&gt;
+&lt;p&gt;This post is for you if you’re a &lt;strong&gt;student following a bachelors degree or someone who just finished a degree and planing to apply for grad school, but don’t really like your current field and wants to switch&lt;/strong&gt;(&lt;em&gt;I emphasize on CS&lt;/em&gt;). Now first of all switching fields is not an easy thing, and it requires a lot of planing and preparation. But thats not the hardest part, the &lt;code class=&quot;highlighter-rouge&quot;&gt;hardest part is deciding that you want to switch&lt;/code&gt;. Because most everyone you will meet or ask advice from would tell you it’s risky and hard. &lt;strong&gt;Yes&lt;/strong&gt; it is &lt;em&gt;risky and hard&lt;/em&gt; but not impossible. I decided for my own personal reasons to switch fields back in 2015 and it was one of the best decisions I’ve taken so far amidst a bunch of horrible ones.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Disclaimer: like any form advice, what I’ll be telling today is 30% actual advice and 70% from my own experience. So some things may or may not apply to you, so do take everything with a grain of salt.&lt;/p&gt;
@@ -27,25 +27,44 @@
   &lt;li&gt;You really &lt;em&gt;really&lt;/em&gt; want to do a PHD. This ones a given, because if you didn’t you wouldn’t be reading this.&lt;/li&gt;
   &lt;li&gt;You are thinking of switching fields, but unsure if thats possible. Now, what I’ll be telling will relate mostly to a switch to &lt;strong&gt;Computer Science&lt;/strong&gt;, but some of it might be applicable to other fields as well.&lt;/li&gt;
   &lt;li&gt;You are a student following a bachelors degree(&lt;em&gt;maybe masters, but it’s geared towards bachelors more&lt;/em&gt;) &lt;strong&gt;OR&lt;/strong&gt; just completed one.&lt;/li&gt;
+  &lt;li&gt;Since I’m from Sri Lanka It’ll mostly apply to students from Sri Lanka, or a country with a similar university system. From where I’m from the university year starts from January and ends in December. However in the west usually the academic calender starts in August(Fall).&lt;/li&gt;
+  &lt;li&gt;Since I will be specifically covering a switch to &lt;em&gt;Computer Science&lt;/em&gt;, I’m assuming you have a double major with CS in it or you’ve taken some courses in CS and really like it.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;case-1--youre-a-freshman-1st-year-or-a-sophomore-2nd-year&quot;&gt;Case 1 : You’re a Freshman (1st year) or a Sophomore (2nd year)&lt;/h3&gt;
 
-&lt;p&gt;If you are a Sophomore or a Freshman my biggest advice is to focus on grades. There is a debate about the influence GPA has on your application. Because most PHD candidates would agree that grades alone wouldn’t be enough. Now heres the catch, GPA has a disproportional impact on your application. Say you have an amazing GPA(4.0/4.0), thats great while it wouldn’t ensure you’re success at getting in it certainly is positive. However lets say your GPA is 2.0/4.0 then it definitely would have a negative impact on your application.&lt;/p&gt;
+&lt;p&gt;If you are a Sophomore or a Freshman my biggest advice is to focus on grades. There is a debate about the influence GPA has on your application. Because most PHD candidates would agree that grades alone wouldn’t be enough. Now heres the catch, GPA has a disproportional impact on your application. Say you have an amazing GPA(4.0/4.0), thats great!!! while it wouldn’t ensure you’re success at getting in it certainly is positive. However lets say your GPA is 2.0/4.0 then it definitely would have a negative impact on your application.&lt;/p&gt;
 
 &lt;p&gt;GPA isn’t really a measure of your intelligence(&lt;em&gt;well to a certain extent it is&lt;/em&gt;), but its more an indication of your dedication and capacity to plan and work. PHDs aren’t achieved in a couple of months, it usually takes years. So they definitely check for an applicants ability to persevere. Your cumulative GPA is a summation of 4 years, and the fact that you have been able to maintain it shows you have &lt;strong&gt;focus&lt;/strong&gt; and thats essential for a PHD.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;In a nutshell if you are a freshman or Sophomore focus on your grades&lt;/code&gt;. You don’t need to worry about what area you want to apply for or the universities you’d want to attend for grad school. Because a lot of things change, I remember back when I was in 1st year I wanted to specialize in &lt;strong&gt;chemistry&lt;/strong&gt; and look where I am now. :)&lt;/p&gt;
 
-&lt;h2 id=&quot;case-2-youre-a-junior3rd-year&quot;&gt;Case 2: You’re a Junior(3rd year)&lt;/h2&gt;
+&lt;h3 id=&quot;case-2-youre-a-junior3rd-year-or-a-senior4th-year&quot;&gt;Case 2: You’re a Junior(3rd year) or a Senior(4th year)&lt;/h3&gt;
 
-&lt;p&gt;Alright, now if you are a junior(3rd year) then you are either following some major or have an area you like. The workload you probably have now far exceeds what you were used to during the first two years in university. So prioritizing tasks would be an intelligent way to go about it. This all depends on these factors,&lt;/p&gt;
+&lt;p&gt;Alright, now if you are a junior(3rd year) or Senior(4th year) then you are either following some major or have an area you like. The workload you probably have now far exceeds what you were used to during the first two years in university. So prioritizing tasks would be an intelligent way to go about it. This all depends on these factors,&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Your GPA&lt;/code&gt;. Ask yourself the question “&lt;em&gt;is my GPA good?&lt;/em&gt;”, what do I mean by &lt;strong&gt;good&lt;/strong&gt;. Imagine a worse case scenario, where you perform extremely poorly during some examination, then what is the capacity of your GPA to buffer the new results such that your &lt;strong&gt;class&lt;/strong&gt;(&lt;em&gt;I am assuming you have some class, if not you should really focus on your grades&lt;/em&gt;) is still maintained.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;You have some idea of what you like, but you definitely know what you don't like&lt;/code&gt;. This is the building block of deciding whether a switch to some other field is necessary or not. Most of the time its really hard to find what we like, but more often than not a simple &lt;strong&gt;process of elimination&lt;/strong&gt;  can get us very close. In my case I remember my &lt;em&gt;sub-fields I didn’t like in physics(like astronomy)&lt;/em&gt; kept on increasing and where as I remember being drawn to all the &lt;code class=&quot;highlighter-rouge&quot;&gt;Computer Science&lt;/code&gt; courses I took.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;When will you apply for grad school?&lt;/code&gt;. This all depends on you, either you can apply during 4th year or wait until you have a complete transcript.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;When will you apply for grad school?&lt;/code&gt;. This all depends on you, either you can apply during 4th year or wait until you have a complete transcript and that’s all on you.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;Depending on the above factors there could be a couple of scenarios,&lt;/p&gt;
+
+&lt;h4 id=&quot;my-gpa-isnt-good&quot;&gt;“My GPA isn’t &lt;em&gt;good&lt;/em&gt;”&lt;/h4&gt;
+
+&lt;p&gt;Alright, now if this is the case then I strongly recommend to focus on grades. Because It’s just my opinion it will be too big of a risk to prioritize the application process provided that your grades could sink anytime. Besides you might even not want to apply for grad school later on, in such a case having a &lt;em&gt;class&lt;/em&gt; in your bachelors degree would definitely help(&lt;code class=&quot;highlighter-rouge&quot;&gt;in someway&lt;/code&gt;) in landing a job.&lt;/p&gt;
+
+&lt;p&gt;Also just think about it, Imagine you’re a &lt;strong&gt;professor&lt;/strong&gt; going through applications for potential students. You see two applications(&lt;code class=&quot;highlighter-rouge&quot;&gt;application A &amp;amp; B&lt;/code&gt;) with partially complete degrees(&lt;em&gt;so both these students have applied without a full transcript&lt;/em&gt;), meaning that maybe the final semester results aren’t in it. student A has a GPA above 3.5 and student B has one above 3.0, whose application would be more convincing(&lt;code class=&quot;highlighter-rouge&quot;&gt;on grades alone&lt;/code&gt;)? you(&lt;strong&gt;as a professor&lt;/strong&gt;) would need to sort of have an idea about how well these applicants might perform in their last semester simply based on their current transcripts. Of course student &lt;strong&gt;A&lt;/strong&gt; makes a stronger case, since his current performance is &lt;em&gt;good&lt;/em&gt; it’s plausible that he will perform well in his final semester.(&lt;em&gt;whether it actually happens is a different story&lt;/em&gt; &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;;)&lt;/code&gt;&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;h4 id=&quot;i-want-to-switch-to-computer-science&quot;&gt;“I want to switch to Computer Science”&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Do note, that some of what I say here might even apply for applicants who don’t intend
+to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So you want to switch to CS, &lt;code class=&quot;highlighter-rouge&quot;&gt;great !!!&lt;/code&gt; now that you have already decided lets start prepping for it. As you might have probably heard &lt;em&gt;Computer Science&lt;/em&gt; is an extremely competitive field so acceptance rates are pretty low, and since you will be from some other field native CS students would definitely have an edge. But, with a bit of planning its manageable. The table below summarizes the key factors in building a strong application.&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
