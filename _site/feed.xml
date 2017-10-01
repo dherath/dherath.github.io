@@ -3,17 +3,10 @@
  <!-- <channel>
     <title>dinal</title>
     <description>Home</description>
-<<<<<<< HEAD
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Sep 2017 12:45:12 -0400</pubDate>
-    <lastBuildDate>Wed, 20 Sep 2017 12:45:12 -0400</lastBuildDate>
-=======
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Oct 2017 10:08:19 -0400</pubDate>
-    <lastBuildDate>Sun, 01 Oct 2017 10:08:19 -0400</lastBuildDate>
->>>>>>> post_6_compPhy
+    <pubDate>Sun, 01 Oct 2017 10:09:41 -0400</pubDate>
+    <lastBuildDate>Sun, 01 Oct 2017 10:09:41 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -149,8 +142,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
+        <link>/2017/Computational-Physics-to-Computer-Science/</link>
+        <guid isPermaLink="true">/2017/Computational-Physics-to-Computer-Science/</guid>
         
         
       </item>
@@ -285,8 +278,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/hard-disks-2/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-2/</guid>
+        <link>/2017/hard-disks-2/</link>
+        <guid isPermaLink="true">/2017/hard-disks-2/</guid>
         
         
       </item>
@@ -546,8 +539,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/hard-disks-1/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-1/</guid>
+        <link>/2017/hard-disks-1/</link>
+        <guid isPermaLink="true">/2017/hard-disks-1/</guid>
         
         
       </item>
@@ -703,8 +696,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h4 id=&quot;cheers-&quot;&gt;Cheers !!&lt;/h4&gt;
 </description>
         <pubDate>Sun, 23 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/image-pokemon/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/image-pokemon/</guid>
+        <link>/2017/image-pokemon/</link>
+        <guid isPermaLink="true">/2017/image-pokemon/</guid>
         
         
       </item>
@@ -1020,8 +1013,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Sat, 15 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/serial-snake-robot/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/serial-snake-robot/</guid>
+        <link>/2017/serial-snake-robot/</link>
+        <guid isPermaLink="true">/2017/serial-snake-robot/</guid>
         
         
       </item>
@@ -1038,8 +1031,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h4 id=&quot;cheers&quot;&gt;Cheers!&lt;/h4&gt;
 </description>
         <pubDate>Tue, 04 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/hello-world/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/hello-world/</guid>
+        <link>/2017/hello-world/</link>
+        <guid isPermaLink="true">/2017/hello-world/</guid>
         
         
       </item>
