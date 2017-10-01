@@ -5,6 +5,8 @@ comments: false
 description: "post 6"
 keywords: "Computer Science, CS, Computational Physics, Applying , PHD, tips, Grad, School, applying, switching, fields, switch"
 ---
+![phd-comic-strip](http://phdcomics.com/comics/archive/phd091903s.gif)
+
 Hello Everyone !! Sorry I was MIA **:)**, as you all probably know if you read my previous posts I've just started grad school. While everything I learn here is extremely interesting it's kind of a grind so I haven't had time to write anything new. Now coming back to my post a lot of my friends and students from  Sri Lanka have been asking about my experience about switching fields from Computational Physics to Computer Science. To those who don't know I have a bachelors degree in Computational Physics and I switched to Computer Science for my PHD.
 
 This post is for you if you're a **student following a bachelors degree or someone who just finished a degree and planing to apply for grad school, but don't really like your current field and wants to switch**(_I emphasize on CS_). Now first of all switching fields is not an easy thing, and it requires a lot of planing and preparation. But thats not the hardest part, the `hardest part is deciding that you want to switch`. Because most everyone you will meet or ask advice from would tell you it's risky and hard. **Yes** it is _risky and hard_ but not impossible. I decided for my own personal reasons to switch fields back in 2015 and it was one of the best decisions I've taken so far :).
