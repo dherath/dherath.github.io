@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Dec 2017 22:40:01 -0500</pubDate>
-    <lastBuildDate>Tue, 26 Dec 2017 22:40:01 -0500</lastBuildDate>
+    <pubDate>Tue, 26 Dec 2017 22:49:20 -0500</pubDate>
+    <lastBuildDate>Tue, 26 Dec 2017 22:49:20 -0500</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -19,7 +19,11 @@ Hello Everyone !! Hope everything is great, the fall break is around the corner 
   &lt;li&gt;The &lt;strong&gt;Queen of Hearts&lt;/strong&gt; is not in the deck&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;But since you don’t know before hand, the most logical way to go about this problem is to take one card at a time, see if its the queen of hearts, if it is then no point searching further; and if it’s not you keep on doing this until you run out of cards where it’s safe to say your deck doesn’t have that card. This solution seems intuitively correct and the steps seem logical too. So I’m sure you’d agree with me that this method works. But &lt;strong&gt;Imagine&lt;/strong&gt; a more complex scenario where &lt;em&gt;you’ve&lt;/em&gt; found a method that can ensures the accurate prediction of the next &lt;em&gt;flood&lt;/em&gt; or &lt;em&gt;hurricane&lt;/em&gt; or some disaster. Now this is a very serious claim, because human lives depend on your algorithm. So an obvious question that anyone would ask is &lt;strong&gt;&lt;em&gt;how can you say that your method always gives us the answer we need?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;But since you don’t know before hand, the most logical way to go about this problem is to take one card at a time, see if its the queen of hearts, if it is then no point searching further; and if it’s not you keep on doing this until you run out of cards where it’s safe to say your deck doesn’t have that card. This solution seems intuitively correct and the steps seem logical too. So I’m sure you’d agree with me that this method works. But &lt;strong&gt;Imagine&lt;/strong&gt; a more complex scenario where &lt;em&gt;you’ve&lt;/em&gt; found a method that can ensures the accurate prediction of the next &lt;em&gt;flood&lt;/em&gt; or &lt;em&gt;hurricane&lt;/em&gt; or some disaster. Now this is a very serious claim, because human lives depend on your algorithm. So an obvious question that anyone would ask is &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;how can you say that your method always gives us the answer we need?&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thats where proving algorithms really come into the picture, so today I’ll be talking about a technique used to prove the correctness of Algorithms using &lt;strong&gt;Loop Invariants&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;proving-correctness-using-loop-invariants&quot;&gt;Proving Correctness using Loop Invariants&lt;/h4&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;

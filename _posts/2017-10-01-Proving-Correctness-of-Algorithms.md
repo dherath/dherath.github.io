@@ -11,7 +11,12 @@ Hello Everyone !! Hope everything is great, the fall break is around the corner 
 1. The **Queen of Hearts** is in the card deck
 2. The **Queen of Hearts** is not in the deck
 
-But since you don't know before hand, the most logical way to go about this problem is to take one card at a time, see if its the queen of hearts, if it is then no point searching further; and if it's not you keep on doing this until you run out of cards where it's safe to say your deck doesn't have that card. This solution seems intuitively correct and the steps seem logical too. So I'm sure you'd agree with me that this method works. But **Imagine** a more complex scenario where _you've_ found a method that can ensures the accurate prediction of the next _flood_ or _hurricane_ or some disaster. Now this is a very serious claim, because human lives depend on your algorithm. So an obvious question that anyone would ask is **_how can you say that your method always gives us the answer we need?_**
+But since you don't know before hand, the most logical way to go about this problem is to take one card at a time, see if its the queen of hearts, if it is then no point searching further; and if it's not you keep on doing this until you run out of cards where it's safe to say your deck doesn't have that card. This solution seems intuitively correct and the steps seem logical too. So I'm sure you'd agree with me that this method works. But **Imagine** a more complex scenario where _you've_ found a method that can ensures the accurate prediction of the next _flood_ or _hurricane_ or some disaster. Now this is a very serious claim, because human lives depend on your algorithm. So an obvious question that anyone would ask is **`how can you say that your method always gives us the answer we need?`**
+
+Thats where proving algorithms really come into the picture, so today I'll be talking about a technique used to prove the correctness of Algorithms using **Loop Invariants**.
+
+#### Proving Correctness using Loop Invariants
+
 
 
 ##### So until next time,
