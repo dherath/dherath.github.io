@@ -5,9 +5,31 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Dec 2017 22:28:17 -0500</pubDate>
-    <lastBuildDate>Tue, 26 Dec 2017 22:28:17 -0500</lastBuildDate>
+    <pubDate>Tue, 26 Dec 2017 22:40:01 -0500</pubDate>
+    <lastBuildDate>Tue, 26 Dec 2017 22:40:01 -0500</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Proving correctness of Algorithms</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://i.pinimg.com/736x/2d/3f/e5/2d3fe59c74315f74a05b371f67486701.jpg&quot; alt=&quot;queen-of-hearts&quot; height=&quot;400px&quot; /&gt;
+Hello Everyone !! Hope everything is great, the fall break is around the corner so I’ll be getting couple of days off from homework, so I thought of writing something interesting I learned in the Algorithms course I’m taking this semester. Imagine you have a deck of cards(&lt;strong&gt;which could be incomplete&lt;/strong&gt;) in your hand all shuffled together, and someone asks you to find the &lt;code class=&quot;highlighter-rouge&quot;&gt;Queen of hearts&lt;/code&gt; in it. So how would you go about it… There are two scenarios,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The &lt;strong&gt;Queen of Hearts&lt;/strong&gt; is in the card deck&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;Queen of Hearts&lt;/strong&gt; is not in the deck&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;But since you don’t know before hand, the most logical way to go about this problem is to take one card at a time, see if its the queen of hearts, if it is then no point searching further; and if it’s not you keep on doing this until you run out of cards where it’s safe to say your deck doesn’t have that card. This solution seems intuitively correct and the steps seem logical too. So I’m sure you’d agree with me that this method works. But &lt;strong&gt;Imagine&lt;/strong&gt; a more complex scenario where &lt;em&gt;you’ve&lt;/em&gt; found a method that can ensures the accurate prediction of the next &lt;em&gt;flood&lt;/em&gt; or &lt;em&gt;hurricane&lt;/em&gt; or some disaster. Now this is a very serious claim, because human lives depend on your algorithm. So an obvious question that anyone would ask is &lt;strong&gt;&lt;em&gt;how can you say that your method always gives us the answer we need?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
+&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+</description>
+        <pubDate>Sun, 01 Oct 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
+        
+        
+      </item>
     
       <item>
         <title>From Computational Physics to Computer Science</title>
