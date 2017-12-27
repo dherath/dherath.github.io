@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Dec 2017 22:49:20 -0500</pubDate>
-    <lastBuildDate>Tue, 26 Dec 2017 22:49:20 -0500</lastBuildDate>
+    <pubDate>Wed, 27 Dec 2017 13:21:05 -0500</pubDate>
+    <lastBuildDate>Wed, 27 Dec 2017 13:21:05 -0500</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -19,11 +19,103 @@ Hello Everyone !! Hope everything is great, the fall break is around the corner 
   &lt;li&gt;The &lt;strong&gt;Queen of Hearts&lt;/strong&gt; is not in the deck&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;But since you don’t know before hand, the most logical way to go about this problem is to take one card at a time, see if its the queen of hearts, if it is then no point searching further; and if it’s not you keep on doing this until you run out of cards where it’s safe to say your deck doesn’t have that card. This solution seems intuitively correct and the steps seem logical too. So I’m sure you’d agree with me that this method works. But &lt;strong&gt;Imagine&lt;/strong&gt; a more complex scenario where &lt;em&gt;you’ve&lt;/em&gt; found a method that can ensures the accurate prediction of the next &lt;em&gt;flood&lt;/em&gt; or &lt;em&gt;hurricane&lt;/em&gt; or some disaster. Now this is a very serious claim, because human lives depend on your algorithm. So an obvious question that anyone would ask is &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;how can you say that your method always gives us the answer we need?&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;But since you don’t know before hand, the most logical way to go about this problem is to take one card at a time, see if its the queen of hearts, if it is then no point searching further; and if it’s not you keep on doing this until you run out of cards where it’s safe to say your deck doesn’t have that card. This solution seems intuitively correct and the steps seem logical too. So I’m sure you’d agree with me that this method works. But &lt;strong&gt;Imagine&lt;/strong&gt; a more complex scenario where &lt;em&gt;you’ve&lt;/em&gt; found a method that can ensure the accurate prediction of the next &lt;em&gt;flood&lt;/em&gt; or &lt;em&gt;hurricane&lt;/em&gt; or some disaster. Now this is a very serious claim, because human lives depend on your algorithm. So an obvious question that anyone would ask is &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;how can you say that your method always gives us the answer we need?&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Thats where proving algorithms really come into the picture, so today I’ll be talking about a technique used to prove the correctness of Algorithms using &lt;strong&gt;Loop Invariants&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;proving-correctness-using-loop-invariants&quot;&gt;Proving Correctness using Loop Invariants&lt;/h4&gt;
+
+&lt;p&gt;The first question you might have is &lt;em&gt;“What is a loop invariant?”&lt;/em&gt; well thats pretty simple, a loop invariant is some condition of a given algorithm that is true before &amp;amp; after an execution of a loop. The loop itself could be anything(&lt;em&gt;for, while…&lt;/em&gt;). The way to go about proving an algorithm to be correct is by &lt;strong&gt;first&lt;/strong&gt; defining a condition that must be true before &amp;amp; after the loop. &lt;strong&gt;Then&lt;/strong&gt; we show that condition is true before the execution of the algorithm, while it is executing and &lt;strong&gt;finally&lt;/strong&gt; after it’s done.  So essentially by induction if an algorithm is correct at its initiation, termination &amp;amp; while its running then the algorithm must be correct. These three cases are called &lt;code class=&quot;highlighter-rouge&quot;&gt;initialization, maintenance &amp;amp; termination&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The tricky part here is not proving the three cases, rather it’s selecting/defining a &lt;strong&gt;loop invariant&lt;/strong&gt; which can be easily shown to be true in those cases. Depending on how you define the invariant the proof could be simple or complicated, and theres no exact science for it and in my opinion I think it’s more of an art :)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In the sections below I’ll be showing two basic algorithms(&lt;a href=&quot;#ref1&quot;&gt;linear search&lt;/a&gt; &amp;amp; &lt;a href=&quot;#ref2&quot;&gt;insertion sort&lt;/a&gt;) to be true using loop invariants.&lt;/p&gt;
+
+&lt;h4 id=&quot;1-linear-search&quot;&gt;&lt;a name=&quot;ref1&quot;&gt;1) linear search&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Linear Search is an easy algorithm and it works the same way as my &lt;em&gt;finding cards example&lt;/em&gt; I mentioned above. The pseudocode below describes it in a more formal manner. Instead of searching for cards lets consider a case where the objective is to find some integer value &lt;strong&gt;v&lt;/strong&gt; in a Set &lt;strong&gt;A&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Input -&amp;gt;&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;a set &lt;strong&gt;A&lt;/strong&gt; with values {&lt;script type=&quot;math/tex&quot;&gt;a_1, a_2, a_3,... a_N&lt;/script&gt;} and &lt;strong&gt;v&lt;/strong&gt; the value to be searched&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Output -&amp;gt;&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;the index &lt;strong&gt;i&lt;/strong&gt; of some &lt;script type=&quot;math/tex&quot;&gt;a_i&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;a_i=v&lt;/script&gt; OR &lt;strong&gt;NILL&lt;/strong&gt; if &lt;script type=&quot;math/tex&quot;&gt;a_i \neq&lt;/script&gt; v &lt;script type=&quot;math/tex&quot;&gt;~~\forall~~ i~\in~N&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LINEAR-SEARCH(A,v):
+// 1-4 are line number
+1)  for i = 1 to length[A]
+2)    if A[i] == v
+3)      then return i
+4)  return NILL
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Loop Invariant:&lt;/strong&gt;
+At the start of each iteration of the for loop in line 1, the subset A[1 … i-1] would not have the value ‘v’ in it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Based on this loop invariant the following three conditions can be shown to be true.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;I. Initialization:&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Before the first iteration of the loop the subset of A in question would be an empty set. Therefore ‘v’ would not be in it. Then the loop invariant holds true trivially&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;II. Maintenance:&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Assuming the subset A[1 … k-1] does not have the value v, from the comparison in line 2 the loop will transition from the &lt;script type=&quot;math/tex&quot;&gt;k^{th}&lt;/script&gt; iteration to a &lt;script type=&quot;math/tex&quot;&gt;(k+1)^{th}&lt;/script&gt; iteration only if v was not observed. (i.e : &lt;script type=&quot;math/tex&quot;&gt;A[k] \neq v&lt;/script&gt;) Therefore at the &lt;script type=&quot;math/tex&quot;&gt;(k+1)^{th}&lt;/script&gt; iteration the subset A[1 … k] wouldn’t have v in it. Which indicates that the loop invariant holds true from a &lt;script type=&quot;math/tex&quot;&gt;k^{th}&lt;/script&gt; iteration to a &lt;script type=&quot;math/tex&quot;&gt;(k+1)^{th}&lt;/script&gt; iteration)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;III. Termination:&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;At the end of the for loop i = length[A]+1 then the subset would be the complete set ‘A’ itself. At which point provided ‘v’ was not found the loop terminates and returns NILL indicating that ‘v’ is not present within the set ‘A’&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;From these three conditions it’s clear that our algorithm is correct and it aligns to our intuitive guess as to why our card searching approach works as well. Now off to a slightly more different problem &lt;em&gt;insertion sort&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-insertion-sort&quot;&gt;&lt;a name=&quot;ref2&quot;&gt;2) insertion sort&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Like any sorting algorithm, the objective of &lt;em&gt;insertion sort&lt;/em&gt; is to sort a given sequence of numbers in some order.(&lt;em&gt;For our example lets consider ascending&lt;/em&gt;).In a nutshell &lt;em&gt;insertion sort&lt;/em&gt; works by taking some element in a set and then finding its desired location to be placed for the set to be sorted and then swapping elements until it’s placed in that new location. This process occurs for the entirety of the set. If you are unfamiliar with insertion sort check this &lt;a href=&quot;https://www.youtube.com/watch?v=i-SKeOcBwko&amp;amp;t=47s&quot; target=&quot;blank&quot;&gt;video&lt;/a&gt; for more reference.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Input -&amp;gt;&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;a set &lt;strong&gt;A&lt;/strong&gt; with a sequence of numbers {&lt;script type=&quot;math/tex&quot;&gt;a_1, a_2, a_3,... a_N&lt;/script&gt;}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Output -&amp;gt;&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;a permutation &lt;strong&gt;A&lt;script type=&quot;math/tex&quot;&gt;^/&lt;/script&gt;&lt;/strong&gt; with a sequence of numbers {&lt;script type=&quot;math/tex&quot;&gt;a^/_1, a^/_2, a^/_3,... a^/_N&lt;/script&gt;} where &lt;script type=&quot;math/tex&quot;&gt;a^/_i \leq a^/_{i+1}~~\forall~~i~\in~N&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
@@ -570,7 +662,7 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
         <title>Combining video-game sprites using logical operations</title>
         <description>&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/images/front_matter.png&quot; alt=&quot;front-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Today I’m going to explain how different video-game sprites(&lt;em&gt;or any image&lt;/em&gt;) can be combined together like whats shown above using logical operations like &lt;strong&gt;AND, OR, NOT&lt;/strong&gt; in the realm of &lt;code class=&quot;highlighter-rouge&quot;&gt;Image Processing&lt;/code&gt;. This is an extremely interesting area I got to sample during my undergrad days, and I thought of making my second post from a memorable part of it. For the demonstrations I thought of  using sprites from one of my all time favourte pokemon games, &lt;a href=&quot;https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_Versions&quot; target=&quot;blank&quot;&gt;pokemon silver&lt;/a&gt; from Generation 2 which I played first :).&lt;/p&gt;
+&lt;p&gt;Today I’m going to explain how different video-game sprites(&lt;em&gt;or any image&lt;/em&gt;) can be combined together like whats shown above using logical operations like &lt;strong&gt;AND, OR, NOT&lt;/strong&gt; in the realm of &lt;code class=&quot;highlighter-rouge&quot;&gt;Image Processing&lt;/code&gt;. This is an extremely interesting area I got to sample during my undergrad days, and I thought of making my second post from a memorable part of it. For the demonstrations I thought of  using sprites from one of my all time favorite pokemon games, &lt;a href=&quot;https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_Versions&quot; target=&quot;blank&quot;&gt;pokemon silver&lt;/a&gt; from Generation 2 which I played first :).&lt;/p&gt;
 
 &lt;h3 id=&quot;some-basicsskip-if-youre-not-new-to-image-processing&quot;&gt;Some Basics(&lt;a href=&quot;#ref1&quot;&gt;Skip&lt;/a&gt; if you’re not new to Image Processing)&lt;/h3&gt;
 
@@ -580,7 +672,7 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/images/rgb_seperated.png&quot; alt=&quot;rgb_seperated&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Now if you look closely at the character image it’s mostly red, therefore the red-channel has values closer to 255 which is why that channel looks brighter as opposed to the blue-channel which is very dark. Similarly for the background, the green-channel is th brightest image because the original background shows a forest.&lt;/p&gt;
+&lt;p&gt;Now if you look closely at the character image it’s mostly red, therefore the red-channel has values closer to 255 which is why that channel looks brighter as opposed to the blue-channel which is very dark. Similarly for the background, the green-channel is the brightest image because the original background shows a forest.&lt;/p&gt;
 
 &lt;h4 id=&quot;logical-operations-in-image-processing&quot;&gt;Logical operations in Image Processing&lt;/h4&gt;
 
