@@ -6,7 +6,7 @@ description: "post 7"
 keywords: "Proving, proof, correctness, algorithms, linear search, insertion sort, loop invariants"
 ---
 ![queen-of-hearts](https://i.pinimg.com/736x/2d/3f/e5/2d3fe59c74315f74a05b371f67486701.jpg){: height="400px"}
-Hello Everyone !! Hope everything is great, the fall break is around the corner so I'll be getting couple of days off from homework, so I thought of writing something interesting I learned in the Algorithms course I'm taking this semester. Imagine you have a deck of cards(**which could be incomplete**) in your hand all shuffled together, and someone asks you to find the `Queen of hearts` in it. So how would you go about it... There are two scenarios,
+Hello Everyone !! Hope everything is great, the new year is around the corner so I'll be getting couple of days off from work and university, so I thought of writing something interesting I learned in the Algorithms course I took the previous semester. Imagine you have a deck of cards(**which could be incomplete**) in your hand all shuffled together, and someone asks you to find the `Queen of hearts` in it. So how would you go about it... There are two scenarios,
 
 1. The **Queen of Hearts** is in the card deck
 2. The **Queen of Hearts** is not in the deck
@@ -85,13 +85,13 @@ The following section shows again how the loop invariant is maintained in the th
 ---
 
 |**I. Initialization:**
-Before the first iteration of the loop j=2 then subset of A in question would be a set with only one value. Therefore the loop invariant holds true since trivially A is trivially sorted|
+Before the first iteration of the loop j=2 then the subset of A in question would be a set with only one value. Therefore the loop invariant holds true since trivially A is sorted|
 |**II. Maintenance:**
 Assuming the loop invariant holds true for the (k-1)$$^{th}$$ iteration then the subset A[1 ... k-1] would be in sorted order. When j = k the while loop starting from line 4 finds the correct position for A[k] such that when swapping is completed A[1 ... k] would be in sorted order. Therefore the loop invariant is maintained from any k$$^{th}$$ iteration to a (k+1)$$^{th}$$ iteration|
 |**III. Termination:**
 At the end of the for loop j = length[A]+1 then the subset is the set itself, therefore according to the loop invariant the entire set itself would be in sorted order|
 
-So there you have it, two proofs of correctness for two different algorithms using the technique of _loop invariants_. You might have noticed that this technique heavily relies on the algorithms **loop**, what about algorithms without any kind of loop? well there are a bunch of ways to prove correctness of algorithms not just this; however thats a post for another day :). 
+So there you have it, two proofs of correctness for two different algorithms using the technique of _loop invariants_. You might have noticed that this technique heavily relies on the algorithms **loop**, what about algorithms without any kind of loop? well there are a bunch of ways to prove correctness of algorithms not just this; however thats a post for another day :).
 
 ##### So until next time,
 ##### Cheers!

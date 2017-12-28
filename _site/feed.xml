@@ -3,16 +3,16 @@
  <!-- <channel>
     <title>dinal</title>
     <description>Home</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 27 Dec 2017 21:19:01 -0500</pubDate>
-    <lastBuildDate>Wed, 27 Dec 2017 21:19:01 -0500</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 27 Dec 2017 21:28:00 -0500</pubDate>
+    <lastBuildDate>Wed, 27 Dec 2017 21:28:00 -0500</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>Proving correctness of Algorithms</title>
         <description>&lt;p&gt;&lt;img src=&quot;https://i.pinimg.com/736x/2d/3f/e5/2d3fe59c74315f74a05b371f67486701.jpg&quot; alt=&quot;queen-of-hearts&quot; height=&quot;400px&quot; /&gt;
-Hello Everyone !! Hope everything is great, the fall break is around the corner so I’ll be getting couple of days off from homework, so I thought of writing something interesting I learned in the Algorithms course I’m taking this semester. Imagine you have a deck of cards(&lt;strong&gt;which could be incomplete&lt;/strong&gt;) in your hand all shuffled together, and someone asks you to find the &lt;code class=&quot;highlighter-rouge&quot;&gt;Queen of hearts&lt;/code&gt; in it. So how would you go about it… There are two scenarios,&lt;/p&gt;
+Hello Everyone !! Hope everything is great, the new year is around the corner so I’ll be getting couple of days off from work and university, so I thought of writing something interesting I learned in the Algorithms course I took the previous semester. Imagine you have a deck of cards(&lt;strong&gt;which could be incomplete&lt;/strong&gt;) in your hand all shuffled together, and someone asks you to find the &lt;code class=&quot;highlighter-rouge&quot;&gt;Queen of hearts&lt;/code&gt; in it. So how would you go about it… There are two scenarios,&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;The &lt;strong&gt;Queen of Hearts&lt;/strong&gt; is in the card deck&lt;/li&gt;
@@ -138,7 +138,7 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
       &lt;td&gt;&lt;strong&gt;I. Initialization:&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Before the first iteration of the loop j=2 then subset of A in question would be a set with only one value. Therefore the loop invariant holds true since trivially A is trivially sorted&lt;/td&gt;
+      &lt;td&gt;Before the first iteration of the loop j=2 then the subset of A in question would be a set with only one value. Therefore the loop invariant holds true since trivially A is sorted&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;II. Maintenance:&lt;/strong&gt;&lt;/td&gt;
@@ -160,9 +160,9 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
-        <pubDate>Sun, 01 Oct 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
+        <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
+        <link>/2017/Proving-Correctness-of-Algorithms/</link>
+        <guid isPermaLink="true">/2017/Proving-Correctness-of-Algorithms/</guid>
         
         
       </item>
@@ -300,8 +300,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
+        <link>/2017/Computational-Physics-to-Computer-Science/</link>
+        <guid isPermaLink="true">/2017/Computational-Physics-to-Computer-Science/</guid>
         
         
       </item>
@@ -435,8 +435,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/hard-disks-2/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-2/</guid>
+        <link>/2017/hard-disks-2/</link>
+        <guid isPermaLink="true">/2017/hard-disks-2/</guid>
         
         
       </item>
@@ -692,8 +692,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/hard-disks-1/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-1/</guid>
+        <link>/2017/hard-disks-1/</link>
+        <guid isPermaLink="true">/2017/hard-disks-1/</guid>
         
         
       </item>
@@ -847,8 +847,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h4 id=&quot;cheers-&quot;&gt;Cheers !!&lt;/h4&gt;
 </description>
         <pubDate>Sun, 23 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/image-pokemon/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/image-pokemon/</guid>
+        <link>/2017/image-pokemon/</link>
+        <guid isPermaLink="true">/2017/image-pokemon/</guid>
         
         
       </item>
@@ -1159,8 +1159,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 </description>
         <pubDate>Sat, 15 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/serial-snake-robot/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/serial-snake-robot/</guid>
+        <link>/2017/serial-snake-robot/</link>
+        <guid isPermaLink="true">/2017/serial-snake-robot/</guid>
         
         
       </item>
@@ -1177,8 +1177,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;h4 id=&quot;cheers&quot;&gt;Cheers!&lt;/h4&gt;
 </description>
         <pubDate>Tue, 04 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/hello-world/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/hello-world/</guid>
+        <link>/2017/hello-world/</link>
+        <guid isPermaLink="true">/2017/hello-world/</guid>
         
         
       </item>
