@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 27 Dec 2017 13:21:05 -0500</pubDate>
-    <lastBuildDate>Wed, 27 Dec 2017 13:21:05 -0500</lastBuildDate>
+    <pubDate>Wed, 27 Dec 2017 21:19:01 -0500</pubDate>
+    <lastBuildDate>Wed, 27 Dec 2017 21:19:01 -0500</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -65,7 +65,7 @@ Hello Everyone !! Hope everything is great, the fall break is around the corner 
 At the start of each iteration of the for loop in line 1, the subset A[1 … i-1] would not have the value ‘v’ in it.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Based on this loop invariant the following three conditions can be shown to be true.&lt;/p&gt;
+&lt;p&gt;The following section shows how the loop invariant is maintained in the three stages of the algorithm, namely initiation, maintenance &amp;amp; termination.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -81,7 +81,7 @@ At the start of each iteration of the for loop in line 1, the subset A[1 … i-1
       &lt;td&gt;&lt;strong&gt;II. Maintenance:&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Assuming the subset A[1 … k-1] does not have the value v, from the comparison in line 2 the loop will transition from the &lt;script type=&quot;math/tex&quot;&gt;k^{th}&lt;/script&gt; iteration to a &lt;script type=&quot;math/tex&quot;&gt;(k+1)^{th}&lt;/script&gt; iteration only if v was not observed. (i.e : &lt;script type=&quot;math/tex&quot;&gt;A[k] \neq v&lt;/script&gt;) Therefore at the &lt;script type=&quot;math/tex&quot;&gt;(k+1)^{th}&lt;/script&gt; iteration the subset A[1 … k] wouldn’t have v in it. Which indicates that the loop invariant holds true from a &lt;script type=&quot;math/tex&quot;&gt;k^{th}&lt;/script&gt; iteration to a &lt;script type=&quot;math/tex&quot;&gt;(k+1)^{th}&lt;/script&gt; iteration)&lt;/td&gt;
+      &lt;td&gt;Assuming the subset A[1 … k-1] does not have the value v, from the comparison in line 2 the loop will transition from the &lt;script type=&quot;math/tex&quot;&gt;k^{th}&lt;/script&gt; iteration to a &lt;script type=&quot;math/tex&quot;&gt;(k+1)^{th}&lt;/script&gt; iteration only if v was not observed. (i.e : &lt;script type=&quot;math/tex&quot;&gt;A[k] \neq v&lt;/script&gt;) Therefore at the &lt;script type=&quot;math/tex&quot;&gt;(k+1)^{th}&lt;/script&gt; iteration the subset A[1 … k] wouldn’t have v in it. Which indicates that the loop invariant holds true from a &lt;script type=&quot;math/tex&quot;&gt;k^{th}&lt;/script&gt; iteration to a &lt;script type=&quot;math/tex&quot;&gt;(k+1)^{th}&lt;/script&gt; iteration&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;III. Termination:&lt;/strong&gt;&lt;/td&gt;
@@ -92,7 +92,7 @@ At the start of each iteration of the for loop in line 1, the subset A[1 … i-1
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;From these three conditions it’s clear that our algorithm is correct and it aligns to our intuitive guess as to why our card searching approach works as well. Now off to a slightly more different problem &lt;em&gt;insertion sort&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;From these three cases it’s clear that our algorithm is correct and it aligns to our intuitive guess as to why our card searching approach works as well. Now off to a slightly more different problem &lt;em&gt;insertion sort&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;2-insertion-sort&quot;&gt;&lt;a name=&quot;ref2&quot;&gt;2) insertion sort&lt;/a&gt;&lt;/h4&gt;
 
@@ -113,9 +113,49 @@ At the start of each iteration of the for loop in line 1, the subset A[1 … i-1
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;INSERTION-SORT(A):
+// indices of the set start with 1
+1)  for j=2 to length[A]
+2)    key = A[j]
+3)    i = j-1
+4)    while i &amp;gt; 0 and A[i] &amp;gt; key
+5)      A[i+1] = A[i]
+6)      i = i-1
+7)    A[i+1] = key
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Loop Invariant:&lt;/strong&gt;
+At the start of each iteration of the for loop of lines 1-7, the subset A[1 … j-1] would consist of the elements originally in A[1 … j-1], but in sorted order.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The following section shows again how the loop invariant is maintained in the three stages of the algorithm, namely initiation, maintenance &amp;amp; termination.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;I. Initialization:&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Before the first iteration of the loop j=2 then subset of A in question would be a set with only one value. Therefore the loop invariant holds true since trivially A is trivially sorted&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;II. Maintenance:&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Assuming the loop invariant holds true for the (k-1)&lt;script type=&quot;math/tex&quot;&gt;^{th}&lt;/script&gt; iteration then the subset A[1 … k-1] would be in sorted order. When j = k the while loop starting from line 4 finds the correct position for A[k] such that when swapping is completed A[1 … k] would be in sorted order. Therefore the loop invariant is maintained from any k&lt;script type=&quot;math/tex&quot;&gt;^{th}&lt;/script&gt; iteration to a (k+1)&lt;script type=&quot;math/tex&quot;&gt;^{th}&lt;/script&gt; iteration&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;III. Termination:&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;At the end of the for loop j = length[A]+1 then the subset is the set itself, therefore according to the loop invariant the entire set itself would be in sorted order&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;So there you have it, two proofs of correctness for two different algorithms using the technique of &lt;em&gt;loop invariants&lt;/em&gt;. You might have noticed that this technique heavily relies on the algorithms &lt;strong&gt;loop&lt;/strong&gt;, what about algorithms without any kind of loop? well there are a bunch of ways to prove correctness of algorithms not just this; however thats a post for another day :).&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
@@ -270,7 +310,7 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
         <title>Simulation of Hard Disks : Part 2</title>
         <description>&lt;p&gt;Hello Everyone !!! Hope you all had an amazing week, If you’re in college the new semester probably just started and I hope you’re first few weeks were awesome, I just started grad school and my week was pretty good :). Now moving on with my post, this will be a continuation from my previous post &lt;a href=&quot;https://dherath.github.io/2017/hard-disks-1/&quot; target=&quot;blank&quot;&gt;&lt;strong&gt;‘Simulation of Hard Disks - Part 1’&lt;/strong&gt;&lt;/a&gt; where I tackled this very same problem using &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Newtonian deterministic mechanics&lt;/code&gt;&lt;/strong&gt;. Ok, so if this is the first time you’re hearing the word &lt;em&gt;&lt;strong&gt;Hard disks&lt;/strong&gt;&lt;/em&gt; I do suggest reading my first post where I explain the terms and the rationale behind simulations of this sort.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://figures.boundless-cdn.com/9309/full/cg10c2-008.png&quot; alt=&quot;intro-image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://teachbesideme.com/wp-content/uploads/2015/02/solid-liquid-gas-1024x346.jpg&quot; alt=&quot;intro-image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In my last post I ended on a note that suggested the previous simulation technique has some limitations. So today I’ll start from there, the entire point of simulating hard disks is to predict the behavior of particle systems that we might find in the real world. However such systems have more than 4 particles, and in the previous technique we had to solve the &lt;strong&gt;equations of motion for the entire system for every step&lt;/strong&gt;. While this was possible for 4 particles it would be ridiculously time consuming for a system with 1,000,000s of particles. &lt;code class=&quot;highlighter-rouge&quot;&gt;That in itself is the flaw with this method&lt;/code&gt;. This exponential increase in computational complexity drove many scientists to find better ways of simulating hard disk problems.&lt;/p&gt;
 

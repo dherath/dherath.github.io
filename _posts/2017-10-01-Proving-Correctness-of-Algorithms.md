@@ -44,18 +44,18 @@ LINEAR-SEARCH(A,v):
 >**Loop Invariant:**
 At the start of each iteration of the for loop in line 1, the subset A[1 ... i-1] would not have the value 'v' in it.
 
-Based on this loop invariant the following three conditions can be shown to be true.
+The following section shows how the loop invariant is maintained in the three stages of the algorithm, namely initiation, maintenance & termination.
 
 ---
 
 |**I. Initialization:**
 Before the first iteration of the loop the subset of A in question would be an empty set. Therefore 'v' would not be in it. Then the loop invariant holds true trivially|
 |**II. Maintenance:**
-Assuming the subset A[1 ... k-1] does not have the value v, from the comparison in line 2 the loop will transition from the $$ k^{th} $$ iteration to a $$ (k+1)^{th} $$ iteration only if v was not observed. (i.e : $$ A[k] \neq v $$) Therefore at the $$ (k+1)^{th} $$ iteration the subset A[1 ... k] wouldn't have v in it. Which indicates that the loop invariant holds true from a $$k^{th}$$ iteration to a $$(k+1)^{th}$$ iteration)|
+Assuming the subset A[1 ... k-1] does not have the value v, from the comparison in line 2 the loop will transition from the $$ k^{th} $$ iteration to a $$ (k+1)^{th} $$ iteration only if v was not observed. (i.e : $$ A[k] \neq v $$) Therefore at the $$ (k+1)^{th} $$ iteration the subset A[1 ... k] wouldn't have v in it. Which indicates that the loop invariant holds true from a $$k^{th}$$ iteration to a $$(k+1)^{th}$$ iteration|
 |**III. Termination:**
 At the end of the for loop i = length[A]+1 then the subset would be the complete set 'A' itself. At which point provided 'v' was not found the loop terminates and returns NILL indicating that 'v' is not present within the set 'A'|
 
-From these three conditions it's clear that our algorithm is correct and it aligns to our intuitive guess as to why our card searching approach works as well. Now off to a slightly more different problem _insertion sort_.
+From these three cases it's clear that our algorithm is correct and it aligns to our intuitive guess as to why our card searching approach works as well. Now off to a slightly more different problem _insertion sort_.
 
 #### <a name="ref2">2) insertion sort</a>
 
@@ -67,12 +67,31 @@ Like any sorting algorithm, the objective of _insertion sort_ is to sort a given
 |**Output ->**|a permutation **A$$^/$$** with a sequence of numbers {$$ a^/_1, a^/_2, a^/_3,... a^/_N $$} where $$ a^/_i \leq a^/_{i+1}~~\forall~~i~\in~N $$|
 
 ````
-
-
+INSERTION-SORT(A):
+// indices of the set start with 1
+1)  for j=2 to length[A]
+2)    key = A[j]
+3)    i = j-1
+4)    while i > 0 and A[i] > key
+5)      A[i+1] = A[i]
+6)      i = i-1
+7)    A[i+1] = key
 ````
+>**Loop Invariant:**
+At the start of each iteration of the for loop of lines 1-7, the subset A[1 ... j-1] would consist of the elements originally in A[1 ... j-1], but in sorted order.
 
+The following section shows again how the loop invariant is maintained in the three stages of the algorithm, namely initiation, maintenance & termination.
 
+---
 
+|**I. Initialization:**
+Before the first iteration of the loop j=2 then subset of A in question would be a set with only one value. Therefore the loop invariant holds true since trivially A is trivially sorted|
+|**II. Maintenance:**
+Assuming the loop invariant holds true for the (k-1)$$^{th}$$ iteration then the subset A[1 ... k-1] would be in sorted order. When j = k the while loop starting from line 4 finds the correct position for A[k] such that when swapping is completed A[1 ... k] would be in sorted order. Therefore the loop invariant is maintained from any k$$^{th}$$ iteration to a (k+1)$$^{th}$$ iteration|
+|**III. Termination:**
+At the end of the for loop j = length[A]+1 then the subset is the set itself, therefore according to the loop invariant the entire set itself would be in sorted order|
+
+So there you have it, two proofs of correctness for two different algorithms using the technique of _loop invariants_. You might have noticed that this technique heavily relies on the algorithms **loop**, what about algorithms without any kind of loop? well there are a bunch of ways to prove correctness of algorithms not just this; however thats a post for another day :). 
 
 ##### So until next time,
 ##### Cheers!
