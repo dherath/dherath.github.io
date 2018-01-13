@@ -16,7 +16,7 @@ talk to me
 <a href="https://www.linkedin.com/in/jerome-dinal-herath-bba3b0148/" target="blank"><i class="fa fa-linkedin-square" style="font-size:19px;color:#2294bd"></i></a>
 or check out my recent work
 <a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a> 
-<a href="https://www.researchgate.net/profile/Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>. 
+<a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>. 
     
 
 ## Research Interests
