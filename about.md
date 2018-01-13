@@ -6,7 +6,7 @@ permalink: /about/
 
 <!--<div class="post-container">-->
   <!--<div class="post-image-1" align="right">-->
-  	<img src="/assets/img/image.jpg" style="width:270px;padding:30px;border-radius:48px;" align="right">
+  	<img src="/assets/img/image.jpg" style="width:290px;padding:30px;border-radius:48px;" align="right">
   <!-- </div> -->
 Hi! <i class="fa fa-smile-o" aria-hidden="true" style="font-size:19px;color:#2294bd"></i> I'm **Dinal Herath** a computer science PHD candidate at State University of New York (SUNY) Binghamton. I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics. _Click_ to follow my blog updates
 <a href="https://www.facebook.com/dinalHerath" target="_blank"><i class="fa fa-facebook-square" style="font-size:19px;color:#2294bd"></i></a>
