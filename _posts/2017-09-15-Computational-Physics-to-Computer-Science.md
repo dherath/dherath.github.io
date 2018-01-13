@@ -79,3 +79,6 @@ With all this said, I think I'll end my _pretty long_ post here. If you have any
 
 ##### So until next time,
 ##### Cheers!
+
+**Next: [Proving correctness of Algorithms](http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/)**                                                          
+**Prev: [Simulation of Hard Disks : Part 2](http://dinalherath.com/2017/hard-disks-2/)**

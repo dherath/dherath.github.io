@@ -95,3 +95,5 @@ So there you have it, two proofs of correctness for two different algorithms usi
 
 ##### So until next time,
 ##### Cheers!
+
+**Prev: [From Computational Physics to Computer Science](http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/)**

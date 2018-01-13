@@ -152,3 +152,6 @@ I know this post was a bit long, but this is a cool example of some basic image 
 
 ###### So until next time.
 #### Cheers !!
+
+**Next: [Simulation of Hard Disks : Part 1](http://dinalherath.com/2017/hard-disks-1/)**                                                          
+**Prev: [Simulation of a serial snake robot](http://dinalherath.com/2017/serial-snake-robot/)**

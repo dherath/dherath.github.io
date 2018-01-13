@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Jan 2018 19:23:44 -0500</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2018 19:23:44 -0500</lastBuildDate>
+    <pubDate>Fri, 12 Jan 2018 20:00:25 -0500</pubDate>
+    <lastBuildDate>Fri, 12 Jan 2018 20:00:25 -0500</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -159,6 +159,8 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
@@ -298,6 +300,9 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
@@ -433,6 +438,9 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;                                                     &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/hard-disks-2/</link>
@@ -690,6 +698,9 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;                                                         &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/image-pokemon/&quot;&gt;Combining video-game sprites using logical operations&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/hard-disks-1/</link>
@@ -845,6 +856,9 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 
 &lt;h6 id=&quot;so-until-next-time&quot;&gt;So until next time.&lt;/h6&gt;
 &lt;h4 id=&quot;cheers-&quot;&gt;Cheers !!&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-1/&quot;&gt;Simulation of Hard Disks : Part 1&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Jul 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/image-pokemon/</link>
@@ -1157,6 +1171,9 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 
 &lt;p&gt;So until next time,&lt;/p&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/image-pokemon/&quot;&gt;Combining video-game sprites using logical operations&lt;/a&gt;&lt;/strong&gt;                                                         &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hello-world/&quot;&gt;Hello world :)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Jul 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/serial-snake-robot/</link>
@@ -1175,6 +1192,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;p&gt;So there you have it, my first blog post :).  I guess thats a sufficient introduction about what my blog will be all about :) I hope you find the upcoming posts informative and enjoyable.&lt;/p&gt;
 
 &lt;h4 id=&quot;cheers&quot;&gt;Cheers!&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Jul 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/hello-world/</link>

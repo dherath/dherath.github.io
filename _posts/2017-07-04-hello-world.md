@@ -14,3 +14,5 @@ I’m a graduate from **University of Colombo with a specialization in Computati
 So there you have it, my first blog post :).  I guess thats a sufficient introduction about what my blog will be all about :) I hope you find the upcoming posts informative and enjoyable.
 
 #### Cheers!
+
+**Next: [Simulation of a serial snake robot](http://dinalherath.com/2017/serial-snake-robot/)**

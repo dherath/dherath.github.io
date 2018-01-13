@@ -227,3 +227,6 @@ If you'd like to work on this code or need this for some other project feel free
 
 So until next time,
 ##### Cheers!
+
+**Next: [Combining video-game sprites using logical operations](http://dinalherath.com/2017/image-pokemon/)**                                                           
+**Prev: [Hello world :)](http://dinalherath.com/2017/hello-world/)**
