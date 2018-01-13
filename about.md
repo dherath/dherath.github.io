@@ -6,13 +6,27 @@ permalink: /about/
 
 <!--<div class="post-container">-->
   <!--<div class="post-image-1" align="right">-->
-    <img src="/assets/img/image.jpg" style="width:270px;padding:30px;border-radius:48px;" align="right">
-  <!--</div>-->
-Hi! I'm **Dinal Herath** a computer science PHD candidate at State University of New York (SUNY) Binghamton. I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics.
+  	<img src="/assets/img/image.jpg" style="width:270px;padding:30px;border-radius:48px;" align="right">
+  <!-- </div> -->
+Hi! <i class="fa fa-smile-o" aria-hidden="true" style="font-size:19px;color:#2294bd"></i> I'm **Dinal Herath** a computer science PHD candidate at State University of New York (SUNY) Binghamton. I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics. _Click_ to follow my blog updates
+<a href="https://www.facebook.com/dinalHerath" target="_blank"><i class="fa fa-facebook-square" style="font-size:19px;color:#2294bd"></i></a>
+<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="fa fa-rss-square" style="font-size:19px;color:#2294bd"></i></a>,
+talk to me
+<a href="mailto:dinal.bing@gmail.com"><i class="fa fa-envelope" style="font-size:19px;color:#2294bd;"></i></a> 
+<a href="https://www.linkedin.com/in/jerome-dinal-herath-bba3b0148/" target="blank"><i class="fa fa-linkedin-square" style="font-size:19px;color:#2294bd"></i></a>
+or check out my recent work
+<a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a> 
+<a href="https://www.researchgate.net/profile/Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>. 
+    
 
 ## Research Interests
 
-My research work at SUNY Binghamton generally fall under the category of **Computer Networks** under the supervision of [Prof. Anand Seetharam](http://www.cs.binghamton.edu/~anand){:target="blank"} with emphesis on `wireless & information centric networks`, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
+My research work at SUNY Binghamton generally fall under the category of **Computer Networks** under the supervision of [Prof. Anand Seetharam](http://www.cs.binghamton.edu/~anand){:target="blank"} with emphesis on **`wireless & information centric networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
+
+<div class="contact-info" align="right">
+
+    
+</div>
 
 ## Education
 
