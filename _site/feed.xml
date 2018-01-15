@@ -3,11 +3,71 @@
  <!-- <channel>
     <title>dinal</title>
     <description>Home</description>
-    <link>http://dinalherath.com/</link>
-    <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Jan 2018 22:47:24 -0500</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2018 22:47:24 -0500</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 15 Jan 2018 16:49:29 -0500</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 16:49:29 -0500</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Markov Chains 101</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2018/Post_8_MarkovCHains/first_image.jpeg&quot; alt=&quot;markov-image&quot; height=&quot;300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hello Everyone!! in todays post I thought of writing an introduction for &lt;a href=&quot;https://en.wikipedia.org/wiki/Markov_chain&quot; target=&quot;blank&quot;&gt;Markov Chains&lt;/a&gt;. Simply put, Markov chains are used to model systems that change randomly where a &lt;em&gt;current state&lt;/em&gt; is only dependent on the &lt;em&gt;previous state&lt;/em&gt;.(&lt;em&gt;I’ll explain what states are in a  minute&lt;/em&gt;) In fact, its a pretty powerful technique used in fields ranging from &lt;strong&gt;computer networks&lt;/strong&gt; to &lt;strong&gt;statistical physics&lt;/strong&gt;. I’ll explain the basics of Markov chains using a simple example called the &lt;em&gt;pebble game&lt;/em&gt; as illustrated above.&lt;/p&gt;
+
+&lt;p&gt;Now imagine we have a 3x3 grid just like the image above, with the &lt;strong&gt;black dot&lt;/strong&gt; being a pebble. At each instance in time a person picks the pebble up and tries to throw to some other directly linked cell randomly.(Note that throwing the pebble to diagonal cells is not possible) The image below shows the three types of throws possible:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;config (a) :&lt;/code&gt;&lt;/strong&gt; The pebble is at the corner, So theres only two positions it can be thrown to.The pebble can’t be thrown up or to the left.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;config (b) :&lt;/code&gt;&lt;/strong&gt; The pebble has three possible cells to be thrown to.The pebble can’t be thrown to the left.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;config (c) :&lt;/code&gt;&lt;/strong&gt; The pebble can be thrown in all directions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2018/Post_8_MarkovCHains/second_image.jpeg&quot; alt=&quot;transitions&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So the question is, &lt;em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lets say at each time step someone picks the pebble and throws to an adjacent cell and keeps on doing it. After 10,000 iterations of the process where would the pebble likely be? OR whats the probability of some cell having the pebble, provided this was done for a long time?&lt;/code&gt;&lt;/em&gt; Now intuitively since there are 9 cells, and the person is going to keep on throwing the pebble in this space for a long time we can make a guess that the probability of finding this pebble in any cell is equally likely, i.e the probability will be &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{9}&lt;/script&gt;. This is actually the correct result, but there might be problems so complex that getting these sort of insights might not be as intuitive, and that’s where this technique truly shines.&lt;/p&gt;
+
+&lt;p&gt;There are two main steps in defining Markovian models, the 1st is to &lt;strong&gt;define the states&lt;/strong&gt; &amp;amp; the second is to &lt;strong&gt;populate whats called a transition matrix&lt;/strong&gt;. Both of which I’ll go through below.&lt;/p&gt;
+
+&lt;h3 id=&quot;states&quot;&gt;States&lt;/h3&gt;
+
+&lt;p&gt;Before diving into the technique itself, there are some things called &lt;code class=&quot;highlighter-rouge&quot;&gt;states&lt;/code&gt; that must be defined.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;States&lt;/strong&gt; refer to all the possible configurations of the system.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In our example, states refer to the cell position of the pebble at a given time instance. If you look at the figure again I’ve drawn an image with circles labeled &lt;strong&gt;A-I&lt;/strong&gt;, these labels refer to the different cell  locations the pebble could be in. Furthermore, I’ve also drawn arrows, these arrows represent the possible transitions from one state(cell) to another. That image corresponds to all the possible things that could happen in this system of ours, and by definition nothing beyond those transitions should occur.&lt;/p&gt;
+
+&lt;p&gt;Lets take the initial state &lt;strong&gt;A&lt;/strong&gt;, from this location if the pebble is to be thrown there are three possibilities,&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;A transition from A to B&lt;/li&gt;
+  &lt;li&gt;A transition from A to D&lt;/li&gt;
+  &lt;li&gt;No throw is possible up or to the left, therefore a transition from A to A&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Similarly, the image represents all transitions in all states whom fall under the basic configurations explained in &lt;strong&gt;(a), (b) &amp;amp; (c)&lt;/strong&gt;. Note that it’s impossible to throw the pebble from A to E or from A to F, so there is no arrow corresponding to that.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Figuring out the states of your problem is the hard part. Because there is not a set way in defining those, and it all comes down to how you see the problem. As you’ll see in the section below what comes after that is way more simpler.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;the-transition-matrix&quot;&gt;The transition matrix&lt;/h3&gt;
+
+&lt;p&gt;Now that we have our states defined, the second problem is the transitions.  It’s all nice that our figure has arrows pointing to what might happen next. But &lt;em&gt;which of those possibilities actually happen?&lt;/em&gt; The thing to remember here is our entire system evolves randomly with time. Any of the state transitions could  happen at some instance. Therefore &lt;strong&gt;the transitions aren’t deterministic rather they are probabilistic&lt;/strong&gt;. Meaning there is a probability value associated with each transition from one state to another.&lt;/p&gt;
+
+&lt;p&gt;Ok, now how do we get those probabilities. First of all since the throws are done randomly and independently of each other. &lt;strong&gt;config (c)&lt;/strong&gt; shows the best possible case where a pebble could be thrown in all four directions. Since any of these transitions is equally likely $$ P_{}&lt;/p&gt;
+
+&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
+&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 12 Jan 2018 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2018/Markov-Chains/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/Markov-Chains/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Proving correctness of Algorithms</title>
@@ -163,8 +223,8 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</guid>
+        <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
         
         
       </item>
@@ -305,8 +365,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</guid>
+        <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
         
         
       </item>
@@ -443,8 +503,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hard-disks-2/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-2/</guid>
+        <link>http://localhost:4000/2017/hard-disks-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-2/</guid>
         
         
       </item>
@@ -703,8 +763,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/image-pokemon/&quot;&gt;Combining video-game sprites using logical operations&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hard-disks-1/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-1/</guid>
+        <link>http://localhost:4000/2017/hard-disks-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-1/</guid>
         
         
       </item>
@@ -861,8 +921,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/image-pokemon/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/image-pokemon/</guid>
+        <link>http://localhost:4000/2017/image-pokemon/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/image-pokemon/</guid>
         
         
       </item>
@@ -1176,8 +1236,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hello-world/&quot;&gt;Hello world :)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/serial-snake-robot/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/serial-snake-robot/</guid>
+        <link>http://localhost:4000/2017/serial-snake-robot/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/serial-snake-robot/</guid>
         
         
       </item>
@@ -1196,8 +1256,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hello-world/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hello-world/</guid>
+        <link>http://localhost:4000/2017/hello-world/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hello-world/</guid>
         
         
       </item>
