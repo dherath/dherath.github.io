@@ -96,4 +96,5 @@ So there you have it, two proofs of correctness for two different algorithms usi
 ##### So until next time,
 ##### Cheers!
 
+**Next: [Markov Chains 101](http://dinalherath.com/2018/Markov-Chains/)**                                                          
 **Prev: [From Computational Physics to Computer Science](http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/)**

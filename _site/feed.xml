@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://dinalherath.com/</link>
     <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Jan 2018 22:30:09 -0500</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2018 22:30:09 -0500</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 22:32:32 -0500</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 22:32:32 -0500</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -278,7 +278,8 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
         <link>http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</link>
