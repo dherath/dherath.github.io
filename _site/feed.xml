@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Jan 2018 16:49:29 -0500</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2018 16:49:29 -0500</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 21:31:53 -0500</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 21:31:53 -0500</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -55,7 +55,65 @@
 
 &lt;p&gt;Now that we have our states defined, the second problem is the transitions.  It’s all nice that our figure has arrows pointing to what might happen next. But &lt;em&gt;which of those possibilities actually happen?&lt;/em&gt; The thing to remember here is our entire system evolves randomly with time. Any of the state transitions could  happen at some instance. Therefore &lt;strong&gt;the transitions aren’t deterministic rather they are probabilistic&lt;/strong&gt;. Meaning there is a probability value associated with each transition from one state to another.&lt;/p&gt;
 
-&lt;p&gt;Ok, now how do we get those probabilities. First of all since the throws are done randomly and independently of each other. &lt;strong&gt;config (c)&lt;/strong&gt; shows the best possible case where a pebble could be thrown in all four directions. Since any of these transitions is equally likely $$ P_{}&lt;/p&gt;
+&lt;p&gt;Ok, now how do we get those probabilities. First of all since the throws are done randomly and independently of each other. &lt;strong&gt;config (c)&lt;/strong&gt; shows the best possible case where a pebble could be thrown in all four directions. Since any of these transitions is equally likely, The probability of moving from state &lt;strong&gt;E&lt;/strong&gt; to either &lt;strong&gt;F, B, D, H&lt;/strong&gt; is &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{4}&lt;/script&gt; (&lt;script type=&quot;math/tex&quot;&gt;P_{EF} = P_{EB} = P_{ED} = P_{EH} = \frac{1}{4}&lt;/script&gt;). However, when considering &lt;strong&gt;configs (a) &amp;amp; (b)&lt;/strong&gt; the pebble cannot be thrown in all directions. Therefore the probabilities for those impossible throws gets added on to a &lt;em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;special transition probability&lt;/code&gt;&lt;/em&gt; namely &lt;script type=&quot;math/tex&quot;&gt;P_{AA},~P_{DD}&lt;/script&gt; and vice-versa.  According to this logic the probabilities for &lt;strong&gt;config (a) &amp;amp; (b)&lt;/strong&gt; would be &lt;script type=&quot;math/tex&quot;&gt;P_{AA}=\frac{1}{2},~P_{AB}=P_{AD}=\frac{1}{4}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;P_{DD} = P_{DA} = P_{DE} = P_{DG} = \frac{1}{4}&lt;/script&gt; respectively. All these probability values can be represented in matrix form, and that’s called a &lt;strong&gt;&lt;em&gt;transition matrix&lt;/em&gt;(&lt;script type=&quot;math/tex&quot;&gt;\mathbb{P}&lt;/script&gt;)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+\mathbb{P}=\begin{pmatrix}
+P_{AA} &amp;amp; P_{AB} &amp;amp; P_{AC} &amp;amp; P_{AD} &amp;amp; P_{AE} &amp;amp; P_{AF} &amp;amp; P_{AG} &amp;amp; P_{AH} &amp;amp; P_{AI} \\ 
+P_{BA} &amp;amp; P_{BB} &amp;amp; P_{BC} &amp;amp; P_{BD} &amp;amp; P_{BE} &amp;amp; P_{BF} &amp;amp; P_{BG} &amp;amp; P_{BH} &amp;amp; P_{BI} \\ 
+P_{CA} &amp;amp; P_{CB} &amp;amp; P_{CC} &amp;amp; P_{CD} &amp;amp; P_{CE} &amp;amp; P_{CF} &amp;amp; P_{CG} &amp;amp; P_{CH} &amp;amp; P_{CI} \\ 
+P_{DA} &amp;amp; P_{DB} &amp;amp; P_{DC} &amp;amp; P_{DD} &amp;amp; P_{DE} &amp;amp; P_{DF} &amp;amp; P_{DG} &amp;amp; P_{DH} &amp;amp; P_{DI} \\ 
+P_{EA} &amp;amp; P_{EB} &amp;amp; P_{EC} &amp;amp; P_{ED} &amp;amp; P_{EE} &amp;amp; P_{EF} &amp;amp; P_{EG} &amp;amp; P_{EH} &amp;amp; P_{EI} \\ 
+P_{FA} &amp;amp; P_{FB} &amp;amp; P_{FC} &amp;amp; P_{FD} &amp;amp; P_{FE} &amp;amp; P_{FF} &amp;amp; P_{FG} &amp;amp; P_{FH} &amp;amp; P_{FI} \\ 
+P_{GA} &amp;amp; P_{GB} &amp;amp; P_{GC} &amp;amp; P_{GD} &amp;amp; P_{GE} &amp;amp; P_{GF} &amp;amp; P_{GG} &amp;amp; P_{GH} &amp;amp; P_{GI} \\ 
+P_{HA} &amp;amp; P_{HB} &amp;amp; P_{HC} &amp;amp; P_{HD} &amp;amp; P_{HE} &amp;amp; P_{HF} &amp;amp; P_{HG} &amp;amp; P_{HH} &amp;amp; P_{HI} \\ 
+P_{IA} &amp;amp; P_{IB} &amp;amp; P_{IC} &amp;amp; P_{ID} &amp;amp; P_{IE} &amp;amp; P_{IF} &amp;amp; P_{IG} &amp;amp; P_{IH} &amp;amp; P_{II} \\ 
+\end{pmatrix}\\
+\end{equation}
+By substitution of values,
+\begin{equation}
+\mathbb{P}=\begin{pmatrix}
+\frac{1}{2} &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 
+\frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 
+0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{2} &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 
+\frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 \\ 
+0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 \\ 
+0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} \\ 
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{2} &amp;amp; \frac{1}{4} &amp;amp; 0 \\ 
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} \\ 
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{2} \\ 
+\end{pmatrix}
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;Note that the summation of probabilities at each row equals to 1 &amp;amp; for transitions that aren’t possible the value in the matrix is 0. Now that we have this matrix we can use it to calculate the probabilities of being in some state after a given set of iterations. lets consider &lt;script type=&quot;math/tex&quot;&gt;\alpha_{t}&lt;/script&gt; as the probability distribution of the pebble at time t. i.e &lt;script type=&quot;math/tex&quot;&gt;\alpha_{t} = (P_A,P_B,P_C,P_D,P_E,P_F,P_G,P_H,P_I)&lt;/script&gt;. Therefore at t=0, since the pebble is at state A, &lt;script type=&quot;math/tex&quot;&gt;\alpha_{t=0}=(1,0,0,0,0,0,0,0,0)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The following method is used to calculate the probability distribution at some t.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\alpha_{t} = \alpha_{t-1}.\mathbb{P}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Then for t=1,
+\begin{aligned}
+\alpha_{t=1} &amp;amp;= \alpha_{t=0}.
+\mathbb{P}
+\\
+\alpha_{t=1} &amp;amp;=(1~0~0~0~0~0~0~0~0).\begin{pmatrix}
+\frac{1}{2} &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 
+\frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 
+0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{2} &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 
+\frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 \\ 
+0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 \\ 
+0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} \\ 
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{2} &amp;amp; \frac{1}{4} &amp;amp; 0 \\ 
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{4} \\ 
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; 0 &amp;amp; \frac{1}{4} &amp;amp; \frac{1}{2} \\ 
+\end{pmatrix}
+\\
+\alpha_{t=1} &amp;amp;=(\frac{1}{2}~\frac{1}{4}~0~\frac{1}{4}~0~0~0~0~0)
+\end{aligned}&lt;/p&gt;
+
+&lt;p&gt;Similarly, this process can be carried out for any given number of steps. Now, what about our earlier guess of &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{9}&lt;/script&gt; . This value is called the &lt;strong&gt;steady state probability&lt;/strong&gt; value. By definition it’s the probability of being in a specific state provided that infinitely many iterations have taken place. The easiest way to obtain that is to convolve the equation above many times over OR simply computing a large power of &lt;script type=&quot;math/tex&quot;&gt;\mathbb{P}&lt;/script&gt;. Therefore simply &lt;script type=&quot;math/tex&quot;&gt;\mathbb{P}^{x\rightarrow\infty}=\frac{1}{9}&lt;/script&gt; for all the states. So there you go, a somewhat simple introduction to Markov Chains. If you want to learn more about this I highly recommend the book &lt;a href=&quot;https://www.amazon.com/Introduction-Probability-Models-Eleventh-Sheldon/dp/0124079482/ref=sr_1_1?s=books&amp;amp;ie=UTF8&amp;amp;qid=1516069838&amp;amp;sr=1-1&amp;amp;keywords=introduction+to+probability+models+ross&quot; target=&quot;black&quot;&gt;Introduction to Probability Models&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
