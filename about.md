@@ -32,7 +32,7 @@ My research work at SUNY Binghamton generally fall under the category of **Compu
 
 #### Conference
 
-- **J. Dinal Herath** and Anand Seetharam(2018).**Analyzing Opportunistic Request Routing in Wireless Cache Networks** **accepted** to IEEE International Conference on Communications(ICC) 2018.
+- **J. Dinal Herath** and Anand Seetharam(2018).**Analyzing Opportunistic Request Routing in Wireless Cache Networks**.**_Accepted_** to IEEE International Conference on Communications(ICC) 2018.
 
 - **J. Dinal Herath** and K. Jayananda(2017). [Simulation of Symmetric and Asymmetric movement gaits for Lateral Undulation in Serial Snake Robots](https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots){:target="blank"}. In: 2017 International Conference on Computational Modeling & Simulation (ICCMS-2017).
 
