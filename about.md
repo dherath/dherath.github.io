@@ -17,16 +17,10 @@ talk to me
 or check out my recent work
 <a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a> 
 <a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>. 
-    
 
 ## Research Interests
 
 My research work at SUNY Binghamton generally fall under the category of **Computer Networks** under the supervision of [Prof. Anand Seetharam](http://www.cs.binghamton.edu/~anand){:target="blank"} with emphesis on **`wireless & information centric networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
-
-<div class="contact-info" align="right">
-
-    
-</div>
 
 ## Education
 
@@ -38,9 +32,16 @@ My research work at SUNY Binghamton generally fall under the category of **Compu
 
 #### Conference
 
-- **Herath, D.** and Jayananda, K. (2017). [Simulation of Symmetric and Asymmetric movement gaits for Lateral Undulation in Serial Snake Robots](https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots){:target="blank"}. In: 2017 International Conference on Computational Modeling & Simulation (ICCMS-2017).
+- **J. Dinal Herath** and Anand Seetharam(2018).**Analyzing Opportunistic Request Routing in Wireless Cache Networks** **accepted** to IEEE International Conference on Communications(ICC) 2018.
 
-- **Herath, D.** and Jayananda, K. (2016). [Comparison of Serial and Parallel Snake Robots for Lateral Undulation Motion Using Gazebo](https://www.researchgate.net/publication/311716282_Comparison_of_Serial_and_Parallel_Snake_Robots_for_Lateral_Undulation_Motion_using_Gazebo){:target="blank"}. In: 2016 IEEE International Conference on Information and Automation for Sustainability (ICIAfS-2016). (DOI - 10.1109/ICIAFS.2016.7946540)
+- **J. Dinal Herath** and K. Jayananda(2017). [Simulation of Symmetric and Asymmetric movement gaits for Lateral Undulation in Serial Snake Robots](https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots){:target="blank"}. In: 2017 International Conference on Computational Modeling & Simulation (ICCMS-2017).
+
+- **J. Dinal Herath** and K. Jayananda(2016). [Comparison of Serial and Parallel Snake Robots for Lateral Undulation Motion Using Gazebo](https://www.researchgate.net/publication/311716282_Comparison_of_Serial_and_Parallel_Snake_Robots_for_Lateral_Undulation_Motion_using_Gazebo){:target="blank"}. In: 2016 IEEE International Conference on Information and Automation for Sustainability (ICIAfS-2016). (DOI - 10.1109/ICIAFS.2016.7946540)
+
+#### Thesis
+
+- **J. Dinal Herath** [Simulation of a Snake Robot](https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot){:target="blank"} 2016.(Undergraduate Thesis: University of Colombo, Sri Lanka)
+
 
 ## Awards and Scholarships
 
