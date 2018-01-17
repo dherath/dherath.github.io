@@ -8,7 +8,7 @@ permalink: /about/
   <!--<div class="post-image-1" align="right">-->
   	<img src="/assets/img/image.jpg" style="width:290px;padding:30px;border-radius:48px;" align="right">
   <!-- </div> -->
-Hi! <i class="fa fa-smile-o" aria-hidden="true" style="font-size:19px;color:#2294bd"></i> I'm **Dinal Herath** a computer science PHD candidate at State University of New York (SUNY) Binghamton. I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics. _Click_ to follow my blog updates
+Hi! <i class="fa fa-smile-o" aria-hidden="true" style="font-size:19px;color:#2294bd"></i> I'm **Jerome Dinal Herath**(_ everyone calls me Dinal_). I'm a computer science PHD candidate at State University of New York (SUNY) Binghamton. I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics. _Click_ to follow my blog updates
 <a href="https://www.facebook.com/dinalHerath" target="_blank"><i class="fa fa-facebook-square" style="font-size:19px;color:#2294bd"></i></a>
 <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="fa fa-rss-square" style="font-size:19px;color:#2294bd"></i></a>,
 talk to me
@@ -21,12 +21,6 @@ or check out my recent work
 ## Research Interests
 
 My research work at SUNY Binghamton generally fall under the category of **Computer Networks** under the supervision of [Prof. Anand Seetharam](http://www.cs.binghamton.edu/~anand){:target="blank"} with emphesis on **`wireless & information centric networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
-
-## Education
-
-- Bsc. Special Degree in Computational Physics(Hons), University of Colombo, Sri Lanka.(2016)
-- Professional Postgraduate Diploma in Marketing, Chartered Institute of Marketing(CIM),United Kindom(UK).(2015)
-- st.Joseph's College, Colombo-10, Sri Lanka.(2011)
 
 ## Publications
 
@@ -42,6 +36,11 @@ My research work at SUNY Binghamton generally fall under the category of **Compu
 
 - **J. Dinal Herath** [Simulation of a Snake Robot](https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot){:target="blank"} 2016.(Undergraduate Thesis: University of Colombo, Sri Lanka)
 
+## Education
+
+- Bsc. Special Degree in Computational Physics(Hons), University of Colombo, Sri Lanka.(2016)
+- Professional Postgraduate Diploma in Marketing, Chartered Institute of Marketing(CIM),United Kindom(UK).(2015)
+- st.Joseph's College, Colombo-10, Sri Lanka.(2011)
 
 ## Awards and Scholarships
 
