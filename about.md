@@ -38,9 +38,10 @@ My research work at SUNY Binghamton generally fall under the category of **Compu
 
 ## Education
 
-- Bsc. Special Degree in Computational Physics(First Class Hons), University of Colombo, Sri Lanka.(2016)
-- Professional Postgraduate Diploma in Marketing, Chartered Institute of Marketing(CIM),United Kindom(UK).(2015)
-- st.Joseph's College, Colombo-10, Sri Lanka.(2011)
+- PhD. Computer Science, State University of New York(SUNY) Binghamton.(2017-Present)[[link]](https://www.binghamton.edu){:target="blank"}
+- Bsc. Special Degree in Computational Physics(First Class Hons), University of Colombo, Sri Lanka.(2016)[[link]](http://www.cmb.ac.lk){:target="blank"}
+- Professional Postgraduate Diploma in Marketing, Chartered Institute of Marketing(CIM),United Kindom(UK).(2015)[[link]](https://www.cim.co.uk){:target="blank"}
+- St.Joseph's College, Colombo-10, Sri Lanka.(2011)[[link]](http://www.stjosephscollege.lk){:target="blank"}
 
 ## Awards and Scholarships
 
