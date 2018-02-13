@@ -20,7 +20,7 @@ or check out my recent work
 
 ## Research Interests
 
-My research work at SUNY Binghamton generally fall under the category of **Computer Networks** under the supervision of [Prof. Anand Seetharam](http://www.cs.binghamton.edu/~anand){:target="blank"} with emphesis on **`wireless & information centric networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
+I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} at SUNY Binghamton & my research here focuses on **Computer Networks** under the supervision of [Prof. Anand Seetharam](http://www.cs.binghamton.edu/~anand){:target="blank"} with emphesis on **`wireless & information centric networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
 
 ## Publications
 
