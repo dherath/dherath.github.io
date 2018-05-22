@@ -26,7 +26,7 @@ I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ 
 
 #### Conference
 
-- **J. Dinal Herath** and Anand Seetharam(2018).**Analyzing Opportunistic Request Routing in Wireless Cache Networks**. **_`Accepted`_** to IEEE International Conference on Communications(ICC) 2018.
+- **J. Dinal Herath** and Anand Seetharam(2018). [Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/pdfs/2018/icc2018.pdf). In: IEEE International Conference on Communications(ICC) 2018.
 
 - **J. Dinal Herath** and K. Jayananda(2017). [Simulation of Symmetric and Asymmetric movement gaits for Lateral Undulation in Serial Snake Robots](https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots){:target="blank"}. In: 2017 International Conference on Computational Modeling & Simulation (ICCMS-2017).
 
@@ -39,8 +39,8 @@ I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ 
 ## Education
 
 - PhD. Computer Science, State University of New York(SUNY) Binghamton.(2017-Present)[[link]](https://www.binghamton.edu){:target="blank"}
-- Bsc. Special Degree in Computational Physics(First Class Hons), University of Colombo, Sri Lanka.(2016)[[link]](http://www.cmb.ac.lk){:target="blank"}
-- Professional Postgraduate Diploma in Marketing, Chartered Institute of Marketing(CIM),United Kindom(UK).(2015)[[link]](https://www.cim.co.uk){:target="blank"}
+- Bsc. Special Degree in Computational Physics(First Class Hons), University of Colombo, Sri Lanka.(2017)[[link]](http://www.cmb.ac.lk){:target="blank"}
+- Professional Postgraduate Diploma in Marketing, Chartered Institute of Marketing(CIM),United Kingdom(UK).(2015)[[link]](https://www.cim.co.uk){:target="blank"}
 - St.Joseph's College, Colombo-10, Sri Lanka.(2011)[[link]](http://www.stjosephscollege.lk){:target="blank"}
 
 ## Awards and Scholarships
@@ -50,5 +50,5 @@ I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ 
 
 ## Experience
 
-- Graduate Assitant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2017,Spring-2018)
+- Graduate Assistant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2017,Spring-2018)
 - Temporary Lecturer, Department of Physics, University of Colombo.(2017)
