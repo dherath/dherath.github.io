@@ -103,6 +103,6 @@ Similarly, this process can be carried out for any given number of steps. Now, w
 ##### So until next time,
 ##### Cheers!
 
-**Next: [Finding cycles in linked lists]({{site.url}}/2017/Linked-Lists/)** 
+**Next: [Finding cycles in linked lists]({{site.url}}/2018/Linked-Lists/)** 
 
 **Prev: [Proving correctness of Algorithms](http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/)**

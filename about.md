@@ -45,6 +45,7 @@ I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ 
 
 ## Awards and Scholarships
 
+- NSF Student travel grant to attend International Conference on Communications (ICC-2018).
 - Dr. Sarath Gunapala Gold Medal for Computational Physics (2016).
 - MIND (Munasinghe Institute for Development) scholarship (2015-2016).[{www.mindlanka.org}](http://www.mindlanka.org/past.cfm?page=aa){:target="blank"}
 
