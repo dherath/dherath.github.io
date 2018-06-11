@@ -1,12 +1,19 @@
 ---
 layout: post
-title: "Markov Chains 101"
+title: "Finding cycles in linked lists"
 comments: false
-description: "post 8"
-keywords: "Markov, Chains, pebble, game, chains, chain,introduction"
+description: "post 9"
+keywords: "Cycles, Linked lists, identify, algorithm"
 ---
 
+
+
+
 ![markov-image](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2018/Post_8_MarkovCHains/first_image.jpeg){:height="300px"}
+
+
+
+
 
 Hello Everyone!! in todays post I thought of writing an introduction for [Markov Chains](https://en.wikipedia.org/wiki/Markov_chain){:target="blank"}. Simply put, Markov chains are used to model systems that change randomly where a _current state_ is only dependent on the _previous state_.(_I'll explain what states are in a  minute_) In fact, its a pretty powerful technique used in fields ranging from **computer networks** to **statistical physics**. I'll explain the basics of Markov chains using a simple example called the _pebble game_ as illustrated above.
 
@@ -103,6 +110,4 @@ Similarly, this process can be carried out for any given number of steps. Now, w
 ##### So until next time,
 ##### Cheers!
 
-**Next: [Finding cycles in linked lists]({{site.url}}/2017/Linked-Lists/)** 
-
-**Prev: [Proving correctness of Algorithms](http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/)**
+**Prev: [Markov Chains 101]({{site.url}}/2018/Markov-Chains/)** 
