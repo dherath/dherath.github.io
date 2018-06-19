@@ -5,23 +5,23 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Jun 2018 21:54:07 -0400</pubDate>
-    <lastBuildDate>Sun, 10 Jun 2018 21:54:07 -0400</lastBuildDate>
+    <pubDate>Tue, 19 Jun 2018 11:00:43 -0400</pubDate>
+    <lastBuildDate>Tue, 19 Jun 2018 11:00:43 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
         <title>Finding cycles in linked lists</title>
         <description>&lt;p&gt;&lt;img src=&quot;https://github.com/dherath/WebsiteMaterial/blob/master/2018/Post_9_LinkedList/linked_list_org.jpeg?raw=true&quot; alt=&quot;cycled-linked-list&quot; height=&quot;200px&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hello Everyone!! Hope everyone is doing ok, the previous semester ws pretty hectic so didn’t really have time to write anything up. But now I’m back &lt;i class=&quot;fa fa-smile-o&quot; style=&quot;font-size:20px;&quot;&gt;&lt;/i&gt; and in todays post I thought of writing something interesting I learned in a course and something that apperntly ends up being a common interview question for coding/developing positions–that is to &lt;em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;identify cycles in a linked list&quot;&lt;/code&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Hello Everyone!! Hope everyone is doing ok, the previous semester was pretty hectic with research work and courses so didn’t really have time to write anything up. But now I’m back &lt;i class=&quot;fa fa-smile-o&quot; style=&quot;font-size:20px;&quot;&gt;&lt;/i&gt; and in todays post I thought of writing something interesting I learned in a course and something that apparently ends up being a common interview question for coding/developing positions–that is to &lt;em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;identify cycles in a linked list&quot;&lt;/code&gt;&lt;/em&gt;. If you are from a CS background, you’d probably know that job interviews usually consist of a couple of problems which test a candidates knowledge on algorithms &amp;amp; data structures. If you just stumbled across my post and if you had no idea of this, well now you know.&lt;/p&gt;
 
-&lt;p&gt;If you are from a CS background, you’d probably know that job interviews usually consist of a couple of problems which test a candidates knowledge on algorithms &amp;amp; data structures. If you just stumbled across my post and if you had no idea of this, well now you know. So basically they give you a problem and you have to come up with a solution in the form of an algorithm. An algorithm is sort of like the steps one would follow to find an acceptable solution to a problem. For big companies like Google, Facebook, Amazon the interview process is pretty long. I have a friend who got in to Facebook, and he had to face 11 interviews &lt;strong&gt;:O&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Anyways, without digressing anymore back to my topic–linked lists are a basic data structure like arrays which are used quite alot. Now if you have no idea about linked lists and you want to learn about them then this is not the post for that. There are lots of youtube tutorials and posts online which would probably give you a fair understanding on how this data structure works. Click on these links to learn more about linked lists - &lt;a href=&quot;https://www.youtube.com/watch?v=NobHlGUjV3g&quot;&gt;[youtube]&lt;/a&gt;, &lt;a href=&quot;https://www.geeksforgeeks.org/linked-list-set-1-introduction/&quot;&gt;[weblink]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Anyways, without digressing anymore back to my topic–linked lists are a basic data structure like arrays which are used quite a lot. Now if you have no idea about linked lists and you want to learn about them then this is not the post for that. There are lots of youtube tutorials and posts online which would probably give you a fair understanding on how this data structure works. Click on these links to learn more about linked lists - &lt;a href=&quot;https://www.youtube.com/watch?v=NobHlGUjV3g&quot;&gt;[youtube]&lt;/a&gt;, &lt;a href=&quot;https://www.geeksforgeeks.org/linked-list-set-1-introduction/&quot;&gt;[weblink]&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;the-problem--a-cyclic-linked-list&quot;&gt;The problem : a cyclic linked list&lt;/h3&gt;
 
-&lt;p&gt;Ok, now to our problem at hand. I’m assuming you know how a link list works, so basically as depicted above each link would have some storage capability to store data and a pointer to the next link which is the arrow. The follwing are the basic &lt;strong&gt;C&lt;/strong&gt; decalarations for a Node (link) and the linked list.&lt;/p&gt;
+&lt;p&gt;Now to our problem at hand. I’m assuming you know how a link list works, so basically as depicted above each link would have some storage capability to store data and a pointer to the next link which is the arrow. So if you look at the image above, the linked list starts from the red link at the left end and moves to the right. If you follow through the connectivity of this linked list starting form the red links shown in the image above you would notice that the traversal itself would never stop. Because the green pointer (&lt;em&gt;the arrow&lt;/em&gt;) of the list would point again to the blue link which in-turn points back to the green links.&lt;/p&gt;
+
+&lt;p&gt;This would be a nightmare in real code because the code will run in an infinite loop. And the worst part is its caused because of the connectivity of the underlining data structure and not an issue with the core programing logic, so figuring it out could be tricky also.  But as it turns out there is a simple algorithm that can check if there are any cycles in a linked list.&lt;/p&gt;
 
 &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// definition for a Node in a link list
 &lt;/span&gt;
@@ -39,7 +39,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Linkedlist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;If you follow through the connectivity of this linked list starting form the red links shown in the image above you would notice that the traversal itself would never stop. Because the green portiion of the list would point again to the blue link which in-turn points back to the green links. This would be a nightmare in real code because the code will run in an infinite loop. And the worst part is its caused because of the connectivity of the underlining data structure and not an issue with the core programing logic, so figuring it out could be tricky also.  But as it turns out there is a simple algorithm that can check if there are any cycles in a linked list.&lt;/p&gt;
+&lt;p&gt;Lets consider the above basic &lt;strong&gt;C&lt;/strong&gt; declarations for a Node (link) and the linked list. I’ll be explaining the working algorithm using a &lt;strong&gt;C&lt;/strong&gt; skeleton code so I’m again assuming you have some working knowledge of &lt;strong&gt;C&lt;/strong&gt; and pointers. If you don’t know much about this, think of &lt;code class=&quot;highlighter-rouge&quot;&gt;Node&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Linkedlist&lt;/code&gt; as two classes where the linked list has a reference to its &lt;em&gt;head&lt;/em&gt; (i.e. its starting location) and each &lt;em&gt;Node&lt;/em&gt; has a reference to the data and the Node connected to it.&lt;/p&gt;
 
 &lt;h3 id=&quot;cycle-detection-algorithm&quot;&gt;Cycle detection algorithm&lt;/h3&gt;
 
@@ -57,6 +57,7 @@
 	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The algorithm itself isn’t pretty long right? But how does this work? I’ll explain that next.&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
@@ -179,9 +180,8 @@ By substitution of values,
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 15 Jan 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2018/Markov-Chains/</link>

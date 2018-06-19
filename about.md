@@ -12,15 +12,15 @@ Hi! <i class="fa fa-smile-o" aria-hidden="true" style="font-size:19px;color:#229
 <a href="https://www.facebook.com/dinalHerath" target="_blank"><i class="fa fa-facebook-square" style="font-size:19px;color:#2294bd"></i></a>
 <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="fa fa-rss-square" style="font-size:19px;color:#2294bd"></i></a>,
 talk to me
-<a href="mailto:dinal.bing@gmail.com"><i class="fa fa-envelope" style="font-size:19px;color:#2294bd;"></i></a> 
+<a href="mailto:dinal.bing@gmail.com"><i class="fa fa-envelope" style="font-size:19px;color:#2294bd;"></i></a>
 <a href="https://www.linkedin.com/in/jerome-dinal-herath-bba3b0148/" target="blank"><i class="fa fa-linkedin-square" style="font-size:19px;color:#2294bd"></i></a>
 or check out my recent work
-<a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a> 
-<a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>. 
+<a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a>
+<a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>.
 
 ## Research Interests
 
-I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ SUNY Binghamton & my research here generally falls under the catogory of **Computer Networks** with emphesis on **`wireless & information centric networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
+I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ SUNY Binghamton & my research here generally falls under the category of **Computer Networks** with emphasis on **`wireless networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
 
 ## Publications
 
@@ -38,18 +38,20 @@ I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ 
 
 ## Education
 
-- PhD. Computer Science, State University of New York(SUNY) Binghamton.(2017-Present)[[link]](https://www.binghamton.edu){:target="blank"}
+- PhD. Computer Science, State University of New York(SUNY) Binghamton.(Fall 2017-Present)[[link]](https://www.binghamton.edu){:target="blank"}
 - Bsc. Special Degree in Computational Physics(First Class Hons), University of Colombo, Sri Lanka.(2017)[[link]](http://www.cmb.ac.lk){:target="blank"}
 - Professional Postgraduate Diploma in Marketing, Chartered Institute of Marketing(CIM),United Kingdom(UK).(2015)[[link]](https://www.cim.co.uk){:target="blank"}
-- St.Joseph's College, Colombo-10, Sri Lanka.(2011)[[link]](http://www.stjosephscollege.lk){:target="blank"}
+- St. Joseph's College, Colombo-10, Sri Lanka.(2011)[[link]](http://www.stjosephscollege.lk){:target="blank"}
 
 ## Awards and Scholarships
 
+- Student travel grant to attend ACM/IEEE Symposium on Architectures for Networking and Communications (ANCS-2018).
 - NSF Student travel grant to attend International Conference on Communications (ICC-2018).
-- Dr. Sarath Gunapala Gold Medal for Computational Physics (2016).
+- Dr. Sarath Gunapala Gold Medal for Computational Physics (2017).
 - MIND (Munasinghe Institute for Development) scholarship (2015-2016).[{www.mindlanka.org}](http://www.mindlanka.org/past.cfm?page=aa){:target="blank"}
 
 ## Experience
 
-- Graduate Assistant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2017,Spring-2018)
+- Graduate Research Assistant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2017, Spring-2018, Summer-2018)
 - Temporary Lecturer, Department of Physics, University of Colombo.(2017)
+- Assistant Head Prefect, St. Joseph's college, Colombo-10, Sri Lanka. (2011-2012)
