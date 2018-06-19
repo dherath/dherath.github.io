@@ -62,12 +62,13 @@ Lets work this out for the linked list drawn above, I will name each node with a
 
 | **timestep** | **pointer s**| **pointer f1** | **pointer f2**|
 | **Initially**| 1 (head)| 1 (head)| 2|
-| **step 1** | 2 | 3 | 5 |
-| **step 2** | 3 | 5 | 7 |
-| **step 3** | 4 | 7 | 3 |
-| **step 4** | **5** | 3 | **5** |
+| **step 1** | 2 | 3 | 4 |
+| **step 2** | 3 | 5 | 6 |
+| **step 3** | 4 | 7 | 8 |
+| **step 4** | 5 | 3 | 4 |
+| **step 5** | **`6`** | 5 | **`6`** |
 
-At step 4 **`f2 == s`** which means there is a cycle. So there you go, a simple algorithm to identify cycles in linked lists.
+At step 5 **`f2 == s`** which means there is a cycle. So there you go, a simple algorithm to identify cycles in linked lists.
 
 ##### So until next time,
 ##### Cheers!
