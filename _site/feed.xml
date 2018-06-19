@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Jun 2018 11:17:10 -0400</pubDate>
-    <lastBuildDate>Tue, 19 Jun 2018 11:17:10 -0400</lastBuildDate>
+    <pubDate>Tue, 19 Jun 2018 11:50:35 -0400</pubDate>
+    <lastBuildDate>Tue, 19 Jun 2018 11:50:35 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -57,7 +57,54 @@
 	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The algorithm itself isn’t pretty long right? But how does this work? I’ll explain that next.&lt;/p&gt;
+&lt;p&gt;The algorithm itself isn’t pretty long right? But how does this work? I’ll explain that next. First of all the algorithm checks if &lt;code class=&quot;highlighter-rouge&quot;&gt;l-&amp;gt;head == NULL&lt;/code&gt; which indicates if the linked list is empty or not, if it’s empty then it returns &lt;strong&gt;0&lt;/strong&gt; meaning there is no cycle. The algorithm works on the three pointers &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;s, f1 and f2&lt;/code&gt;&lt;/strong&gt; which means &lt;em&gt;start, fast1 and fast2&lt;/em&gt;. These pointers reference some &lt;strong&gt;node&lt;/strong&gt; in the link list. Initially both the pointers of &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;s and f1&lt;/code&gt;&lt;/strong&gt; point to the head of the linked list while &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;f2&lt;/code&gt;&lt;/strong&gt; refers to the node right after the head. The idea is very simple, at every instance of the while loop the pointers &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;f1, f2&lt;/code&gt;&lt;/strong&gt; are moved forward in the list by two positions while the pointer &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt;&lt;/strong&gt; is moved by one position. (&lt;em&gt;Now you might notice the reason ‘f1,f2’ are named fast is because these pointers traverse the list faster than ‘s’&lt;/em&gt;) Given there is a cycle then at some point &lt;code class=&quot;highlighter-rouge&quot;&gt;f1 == s OR f2 == s&lt;/code&gt; then the algorithm returns &lt;strong&gt;1&lt;/strong&gt; else if any of the pointers finish traversing the list it returns &lt;strong&gt;0&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lets work this out for the linked list drawn above, I will name each node with a number from 1-8 where the first red node to the left is 1 and the final green node 8. In the table below I’ll show the position of the pointers at each step of the while loop.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/dherath/WebsiteMaterial/blob/master/2018/Post_9_LinkedList/linked_list_numbered.jpeg?raw=true&quot; alt=&quot;cycled-linked-list&quot; height=&quot;150px&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;timestep&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;pointer s&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;pointer f1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;pointer f2&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Initially&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;1 (head)&lt;/td&gt;
+      &lt;td&gt;1 (head)&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;step 1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;step 2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;step 3&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;step 4&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;At step 4 &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;f2 == s&lt;/code&gt;&lt;/strong&gt; which means there is a cycle. So there you go, a simple algorithm to identify cycles in linked lists.&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
