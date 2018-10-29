@@ -6,11 +6,7 @@ permalink: /about/
 
 <!--<div class="post-container">-->
   <!--<div class="post-image-1" align="right">-->
-<<<<<<< HEAD
-  	<img src="/assets/img/image.jpg" style="width:290px;padding:30px;border-radius:50px;" align="right">
-=======
 <img src="/assets/img/image.jpg" style="width:240px;padding:20px;border-radius:38px;" align="right">
->>>>>>> post_10
   <!-- </div> -->
 Hi! <i class="fa fa-smile-o" aria-hidden="true" style="font-size:19px;color:#2294bd"></i> I'm **Jerome Dinal Herath**(_everyone calls me Dinal_). I'm a computer science PHD candidate at State University of New York (SUNY) Binghamton. I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics. _Click_ to follow my blog updates
 <a href="https://www.facebook.com/dinalHerath" target="_blank"><i class="fa fa-facebook-square" style="font-size:19px;color:#2294bd"></i></a>
@@ -21,8 +17,6 @@ talk to me
 or check out my recent work
 <a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a>
 <a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>.
-<h5><a href="{{site.url}}/dinal_cv.pdf"><span style="background-color: #f7f7f7;color:#3885B5">[Curriculum Vitae]</span></a></h5>
-
 
 <h3><a href="{{site.url}}/dinal_cv.pdf"><span style="background-color: #f7f7f7;color:#3885B5">[Curriculum Vitae]</span></a></h3>
 
