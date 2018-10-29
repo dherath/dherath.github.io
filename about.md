@@ -6,7 +6,11 @@ permalink: /about/
 
 <!--<div class="post-container">-->
   <!--<div class="post-image-1" align="right">-->
+<<<<<<< HEAD
   	<img src="/assets/img/image.jpg" style="width:290px;padding:30px;border-radius:50px;" align="right">
+=======
+<img src="/assets/img/image.jpg" style="width:240px;padding:20px;border-radius:38px;" align="right">
+>>>>>>> post_10
   <!-- </div> -->
 Hi! <i class="fa fa-smile-o" aria-hidden="true" style="font-size:19px;color:#2294bd"></i> I'm **Jerome Dinal Herath**(_everyone calls me Dinal_). I'm a computer science PHD candidate at State University of New York (SUNY) Binghamton. I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics. _Click_ to follow my blog updates
 <a href="https://www.facebook.com/dinalHerath" target="_blank"><i class="fa fa-facebook-square" style="font-size:19px;color:#2294bd"></i></a>
@@ -19,13 +23,16 @@ or check out my recent work
 <a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>.
 <h5><a href="{{site.url}}/dinal_cv.pdf"><span style="background-color: #f7f7f7;color:#3885B5">[Curriculum Vitae]</span></a></h5>
 
-## Research Interests
 
-I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ SUNY Binghamton & my research here generally falls under the category of **Computer Networks** with emphasis on **`wireless networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
+<h3><a href="{{site.url}}/dinal_cv.pdf"><span style="background-color: #f7f7f7;color:#3885B5">[Curriculum Vitae]</span></a></h3>
 
-## Publications
+<!--## Research-->
 
-#### Conference
+<!--I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ SUNY Binghamton & my research here generally falls under the category of **Computer Networks** with emphasis on **`wireless networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
+
+<!--## Publications -->
+
+#### Publications
 
 - **J. Dinal Herath** and Anand Seetharam (2018). [Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/papers/2018ICC.pdf). In: IEEE International Conference on Communications(ICC) 2018. [[code]](https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing) [[project]](https://www.researchgate.net/project/Models-for-Opportunistic-Request-Routing-in-Cache-Networks)
 
@@ -53,6 +60,7 @@ I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ 
 
 ## Experience
 
+- Graduate Teaching Assistant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2018)
 - Graduate Research Assistant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2017, Spring-2018, Summer-2018)
 - Temporary Lecturer, Department of Physics, University of Colombo.(2017)
 - Assistant Head Prefect, St. Joseph's college, Colombo-10, Sri Lanka. (2011-2012)
