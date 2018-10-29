@@ -5,13 +5,15 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Aug 2018 12:29:28 -0400</pubDate>
-    <lastBuildDate>Fri, 17 Aug 2018 12:29:28 -0400</lastBuildDate>
+    <pubDate>Fri, 17 Aug 2018 12:40:26 -0400</pubDate>
+    <lastBuildDate>Fri, 17 Aug 2018 12:40:26 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
         <title>Adding git support to terminal</title>
-        <description>&lt;p&gt;Hello Everyone!! Hope everything is going great. In today’s post I thought of writing a simple post on how to add &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to the terminal. So basically, I’ll first start off with a bit of an into on what is &lt;strong&gt;git&lt;/strong&gt;. If you do a lot of coding in your day to day life, whether it be in your school, research or work–something that you’d probably agree with me is that debugging code is what takes most of your time. This is where &lt;strong&gt;git&lt;/strong&gt; comes in, to put it simply &lt;strong&gt;git&lt;/strong&gt; is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2018/post_10_git/welcome_image.jpeg&quot; alt=&quot;git-terminal&quot; height=&quot;400px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hello Everyone!! Hope everything is going great. In today’s post I thought of writing a simple post on how to add &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to the terminal. So basically, I’ll first start off with a bit of an into on what is &lt;strong&gt;git&lt;/strong&gt;. If you do a lot of coding in your day to day life, whether it be in your school, research or work–something that you’d probably agree with me is that debugging code is what takes most of your time. This is where &lt;strong&gt;git&lt;/strong&gt; comes in, to put it simply &lt;strong&gt;git&lt;/strong&gt; is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.&lt;/p&gt;
 
 &lt;h3 id=&quot;what-can-git-do&quot;&gt;What can git do?&lt;/h3&gt;
 

@@ -6,6 +6,9 @@ description: "post 10"
 keywords: "git, github, terminal, support"
 ---
 
+![git-terminal](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2018/post_10_git/welcome_image.jpeg){:height="400px"}
+
+
 Hello Everyone!! Hope everything is going great. In today's post I thought of writing a simple post on how to add `git` support to the terminal. So basically, I'll first start off with a bit of an into on what is **git**. If you do a lot of coding in your day to day life, whether it be in your school, research or work--something that you'd probably agree with me is that debugging code is what takes most of your time. This is where **git** comes in, to put it simply **git** is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.
 
 ### What can git do?
