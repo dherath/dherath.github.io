@@ -16,7 +16,7 @@ Once you start working on big projects with potentially thousands of lines of co
 If you are someone who is already familiar with `git`, and you only want to know how get this working then read on, the steps are quite easy. As you can see in the image above, if you follow the steps I mention in this post, you can view helpful git debugging information in the terminal itself. This includes, the current git branch, an indication to whether a change was made or commited and so on. In this image you can see some text in green right next to my name in the prompt. This green text is what Im talking about.
 
 
-In today's post I thought writing a simple post on how to add `git` support to the terminal. So basically, I'll first start off with a bit of an into on what is **git**. If you do a lot of coding in your day to day life, whether it be in your school, research or work--something that you'd probably agree with me is that debugging code is what takes most of your time. This is where **git** comes in, to put it simply **git** is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.
+<!-- In today's post I thought writing a simple post on how to add `git` support to the terminal. So basically, I'll first start off with a bit of an into on what is **git**. If you do a lot of coding in your day to day life, whether it be in your school, research or work--something that you'd probably agree with me is that debugging code is what takes most of your time. This is where **git** comes in, to put it simply **git** is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.
 
 ### What can git do?
 
@@ -28,7 +28,7 @@ To be clear, my post wont be an introduction to **git**, well because there are 
 
 If your reading this part of my post, then I'm assuming you have some familiarity with git. if you use some development environment like Eclipse, then its possible to have some indication of what branch your on, or if there are some changes that you have not commited and so on. But if you use the terminal then that sort of support is not in-built so it can get a bit annoying sometimes.
 
-But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code.
+But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. -->
 
 
 

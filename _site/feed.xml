@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Dec 2018 19:00:08 -0500</pubDate>
-    <lastBuildDate>Mon, 03 Dec 2018 19:00:08 -0500</lastBuildDate>
+    <pubDate>Mon, 03 Dec 2018 19:02:23 -0500</pubDate>
+    <lastBuildDate>Mon, 03 Dec 2018 19:02:23 -0500</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -22,19 +22,19 @@
 
 &lt;p&gt;If you are someone who is already familiar with &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;, and you only want to know how get this working then read on, the steps are quite easy. As you can see in the image above, if you follow the steps I mention in this post, you can view helpful git debugging information in the terminal itself. This includes, the current git branch, an indication to whether a change was made or commited and so on. In this image you can see some text in green right next to my name in the prompt. This green text is what Im talking about.&lt;/p&gt;
 
-&lt;p&gt;In today’s post I thought writing a simple post on how to add &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to the terminal. So basically, I’ll first start off with a bit of an into on what is &lt;strong&gt;git&lt;/strong&gt;. If you do a lot of coding in your day to day life, whether it be in your school, research or work–something that you’d probably agree with me is that debugging code is what takes most of your time. This is where &lt;strong&gt;git&lt;/strong&gt; comes in, to put it simply &lt;strong&gt;git&lt;/strong&gt; is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.&lt;/p&gt;
+&lt;!-- In today's post I thought writing a simple post on how to add `git` support to the terminal. So basically, I'll first start off with a bit of an into on what is **git**. If you do a lot of coding in your day to day life, whether it be in your school, research or work--something that you'd probably agree with me is that debugging code is what takes most of your time. This is where **git** comes in, to put it simply **git** is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.
 
-&lt;h3 id=&quot;what-can-git-do&quot;&gt;What can git do?&lt;/h3&gt;
+### What can git do?
 
-&lt;p&gt;I sort of try to think of as keeping save points in a game, so like before we go battle the final boss usually its a good idea to save up. I use git sort of like that, when I know that my code is in some working state before I add anything else, I save or &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt; it’s state. So that if I mess up a future version of the code (which usually happens a lot) then I can roll back my code to a past working version. The best part is its not like maintaining folder structure that has folders like &lt;code class=&quot;highlighter-rouge&quot;&gt;backup OR backup_of_backup/&lt;/code&gt; and so on. Which I admit before using git I did myself. Another cool thing about git is, lets say you have two ideas you could potentially implement to solve the same problem, then it’s possible to create whats called &lt;code class=&quot;highlighter-rouge&quot;&gt;branches&lt;/code&gt; so that you can work on both those versions at the same time. Later on you can integrate what works best to the actual &lt;strong&gt;main&lt;/strong&gt; code base. In a nutshell, these are some of the features in &lt;strong&gt;git&lt;/strong&gt; that I use most of the time.&lt;/p&gt;
+I sort of try to think of as keeping save points in a game, so like before we go battle the final boss usually its a good idea to save up. I use git sort of like that, when I know that my code is in some working state before I add anything else, I save or `commit` it's state. So that if I mess up a future version of the code (which usually happens a lot) then I can roll back my code to a past working version. The best part is its not like maintaining folder structure that has folders like `backup OR backup_of_backup/` and so on. Which I admit before using git I did myself. Another cool thing about git is, lets say you have two ideas you could potentially implement to solve the same problem, then it's possible to create whats called `branches` so that you can work on both those versions at the same time. Later on you can integrate what works best to the actual **main** code base. In a nutshell, these are some of the features in **git** that I use most of the time.
 
-&lt;p&gt;To be clear, my post wont be an introduction to &lt;strong&gt;git&lt;/strong&gt;, well because there are lots of online tutorials that could probably do a better job than me like this online course on &lt;a href=&quot;https://www.udacity.com/course/how-to-use-git-and-github--ud775&quot; target=&quot;blank&quot;&gt;udacity&lt;/a&gt;. It’s a free course, and what I’ll be presenting today is something I learnt from there.&lt;/p&gt;
+To be clear, my post wont be an introduction to **git**, well because there are lots of online tutorials that could probably do a better job than me like this online course on [udacity](https://www.udacity.com/course/how-to-use-git-and-github--ud775){:target=&quot;blank&quot;}. It's a free course, and what I'll be presenting today is something I learnt from there.
 
-&lt;h3 id=&quot;adding-git-support&quot;&gt;Adding git support&lt;/h3&gt;
+### Adding git support
 
-&lt;p&gt;If your reading this part of my post, then I’m assuming you have some familiarity with git. if you use some development environment like Eclipse, then its possible to have some indication of what branch your on, or if there are some changes that you have not commited and so on. But if you use the terminal then that sort of support is not in-built so it can get a bit annoying sometimes.&lt;/p&gt;
+If your reading this part of my post, then I'm assuming you have some familiarity with git. if you use some development environment like Eclipse, then its possible to have some indication of what branch your on, or if there are some changes that you have not commited and so on. But if you use the terminal then that sort of support is not in-built so it can get a bit annoying sometimes.
 
-&lt;p&gt;But fear no more, in this post I’ll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn’t my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code.&lt;/p&gt;
+But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. --&gt;
 
 &lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
