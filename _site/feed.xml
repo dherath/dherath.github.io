@@ -3,11 +3,47 @@
  <!-- <channel>
     <title>dinal</title>
     <description>Home</description>
-    <link>http://dinalherath.com/</link>
-    <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Nov 2018 12:58:29 -0500</pubDate>
-    <lastBuildDate>Mon, 12 Nov 2018 12:58:29 -0500</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 03 Dec 2018 19:00:08 -0500</pubDate>
+    <lastBuildDate>Mon, 03 Dec 2018 19:00:08 -0500</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>Adding git support to terminal</title>
+        <description>&lt;p&gt;Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to a terminal. This post is more of a &lt;strong&gt;‘How to?’&lt;/strong&gt; post, and not really an introduction to &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;. So if you have no idea what &lt;strong&gt;git&lt;/strong&gt; is all about and you program alot, then I think you should really consider learing it, and heres why…&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;In a nutshell, git is a version control system that programmers use to keep track of their code.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Once you start working on big projects with potentially thousands of lines of code, it becomes quite unbearable to keep track of every change one would make. Specially when one small change could potentially break the entire program. By using &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; one is able to keep versions of the same code before any significant modification, so if something bad happens and the code breaks its always possible to roll back and re-try changing the code starting off from a &lt;strong&gt;correct&lt;/strong&gt; version. I actually learned about git not more than a year ago and it really is a life saver. I learned about git from an online free course provided by Udacity. Click &lt;a href=&quot;https://www.udacity.com/course/how-to-use-git-and-github--ud775&quot;&gt;here&lt;/a&gt; to check this course out. In fact, the neat trick about adding git support to terminal is also something I picked from there.&lt;/p&gt;
+
+&lt;p&gt;If you are someone who is already familiar with &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;, and you only want to know how get this working then read on, the steps are quite easy. As you can see in the image above, if you follow the steps I mention in this post, you can view helpful git debugging information in the terminal itself. This includes, the current git branch, an indication to whether a change was made or commited and so on. In this image you can see some text in green right next to my name in the prompt. This green text is what Im talking about.&lt;/p&gt;
+
+&lt;p&gt;In today’s post I thought writing a simple post on how to add &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to the terminal. So basically, I’ll first start off with a bit of an into on what is &lt;strong&gt;git&lt;/strong&gt;. If you do a lot of coding in your day to day life, whether it be in your school, research or work–something that you’d probably agree with me is that debugging code is what takes most of your time. This is where &lt;strong&gt;git&lt;/strong&gt; comes in, to put it simply &lt;strong&gt;git&lt;/strong&gt; is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-can-git-do&quot;&gt;What can git do?&lt;/h3&gt;
+
+&lt;p&gt;I sort of try to think of as keeping save points in a game, so like before we go battle the final boss usually its a good idea to save up. I use git sort of like that, when I know that my code is in some working state before I add anything else, I save or &lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt; it’s state. So that if I mess up a future version of the code (which usually happens a lot) then I can roll back my code to a past working version. The best part is its not like maintaining folder structure that has folders like &lt;code class=&quot;highlighter-rouge&quot;&gt;backup OR backup_of_backup/&lt;/code&gt; and so on. Which I admit before using git I did myself. Another cool thing about git is, lets say you have two ideas you could potentially implement to solve the same problem, then it’s possible to create whats called &lt;code class=&quot;highlighter-rouge&quot;&gt;branches&lt;/code&gt; so that you can work on both those versions at the same time. Later on you can integrate what works best to the actual &lt;strong&gt;main&lt;/strong&gt; code base. In a nutshell, these are some of the features in &lt;strong&gt;git&lt;/strong&gt; that I use most of the time.&lt;/p&gt;
+
+&lt;p&gt;To be clear, my post wont be an introduction to &lt;strong&gt;git&lt;/strong&gt;, well because there are lots of online tutorials that could probably do a better job than me like this online course on &lt;a href=&quot;https://www.udacity.com/course/how-to-use-git-and-github--ud775&quot; target=&quot;blank&quot;&gt;udacity&lt;/a&gt;. It’s a free course, and what I’ll be presenting today is something I learnt from there.&lt;/p&gt;
+
+&lt;h3 id=&quot;adding-git-support&quot;&gt;Adding git support&lt;/h3&gt;
+
+&lt;p&gt;If your reading this part of my post, then I’m assuming you have some familiarity with git. if you use some development environment like Eclipse, then its possible to have some indication of what branch your on, or if there are some changes that you have not commited and so on. But if you use the terminal then that sort of support is not in-built so it can get a bit annoying sometimes.&lt;/p&gt;
+
+&lt;p&gt;But fear no more, in this post I’ll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn’t my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 17 Oct 2018 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2018/git-support/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/git-support/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Finding cycles in linked lists</title>
@@ -115,13 +151,13 @@
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;!--**Next: [Adding git support to terminal](http://dinalherath.com/2018/git-support/)**--&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;!--**Next: [Adding git support to terminal](http://localhost:4000/2018/git-support/)**--&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 19 May 2018 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2018/Linked-Lists/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/Linked-Lists/</guid>
+        <link>http://localhost:4000/2018/Linked-Lists/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/Linked-Lists/</guid>
         
         
       </item>
@@ -235,12 +271,12 @@ By substitution of values,
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 15 Jan 2018 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2018/Markov-Chains/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/Markov-Chains/</guid>
+        <link>http://localhost:4000/2018/Markov-Chains/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/Markov-Chains/</guid>
         
         
       </item>
@@ -400,8 +436,8 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</guid>
+        <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
         
         
       </item>
@@ -542,8 +578,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</guid>
+        <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
         
         
       </item>
@@ -680,8 +716,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-1/&quot;&gt;Simulation of Hard Disks : Part 1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hard-disks-2/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-2/</guid>
+        <link>http://localhost:4000/2017/hard-disks-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-2/</guid>
         
         
       </item>
@@ -940,8 +976,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/image-pokemon/&quot;&gt;Combining video-game sprites using logical operations&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hard-disks-1/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-1/</guid>
+        <link>http://localhost:4000/2017/hard-disks-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-1/</guid>
         
         
       </item>
@@ -1098,8 +1134,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/image-pokemon/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/image-pokemon/</guid>
+        <link>http://localhost:4000/2017/image-pokemon/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/image-pokemon/</guid>
         
         
       </item>
@@ -1413,8 +1449,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hello-world/&quot;&gt;Hello world :)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/serial-snake-robot/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/serial-snake-robot/</guid>
+        <link>http://localhost:4000/2017/serial-snake-robot/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/serial-snake-robot/</guid>
         
         
       </item>
@@ -1433,8 +1469,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hello-world/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hello-world/</guid>
+        <link>http://localhost:4000/2017/hello-world/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hello-world/</guid>
         
         
       </item>
