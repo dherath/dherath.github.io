@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Adding git support to terminal"
+title: "Adding git support to Terminal"
 comments: false
 description: "post 10"
 keywords: "git, github, terminal, support"

@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Dec 2018 21:06:53 -0500</pubDate>
-    <lastBuildDate>Sun, 23 Dec 2018 21:06:53 -0500</lastBuildDate>
+    <pubDate>Sun, 23 Dec 2018 21:12:22 -0500</pubDate>
+    <lastBuildDate>Sun, 23 Dec 2018 21:12:22 -0500</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -16,7 +16,7 @@
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Dec 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2018/time-series-prediction/</link>
@@ -26,7 +26,7 @@
       </item>
     
       <item>
-        <title>Adding git support to terminal</title>
+        <title>Adding git support to Terminal</title>
         <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2018/post_10/github_helper.jpeg?raw=true&quot; alt=&quot;github_helper&quot; height=&quot;400px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to a terminal. This post is more of a &lt;strong&gt;‘How to?’&lt;/strong&gt; post, and not really an introduction to &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;. So if you have no idea what &lt;strong&gt;git&lt;/strong&gt; is all about and you program alot, then I think you should really consider learing it, and heres why…&lt;/p&gt;
@@ -229,7 +229,7 @@ But fear no more, in this post I'll be going through three easy steps on how to 
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 19 May 2018 00:00:00 -0400</pubDate>

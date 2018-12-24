@@ -13,4 +13,4 @@ keywords: "time series, prediction, RNN, LSTM, GRU, recurrent, neural, networks,
 ##### So until next time,
 ##### Cheers!
 
-**Prev: [Finding cycles in linked lists]({{site.url}}/2018/git-support/)**
+**Prev: [Adding git support to Terminal]({{site.url}}/2018/git-support/)**
