@@ -35,8 +35,8 @@ So as you can see, this automatic notifications inside the terminal itself reall
 
 #### Steps if Mac 
 
-1. Download this [file](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash) into your home directory and name it as **`bash-completion.bash`**.
-2. Download this [file](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh) into your home directory and name it as **`bash-prompt.bash`**.
+1. Download this [file](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash) into your home directory and name it as **`git-completion.bash`**.
+2. Download this [file](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh) into your home directory and name it as **`git-prompt.bash`**.
 3. In your home directory if there is a file called `.bash_profile`, then copy the contents of the code below into it. If not then create a new file called `.bash_profile` and copy this code into it. (_Note that these colors work best when the background is white or a light color, You can change the color scheme to your taste_)
 
 ```sh
