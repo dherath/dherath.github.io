@@ -73,7 +73,8 @@ At step 5 **`f2 == s`** which means there is a cycle. So there you go, a simple 
 ##### So until next time,
 ##### Cheers!
 
-**Prev: [Markov Chains 101]({{site.url}}/2018/Markov-Chains/)** \\
-**Next: [Adding git support to terminal]({{site.url}}/2018/git-support/)**
+**Next: [Adding git support to terminal]({{site.url}}/2018/git-support/)** \\
+**Prev: [Markov Chains 101]({{site.url}}/2018/Markov-Chains/)**
+
 
 
