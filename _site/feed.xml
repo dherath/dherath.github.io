@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Dec 2018 19:30:21 -0500</pubDate>
-    <lastBuildDate>Sun, 23 Dec 2018 19:30:21 -0500</lastBuildDate>
+    <pubDate>Sun, 23 Dec 2018 20:34:14 -0500</pubDate>
+    <lastBuildDate>Sun, 23 Dec 2018 20:34:14 -0500</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -20,9 +20,69 @@
 
 &lt;p&gt;Once you start working on big projects with potentially thousands of lines of code, it becomes quite unbearable to keep track of every change one would make. Specially when one small change could potentially break the entire program. By using &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; one is able to keep versions of the same code before any significant modification, so if something bad happens and the code breaks its always possible to roll back and re-try changing the code starting off from a &lt;strong&gt;correct&lt;/strong&gt; version. I actually learned about git not more than a year ago and it really is a life saver. I learned about git from an online free course provided by Udacity. Click &lt;a href=&quot;https://www.udacity.com/course/how-to-use-git-and-github--ud775&quot;&gt;here&lt;/a&gt; to check this course out. In fact, the neat trick about adding git support to terminal is also something I picked from there.&lt;/p&gt;
 
-&lt;p&gt;If you are someone who is already familiar with &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;, and you only want to know how get this working then read on, the steps are quite easy. As you can see in the image above, if you follow the steps I mention in this post, you can view helpful git debugging information in the terminal itself. This includes, the current git branch, an indication to whether a change was made or commited and so on. In this image you can see some text in green right next to my name in the prompt. This green text is what Im talking about.&lt;/p&gt;
+&lt;p&gt;If you are someone who is already familiar with &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;, and you only want to know how get this working then read on. But before all of that, you might wonder…&lt;/p&gt;
 
-&lt;!-- In today's post I thought writing a simple post on how to add `git` support to the terminal. So basically, I'll first start off with a bit of an into on what is **git**. If you do a lot of coding in your day to day life, whether it be in your school, research or work--something that you'd probably agree with me is that debugging code is what takes most of your time. This is where **git** comes in, to put it simply **git** is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.
+&lt;h4 id=&quot;what-kind-of-features-will-this-add&quot;&gt;“What kind of features will this add?”&lt;/h4&gt;
+
+&lt;p&gt;As you can see in the image above, if you follow the steps I mention in this post, you can view helpful git debugging information in the terminal itself as shown in the image above, which shows the status of my github repo for this website. This includes,&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;1. The current git branch&lt;/code&gt;:&lt;/strong&gt;The git branch you’re checked in is shown in green inside parenthisis. In my case, I’m checked into a branch for this post called &lt;strong&gt;post_10&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;2. Un-commited/added changes&lt;/code&gt;:&lt;/strong&gt;If there is any change that is not commited or added, it will be shown as a &lt;em&gt;green&lt;/em&gt; &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;&lt;/strong&gt; symbol right next to the branch name. In my case, the &lt;em&gt;feed.xml&lt;/em&gt; file is modified and not commited, so there is a asterix shown.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;3. Changes added but not commited&lt;/code&gt;:&lt;/strong&gt;
+Symilar to the above case, if there are any changes that are &lt;em&gt;added&lt;/em&gt; but not commited its shown as a &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt;&lt;/strong&gt; symbol. In my example, after adding the changes with &lt;code class=&quot;highlighter-rouge&quot;&gt;git add --all&lt;/code&gt; the symbol changes from * to +.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;4. Merge status&lt;/code&gt;:&lt;/strong&gt;
+After pulling from a branch, if a merge is required then an additional text as &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;| MERGE&lt;/code&gt;&lt;/strong&gt; will show right next to the branch name.&lt;/p&gt;
+
+&lt;p&gt;So as you can see, this automatic notifications inside the terminal itself really helps out when you code. Now there are two methods of adding this functionality to you’re terminal, depending on wether you are using a &lt;em&gt;mac&lt;/em&gt; or some &lt;em&gt;linux&lt;/em&gt; destribution.&lt;/p&gt;
+
+&lt;h4 id=&quot;steps-if-mac&quot;&gt;Steps if Mac&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Download this &lt;a href=&quot;https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash&quot;&gt;file&lt;/a&gt; into your home directory and name it as &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bash-completion.bash&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Download this &lt;a href=&quot;https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh&quot;&gt;file&lt;/a&gt; into your home directory and name it as &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bash-prompt.bash&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;In your home directory if there is a file called &lt;code class=&quot;highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt;, then copy the contents of the code below into it. If not then create a new file called &lt;code class=&quot;highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt; and copy this code into it. (&lt;em&gt;Note that these colors work best when the background is white or a light color, You can change the color scheme to your taste&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Enable tab completion&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/git-completion.bash
+
+&lt;span class=&quot;c&quot;&gt;# colors for the notifications&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;33[0;32m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;33[0;34m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;purple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;33[0;35m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;33[0m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+ 
+&lt;span class=&quot;c&quot;&gt;# Change command prompt&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/git-prompt.sh
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWDIRTYSTATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$purple&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\u&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$green&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;(__git_ps1)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$blue&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\W&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ $reset&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;steps-if-linux-destribution&quot;&gt;Steps if Linux Destribution&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If you are working on a linux destribution, then there is only one change that is required. First of all follow steps 1 and 2 as is. Afterwards, copy the above code snippet (&lt;em&gt;after changing the color scheme if needed&lt;/em&gt;) into a file called &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt;(not &lt;em&gt;.bash_profile&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After all these steps are complete, then restart a new terminal and this should start working. Hope this makes it easy when working with git repositories.&lt;/p&gt;
+
+&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
+&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--+ **the current git branch**: The git branch you're checked in is shown in green inside parenthisis. In my case, I'm checked into a branch for this post called **post_10**.
++ **un-commited changes**: If there is any change that is not commited or added, it will be shown as a _green_ **`*`**(asterix) symbol right next to the branch name. In my case, the _feed.xml_ file is modified and not commited, so there is a asterix shown.
++ **changes added but not commited**: Symilar to the above case, if there are any changes that are _added_ but not commited its shown as a **`+`** symbol. In my example, after adding the changes with `git add --all` the symbol changes from * to +.
++ **merge status**: After pulling from a branch, if a merge is required then an additional text as **`| MERGE`** will show right next to the branch name.
+
+&lt;!--the current git branch, an indication to whether a change was made or commited and so on. In this image you can see some text in green right next to my name in the prompt. This green text is what Im talking about.
+
+
+ In today's post I thought writing a simple post on how to add `git` support to the terminal. So basically, I'll first start off with a bit of an into on what is **git**. If you do a lot of coding in your day to day life, whether it be in your school, research or work--something that you'd probably agree with me is that debugging code is what takes most of your time. This is where **git** comes in, to put it simply **git** is a version control system and what it does is, it enables us to have keep track of our code base in separate versions.
 
 ### What can git do?
 
@@ -35,8 +95,6 @@ To be clear, my post wont be an introduction to **git**, well because there are 
 If your reading this part of my post, then I'm assuming you have some familiarity with git. if you use some development environment like Eclipse, then its possible to have some indication of what branch your on, or if there are some changes that you have not commited and so on. But if you use the terminal then that sort of support is not in-built so it can get a bit annoying sometimes.
 
 But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. --&gt;
-
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 17 Oct 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2018/git-support/</link>
@@ -152,7 +210,7 @@ But fear no more, in this post I'll be going through three easy steps on how to 
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;!--**Next: [Adding git support to terminal](http://localhost:4000/2018/git-support/)**--&gt;&lt;/p&gt;
+&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 19 May 2018 00:00:00 -0400</pubDate>
