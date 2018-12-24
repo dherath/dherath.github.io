@@ -6,6 +6,8 @@ description: "post 10"
 keywords: "git, github, terminal, support"
 ---
 
+![github_helper]({{site.url}}/material/2018/post_10/github_helper.jpeg?raw=true){:height="400px"}
+
 Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding `git` support to a terminal. This post is more of a **'How to?'** post, and not really an introduction to `git`. So if you have no idea what **git** is all about and you program alot, then I think you should really consider learing it, and heres why... 
 
 >

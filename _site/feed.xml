@@ -5,13 +5,15 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Dec 2018 20:38:50 -0500</pubDate>
-    <lastBuildDate>Sun, 23 Dec 2018 20:38:50 -0500</lastBuildDate>
+    <pubDate>Sun, 23 Dec 2018 20:43:17 -0500</pubDate>
+    <lastBuildDate>Sun, 23 Dec 2018 20:43:17 -0500</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
         <title>Adding git support to terminal</title>
-        <description>&lt;p&gt;Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to a terminal. This post is more of a &lt;strong&gt;‘How to?’&lt;/strong&gt; post, and not really an introduction to &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;. So if you have no idea what &lt;strong&gt;git&lt;/strong&gt; is all about and you program alot, then I think you should really consider learing it, and heres why…&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2018/post_10/github_helper.jpeg?raw=true&quot; alt=&quot;github_helper&quot; height=&quot;400px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to a terminal. This post is more of a &lt;strong&gt;‘How to?’&lt;/strong&gt; post, and not really an introduction to &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;. So if you have no idea what &lt;strong&gt;git&lt;/strong&gt; is all about and you program alot, then I think you should really consider learing it, and heres why…&lt;/p&gt;
 
 &lt;blockquote&gt;
 
