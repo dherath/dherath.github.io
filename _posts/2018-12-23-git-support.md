@@ -64,8 +64,8 @@ After all these steps are complete, then restart a new terminal and this should 
 ##### So until next time,
 ##### Cheers!
 
-**Prev: [Finding cycles in linked lists]({{site.url}}/2018/Linked-Lists/)** \\
-**Next: [Time series prediction with Recurrent Neural Networks]({{site.url}}/2018/time-series-prediction/)**
+**Next: [Time series prediction with Recurrent Neural Networks]({{site.url}}/2018/time-series-prediction/)** \\
+**Prev: [Finding cycles in linked lists]({{site.url}}/2018/Linked-Lists/)**
 
 
 <!--+ **the current git branch**: The git branch you're checked in is shown in green inside parenthisis. In my case, I'm checked into a branch for this post called **post_10**.
