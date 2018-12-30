@@ -21,7 +21,7 @@ or <a href="https://github.com/dherath" target="blank"><i class="fa fa-github-sq
 
 ### Research
 
-Currently I'm part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) where my current research focuses on utilizing blockchain technology and machine learning for building secure systems. In terms of research experience, before my PhD, I have worked on research projects spanning the areas of wireless communications and robotics. During which I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations.
+Currently I'm part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) where my current research focuses on utilizing blockchain technology and machine learning for building secure systems. In terms of research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations.
 
 
 <!--In previous research projects I have mainly focused on wireless communications while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.
