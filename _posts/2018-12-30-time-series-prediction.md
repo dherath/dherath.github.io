@@ -6,7 +6,9 @@ description: "post 11"
 keywords: "time series, prediction, RNN, LSTM, GRU, recurrent, neural, networks, tensorflow, deeplearning"
 ---
 
-![github_helper]({{site.url}}/material/2018/post_10/github_helper.jpeg?raw=true){:height="400px"}
+![github_helper]({{site.url}}/material/2018/post_11/model_image.jpeg?raw=true){:height="350px"}
+
+Hello Everyone!! In todays post I'll be talking about 
 
 
 
