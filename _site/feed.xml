@@ -5,15 +5,17 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Dec 2018 18:37:28 +0530</pubDate>
-    <lastBuildDate>Sun, 30 Dec 2018 18:37:28 +0530</lastBuildDate>
+    <pubDate>Sun, 30 Dec 2018 18:54:48 +0530</pubDate>
+    <lastBuildDate>Sun, 30 Dec 2018 18:54:48 +0530</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
         <title>Time series prediction with Recurrent Neural Networks</title>
         <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2018/post_11/model_image.jpeg?raw=true&quot; alt=&quot;github_helper&quot; height=&quot;350px&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hello Everyone!! In todays post I’ll be talking about&lt;/p&gt;
+&lt;p&gt;Hello Everyone!! In todays post I will be talking about a brief introduction on using &lt;strong&gt;Recurrent Neural Networks(RNN)&lt;/strong&gt; for Time series prediction.  RNNs are a type of &lt;em&gt;Deep Learning&lt;/em&gt; models that are specifically well suited in handling temporal dependencies in data. For example, lets take the weather in a given day. If today is sunny, then there is some likelihood that tomorrow might be sunny too. Now obviously it might rain tomorrow, but the point is &lt;strong&gt;what happens in the past, affects the future&lt;/strong&gt;. When we consider most phenomena in the natural world, we can see some temporal dependency in those datasets-like temperature, stock prices, signal strength variations or even video frames in a video segment. Knowing, that some processes is related across timesteps is not enough in most real world applications.&lt;/p&gt;
+
+&lt;p&gt;So the obvious next step is to predict what might happen based on some given historical data. And thats where &lt;em&gt;Machine Learning&lt;/em&gt; comes into the picture. You probably have heard of computers beating human champions in Chess and in other games like Go. &lt;strong&gt;cont…&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
