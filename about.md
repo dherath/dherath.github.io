@@ -14,15 +14,17 @@ Hi! <i class="fa fa-smile-o" aria-hidden="true" style="font-size:19px;color:#229
 talk to me
 <a href="mailto:dinal.bing@gmail.com"><i class="fa fa-envelope" style="font-size:19px;color:#2294bd;"></i></a>
 <a href="https://www.linkedin.com/in/jerome-dinal-herath-bba3b0148/" target="blank"><i class="fa fa-linkedin-square" style="font-size:19px;color:#2294bd"></i></a>
-or check out my recent work
-<a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a>
-<a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>.
+or check out my recent work in <a href="https://scholar.google.com/citations?user=vNtiUMwAAAAJ&hl=en" target="blank"><i style="color:#2294bd;font-weight:bold;">[google scholar]</i></a>, <a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a>
+or <a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a>.
 
 <h3><a href="{{site.url}}/dinal_cv.pdf"><span style="background-color: #f7f7f7;color:#3885B5">[Curriculum Vitae]</span></a></h3>
 
-<!--## Research-->
+### Research
 
-<!--I'm part of the [FIND Lab](https://cs.binghamton.edu/~find/){:target="blank"} @ SUNY Binghamton & my research here generally falls under the category of **Computer Networks** with emphasis on **`wireless networks`**, while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.-->
+Currently I'm part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) where my current research focuses on utilizing blockchain technology and machine learning for building secure systems. In terms of research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations.
+
+
+<!--In previous research projects I have mainly focused on wireless communications while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.
 
 <!--## Publications -->
 
@@ -56,7 +58,7 @@ or check out my recent work
 
 ## Experience
 
-- Graduate Teaching Assistant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2018)
+- Graduate Teaching Assistant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2018, Spring-2019)
 - Graduate Research Assistant, Watson School of Engineering & Applied Science, SUNY Binghamton.(Fall-2017, Spring-2018, Summer-2018)
 - Temporary Lecturer, Department of Physics, University of Colombo.(2017)
 - Assistant Head Prefect, St. Joseph's college, Colombo-10, Sri Lanka. (2011-2012)
