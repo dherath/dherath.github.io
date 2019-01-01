@@ -7,15 +7,7 @@ keywords: "git, github, terminal, support, Github"
 ---
 ![github_helper]({{site.url}}/material/2018/post_10/github_helper.jpeg?raw=true){:height="400px"}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding `git` support to a terminal. This post is more of a **'How to?'** post, and not really an introduction to `git`. So if you have no idea what **git** is all about and you program a lot, then I think you should really consider learning it, and heres why...
-=======
-Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding `git` support to a terminal. This post is more of a **'How to?'** post, and not really an introduction to `git`. So if you have no idea what **git** is all about and you program alot, then I think you should really consider learning it, and heres why...
->>>>>>> post_11
-=======
-Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding `git` support to a terminal. This post is more of a **'How to?'** post, and not really an introduction to `git`. So if you have no idea what **git** is all about and you program a lot, then I think you should really consider learning it, and heres why...
->>>>>>> post_11
 
 >
 In a nutshell, git is a version control system that programmers use to keep track of their code.
@@ -28,23 +20,14 @@ If you are someone who is already familiar with `git`, and you only want to know
 
 As you can see in the image above, if you follow the steps I mention in this post, you can view helpful git debugging information in the terminal itself as shown in the image above, which shows the status of my Github repo for this website. This includes,
 
-**`1. The current git branch`:**The git branch you're checked in is shown in green inside parenthesis. In my case, I'm checked into a branch for this post called **post_10**.
+**`1. The current git branch`:**
+The git branch you're checked in is shown in green inside parenthesis. In my case, I'm checked into a branch for this post called **post_10**.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-**`2. Un-committed/added changes`:**If there is any change that is not committed or added, it will be shown as a _green_ **`*`** symbol right next to the branch name. In my case, the _feed.xml_ file is modified and not committed, so there is a Asterix shown.
-
-**`3. Changes added but not committed`:**
-Similar to the above case, if there are any changes that are _added_ but not commited its shown as a **`+`** symbol. In my example, after adding the changes with `git add --all` the symbol changes from * to +.
-=======
-**`2. Un-commited/added changes`:**If there is any change that is not committed or added, it will be shown as a _green_ **`*`** symbol right next to the branch name. In my case, the _feed.xml_ file is modified and not committed, so there is a asterix shown.
-=======
-**`2. Un-committed/added changes`:**If there is any change that is not committed or added, it will be shown as a _green_ **`*`** symbol right next to the branch name. In my case, the _feed.xml_ file is modified and not committed, so there is a asterix shown.
->>>>>>> post_11
+**`2. Un-committed/added changes`:**If there is any change that is not committed or added, it will be shown as a _green_ **`*`**
+symbol right next to the branch name. In my case, the _feed.xml_ file is modified and not committed, so there is a Asterix shown.
 
 **`3. Changes added but not committed`:**
 Similar to the above case, if there are any changes that are _added_ but not committed its shown as a **`+`** symbol. In my example, after adding the changes with `git add --all` the symbol changes from * to +.
->>>>>>> post_11
 
 **`4. Merge status`:**
 After pulling from a branch, if a merge is required then an additional text as **`| MERGE`** will show right next to the branch name.
@@ -82,7 +65,7 @@ After all these steps are complete, then restart a new terminal and this should 
 ##### So until next time,
 ##### Cheers!
 
-**Next: [Time series prediction with Recurrent Neural Networks]({{site.url}}/2018/time-series-prediction/)** \\
+<!--**Next: [Time series prediction with Recurrent Neural Networks]({{site.url}}/2018/time-series-prediction/)** \\-->
 **Prev: [Finding cycles in linked lists]({{site.url}}/2018/Linked-Lists/)**
 
 
