@@ -3,17 +3,10 @@
  <!-- <channel>
     <title>dinal</title>
     <description>Home</description>
-<<<<<<< HEAD
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Jan 2019 15:40:51 -0500</pubDate>
-    <lastBuildDate>Tue, 29 Jan 2019 15:40:51 -0500</lastBuildDate>
-=======
-    <link>http://dinalherath.com/</link>
-    <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Feb 2019 16:23:50 -0500</pubDate>
-    <lastBuildDate>Sun, 03 Feb 2019 16:23:50 -0500</lastBuildDate>
->>>>>>> master
+    <pubDate>Mon, 04 Mar 2019 13:57:09 -0500</pubDate>
+    <lastBuildDate>Mon, 04 Mar 2019 13:57:09 -0500</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -129,13 +122,8 @@ If your reading this part of my post, then I'm assuming you have some familiarit
 But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. --&gt;
 </description>
         <pubDate>Sun, 23 Dec 2018 00:00:00 -0500</pubDate>
-<<<<<<< HEAD
         <link>http://localhost:4000/2018/git-support/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/git-support/</guid>
-=======
-        <link>http://dinalherath.com/2018/git-support/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/git-support/</guid>
->>>>>>> master
         
         
       </item>
@@ -250,13 +238,8 @@ But fear no more, in this post I'll be going through three easy steps on how to 
 &lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 19 May 2018 00:00:00 -0400</pubDate>
-<<<<<<< HEAD
         <link>http://localhost:4000/2018/Linked-Lists/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/Linked-Lists/</guid>
-=======
-        <link>http://dinalherath.com/2018/Linked-Lists/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/Linked-Lists/</guid>
->>>>>>> master
         
         
       </item>
@@ -374,13 +357,8 @@ By substitution of values,
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 15 Jan 2018 00:00:00 -0500</pubDate>
-<<<<<<< HEAD
         <link>http://localhost:4000/2018/Markov-Chains/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/Markov-Chains/</guid>
-=======
-        <link>http://dinalherath.com/2018/Markov-Chains/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/Markov-Chains/</guid>
->>>>>>> master
         
         
       </item>
@@ -540,13 +518,8 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
-<<<<<<< HEAD
         <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
-=======
-        <link>http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</guid>
->>>>>>> master
         
         
       </item>
@@ -687,13 +660,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
-<<<<<<< HEAD
         <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
-=======
-        <link>http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</guid>
->>>>>>> master
         
         
       </item>
@@ -830,13 +798,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-1/&quot;&gt;Simulation of Hard Disks : Part 1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0400</pubDate>
-<<<<<<< HEAD
         <link>http://localhost:4000/2017/hard-disks-2/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-2/</guid>
-=======
-        <link>http://dinalherath.com/2017/hard-disks-2/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-2/</guid>
->>>>>>> master
         
         
       </item>
@@ -1095,13 +1058,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/image-pokemon/&quot;&gt;Combining video-game sprites using logical operations&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
-<<<<<<< HEAD
         <link>http://localhost:4000/2017/hard-disks-1/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-1/</guid>
-=======
-        <link>http://dinalherath.com/2017/hard-disks-1/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-1/</guid>
->>>>>>> master
         
         
       </item>
@@ -1258,13 +1216,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Jul 2017 00:00:00 -0400</pubDate>
-<<<<<<< HEAD
         <link>http://localhost:4000/2017/image-pokemon/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/image-pokemon/</guid>
-=======
-        <link>http://dinalherath.com/2017/image-pokemon/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/image-pokemon/</guid>
->>>>>>> master
         
         
       </item>
@@ -1578,33 +1531,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hello-world/&quot;&gt;Hello world :)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Jul 2017 00:00:00 -0400</pubDate>
-<<<<<<< HEAD
         <link>http://localhost:4000/2017/serial-snake-robot/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/serial-snake-robot/</guid>
-=======
-        <link>http://dinalherath.com/2017/serial-snake-robot/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/serial-snake-robot/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Hello World :)</title>
-        <description>&lt;p&gt;Hello Everyone, My name is &lt;strong&gt;&lt;em&gt;Dinal Herath&lt;/em&gt;&lt;/strong&gt; and welcome to my blog. Here I’ll  essentially be writing about projects I work on , my experiences and well anything I feel I’d be interested to read on-line. I’m natively from &lt;strong&gt;Sri Lanka&lt;/strong&gt; a beautiful tropical island in the middle of the Indian ocean. If you don’t know anything about Sri Lanka  click 
-&lt;a href=&quot;http://bestoflanka.com/best-things-to-do-in-sri-lanka.php&quot; target=&quot;blank&quot;&gt;here&lt;/a&gt; &amp;amp; if your planning you’re next vacation to a tropical paradise you should definitely visit.&lt;/p&gt;
-
-&lt;p&gt;I’m a graduate from &lt;strong&gt;University of Colombo with a specialization in Computational Physics&lt;/strong&gt; and now in the processes of migrating to &lt;em&gt;Computer Science&lt;/em&gt; for my PHD. This being the case most of the projects I work on would have some code in them, so ill be posting links to my github for anyone who wants to work on them more. This blog will probably be the place where Ill share most of the experiences that I’m bound to face while I make this transition and I hope would probably help anyone out there, who like me would want to switch.&lt;/p&gt;
-
-&lt;p&gt;So there you have it, my first blog post :).  I guess thats a sufficient introduction about what my blog will be all about :) I hope you find the upcoming posts informative and enjoyable.&lt;/p&gt;
-
-&lt;h4 id=&quot;cheers&quot;&gt;Cheers!&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 04 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hello-world/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hello-world/</guid>
->>>>>>> master
         
         
       </item>
