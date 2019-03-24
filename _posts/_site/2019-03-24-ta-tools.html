@@ -1,0 +1,151 @@
+<p><img src="http://phdcomics.com/comics/archive/phd051910s.gif" alt="phd-comics" width="680px" /></p>
+
+<p>Hi All! today I thought of writing about something that relates to being a <strong>Teaching Assistant</strong> or a <strong>TA</strong>. To anyone who is pursuing a PhD, TA-ing is a necessary but sometimes (<em>cough</em> most of the time) cumbersome task, that sort of comes with the job. To anyone who doesn’t know much about–well what it’s like pursuing a PhD, think of it as a kind of an apprenticeship. We (PhD candidates) choose a professor to be our mentor and we essentially work under him/her and eventually (<em>cough</em> hopefully) make a meaningful contribution to our field at which point we are given the title of a <strong>Doctorate</strong>.</p>
+
+<p>While phd candidates are measured on their contribution to the field, most candidates get a stipend during this time which helps us stay afloat financially (<em>cough</em> barely). This stipend either comes as a <strong>Research Assistantship</strong> where we get paid for helping out with research work <em>or</em> as a <strong>Teaching Assistantship</strong> where we help out with teaching and grading. As a Computer Science PhD candidate most of the grading I’ve done involves coding assignments and projects. So to make my life easier I made some <strong>bash</strong> scripts to automate the process a bit and thought of sharing it with everyone else.</p>
+
+<blockquote>
+
+  <p>To cut it short, if you are a TA that needs to grade <em>programming assignments or projects</em> this will really help you out. I have provided some <strong>bash</strong> scripts to,</p>
+  <ol>
+    <li>Download code from <a href="https://classroom.github.com">github-classroom</a></li>
+    <li>Check late submissions (or other repo information)</li>
+    <li>Crawl through all repositories/folders and run code</li>
+  </ol>
+</blockquote>
+
+<h3 id="script-1-cloning-github-classroom-repositories">Script 1: cloning Github classroom repositories</h3>
+
+<p>Firstly, this script clones all the GitHub repositories from the github-classroom. Now if you don’t use github-classroom then this script won’t matter much. I have declared a variable called <strong>names</strong>, fill it with the GitHub IDs of all the students. Each student name must be in <strong>""</strong> and each entry must be separated by a <strong>space</strong>. Also fill in the GitHub source link in the variable <strong>github</strong>. To run a bash script in a terminal type,</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span>I am assuming this code will be stored a file called gitclone.sh
+<span class="gp">$</span> chmod +X gitclone.sh
+<span class="gp">$</span> ./gitclone.sh
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">count</span><span class="o">=</span>1
+<span class="c"># github IDs for all students</span>
+<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">names</span><span class="o">=()</span>
+<span class="c">#the github source link, eg:- https://XXX@github.com/Repo-Name</span>
+<span class="nv">github</span><span class="o">=</span><span class="s2">""</span>
+
+<span class="nb">echo</span> <span class="s2">" clone started"</span>
+<span class="k">for </span>gitsource <span class="k">in</span> <span class="s2">"</span><span class="k">${</span><span class="nv">names</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+<span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"------------------------------------------"</span>
+    <span class="nb">echo</span> <span class="s2">"(</span><span class="nv">$count</span><span class="s2">) : </span><span class="nv">$gitsource</span><span class="s2">"</span>
+    <span class="nv">count</span><span class="o">=</span><span class="k">$((</span>count+1<span class="k">))</span>
+    git clone <span class="s2">"</span><span class="nv">$github</span><span class="s2">-</span><span class="nv">$gitsource</span><span class="s2">.git"</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<h3 id="script-2-checking-submission-info">Script 2: checking submission info</h3>
+
+<p>This script is essentially about extracting useful submission information for a given GitHub submission. Again, you will have to fill in the variables <strong>namesTag</strong> and <strong>names</strong>. Here <strong>namesTag</strong> refers to the git-IDs of each student and <strong>names</strong> refers to their email-IDs associated with them. The reason being most of the time I noticed that a students git-ID is very different to his/her real name, so having both together helped a lot. This script will provide the information of,</p>
+
+<ol>
+  <li>All the git-IDs that have commits in this repo</li>
+  <li>The email addresses associated with them</li>
+  <li>The final <strong>sshKey</strong></li>
+  <li>The time difference between the first and final commit</li>
+  <li>The time of the last commit made</li>
+</ol>
+
+<p>To run this script, use <code class="highlighter-rouge">chmod +X scriptName.sh</code> followed by <code class="highlighter-rouge">./scriptName.sh</code> as in Script 1 above.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">count</span><span class="o">=</span>1
+<span class="c"># github user IDs, each entry in the list should be in ""</span>
+<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">namesTag</span><span class="o">=()</span>
+<span class="c"># university email IDs (I am assuming each student will have</span>
+<span class="c"># some email ID they use associated with the github account)</span>
+<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">names</span><span class="o">=()</span>
+
+<span class="c"># -- initializing variables</span>
+<span class="nb">declare</span> <span class="nt">-i</span> <span class="nv">h</span><span class="o">=</span>3600
+<span class="nb">declare</span> <span class="nt">-i</span> <span class="nv">difference</span><span class="o">=</span>0
+<span class="nb">declare</span> <span class="nt">-i</span> <span class="nv">timeV</span><span class="o">=</span>0
+<span class="nb">declare</span> <span class="nt">-i</span> <span class="nv">firstTime</span><span class="o">=</span>0
+<span class="nb">declare</span> <span class="nt">-i</span> <span class="nv">lastTime</span><span class="o">=</span>0
+<span class="nv">IFS</span><span class="o">=</span><span class="s1">$'</span><span class="se">\n</span><span class="s1">'</span> <span class="c">#makes new line the only separator</span>
+
+<span class="c"># change the course name accordingly</span>
+<span class="c"># eg CS-XXX</span>
+<span class="nv">courseName</span><span class="o">=</span><span class="s1">'course-1'</span>
+
+<span class="k">for</span> <span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;<span class="k">${#</span><span class="nv">names</span><span class="p">[@]</span><span class="k">}</span><span class="p">;</span>++i<span class="o">))</span>
+<span class="k">do
+    </span><span class="nv">gitsource</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">names</span><span class="p">[i]</span><span class="k">}</span><span class="s2">"</span>
+    <span class="nv">foldersource</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">namesTag</span><span class="p">[i]</span><span class="k">}</span><span class="s2">"</span>
+    <span class="c">#now the code will cd to CS-XXX-studentName</span>
+    <span class="nb">cd</span> <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/<span class="nv">$courseName</span>-<span class="nv">$foldersource</span>/
+    <span class="nv">sshKey</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>git log <span class="nt">--author</span><span class="o">=</span><span class="s2">"</span><span class="nv">$gitsource</span><span class="s2">"</span> <span class="nt">--pretty</span><span class="o">=</span>format:%H | sed <span class="nt">-n</span> 1p<span class="k">)</span><span class="s2">"</span>
+    <span class="nv">firstTime</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>git log <span class="nt">--author</span><span class="o">=</span><span class="nv">$gitsource</span> <span class="nt">--reverse</span> <span class="nt">--pretty</span><span class="o">=</span>format:%at | sed <span class="nt">-n</span> 1p<span class="k">)</span><span class="s2">"</span>
+    <span class="nv">lastTime</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>git log <span class="nt">--author</span><span class="o">=</span><span class="nv">$gitsource</span> <span class="nt">--pretty</span><span class="o">=</span>format:%at | sed <span class="nt">-n</span> 1p<span class="k">)</span><span class="s2">"</span>
+    <span class="nv">lastCommitTime</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>git log <span class="nt">--author</span><span class="o">=</span><span class="nv">$gitsource</span> <span class="nt">--pretty</span><span class="o">=</span>format:%aD | sed <span class="nt">-n</span> 1p<span class="k">)</span><span class="s2">"</span>
+    <span class="nv">emailAdd</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>git log <span class="nt">--author</span><span class="o">=</span><span class="nv">$gitsource</span> <span class="nt">--pretty</span><span class="o">=</span>format:%ae | sed <span class="nt">-n</span> 1p<span class="k">)</span><span class="s2">"</span>
+    <span class="nv">nocommits</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>git shortlog <span class="nt">--author</span><span class="o">=</span><span class="nv">$gitsource</span> <span class="nt">-s</span> <span class="nt">-n</span><span class="k">)</span><span class="s2">"</span>
+    <span class="nv">difference</span><span class="o">=</span><span class="k">$((</span><span class="nv">$lastTime</span><span class="o">-</span><span class="nv">$firstTime</span><span class="k">))</span>
+    <span class="nv">timeV</span><span class="o">=</span><span class="k">$((</span><span class="nv">$difference</span><span class="o">/</span><span class="nv">$h</span><span class="k">))</span>
+    <span class="nb">cd</span> ..
+    <span class="nb">echo</span> <span class="s2">"(</span><span class="nv">$count</span><span class="s2">) :  </span><span class="nv">$nocommits</span><span class="s2"> - </span><span class="nv">$foldersource</span><span class="s2">| </span><span class="nv">$emailAdd</span><span class="s2"> | ssh: </span><span class="nv">$sshKey</span><span class="s2"> | commit-diff(h): </span><span class="nv">$timeV</span><span class="s2"> | last-commit: </span><span class="nv">$lastCommitTime</span><span class="s2">"</span>
+    <span class="nv">count</span><span class="o">=</span><span class="k">$((</span>count+1<span class="k">))</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<h3 id="script-3-running-the-code">Script 3: running the code</h3>
+
+<p>The final grading script here gives you the option to run a given piece of code multiple times without too much trouble. Again, make sure you fill in the folder-names of all the students in <strong>namesTag</strong>. So the code below focuses mainly on running <strong>C</strong> code, hence the <em>make</em> which I am assuming is present with targets to run and clean code. If you are running code of a different language change the lines with <strong>make</strong>, to the correct program invocation you need. When you run this script, for a given student the script will prompt if the code should be run, and after each run will prompt again to continue to the next student or re-run the previous code again. This feature is very helpful if you are testing code that changes behavior between different runs. (i.e. maybe it has random numbers or something)</p>
+
+<p>To run this script, use <code class="highlighter-rouge">chmod +X scriptName.sh</code> followed by <code class="highlighter-rouge">./scriptName.sh</code> as in Scripts 1 and 2 above.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">count</span><span class="o">=</span>1
+<span class="c"># git IDs of students</span>
+<span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">namesTag</span><span class="o">=()</span>
+<span class="nb">declare</span> <span class="nt">-i</span> <span class="nv">lastTime</span><span class="o">=</span>0
+<span class="nv">IFS</span><span class="o">=</span><span class="s1">$'</span><span class="se">\n</span><span class="s1">'</span> <span class="c">#makes new line the only separator</span>
+<span class="nb">echo</span> <span class="s2">"started"</span>
+<span class="nv">projectName</span><span class="o">=</span><span class="s2">"lab06"</span> <span class="c">#or anything you are grading</span>
+
+<span class="k">for</span> <span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;<span class="k">${#</span><span class="nv">namesTag</span><span class="p">[@]</span><span class="k">}</span><span class="p">;</span>++i<span class="o">))</span>
+<span class="k">do
+	</span><span class="nv">foldersource</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">namesTag</span><span class="p">[i]</span><span class="k">}</span><span class="s2">"</span>
+    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$count</span><span class="s2"> : start run for </span><span class="nv">$foldersource</span><span class="s2"> (y/n) ?"</span>
+    <span class="nb">read </span>value
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$value</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"y"</span> <span class="o">]</span>
+    <span class="k">then
+    	</span><span class="nb">echo</span> <span class="s2">"runnnig ..."</span>
+    	<span class="nb">cd</span> <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/<span class="nv">$projectName</span>-<span class="nv">$foldersource</span>/
+    	make
+    	<span class="nb">echo</span> <span class="s2">"----- re-run for </span><span class="nv">$foldersource</span><span class="s2"> (y-yes/n-next):"</span>
+    	<span class="nb">read </span>input
+    	<span class="k">while</span> <span class="o">[</span> <span class="nv">$input</span> <span class="o">==</span> <span class="s2">"y"</span> <span class="o">]</span>
+    	<span class="k">do
+    		</span><span class="nb">echo</span> <span class="s2">"re-running..."</span>
+    		make
+    		<span class="nb">echo</span> <span class="s2">"----- re-run for </span><span class="nv">$foldersource</span><span class="s2"> (y-yes/n-next):"</span>
+    		<span class="nb">read </span>input
+    	<span class="k">done
+    	</span><span class="nb">echo</span> <span class="s2">"running finished"</span>
+    	make clean
+    	<span class="nb">cd</span> ..
+    	<span class="nb">echo</span> <span class="s2">"--------------------------------------------------------------------------------"</span>
+    <span class="k">else
+    	</span><span class="nb">exit </span>1
+    <span class="k">fi
+    </span><span class="nb">echo</span> <span class="s2">"moving on..."</span>
+    <span class="nv">count</span><span class="o">=</span><span class="k">$((</span>count+1<span class="k">))</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<p>So there you have it, three bash scripts that have made my TA work considerably easier. If you are a TA like me, I hope they help you out too.</p>
+
+<h5 id="so-until-next-time">So until next time,</h5>
+<h5 id="cheers">Cheers!</h5>
+
+<p><strong>Prev: <a href="/2018/git-support/">Adding git support to Terminal</a></strong></p>

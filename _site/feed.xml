@@ -5,9 +5,170 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Mar 2019 17:57:01 -0400</pubDate>
-    <lastBuildDate>Sun, 24 Mar 2019 17:57:01 -0400</lastBuildDate>
+    <pubDate>Sun, 24 Mar 2019 17:58:07 -0400</pubDate>
+    <lastBuildDate>Sun, 24 Mar 2019 17:58:07 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>Making TA-life easier : Bash scripts for grading</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://phdcomics.com/comics/archive/phd051910s.gif&quot; alt=&quot;phd-comics&quot; width=&quot;680px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hi All! today I thought of writing about something that relates to being a &lt;strong&gt;Teaching Assistant&lt;/strong&gt; or a &lt;strong&gt;TA&lt;/strong&gt;. To anyone who is pursuing a PhD, TA-ing is a necessary but sometimes (&lt;em&gt;cough&lt;/em&gt; most of the time) cumbersome task, that sort of comes with the job. To anyone who doesn’t know much about–well what it’s like pursuing a PhD, think of it as a kind of an apprenticeship. We (PhD candidates) choose a professor to be our mentor and we essentially work under him/her and eventually (&lt;em&gt;cough&lt;/em&gt; hopefully) make a meaningful contribution to our field at which point we are given the title of a &lt;strong&gt;Doctorate&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;While phd candidates are measured on their contribution to the field, most candidates get a stipend during this time which helps us stay afloat financially (&lt;em&gt;cough&lt;/em&gt; barely). This stipend either comes as a &lt;strong&gt;Research Assistantship&lt;/strong&gt; where we get paid for helping out with research work &lt;em&gt;or&lt;/em&gt; as a &lt;strong&gt;Teaching Assistantship&lt;/strong&gt; where we help out with teaching and grading. As a Computer Science PhD candidate most of the grading I’ve done involves coding assignments and projects. So to make my life easier I made some &lt;strong&gt;bash&lt;/strong&gt; scripts to automate the process a bit and thought of sharing it with everyone else.&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;To cut it short, if you are a TA that needs to grade &lt;em&gt;programming assignments or projects&lt;/em&gt; this will really help you out. I have provided some &lt;strong&gt;bash&lt;/strong&gt; scripts to,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Download code from &lt;a href=&quot;https://classroom.github.com&quot;&gt;github-classroom&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Check late submissions (or other repo information)&lt;/li&gt;
+    &lt;li&gt;Crawl through all repositories/folders and run code&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;script-1-cloning-github-classroom-repositories&quot;&gt;Script 1: cloning Github classroom repositories&lt;/h3&gt;
+
+&lt;p&gt;Firstly, this script clones all the GitHub repositories from the github-classroom. Now if you don’t use github-classroom then this script won’t matter much. I have declared a variable called &lt;strong&gt;names&lt;/strong&gt;, fill it with the GitHub IDs of all the students. Each student name must be in &lt;strong&gt;&quot;&quot;&lt;/strong&gt; and each entry must be separated by a &lt;strong&gt;space&lt;/strong&gt;. Also fill in the GitHub source link in the variable &lt;strong&gt;github&lt;/strong&gt;. To run a bash script in a terminal type,&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;I am assuming this code will be stored a file called gitclone.sh
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; chmod +X gitclone.sh
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ./gitclone.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;span class=&quot;c&quot;&gt;# github IDs for all students&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=()&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#the github source link, eg:- https://XXX@github.com/Repo-Name&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; clone started&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;gitsource &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[@]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;------------------------------------------&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$count&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;) : &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gitsource&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;count+1&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+    git clone &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$github&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gitsource&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.git&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;script-2-checking-submission-info&quot;&gt;Script 2: checking submission info&lt;/h3&gt;
+
+&lt;p&gt;This script is essentially about extracting useful submission information for a given GitHub submission. Again, you will have to fill in the variables &lt;strong&gt;namesTag&lt;/strong&gt; and &lt;strong&gt;names&lt;/strong&gt;. Here &lt;strong&gt;namesTag&lt;/strong&gt; refers to the git-IDs of each student and &lt;strong&gt;names&lt;/strong&gt; refers to their email-IDs associated with them. The reason being most of the time I noticed that a students git-ID is very different to his/her real name, so having both together helped a lot. This script will provide the information of,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;All the git-IDs that have commits in this repo&lt;/li&gt;
+  &lt;li&gt;The email addresses associated with them&lt;/li&gt;
+  &lt;li&gt;The final &lt;strong&gt;sshKey&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;The time difference between the first and final commit&lt;/li&gt;
+  &lt;li&gt;The time of the last commit made&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To run this script, use &lt;code class=&quot;highlighter-rouge&quot;&gt;chmod +X scriptName.sh&lt;/code&gt; followed by &lt;code class=&quot;highlighter-rouge&quot;&gt;./scriptName.sh&lt;/code&gt; as in Script 1 above.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;span class=&quot;c&quot;&gt;# github user IDs, each entry in the list should be in &quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;namesTag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=()&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# university email IDs (I am assuming each student will have&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# some email ID they use associated with the github account)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=()&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# -- initializing variables&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3600
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;difference&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;timeV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;firstTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lastTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+&lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#makes new line the only separator&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# change the course name accordingly&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# eg CS-XXX&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;courseName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'course-1'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;i&amp;lt;&lt;span class=&quot;k&quot;&gt;${#&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[@]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;++i&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;gitsource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[i]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;foldersource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namesTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[i]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#now the code will cd to CS-XXX-studentName&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$courseName&lt;/span&gt;-&lt;span class=&quot;nv&quot;&gt;$foldersource&lt;/span&gt;/
+    &lt;span class=&quot;nv&quot;&gt;sshKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gitsource&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--pretty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:%H | sed &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1p&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;firstTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gitsource&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--reverse&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--pretty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:%at | sed &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1p&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;lastTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gitsource&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--pretty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:%at | sed &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1p&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;lastCommitTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gitsource&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--pretty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:%aD | sed &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1p&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;emailAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gitsource&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--pretty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:%ae | sed &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1p&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;nocommits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git shortlog &lt;span class=&quot;nt&quot;&gt;--author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gitsource&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;difference&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$lastTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$firstTime&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;timeV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$difference&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$h&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$count&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;) :  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nocommits&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$foldersource&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;| &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$emailAdd&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; | ssh: &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sshKey&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; | commit-diff(h): &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$timeV&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; | last-commit: &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$lastCommitTime&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;count+1&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;script-3-running-the-code&quot;&gt;Script 3: running the code&lt;/h3&gt;
+
+&lt;p&gt;The final grading script here gives you the option to run a given piece of code multiple times without too much trouble. Again, make sure you fill in the folder-names of all the students in &lt;strong&gt;namesTag&lt;/strong&gt;. So the code below focuses mainly on running &lt;strong&gt;C&lt;/strong&gt; code, hence the &lt;em&gt;make&lt;/em&gt; which I am assuming is present with targets to run and clean code. If you are running code of a different language change the lines with &lt;strong&gt;make&lt;/strong&gt;, to the correct program invocation you need. When you run this script, for a given student the script will prompt if the code should be run, and after each run will prompt again to continue to the next student or re-run the previous code again. This feature is very helpful if you are testing code that changes behavior between different runs. (i.e. maybe it has random numbers or something)&lt;/p&gt;
+
+&lt;p&gt;To run this script, use &lt;code class=&quot;highlighter-rouge&quot;&gt;chmod +X scriptName.sh&lt;/code&gt; followed by &lt;code class=&quot;highlighter-rouge&quot;&gt;./scriptName.sh&lt;/code&gt; as in Scripts 1 and 2 above.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;span class=&quot;c&quot;&gt;# git IDs of students&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;namesTag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=()&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lastTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+&lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#makes new line the only separator&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;started&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;projectName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;lab06&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#or anything you are grading&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;i&amp;lt;&lt;span class=&quot;k&quot;&gt;${#&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namesTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[@]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;++i&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+	&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;foldersource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namesTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[i]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$count&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; : start run for &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$foldersource&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; (y/n) ?&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;value
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$value&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;y&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;then
+    	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;runnnig ...&quot;&lt;/span&gt;
+    	&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$projectName&lt;/span&gt;-&lt;span class=&quot;nv&quot;&gt;$foldersource&lt;/span&gt;/
+    	make
+    	&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;----- re-run for &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$foldersource&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; (y-yes/n-next):&quot;&lt;/span&gt;
+    	&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;input
+    	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;y&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    	&lt;span class=&quot;k&quot;&gt;do
+    		&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;re-running...&quot;&lt;/span&gt;
+    		make
+    		&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;----- re-run for &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$foldersource&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; (y-yes/n-next):&quot;&lt;/span&gt;
+    		&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;input
+    	&lt;span class=&quot;k&quot;&gt;done
+    	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;running finished&quot;&lt;/span&gt;
+    	make clean
+    	&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+    	&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;--------------------------------------------------------------------------------&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else
+    	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;1
+    &lt;span class=&quot;k&quot;&gt;fi
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;moving on...&quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;count+1&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So there you have it, three bash scripts that have made my TA work considerably easier. If you are a TA like me, I hope they help you out too.&lt;/p&gt;
+
+&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
+&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Mar 2019 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2019/ta-tools/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/ta-tools/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Adding git support to Terminal</title>
@@ -1513,26 +1674,6 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
         <pubDate>Sat, 15 Jul 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/serial-snake-robot/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/serial-snake-robot/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Hello World :)</title>
-        <description>&lt;p&gt;Hello Everyone, My name is &lt;strong&gt;&lt;em&gt;Dinal Herath&lt;/em&gt;&lt;/strong&gt; and welcome to my blog. Here I’ll  essentially be writing about projects I work on , my experiences and well anything I feel I’d be interested to read on-line. I’m natively from &lt;strong&gt;Sri Lanka&lt;/strong&gt; a beautiful tropical island in the middle of the Indian ocean. If you don’t know anything about Sri Lanka  click 
-&lt;a href=&quot;http://bestoflanka.com/best-things-to-do-in-sri-lanka.php&quot; target=&quot;blank&quot;&gt;here&lt;/a&gt; &amp;amp; if your planning you’re next vacation to a tropical paradise you should definitely visit.&lt;/p&gt;
-
-&lt;p&gt;I’m a graduate from &lt;strong&gt;University of Colombo with a specialization in Computational Physics&lt;/strong&gt; and now in the processes of migrating to &lt;em&gt;Computer Science&lt;/em&gt; for my PHD. This being the case most of the projects I work on would have some code in them, so ill be posting links to my github for anyone who wants to work on them more. This blog will probably be the place where Ill share most of the experiences that I’m bound to face while I make this transition and I hope would probably help anyone out there, who like me would want to switch.&lt;/p&gt;
-
-&lt;p&gt;So there you have it, my first blog post :).  I guess thats a sufficient introduction about what my blog will be all about :) I hope you find the upcoming posts informative and enjoyable.&lt;/p&gt;
-
-&lt;h4 id=&quot;cheers&quot;&gt;Cheers!&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 04 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2017/hello-world/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/hello-world/</guid>
         
         
       </item>
