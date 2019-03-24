@@ -5,17 +5,17 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Mar 2019 17:29:27 -0400</pubDate>
-    <lastBuildDate>Sun, 24 Mar 2019 17:29:27 -0400</lastBuildDate>
+    <pubDate>Sun, 24 Mar 2019 17:43:13 -0400</pubDate>
+    <lastBuildDate>Sun, 24 Mar 2019 17:43:13 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
         <title>Making TA-life easier : Bash scripts for grading</title>
         <description>&lt;p&gt;&lt;img src=&quot;http://phdcomics.com/comics/archive/phd051910s.gif&quot; alt=&quot;phd-comics&quot; width=&quot;680px&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hi All! today I thought of writing about something that relates to being a &lt;strong&gt;Teaching Assistant&lt;/strong&gt; or a &lt;strong&gt;TA&lt;/strong&gt;. To anyone who is pursuing a PhD, TA-ing is a necessary but sometimes (&lt;em&gt;cough&lt;/em&gt; most of the time) cumborsome task, that sort of comes with the job. To anyone who doesn’t know much about–well what it’s like pursuing a PhD, think of it as a kind of an apprentiship. We (PhD candidates) choose a professor to be our mentor and we essentially work under him/her and eventually (&lt;em&gt;cough&lt;/em&gt; hopefully) make a meaningfull contribution to our field at which point we are given the title of a &lt;strong&gt;Honarary Doctorate&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Hi All! today I thought of writing about something that relates to being a &lt;strong&gt;Teaching Assistant&lt;/strong&gt; or a &lt;strong&gt;TA&lt;/strong&gt;. To anyone who is pursuing a PhD, TA-ing is a necessary but sometimes (&lt;em&gt;cough&lt;/em&gt; most of the time) cumbersome task, that sort of comes with the job. To anyone who doesn’t know much about–well what it’s like pursuing a PhD, think of it as a kind of an apprenticeship. We (PhD candidates) choose a professor to be our mentor and we essentially work under him/her and eventually (&lt;em&gt;cough&lt;/em&gt; hopefully) make a meaningful contribution to our field at which point we are given the title of a &lt;strong&gt;Honorary Doctorate&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;While phd candidates are measured on their contribution to the field, most candidates get a stipend during this time which helps us stay afloat financially (&lt;em&gt;cough&lt;/em&gt; barely). This stipend either comes as a &lt;strong&gt;Reasearch Assitanship&lt;/strong&gt; where we get paid for helping out with research work &lt;em&gt;or&lt;/em&gt; as a &lt;strong&gt;Teaching Assistantship&lt;/strong&gt; where we help out with teaching and grading. As a Computer Science PhD candidate most of the grading I’ve done involves coding assignments and projects. So to make my life easier I made some &lt;strong&gt;bash&lt;/strong&gt; scripts to automate the process a bit and thought of sharing it with everyone else.&lt;/p&gt;
+&lt;p&gt;While phd candidates are measured on their contribution to the field, most candidates get a stipend during this time which helps us stay afloat financially (&lt;em&gt;cough&lt;/em&gt; barely). This stipend either comes as a &lt;strong&gt;Research Assistantship&lt;/strong&gt; where we get paid for helping out with research work &lt;em&gt;or&lt;/em&gt; as a &lt;strong&gt;Teaching Assistantship&lt;/strong&gt; where we help out with teaching and grading. As a Computer Science PhD candidate most of the grading I’ve done involves coding assignments and projects. So to make my life easier I made some &lt;strong&gt;bash&lt;/strong&gt; scripts to automate the process a bit and thought of sharing it with everyone else.&lt;/p&gt;
 
 &lt;blockquote&gt;
 
@@ -29,7 +29,7 @@
 
 &lt;h4 id=&quot;script-1-cloning-github-classroom-repositories&quot;&gt;Script 1: cloning Github classroom repositories&lt;/h4&gt;
 
-&lt;p&gt;Firstly, this script clones all the github repositories from the github-classroom. Now if you don’t use github-classroom then this script won’t matter much. I have declared a variable called &lt;strong&gt;names&lt;/strong&gt;, fill it with the github IDs of all the students. Each student name must be in &lt;strong&gt;”“&lt;/strong&gt; and each entry must be seperated by a &lt;strong&gt;space&lt;/strong&gt;. Also fill in the github source link in the variable &lt;strong&gt;github&lt;/strong&gt;. To run a bash script in a terminal type,&lt;/p&gt;
+&lt;p&gt;Firstly, this script clones all the GitHub repositories from the github-classroom. Now if you don’t use github-classroom then this script won’t matter much. I have declared a variable called &lt;strong&gt;names&lt;/strong&gt;, fill it with the GitHub IDs of all the students. Each student name must be in &lt;strong&gt;”“&lt;/strong&gt; and each entry must be separated by a &lt;strong&gt;space&lt;/strong&gt;. Also fill in the GitHub source link in the variable &lt;strong&gt;GitHub&lt;/strong&gt;. To run a bash script in a terminal type,&lt;/p&gt;
 
 &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;I am assuming this code will be stored a file called gitclone.sh
 &lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; chmod +X gitclone.sh
@@ -56,7 +56,7 @@
 
 &lt;h4 id=&quot;script-2-checking-commit-times-and-submission-info&quot;&gt;Script 2: checking commit times and submission info&lt;/h4&gt;
 
-&lt;p&gt;This script is essentially about extracting usefull submission information for a given github submission. Again, you will have to fill in the variables &lt;strong&gt;namesTag&lt;/strong&gt; and &lt;strong&gt;names&lt;/strong&gt;. Here &lt;strong&gt;namesTags&lt;/strong&gt; refers to the git-IDs of eachs student and &lt;strong&gt;names&lt;/strong&gt; refers to their email addresses associated with them. The reason being most of the time I noticed that a students git-ID is very different to his/her real name, so having both together helped alot. This script will provide the information of,&lt;/p&gt;
+&lt;p&gt;This script is essentially about extracting useful submission information for a given GitHub submission. Again, you will have to fill in the variables &lt;strong&gt;namesTag&lt;/strong&gt; and &lt;strong&gt;names&lt;/strong&gt;. Here &lt;strong&gt;namesTags&lt;/strong&gt; refers to the git-IDs of each student and &lt;strong&gt;names&lt;/strong&gt; refers to their email addresses associated with them. The reason being most of the time I noticed that a students git-ID is very different to his/her real name, so having both together helped a lot. This script will provide the information of,&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;All the git-IDs that have commits in this repo&lt;/li&gt;
@@ -66,7 +66,7 @@
   &lt;li&gt;The time of the last commit made&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;To run this script, use &lt;code class=&quot;highlighter-rouge&quot;&gt;chmod +X scriptName.sh&lt;/code&gt; follwed by &lt;code class=&quot;highlighter-rouge&quot;&gt;./scriptName.sh&lt;/code&gt; as in Script 1 above.&lt;/p&gt;
+&lt;p&gt;To run this script, use &lt;code class=&quot;highlighter-rouge&quot;&gt;chmod +X scriptName.sh&lt;/code&gt; followed by &lt;code class=&quot;highlighter-rouge&quot;&gt;./scriptName.sh&lt;/code&gt; as in Script 1 above.&lt;/p&gt;
 
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
 
@@ -83,7 +83,7 @@
 &lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;timeV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
 &lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;firstTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
 &lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lastTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
-&lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#makes new line the only seperator&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#makes new line the only separator&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# change the course name accordingly&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# eg CS-XXX&lt;/span&gt;
@@ -111,13 +111,17 @@
 
 &lt;h4 id=&quot;script-3-running-students-code&quot;&gt;Script 3: running students code&lt;/h4&gt;
 
+&lt;p&gt;The final grading script here gives you the option to run a given piece of code multiple times without too much trouble. Again, make sure you fill in the folder-names of all the students in &lt;strong&gt;namesTag&lt;/strong&gt;. So the code below focuses mainly on running &lt;strong&gt;C&lt;/strong&gt; code, hence the &lt;em&gt;make&lt;/em&gt; which I am assuming is present with targets to run and clean code. If you are running code of a different language change the lines with &lt;strong&gt;make&lt;/strong&gt;, to the correct program invocation you need. When you run this script, for a given student the script will prompt if the code should be run, and after each run will prompt again to continue to the next student or re-run the previous code again. This feature is very helpful if you are testing code that changes behavior between different runs. (i.e. maybe it has random numbers or something)&lt;/p&gt;
+
+&lt;p&gt;To run this script, use &lt;code class=&quot;highlighter-rouge&quot;&gt;chmod +X scriptName.sh&lt;/code&gt; followed by &lt;code class=&quot;highlighter-rouge&quot;&gt;./scriptName.sh&lt;/code&gt; as in Scripts 1 and 2 above.&lt;/p&gt;
+
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
 &lt;span class=&quot;c&quot;&gt;# git IDs of students&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;namesTag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=()&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lastTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
-&lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#makes new line the only seperator&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;IFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#makes new line the only separator&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;started&quot;&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;projectName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;lab06&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#or anything you are grading&lt;/span&gt;
 
@@ -151,6 +155,8 @@
     &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;count+1&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So there you have it, three bash scripts that have made my TA work considerably easier. If you are a TA like me, I hope they help you out too.&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
