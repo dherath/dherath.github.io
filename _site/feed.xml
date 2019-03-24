@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Mar 2019 17:58:07 -0400</pubDate>
-    <lastBuildDate>Sun, 24 Mar 2019 17:58:07 -0400</lastBuildDate>
+    <pubDate>Sun, 24 Mar 2019 17:59:42 -0400</pubDate>
+    <lastBuildDate>Sun, 24 Mar 2019 17:59:42 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -238,7 +238,8 @@ After pulling from a branch, if a merge is required then an additional text as &
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
 &lt;!--**Next: [Time series prediction with Recurrent Neural Networks](http://localhost:4000/2018/time-series-prediction/)** \\--&gt;
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!--+ **the current git branch**: The git branch you're checked in is shown in green inside parenthisis. In my case, I'm checked into a branch for this post called **post_10**.
 + **un-commited changes**: If there is any change that is not commited or added, it will be shown as a _green_ **`*`**(asterix) symbol right next to the branch name. In my case, the _feed.xml_ file is modified and not commited, so there is a asterix shown.

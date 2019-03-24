@@ -66,6 +66,7 @@ After all these steps are complete, then restart a new terminal and this should 
 ##### Cheers!
 
 <!--**Next: [Time series prediction with Recurrent Neural Networks]({{site.url}}/2018/time-series-prediction/)** \\-->
+**Next: [Making TA-life easier : Bash scripts for grading]({{site.url}}/2019/ta-tools/)** \\
 **Prev: [Finding cycles in linked lists]({{site.url}}/2018/Linked-Lists/)**
 
 
