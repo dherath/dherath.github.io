@@ -1,0 +1,250 @@
+<p>Hey guys !!! Hope all of you are doing great :), In todays post I’ll be demonstrating a very interesting problem of simulating the behavior of hard disks. Now first of all <code class="highlighter-rouge">what are hard disks? and why is this even important?</code> We all know that matter around us are either solid,liquid or gaseous. All of these states are some combination of particles, without going in too deep we can simply assume these particles are like spheres in 3-dimensions.</p>
+
+<p><img src="http://teachbesideme.com/wp-content/uploads/2015/02/solid-liquid-gas-1024x346.jpg" alt="intro-image" /></p>
+
+<p>Imagine you suddenly found out some new gas, or liquid and you have it in some container, but you don’t know any of its properties maybe except its mass or the current room temperature. Now how can you predict what will happen when the temperature changes? or when the the number of particles increase? will it become a liquid or become a solid straight away? Those days these sort of problems required experimentation, but now since we have computers we can run simulations and predict their behavior.</p>
+
+<p><strong><em>Today I’ll be demonstrating something along these lines</em>.</strong> Imagine you have a container filed with some gas, and you want to know the behavior of it. <code class="highlighter-rouge">By behavior I mean what sort of distribution would the velocities &amp; positions of each particle take? Is there some pattern Or is it completely random?</code></p>
+
+<p>As it’s with any simulation I’ll start with the assumptions first.</p>
+
+<h3 id="assumptions">Assumptions</h3>
+
+<ol>
+  <li>It’s assumed that the temperature,pressure and volume are constant for the entire duration of the simulation. Therefore any change in particle velocity or position would be only because of some collision.</li>
+  <li>The simulation will only have 4 particles, each a 2-D hard disk. A 2-D space inclusive of only 4 particles are considered purely to reduce the computational complexity of the simulation, which you probably will understand when we get into the code. As for the <code class="highlighter-rouge">hard contact</code> part, this means that the collisions are not damped.</li>
+  <li>Here instantaneous pair collisions conserve momentum, and wall collisions simply reverse one velocity component. Furthermore, between collisions disks move in a straight line just like a free particle.</li>
+</ol>
+
+<h3 id="simulating-hard-disks-with-newtonian-deterministic-mechanics">Simulating hard disks with Newtonian deterministic mechanics</h3>
+
+<p><img src="https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/MD_animation.gif" alt="hard-disks-gif" width="450px" /></p>
+
+<p>In order to numerically solve the equations of motion for all disks, from a given initial condition we need to propagate all disks up to a next collision in the whole system.Then calculate the new velocities of the collided disks and then continue this process until we decide to stop. Ive coded this simulation using <code class="highlighter-rouge">Matlab</code> and used functions extensively. If you’re new to matlab functions click <a href="https://in.mathworks.com/help/matlab/matlab_prog/create-functions-in-files.html" taget="blank">here</a> for a quick introduction.</p>
+
+<p>For a given instance in time there can be a couple of scenarios when it comes to collisions.</p>
+<ul>
+  <li>There might be no collisions between disks.</li>
+  <li>A disk might collide with a wall.</li>
+  <li>Two disks might collide with each-other.</li>
+</ul>
+
+<p>For a case where a collision does not occur the state of the system would not change, all the disks would move along a straight line until it collides with a wall or another disk. When it comes to the simulation, the main task is to identify what type of collision happens first (<code class="highlighter-rouge">disk-disk</code> or <code class="highlighter-rouge">disk-wall</code>) and between what pair (<em>in our case we have 4 disks</em>). Therefore in the first step two separate functions were defined to calculate the time for all possible disk-disk and disk-wall collisions. Afterwards the <strong><code class="highlighter-rouge">min()</code></strong> was taken from all those time values as the next time step when the state of the system changes.</p>
+
+<h4 id="case-1--a-disk-collides-with-a-wall">Case 1 : A disk collides with a wall</h4>
+
+<p><img src="https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disk-wall.png" alt="disk-wall-collision" width="450px" /></p>
+
+<p>This case is fairly simple. As per the code snippet below the time for a possible collision is computed based on three cases. In this simulation I’ve considered that a side of the boundary is of unit 1.0 so the coordinates in either x or y directions would be between 0 and 1.0 where as a wall is defined when either x or y is 0 or 1 respectively.</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span>  <span class="n">t</span><span class="o">=</span> <span class="n">wallTime</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="n">vel</span><span class="p">,</span><span class="n">radius</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">vel</span> <span class="o">&gt;</span> <span class="mi">0</span>
+		<span class="n">t</span><span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">-</span><span class="n">radius</span><span class="o">-</span><span class="n">pos</span><span class="p">)/</span><span class="n">vel</span><span class="p">;</span>
+	<span class="k">elseif</span> <span class="n">vel</span><span class="o">&lt;</span> <span class="mi">0</span>
+		<span class="n">t</span><span class="o">=</span> <span class="p">(</span><span class="n">pos</span><span class="o">-</span><span class="n">radius</span><span class="p">)/</span><span class="nb">abs</span><span class="p">(</span><span class="n">vel</span><span class="p">);</span>
+	<span class="k">else</span>
+		<span class="n">t</span><span class="o">=</span><span class="nb">double</span><span class="p">(</span><span class="nb">inf</span><span class="p">);</span>
+	<span class="k">end</span>
+</code></pre></div></div>
+<p>The first two cases determine the wall side which the disk would collide in if it traversed without any change. Afterwards depending on the movement direction the time taken until a collision would occur is calculated and returned.</p>
+
+<h4 id="case-2--a-disk-collides-with-another-disk">Case 2 : A disk collides with another disk</h4>
+
+<p><img src="https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disk-disk.png" alt="disk-disk-collision" width="250px" /></p>
+
+<p>Now this situation is fairly tricky. Because the number of possible types of collisions that could happen depend on the number of disks. Now its true for the previous case as well. <em>However</em> since we took the sample space as 2-D a given disk could only have one of four collisions since there are only four walls. Since we took only four disks in our sample there are only <strong>6 types</strong> of disk-disk collisions. The table below illustrates the possibilities.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Disk type A</th>
+      <th style="text-align: center">Disk Type B</th>
+      <th style="text-align: right">Number of collisions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td style="text-align: center">2, 3, 4</td>
+      <td style="text-align: right">3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td style="text-align: center">3, 4</td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: right">1</td>
+    </tr>
+    <tr>
+      <td><strong>Total No.of collisions</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"><strong><code class="highlighter-rouge">6</code></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Here a collision between disk 1 &amp; 2 or a collision between disk 2 &amp; 1 are considered the same. Therefore for 4 disks there are only 6 possibilities as shown above. What we do here is we compute the time for all the collisions and use that set to find the first pair collision. As per the code below, a collision occurs between two disks when the norm of the spatial distance vector equals twice the radius of a disk.</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">t</span><span class="o">=</span><span class="n">pairTime</span><span class="p">(</span><span class="n">posa</span><span class="p">,</span><span class="n">vela</span><span class="p">,</span><span class="n">posb</span><span class="p">,</span><span class="n">velb</span><span class="p">,</span><span class="n">radius</span><span class="p">)</span>
+  <span class="n">delx</span><span class="o">=</span><span class="p">[</span><span class="n">posa</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">posb</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">posa</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">posb</span><span class="p">(</span><span class="mi">2</span><span class="p">)];</span>
+  <span class="n">delxSq</span><span class="o">=</span><span class="n">delx</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">delx</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+  <span class="n">delv</span><span class="o">=</span><span class="p">[</span><span class="n">vela</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">velb</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">vela</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">velb</span><span class="p">(</span><span class="mi">2</span><span class="p">)];</span>
+  <span class="n">delvSq</span><span class="o">=</span><span class="n">delv</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">delv</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+  <span class="n">scalar</span><span class="o">=</span><span class="n">delv</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">delx</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">delv</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">delx</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+  <span class="n">Up</span><span class="o">=</span><span class="n">scalar</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="n">delvSq</span><span class="o">*</span><span class="p">(</span><span class="n">delxSq</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">radius</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span>
+  <span class="k">if</span> <span class="n">Up</span><span class="o">&gt;</span> <span class="mf">0.0</span> <span class="o">&amp;&amp;</span> <span class="n">scalar</span> <span class="o">&lt;</span> <span class="mf">0.0</span>
+  		<span class="n">t</span><span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">scalar</span><span class="o">+</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">Up</span><span class="p">))</span> <span class="p">/</span> <span class="n">delvSq</span><span class="p">;</span>
+  	<span class="k">else</span>
+  		<span class="n">t</span><span class="o">=</span><span class="nb">double</span><span class="p">(</span><span class="nb">inf</span><span class="p">);</span>
+  	<span class="k">end</span>
+</code></pre></div></div>
+<h4 id="computing-the-time-until-the-next-event">Computing the time until the next event</h4>
+
+<p>The code below combines the two functions I described above in order to find the next collision event. The objective of this simulation is to record the state of a system for a given time period. And we know now the state of a system changes when a disk collides with a wall or another disk. The code below explains how the above two functions are combined together to find the <strong><code class="highlighter-rouge">time</code></strong> when the next event occurs.</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="n">minWallTime</span><span class="p">,</span><span class="n">minPairTime</span><span class="p">,</span><span class="n">t_wall</span><span class="p">,</span><span class="n">t_pair</span><span class="p">]</span> <span class="o">=</span> <span class="n">nextCollisionTime</span><span class="p">(</span><span class="n">POS</span><span class="p">,</span><span class="n">VEL</span><span class="p">,</span><span class="n">radius</span><span class="p">)</span>
+	<span class="n">wall</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span> <span class="mi">1</span><span class="p">;</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">;</span> <span class="mi">2</span> <span class="mi">1</span> <span class="p">;</span> <span class="mi">2</span> <span class="mi">2</span> <span class="p">;</span> <span class="mi">3</span> <span class="mi">1</span> <span class="p">;</span> <span class="mi">3</span> <span class="mi">2</span> <span class="p">;</span> <span class="mi">4</span> <span class="mi">1</span> <span class="p">;</span> <span class="mi">4</span> <span class="mi">2</span><span class="p">];</span><span class="c1">%1-&gt;wall 1(0) ,2-&gt;wall 2(1)</span>
+	<span class="n">pair</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="p">;</span> <span class="mi">1</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">1</span> <span class="mi">4</span><span class="p">;</span> <span class="mi">2</span> <span class="mi">3</span> <span class="p">;</span> <span class="mi">2</span> <span class="mi">4</span> <span class="p">;</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">];</span>
+	<span class="n">t_wall</span><span class="o">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span>
+	<span class="n">t_pair</span><span class="o">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+	<span class="nb">count</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+	<span class="c1">%wall collision-----------------------</span>
+	<span class="k">for</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span>
+		<span class="k">for</span> <span class="n">l</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span>
+			<span class="n">posTemp</span><span class="o">=</span><span class="n">POS</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">);</span>
+			<span class="n">velTemp</span><span class="o">=</span><span class="n">VEL</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">);</span>
+			<span class="n">t_wall</span><span class="p">(</span><span class="nb">count</span><span class="p">)</span><span class="o">=</span><span class="n">wallTime</span><span class="p">(</span><span class="n">posTemp</span><span class="p">,</span><span class="n">velTemp</span><span class="p">,</span><span class="n">radius</span><span class="p">);</span>
+			<span class="nb">count</span><span class="o">=</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+		<span class="k">end</span>
+	<span class="k">end</span>
+	<span class="n">minWallTime</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">t_wall</span><span class="p">);</span>
+	<span class="c1">%pair collision-----------------------</span>
+	<span class="k">for</span> <span class="nb">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span>
+		<span class="n">pos1</span><span class="o">=</span><span class="n">POS</span><span class="p">(</span><span class="n">pair</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">),:);</span>
+		<span class="n">vel1</span><span class="o">=</span><span class="n">VEL</span><span class="p">(</span><span class="n">pair</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">),:);</span>
+		<span class="n">pos2</span><span class="o">=</span><span class="n">POS</span><span class="p">(</span><span class="n">pair</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">2</span><span class="p">),:);</span>
+		<span class="n">vel2</span><span class="o">=</span><span class="n">VEL</span><span class="p">(</span><span class="n">pair</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">2</span><span class="p">),:);</span>
+		<span class="n">t_pair</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">=</span><span class="n">pairTime</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span><span class="n">vel1</span><span class="p">,</span><span class="n">pos2</span><span class="p">,</span><span class="n">vel2</span><span class="p">,</span><span class="n">radius</span><span class="p">);</span>
+	<span class="k">end</span>
+	<span class="n">minPairTime</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">t_pair</span><span class="p">);</span>
+	<span class="n">t</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">minPairTime</span><span class="p">,</span><span class="n">minWallTime</span><span class="p">);</span>
+</code></pre></div></div>
+<h3 id="running-the-simulation">Running the simulation</h3>
+
+<p>So intuitively this is how the program collects data. Say the simulations starts at time t=0 and it’s supposed to collect data every 0.10 seconds. The first thing to do is calculate the time for the next event. Using the function above. In our case we get that the next event occurs at t=0.15 seconds. In such a case the program will iterate a step to 0.10 seconds and then compute the new positions of the disks(<em>Note that the velocities wont change</em>) afterwards the new velocities &amp; positions at 0.15s will be computed. <strong>Because</strong> we already found out that a collision will occur at this time step. These new velocities and positions will be again used at the next iteration at 0.20s not the ones before. This process needs to iterate until we have enough samples for our data set.</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">clc</span><span class="p">;</span>
+<span class="nb">clear</span><span class="p">;</span>
+
+<span class="n">intialPos</span><span class="o">=</span><span class="p">[</span><span class="mf">0.25</span> <span class="mf">0.25</span><span class="p">;</span> <span class="mf">0.75</span> <span class="mf">0.25</span><span class="p">;</span> <span class="mf">0.75</span> <span class="mf">0.75</span><span class="p">;</span> <span class="mf">0.25</span> <span class="mf">0.75</span><span class="p">];</span><span class="c1">%intial posiitons of the disks</span>
+<span class="n">initalVel</span><span class="o">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="k">for</span> <span class="nb">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">;</span> <span class="c1">%setting up initial velocities</span>
+	<span class="n">initalVel</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="nb">rand</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="n">initalVel</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="nb">rand</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">end</span>
+<span class="c1">%----definiing collision types--------</span>
+<span class="n">wall</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span> <span class="mi">1</span><span class="p">;</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">;</span> <span class="mi">2</span> <span class="mi">1</span> <span class="p">;</span> <span class="mi">2</span> <span class="mi">2</span> <span class="p">;</span> <span class="mi">3</span> <span class="mi">1</span> <span class="p">;</span> <span class="mi">3</span> <span class="mi">2</span> <span class="p">;</span> <span class="mi">4</span> <span class="mi">1</span> <span class="p">;</span> <span class="mi">4</span> <span class="mi">2</span><span class="p">];</span><span class="c1">%1-&gt;wall 1(0) ,2-&gt;wall 2(1)</span>
+<span class="n">pair</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="p">;</span> <span class="mi">1</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">1</span> <span class="mi">4</span><span class="p">;</span> <span class="mi">2</span> <span class="mi">3</span> <span class="p">;</span> <span class="mi">2</span> <span class="mi">4</span> <span class="p">;</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">];</span>
+<span class="n">radius</span><span class="o">=</span><span class="mf">0.15</span> <span class="p">;</span><span class="c1">%radius</span>
+<span class="n">t</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span><span class="c1">%initial time</span>
+<span class="n">dt</span><span class="o">=</span><span class="mf">0.01</span><span class="p">;</span><span class="c1">%time step</span>
+<span class="n">n</span><span class="o">=</span><span class="mi">1000000</span><span class="p">;</span><span class="c1">%number of samples</span>
+<span class="nb">time</span><span class="o">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>
+<span class="nb">time</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+<span class="n">nextColtime</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="n">wt</span><span class="o">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span><span class="c1">%wall times calculated per collision</span>
+<span class="n">pt</span><span class="o">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span><span class="c1">%pair collisions times per collision</span>
+
+<span class="n">pos</span><span class="o">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>
+<span class="n">pos</span><span class="p">(:,:,</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">intialPos</span><span class="p">;</span>
+<span class="n">vel</span><span class="o">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>
+<span class="n">vel</span><span class="p">(:,:,</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">initalVel</span><span class="p">;</span>
+
+<span class="c1">%----calculating next collision event----------------</span>
+<span class="nb">count</span> <span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">POS</span><span class="o">=</span><span class="n">intialPos</span><span class="p">;</span>
+<span class="n">VEL</span><span class="o">=</span><span class="n">initalVel</span><span class="p">;</span>
+<span class="p">[</span><span class="n">tmin</span><span class="p">,</span><span class="n">minWallTime</span><span class="p">,</span><span class="n">minPairTime</span><span class="p">,</span><span class="n">allWallTime</span><span class="p">,</span><span class="n">allPairTime</span><span class="p">]</span><span class="o">=</span><span class="n">nextCollisionTime</span><span class="p">(</span><span class="n">POS</span><span class="p">,</span><span class="n">VEL</span><span class="p">,</span><span class="n">radius</span><span class="p">);</span>
+<span class="c1">%----------------------------------------------------</span>
+<span class="k">while</span> <span class="nb">count</span> <span class="o">&lt;=</span> <span class="n">n</span>
+	<span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="o">+</span><span class="n">dt</span><span class="p">;</span>
+	<span class="k">if</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">tmin</span>
+		<span class="nb">time</span><span class="p">(</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+		<span class="n">vel</span><span class="p">(:,:,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">vel</span><span class="p">(:,:,</span><span class="nb">count</span><span class="p">);</span>
+		<span class="k">for</span> <span class="nb">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span>
+			<span class="n">pos</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">pos</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="p">)</span><span class="o">+</span><span class="n">dt</span><span class="o">*</span><span class="n">vel</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="p">);</span>
+			<span class="n">pos</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">pos</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="p">)</span><span class="o">+</span><span class="n">dt</span><span class="o">*</span><span class="n">vel</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="p">);</span>
+		<span class="k">end</span>
+	<span class="k">else</span>
+		<span class="nb">time</span><span class="p">(</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">tmin</span><span class="p">;</span>
+		<span class="n">vel</span><span class="p">(:,:,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">vel</span><span class="p">(:,:,</span><span class="nb">count</span><span class="p">);</span>
+		<span class="k">for</span> <span class="nb">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span>
+			<span class="n">pos</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">pos</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">tmin</span><span class="o">-</span><span class="n">t</span><span class="o">-</span><span class="n">dt</span><span class="p">)</span><span class="o">*</span><span class="n">vel</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="p">);</span>
+			<span class="n">pos</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">pos</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">tmin</span><span class="o">-</span><span class="n">t</span><span class="o">-</span><span class="n">dt</span><span class="p">)</span><span class="o">*</span><span class="n">vel</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="p">);</span>
+		<span class="k">end</span>
+		<span class="k">if</span> <span class="n">minWallTime</span> <span class="o">&lt;</span> <span class="n">minPairTime</span>
+			<span class="p">[</span><span class="n">Lia</span><span class="p">,</span><span class="n">Locb</span><span class="p">]</span><span class="o">=</span><span class="nb">ismember</span><span class="p">(</span><span class="n">minWallTime</span><span class="p">,</span><span class="n">allWallTime</span><span class="p">);</span>
+			<span class="n">collision</span> <span class="o">=</span> <span class="nb">single</span><span class="p">(</span><span class="n">wall</span><span class="p">(</span><span class="n">Locb</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
+			<span class="n">direction</span> <span class="o">=</span> <span class="nb">single</span><span class="p">(</span><span class="n">wall</span><span class="p">(</span><span class="n">Locb</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span>
+			<span class="n">vel</span><span class="p">(</span><span class="n">collision</span><span class="p">,</span><span class="n">direction</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">vel</span><span class="p">(</span><span class="n">collision</span><span class="p">,</span><span class="n">direction</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">);</span>
+		<span class="k">else</span>
+			<span class="p">[</span><span class="n">Lia</span><span class="p">,</span><span class="n">Locb</span><span class="p">]</span><span class="o">=</span><span class="nb">ismember</span><span class="p">(</span><span class="n">minPairTime</span><span class="p">,</span><span class="n">allPairTime</span><span class="p">);</span>
+			<span class="n">a</span><span class="o">=</span><span class="n">pair</span><span class="p">(</span><span class="n">Locb</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+			<span class="n">b</span><span class="o">=</span><span class="n">pair</span><span class="p">(</span><span class="n">Locb</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+			<span class="n">delx</span><span class="o">=</span><span class="p">[</span><span class="n">pos</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">pos</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">pos</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">pos</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)];</span>
+			<span class="n">absx</span><span class="o">=</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">delx</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">delx</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span>
+			<span class="n">ePerp</span><span class="o">=</span><span class="n">delx</span><span class="p">/</span><span class="n">absx</span><span class="p">;</span>
+			<span class="n">delv</span><span class="o">=</span><span class="p">[</span><span class="n">vel</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">vel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">vel</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">vel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)];</span>
+			<span class="n">scalar</span><span class="o">=</span><span class="n">delv</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">ePerp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">delv</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">ePerp</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+			<span class="k">for</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span>
+				<span class="n">vel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">vel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">ePerp</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">scalar</span><span class="p">;</span>
+				<span class="n">vel</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">vel</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">ePerp</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">scalar</span><span class="p">;</span>
+			<span class="k">end</span>
+		<span class="k">end</span>
+		<span class="n">t</span><span class="o">=</span><span class="n">tmin</span><span class="p">;</span>
+		<span class="n">POS</span><span class="o">=</span><span class="n">pos</span><span class="p">(:,:,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+		<span class="n">VEL</span><span class="o">=</span><span class="n">vel</span><span class="p">(:,:,</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+		<span class="p">[</span><span class="n">Newtmin</span><span class="p">,</span><span class="n">minWallTime</span><span class="p">,</span><span class="n">minPairTime</span><span class="p">,</span><span class="n">allWallTime</span><span class="p">,</span><span class="n">allPairTime</span><span class="p">]</span><span class="o">=</span><span class="n">nextCollisionTime</span><span class="p">(</span><span class="n">POS</span><span class="p">,</span><span class="n">VEL</span><span class="p">,</span><span class="n">radius</span><span class="p">);</span>
+		<span class="n">tmin</span><span class="o">=</span><span class="n">tmin</span><span class="o">+</span><span class="n">Newtmin</span><span class="p">;</span>			
+	<span class="k">end</span>
+	<span class="nb">count</span><span class="o">=</span><span class="nb">count</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>From this point on you can either decide to draw the disks at each time step which will give a nice graphical output like in the <em>gif</em> above Or more importantly you can visualize the position and velocity data of these disks(particles).</p>
+
+<h3 id="the-results">The Results</h3>
+
+<p>First, lets look at the position data for all the disks. The histograms below represent the binned values for the x coordinate positions &amp; the y coordinate positions for all 4 disks respectively.</p>
+
+<p><strong>histogram of x coordinates for all disks</strong>
+<img src="https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disks_X_position.jpg" alt="x-coordinate-sample" /></p>
+
+<p><strong>histogram for y coordinates for all disks</strong>
+<img src="https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disks_Y_position.jpg" alt="y-coordinate-sample" /></p>
+
+<p>Now usually you’d expect the histogram to have peaks at the middle between 0 &amp; 1 because particles when in the middle have more room to spread out, but the observation here is the opposite. The disks seem to be near the edges/walls more than at the middle.</p>
+
+<h5 id="why-does-this-happen-">why does this happen ?</h5>
+<p><em>an interesting question</em>. This phenomena is explained using findings from <em>Asakura &amp; Osawa</em> but I wont go in-depth about that here, instead let me explain it simply.</p>
+
+<blockquote>
+  <p>The reason for this unusual behavior is this, now lets say at some given moment disk 1 is at some edge(near a wall) then the region(area) that the other disks could move in without a collision is much larger than when disk 1 would be in the middle. Therefore increasing the ability of the other disks to move freely without a collision.(In other words it increases the entropy of the entire system). Likewise all the disks try to move closer to the edges so as to free more space for the others. Because the disks like to have as much free space to move for themselves.</p>
+</blockquote>
+
+<p>This is the reason you see a histogram like this. I’ll go in detail into this phenomena in a future post with more mathematical rigor :), so this explanation will have to do for now.</p>
+
+<p>Now if you look at the velocity distribution below you’ll see it’s in fact a Boltzmann distribution which is pretty close to how velocities get distributed for particles(like gases) in a box. So there is in fact some pattern to the particle behavior within the classical limits we defined.</p>
+
+<p><img src="https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_4_hard_disks_1/disks_Velocity.jpg" alt="velocity-sample" /></p>
+
+<p>I know the code was a bit complex here, but this goes to show that simulations can in fact be used to predict behavior of matter. <code class="highlighter-rouge">However there are some limitations in this method</code>. Don’t worry, I wont explain it here and make this post any longer, instead I’ll talk about them in my next post and show an easier method to simulate this very same problem with half the code.</p>
+
+<h5 id="so-until-next-time">So until next time,</h5>
+<h5 id="cheers">Cheers!</h5>
+
+<p><strong>Next: <a href="http://dinalherath.com/2017/hard-disks-2/">Simulation of Hard Disks : Part 2</a></strong>                                                         <br />
+<strong>Prev: <a href="http://dinalherath.com/2017/image-pokemon/">Combining video-game sprites using logical operations</a></strong></p>
