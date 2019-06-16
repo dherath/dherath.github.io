@@ -31,7 +31,7 @@ sass:
 author:
   name     : "Dinal Herath"
   job      : "Computer Science PHD candidate @ State University of New York(SUNY) Binghamton"
-  greeting : "welcome to my site"
+  greeting : ""
   bio      : ""
   thumb    : #/assets/images/sherlock.jpg
   email    : #hnrird@gmail.com
