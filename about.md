@@ -21,7 +21,9 @@ or <a href="https://github.com/dherath" target="blank"><i class="fa fa-github-sq
 
 ### Research
 
-Currently I'm part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and co-supervision of Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses is in **Real-time Machine Learning**. My current research work is focused on developing machine learning models for real-time anomaly detection. Additionaly I also am collaborating in research projects which utilize **Ethereum-Blockchain** for building secure, distributed systems. In terms of past research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations.
+Currently I'm part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and co-supervision of Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses is in **Real-time Machine Learning** where I am developing machine learning models for real-time anomaly detection. Additionaly I am also collaborating in research projects which utilize **Ethereum-Blockchain** for building secure, distributed systems. 
+
+In terms of past research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations.
 
 
 <!--In previous research projects I have mainly focused on wireless communications while during my undergrad days I was part of the robotics research group where I simulated different movement algorithms for biologically inspired snake robots. <!--If you're interested in my work please visit my research gate page, where I'd be happy to share my work with anyone interested.
@@ -30,7 +32,7 @@ Currently I'm part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.h
 
 #### Publications
 
-5. [A Deep Learning Model for Wireless Channel Quality Prediction]({{site.url}}/papers/2019ICC.pdf) **J. Dinal Herath**, Anand Seetharam, Arti Ramesh (2019). In: IEEE International Conference on Communications(ICC) (2019).
+5. [A Deep Learning Model for Wireless Channel Quality Prediction]({{site.url}}/papers/2019ICC.pdf) by **J. Dinal Herath**, Anand Seetharam, Arti Ramesh (2019). In: IEEE International Conference on Communications(ICC) (2019).
 
 4. [A Markovian Model for Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/papers/2018tvt.pdf) by **J. Dinal Herath** and Anand Seetharam. In: IEEE Transactions in Vehicular Technology(TVT) (2018). [[code]](https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing) [[project]](https://www.researchgate.net/project/Models-for-Opportunistic-Request-Routing-in-Cache-Networks)
 
