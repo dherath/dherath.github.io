@@ -21,7 +21,7 @@ or <a href="https://github.com/dherath" target="blank"><i class="fa fa-github-sq
 
 ### Research
 
-Currently I'm part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and co-supervision of Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses is in **Real-time Machine Learning** where I am developing machine learning models for real-time anomaly detection. Additionaly I am also collaborating in research projects which utilize **Ethereum-Blockchain** for building secure, distributed systems. 
+Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and co-supervision of Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses is in **`Real-time Machine Learning`**. I primarily develop machine learning models for real-time anomaly detection. Additionally, I also collaborate on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
 
 In terms of past research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations.
 
@@ -32,11 +32,11 @@ In terms of past research experience, before my PhD-I have worked on research pr
 
 #### Publications
 
-5. [A Deep Learning Model for Wireless Channel Quality Prediction]({{site.url}}/papers/2019ICC.pdf) by **J. Dinal Herath**, Anand Seetharam, Arti Ramesh (2019). In: IEEE International Conference on Communications(ICC) (2019).
+5. [A Deep Learning Model for Wireless Channel Quality Prediction]({{site.url}}/papers/2019ICC.pdf) by **J. Dinal Herath**, Anand Seetharam and Arti Ramesh. In: IEEE International Conference on Communications(ICC) (2019).
 
 4. [A Markovian Model for Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/papers/2018tvt.pdf) by **J. Dinal Herath** and Anand Seetharam. In: IEEE Transactions in Vehicular Technology(TVT) (2018). [[code]](https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing) [[project]](https://www.researchgate.net/project/Models-for-Opportunistic-Request-Routing-in-Cache-Networks)
 
-3. [Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/papers/2018ICC.pdf) by **J. Dinal Herath** and Anand Seetharam (2018). In: IEEE International Conference on Communications(ICC) (2018). [[code]](https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing) [[project]](https://www.researchgate.net/project/Models-for-Opportunistic-Request-Routing-in-Cache-Networks)
+3. [Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/papers/2018ICC.pdf) by **J. Dinal Herath** and Anand Seetharam. In: IEEE International Conference on Communications(ICC) (2018). [[code]](https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing) [[project]](https://www.researchgate.net/project/Models-for-Opportunistic-Request-Routing-in-Cache-Networks)
 
 2. [Simulation of Symmetric and Asymmetric movement gaits for Lateral Undulation in Serial Snake Robots](https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots){:target="blank"} by **J. Dinal Herath** and K. Jayananda. In: International Conference on Computational Modeling & Simulation(ICCMS) (2017). [[project]](https://www.researchgate.net/project/Snake-Robots)
 
