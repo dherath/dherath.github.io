@@ -4,7 +4,7 @@ title: Blog Posts
 permalink : /blog/
 ---
 
-Hi All! Thank you for stopping by, as you probably noticed down below is a list of my blog posts that I have written over time. I try to be periodic in my writing but usually it doesnt work out so most of the time I tend to churn out a new post every three or four months. Most of what I write are related to **Computer Science** and the research work I do. Happy reading !!!
+Hi All! Thank you for stopping by, as you probably noticed down below is a list of my blog posts that I have written over time. I try to be periodic in my writing but usually it doesn't work out so most of the time I tend to churn out a new post every three or four months. Most of what I write are related to **Computer Science** and the research work I do. Happy reading !!!
 
 <br>
 
