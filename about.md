@@ -7,15 +7,14 @@ permalink: /about/
 <!--<div class="post-container">-->
   <!--<div class="post-image-1" align="right">-->
   <!-- </div> -->
-<img src="/assets/img/image.jpg" style="width:200px;padding:20px;border-radius:38px;" align="right">
+<!--<img src="/assets/img/image.jpg" style="width:200px;padding:20px;border-radius:38px;" align="right">
 <br>
 Hi! <i class="fa fa-smile-o" aria-hidden="true" style="font-size:19px;color:#2294bd"></i> I'm **Jerome Dinal Herath**(_everyone calls me Dinal_). I'm a computer science PHD candidate at State University of New York (SUNY) Binghamton where my main research focus is in [Real-time Machine Learning](). I completed my bachelors degree in science from University of Colombo, Sri Lanka specializing in computational physics. _Click_ to follow my blog updates
 <a href="https://www.facebook.com/dinalHerath" target="_blank"><i class="fa fa-facebook-square" style="font-size:19px;color:#2294bd"></i></a>
-<!--<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="fa fa-rss-square" style="font-size:19px;color:#2294bd"></i></a>,-->
 talk to me
 <a href="mailto:dinal.bing@gmail.com"><i class="fa fa-envelope" style="font-size:19px;color:#2294bd;"></i></a>
 <a href="https://www.linkedin.com/in/jerome-dinal-herath-bba3b0148/" target="blank"><i class="fa fa-linkedin-square" style="font-size:19px;color:#2294bd"></i></a>
-or check out my recent work in <a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a> <a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a> or <a href="https://scholar.google.com/citations?user=vNtiUMwAAAAJ&hl=en" target="blank"><i style="color:#2294bd;font-weight:bold;">[google-scholar]</i></a>.
+or check out my recent work in <a href="https://github.com/dherath" target="blank"><i class="fa fa-github-square" style="font-size:19px;color:#2294bd"></i></a> <a href="https://www.researchgate.net/profile/Jerome_Dinal_Herath" target="blank"> <i style="color:#2294bd;font-weight:bold;"> RG</i></a> or <a href="https://scholar.google.com/citations?user=vNtiUMwAAAAJ&hl=en" target="blank"><i style="color:#2294bd;font-weight:bold;">[google-scholar]</i></a>.-->
 
 <!--<h3><a href="{{site.url}}/dinal_cv.pdf"><span style="background-color: #f7f7f7;color:#3885B5">[Curriculum Vitae]</span></a></h3>-->
 <!--
