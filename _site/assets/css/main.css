@@ -421,7 +421,7 @@ hr {
 .link, .intro a, .navbar a, .post-link,
 .post a,
 .page a, .pagination .prev, .pagination .next, .site-footer a {
-  color: #0086B3;
+  color: #F15B3D;
   padding-bottom: .05em;
   border-bottom: 2px solid transparent;
   -webkit-transition: border 300ms linear;
@@ -435,7 +435,7 @@ hr {
 .page a:focus, .pagination .prev:focus, .pagination .next:focus, .site-footer a:focus, .link:active, .intro a:active, .navbar a:active, .post-link:active,
 .post a:active,
 .page a:active, .pagination .prev:active, .pagination .next:active, .site-footer a:active {
-  border-bottom: 2px solid #0086B3;
+  border-bottom: 2px solid #F15B3D;
 }
 
 .site-header {
@@ -606,7 +606,7 @@ hr {
 
   .post-link:hover, .post-link:focus, .post-link:active {
     border-bottom: 2px solid transparent;
-    color: #0086B3;
+    color: #F15B3D;
   }
 }
 /**
