@@ -5,15 +5,15 @@
     <description>Home</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Aug 2019 11:47:47 -0400</pubDate>
-    <lastBuildDate>Sun, 18 Aug 2019 11:47:47 -0400</lastBuildDate>
+    <pubDate>Wed, 04 Sep 2019 15:42:38 -0400</pubDate>
+    <lastBuildDate>Wed, 04 Sep 2019 15:42:38 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
         <title>Implementing Deep Recurrent Neural Networks (RNN)</title>
         <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2019/post_12/model_image.jpeg&quot; alt=&quot;rnn-image&quot; width=&quot;340px&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hi All! Today I thought of writing an introductory post on implementing &lt;strong&gt;Deep Learning&lt;/strong&gt; models using &lt;a href=&quot;https://www.tensorflow.org&quot;&gt;Tensorflow&lt;/a&gt;. Deep Learning is a branch of machine learning that extends from &lt;em&gt;neural networks&lt;/em&gt;. In recent years you probably have heard about &lt;em&gt;AI&lt;/em&gt; beating players in quite complex games like &lt;a href=&quot;https://deepmind.com/research/alphago/&quot;&gt;GO&lt;/a&gt; and &lt;a href=&quot;https://www.theverge.com/2019/4/13/18309459/openai-five-dota-2-finals-ai-bot-competition-og-e-sports-the-international-champion&quot;&gt;DOTA&lt;/a&gt; and probably thought its really cool that computers &lt;code class=&quot;highlighter-rouge&quot;&gt;or&lt;/code&gt; rather deep learning models have come all this way.&lt;/p&gt;
+&lt;p&gt;Hi All! Today I thought of writing an introductory post on implementing &lt;strong&gt;Deep Learning&lt;/strong&gt; models using &lt;a href=&quot;https://www.tensorflow.org&quot;&gt;Tensorflow&lt;/a&gt;. In recent years you probably have heard about &lt;em&gt;AI&lt;/em&gt; beating players in quite complex games like &lt;a href=&quot;https://deepmind.com/research/alphago/&quot;&gt;GO&lt;/a&gt; and &lt;a href=&quot;https://www.theverge.com/2019/4/13/18309459/openai-five-dota-2-finals-ai-bot-competition-og-e-sports-the-international-champion&quot;&gt;DOTA&lt;/a&gt; and probably thought its really cool. This explosive development in machine intelligence is due to advancements in Deep Learning, which is a branch of machine learning that extends from &lt;em&gt;neural networks&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Deep Learning has been used in many application domains from image and video processing to time series forecasting and creating autonomous agents that could say play games. Now, to be very specific I will be talking about a subset of deep learning models that are specifically designed to work with time series data. Referring to the image up top these models can be grouped together into whats called &lt;strong&gt;Recurrent Neural Networks (RNN)&lt;/strong&gt;. These are a set models that have the capability to identify temporal correlation in data.&lt;/p&gt;
 
@@ -28,7 +28,7 @@
 
 &lt;h4 id=&quot;part-1--data-preprocessing&quot;&gt;Part 1 : Data Preprocessing&lt;/h4&gt;
 
-&lt;p&gt;Data preprocessing is a very important part in many Machine learning applications. And more often than not, the most important part of applying models is to understand the data so that you know to pick the best model for your data. Once you pick the model, that data itself needs to be preprocessed in a way the model understands it. For this example, referring the image above the model takes in sequences of data. Lets say we have a time series of 1000 values [1,2,3,…,999,1000]. The RNN model needs input as sequences of data where the model will learn the temporal behavior of each sequence. In this case if say the sequence length is 50, then the model needs sequences [1-50],[2-51],[3-52]… with unit time step for all the data.&lt;/p&gt;
+&lt;p&gt;Data preprocessing is a very important part in many Machine learning applications. And more often than not, the most important part of applying models is to understand the data so that you know to pick the best model for your data. Once you pick the model, the data needs to be preprocessed in a way the model understands it. For this example, referring to the image above the model takes in sequences of data. Lets say we have a time series of 1000 values [1,2,3,…,999,1000]. The RNN model needs input as sequences of data where the model will learn the temporal behavior of each sequence. In this case if say the sequence length is 50, then the model needs sequences [1-50],[2-51],[3-52]… with unit time step for all the data.&lt;/p&gt;
 
 &lt;p&gt;The function &lt;strong&gt;getData&lt;/strong&gt; converts a list of univariate time series values into a sequences of data used for both training and testing the model. The input parameters are the &lt;em&gt;filename&lt;/em&gt; use to load data, the &lt;em&gt;x_length&lt;/em&gt; the size of the input sequence (as per the figure default is 50), the &lt;em&gt;y_length&lt;/em&gt; the number of future predictions made by the RNN and finally the &lt;em&gt;percentage&lt;/em&gt; between training and test data separation. Usually and 80:20 split for training:testing is used in most models so &lt;em&gt;percentage=0.8&lt;/em&gt; usually works. This function returns the sequences used for training and testing and the predictor labels as well. The helper functions &lt;strong&gt;openFile&lt;/strong&gt; and &lt;strong&gt;sampleData&lt;/strong&gt; used within &lt;strong&gt;getData&lt;/strong&gt; reads data from file and creates the sequences respectively. I usually create a separate python file &lt;strong&gt;DataPreprocessor.py&lt;/strong&gt; and use the functions herewith to preprocess the input data.&lt;/p&gt;
 
@@ -73,6 +73,10 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;part-2--the-rnn-model&quot;&gt;Part 2 : The RNN Model&lt;/h4&gt;
+
+&lt;p&gt;Now to the RNN model itself–In the code below the python function &lt;em&gt;graph()&lt;/em&gt; defines the structure of the model shown in the image above. The first few lines of code in the function, initially reset the graph in Tensorflow. This is done to ensure that a pre-loaded graph is cleaned before creation of the RNN graph. This is followed by instantiation of the variables for the &lt;em&gt;weights&lt;/em&gt; and &lt;em&gt;bias&lt;/em&gt; of the final prediction layer &lt;script type=&quot;math/tex&quot;&gt;\hat{Y}_{T}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The RNN model has multiple components defined in its own respective variable scope. The scope &lt;em&gt;rnn&lt;/em&gt; defines the model structure that processes each temporal value in the sequence. The scope &lt;em&gt;cells&lt;/em&gt; within &lt;em&gt;rnn&lt;/em&gt; defines the architecture for a single unit used in the RNN. If you want to use more sophisticated structures like &lt;strong&gt;LSTM,GRU&lt;/strong&gt; this is the code segment that needs to be changed. The scope &lt;em&gt;loss&lt;/em&gt; defines the loss function that is used in the model, for this example I have used the &lt;code class=&quot;highlighter-rouge&quot;&gt;root-mean-squared error&lt;/code&gt; and finally the scope &lt;em&gt;Optimizer&lt;/em&gt; defines the function used to reduce the loss for each training epoch.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;environ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'TF_CPP_MIN_LOG_LEVEL'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'2'&lt;/span&gt;
@@ -129,6 +133,10 @@
 
 &lt;h4 id=&quot;part-3--model-execution&quot;&gt;Part 3 : Model Execution&lt;/h4&gt;
 
+&lt;p&gt;In terms of model execution, we begin by setting the hyper parameters of the RNN model. Afterwards the code here calls the data preprocessing functionality described in &lt;strong&gt;Part 1&lt;/strong&gt; to obtain the training sequences. I have defined a training cycle count or &lt;em&gt;epochs&lt;/em&gt; of a 1000. This stopping criterion is a highly subjective value and depends on the actual dataset you’ll use.&lt;/p&gt;
+
+&lt;p&gt;The actual execution of the model starts from the code segment &lt;code class=&quot;highlighter-rouge&quot;&gt;with tf.Session() as sess:&lt;/code&gt;. Within the Tensorflow session, the first part of the code implement the training process where we call the models loss function and optimizer at each epoch. I have made print statements for every &lt;script type=&quot;math/tex&quot;&gt;100^{th}&lt;/script&gt; turn to display the variation of the loss as the model trains more and mode. IN practice you will probably notice that models tend to have drastic reductions in loss at the very beginning, and tend to have a slower reduction rate as more time goes by. Once the training is complete, the test data is used to evaluate the final predictive performance. For ease of presentation, I have grouped the training and testing in one Tensorflow session, but it doesn’t have to be so.&lt;/p&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;environ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'TF_CPP_MIN_LOG_LEVEL'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'2'&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# --&lt;/span&gt;
@@ -136,9 +144,6 @@
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tensorflow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;preprocessor&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
 
-&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
- NOTE : you can put the model code in Part 2 right here without the imports
-&quot;&quot;&quot;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;data.txt&quot;&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# ------- RNN model configurations ------------&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;x_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# input size&lt;/span&gt;
@@ -164,6 +169,13 @@
 
 &lt;span class=&quot;n&quot;&gt;X_test_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# testing set&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;Y_test_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Y_T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#-----------------------------------------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#            RNN - Model&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#-----------------------------------------------&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+ NOTE : you can put the model code in Part 2 right here
+&quot;&quot;&quot;&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;#-----------------------------------------------&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;#            RUN&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;#-----------------------------------------------&lt;/span&gt;
@@ -214,6 +226,7 @@
     &lt;span class=&quot;n&quot;&gt;Y_found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test_out_t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tolist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# final product&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; -- session complete --&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;There you go, a speedy run through on how to build a RNN model in Tensorflow. Note that this code in question is not designed GPUs, so the actual speed for training might be pretty slow in practice. Its possible to refactor this code to work with GPUs, but thats a post for another time.&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
