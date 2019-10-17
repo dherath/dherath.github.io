@@ -10,6 +10,8 @@ In terms of past research experience, before my PhD-I have worked on research pr
 
 #### Publications
 
+6. [RAMP: Real-Time Anomaly Detection in Scientific Workflows](). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**Accepted**]()
+
 5. [A Deep Learning Model for Wireless Channel Quality Prediction]({{site.url}}/papers/2019ICC.pdf) by **J. Dinal Herath**, Anand Seetharam and Arti Ramesh. In: IEEE International Conference on Communications (ICC) (2019).
 
 4. [A Markovian Model for Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/papers/2018tvt.pdf) by **J. Dinal Herath** and Anand Seetharam. In: IEEE Transactions in Vehicular Technology (TVT) (2018). [[code]](https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing) [[project]](https://www.researchgate.net/project/Models-for-Opportunistic-Request-Routing-in-Cache-Networks)
