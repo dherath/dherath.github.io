@@ -10,7 +10,7 @@ In terms of past research experience, before my PhD-I have worked on research pr
 
 #### Publications
 
-6. [RAMP: Real-Time Anomaly Detection in Scientific Workflows](). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**Accepted**]()
+6. [RAMP: Real-Time Anomaly Detection in Scientific Workflows](). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**(Accepted)**]()
 
 5. [A Deep Learning Model for Wireless Channel Quality Prediction]({{site.url}}/papers/2019ICC.pdf) by **J. Dinal Herath**, Anand Seetharam and Arti Ramesh. In: IEEE International Conference on Communications (ICC) (2019).
 
