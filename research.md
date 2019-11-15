@@ -10,7 +10,9 @@ In terms of past research experience, before my PhD-I have worked on research pr
 
 #### Publications
 
-7. [RAMP: Real-Time Anomaly Detection in Scientific Workflows](). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**(Accepted)**]()
+8. [RAMP: Real-Time Anomaly Detection in Scientific Workflows](). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**(Accepted)**]()
+
+7. [SciBlock: A Blockchain-Based Tamper-Proof Non-Repudiable Storage for Scientific Workflow Provenance](). By Dinuni Fernando, Siddharth Kulshrestha, **J. Dinal Herath**, Nitin Mahadik, Yanzhe Ma, Changxin Bai, Ping Yang, Guanhua Yan, Shiyong Lu. In: IEEE International Conference on Collaboration and Internet Computing (2019). [**(Accepted)**]()
 
 6. [DeepChannel: Wireless Channel Quality Prediction using Deep Learning]({{site.url}}/papers/2019tvt.pdf). By Adita Kulkarni, Anand Seetharam, Arti Ramesh, **J. Dinal Herath**. In: IEEE Transactions in Vehicular Technology (TVT) (2019).
 
