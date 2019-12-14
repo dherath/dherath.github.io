@@ -3,15 +3,15 @@
  <!-- <channel>
     <title></title>
     <description>Home</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 Dec 2019 19:00:11 -0800</pubDate>
-    <lastBuildDate>Fri, 13 Dec 2019 19:00:11 -0800</lastBuildDate>
+    <link>http://dinalherath.com/</link>
+    <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 13 Dec 2019 19:13:30 -0800</pubDate>
+    <lastBuildDate>Fri, 13 Dec 2019 19:13:30 -0800</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
         <title>Implementing Deep Recurrent Neural Networks (RNN)</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2019/post_12/model_image.jpeg&quot; alt=&quot;rnn-image&quot; width=&quot;340px&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2019/post_12/model_image.jpeg&quot; alt=&quot;rnn-image&quot; width=&quot;340px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hi All! Today I thought of writing an introductory post on implementing &lt;strong&gt;Deep Learning&lt;/strong&gt; models using &lt;a href=&quot;https://www.tensorflow.org&quot;&gt;Tensorflow&lt;/a&gt;. In recent years you probably have heard about &lt;em&gt;AI&lt;/em&gt; beating players in quite complex games like &lt;a href=&quot;https://deepmind.com/research/alphago/&quot;&gt;GO&lt;/a&gt; and &lt;a href=&quot;https://www.theverge.com/2019/4/13/18309459/openai-five-dota-2-finals-ai-bot-competition-og-e-sports-the-international-champion&quot;&gt;DOTA&lt;/a&gt; and probably thought its really cool. This explosive development in machine intelligence is due to advancements in Deep Learning, which is a branch of machine learning that extends from &lt;em&gt;neural networks&lt;/em&gt;.&lt;/p&gt;
 
@@ -232,11 +232,11 @@
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Aug 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/rnn/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/rnn/</guid>
+        <link>http://dinalherath.com/2019/rnn/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2019/rnn/</guid>
         
         
       </item>
@@ -393,19 +393,19 @@
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 24 Mar 2019 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/ta-tools/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/ta-tools/</guid>
+        <link>http://dinalherath.com/2019/ta-tools/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2019/ta-tools/</guid>
         
         
       </item>
     
       <item>
         <title>Adding git support to Terminal</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2018/post_10/github_helper.jpeg?raw=true&quot; alt=&quot;github_helper&quot; height=&quot;400px&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2018/post_10/github_helper.jpeg?raw=true&quot; alt=&quot;github_helper&quot; height=&quot;400px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to a terminal. This post is more of a &lt;strong&gt;‘How to?’&lt;/strong&gt; post, and not really an introduction to &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;. So if you have no idea what &lt;strong&gt;git&lt;/strong&gt; is all about and you program a lot, then I think you should really consider learning it, and heres why…&lt;/p&gt;
 
@@ -470,9 +470,9 @@ After pulling from a branch, if a merge is required then an additional text as &
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;!--**Next: [Time series prediction with Recurrent Neural Networks](http://localhost:4000/2018/time-series-prediction/)** \\--&gt;
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;!--**Next: [Time series prediction with Recurrent Neural Networks](http://dinalherath.com/2018/time-series-prediction/)** \\--&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!--+ **the current git branch**: The git branch you're checked in is shown in green inside parenthisis. In my case, I'm checked into a branch for this post called **post_10**.
 + **un-commited changes**: If there is any change that is not commited or added, it will be shown as a _green_ **`*`**(asterix) symbol right next to the branch name. In my case, the _feed.xml_ file is modified and not commited, so there is a asterix shown.
@@ -497,8 +497,8 @@ If your reading this part of my post, then I'm assuming you have some familiarit
 But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. --&gt;
 </description>
         <pubDate>Sun, 23 Dec 2018 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2018/git-support/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/git-support/</guid>
+        <link>http://dinalherath.com/2018/git-support/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2018/git-support/</guid>
         
         
       </item>
@@ -609,12 +609,12 @@ But fear no more, in this post I'll be going through three easy steps on how to 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 19 May 2018 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2018/Linked-Lists/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/Linked-Lists/</guid>
+        <link>http://dinalherath.com/2018/Linked-Lists/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2018/Linked-Lists/</guid>
         
         
       </item>
@@ -728,12 +728,12 @@ By substitution of values,
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 15 Jan 2018 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2018/Markov-Chains/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/Markov-Chains/</guid>
+        <link>http://dinalherath.com/2018/Markov-Chains/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2018/Markov-Chains/</guid>
         
         
       </item>
@@ -893,8 +893,8 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
+        <link>http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</guid>
         
         
       </item>
@@ -1035,8 +1035,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Sep 2017 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
+        <link>http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</guid>
         
         
       </item>
@@ -1173,8 +1173,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-1/&quot;&gt;Simulation of Hard Disks : Part 1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2017/hard-disks-2/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-2/</guid>
+        <link>http://dinalherath.com/2017/hard-disks-2/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-2/</guid>
         
         
       </item>
@@ -1433,8 +1433,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/image-pokemon/&quot;&gt;Combining video-game sprites using logical operations&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2017/hard-disks-1/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-1/</guid>
+        <link>http://dinalherath.com/2017/hard-disks-1/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-1/</guid>
         
         
       </item>
@@ -1591,8 +1591,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Jul 2017 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2017/image-pokemon/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/image-pokemon/</guid>
+        <link>http://dinalherath.com/2017/image-pokemon/</link>
+        <guid isPermaLink="true">http://dinalherath.com/2017/image-pokemon/</guid>
         
         
       </item>
