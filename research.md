@@ -10,9 +10,10 @@ In terms of past research experience, before my PhD-I have worked on research pr
 
 #### Publications
 
-8. [RAMP: Real-Time Anomaly Detection in Scientific Workflows]({{site.url}}/papers/2019BigData.pdf). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**[extended version]**]({{site.url}}/papers/2019RAMP_extended_paper.pdf)
+8. [RAMP: Real-Time Anomaly Detection in Scientific Workflows]({{site.url}}/papers/2019BigData.pdf). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**[extended version]**]({{site.url}}/papers/2019RAMP_extended_paper.pdf) [[slides]](https://www.researchgate.net/publication/337927011_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows)
 
-7. [SciBlock: A Blockchain-Based Tamper-Proof Non-Repudiable Storage for Scientific Workflow Provenance]({{site.url}}/papers/2019_CIC_sciblock.pdf). By Dinuni Fernando, Siddharth Kulshrestha, **J. Dinal Herath**, Nitin Mahadik, Yanzhe Ma, Changxin Bai, Ping Yang, Guanhua Yan, Shiyong Lu. In: IEEE International Conference on Collaboration and Internet Computing (2019).
+7. [SciBlock: A Blockchain-Based Tamper-Proof Non-Repudiable Storage for Scientific Workflow Provenance]({{site.url}}/papers/2019_CIC_sciblock.pdf). By Dinuni Fernando, Siddharth Kulshrestha, **J. Dinal Herath**, Nitin Mahadik, Yanzhe Ma, Changxin Bai, Ping Yang, Guanhua Yan, Shiyong Lu. In: IEEE International Conference on Collaboration and Internet Computing (2019). [[slides]](https://www.researchgate.net/publication/337927108_SciBlock_A_Blockchain-Based_Tamper-Proof_Non-_Repudiable_Storage_for_Scientific_Workflow_Provenance)
+
 
 6. [DeepChannel: Wireless Channel Quality Prediction using Deep Learning]({{site.url}}/papers/2019tvt.pdf). By Adita Kulkarni, Anand Seetharam, Arti Ramesh, **J. Dinal Herath**. In: IEEE Transactions in Vehicular Technology (TVT) (2019).
 
