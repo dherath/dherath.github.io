@@ -3,15 +3,48 @@
  <!-- <channel>
     <title></title>
     <description>Home</description>
-    <link>http://dinalherath.com/</link>
-    <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Apr 2020 11:38:34 -0400</pubDate>
-    <lastBuildDate>Thu, 09 Apr 2020 11:38:34 -0400</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 21 Apr 2020 13:47:24 -0400</pubDate>
+    <lastBuildDate>Tue, 21 Apr 2020 13:47:24 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
+        <title>RAMP: Real-Time Aggregated Matrix Profile</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2020/post_13/main_image.jpeg&quot; alt=&quot;main-image&quot; width=&quot;740px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hi All! Today I thought of writing about some research work that I did as part of my PhD. The goal of this project was aimed at improving the credibility and reproducability of scientific research. Falsified research findings can have serious implications in many areas, for example imagine if fradulant research was used for drug discovery for some desease, then it could have serious side effects for any patient that use those drugs. Or imagine a governmental policy decision was carried unknowingly based on some fradulent research, this again could have serious negative implications to the society at large. Therefore, ensuring that research is credible and reproducible is of great importance in the research community [&lt;a href=&quot;https://nbakay.wordpress.com/2018/10/06/peer-reviewed-scientific-research-losing-credibility-as-studies-show-they-are-rigged-or-false/&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;https://www.press.umich.edu/9717920/fraud_and_misconduct_in_research&quot;&gt;2&lt;/a&gt;.  The work I have done is aimed at improving the credibility of a cyber-infastructure called scientific workflows that is used as a computational resource by many scientist when they need to conduct large scale complex computations. For example, scientific workflows are used for detecting possible locations for earthquakes, computational drug discover or diagnosing a patients illness.&lt;/p&gt;
+
+&lt;h4 id=&quot;what-are-scientific-workflows-&quot;&gt;What are Scientific Workflows ?&lt;/h4&gt;
+
+&lt;!-- what are sciflows? how are they attacked  --&gt;
+
+&lt;p&gt;Basically, a scientific workflow is a cyber-infastructure used to facilitate collaboration between scientists across different geographical locations. Think of a scientific workflow as a combination of sequential tasks like a flowchart that needs to be carried out inorder to get results from some experiment. Imagine that each of those tasks require massive computations. The image below is an example of a scientific workflow used for gene conversion analysis. So by using a scientific workflow, a scientist can offload the computational tasks to the cloud and also share the results with other scientists. In terms of reproducability, by sharing the same workflow any other scientist should be able to reproduce the same result.&lt;/p&gt;
+
+&lt;p&gt;However as shown in the same image, it is possible for some malicious person to change the structure and computational order of a workflow and get a fraudulant result. These sort of malicious activity could be motivated by a variety fo reasons, &lt;strong&gt;1)&lt;/strong&gt; One disgrunted member of the research team or some person might want to sabotage the entire research effort, &lt;strong&gt;2)&lt;/strong&gt; to bloat the actual research findings such that it will get easily accepted to a refferred publication or used in actual policy making. To that end, we developed a novel Machine Learning model called &lt;strong&gt;RAMP&lt;/strong&gt; that is able to identify malicious activity or anomalies in scientific workflows in real-time.&lt;/p&gt;
+
+&lt;h4 id=&quot;ramp-real-time-aggregated-matrix-profile&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/h4&gt;
+
+&lt;!-- just the basics of RAMP  --&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2020/post_13/ramp_model.jpeg&quot; alt=&quot;ramp-image&quot; width=&quot;540px&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ramp-in-action-a-toy-example&quot;&gt;RAMP in Action: A toy example&lt;/h4&gt;
+
+&lt;!-- toy example --&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2020/post_13/toy_example.jpg&quot; alt=&quot;example-image&quot; width=&quot;940px&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Apr 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2020/ramp/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/ramp/</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Implementing Deep Recurrent Neural Networks (RNN)</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2019/post_12/model_image.jpeg&quot; alt=&quot;rnn-image&quot; width=&quot;340px&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2019/post_12/model_image.jpeg&quot; alt=&quot;rnn-image&quot; width=&quot;340px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hi All! Today I thought of writing an introductory post on implementing &lt;strong&gt;Deep Learning&lt;/strong&gt; models using &lt;a href=&quot;https://www.tensorflow.org&quot;&gt;Tensorflow&lt;/a&gt;. In recent years you probably have heard about &lt;em&gt;AI&lt;/em&gt; beating players in quite complex games like &lt;a href=&quot;https://deepmind.com/research/alphago/&quot;&gt;GO&lt;/a&gt; and &lt;a href=&quot;https://www.theverge.com/2019/4/13/18309459/openai-five-dota-2-finals-ai-bot-competition-og-e-sports-the-international-champion&quot;&gt;DOTA&lt;/a&gt; and probably thought its really cool. This explosive development in machine intelligence is due to advancements in Deep Learning, which is a branch of machine learning that extends from &lt;em&gt;neural networks&lt;/em&gt;.&lt;/p&gt;
 
@@ -232,17 +265,17 @@
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Aug 2019 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2019/rnn/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2019/rnn/</guid>
+        <link>http://localhost:4000/2019/rnn/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/rnn/</guid>
         
         
       </item>
     
       <item>
-        <title>Making TA-life easier : Bash scripts for grading</title>
+        <title>Making TA-life easier: Bash scripts for grading</title>
         <description>&lt;p&gt;&lt;img src=&quot;http://phdcomics.com/comics/archive/phd051910s.gif&quot; alt=&quot;phd-comics&quot; width=&quot;680px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hi All! today I thought of writing about something that relates to being a &lt;strong&gt;Teaching Assistant&lt;/strong&gt; or a &lt;strong&gt;TA&lt;/strong&gt;. To anyone who is pursuing a PhD, TA-ing is a necessary but sometimes cumbersome task, that sort of comes with the job. To anyone who doesn’t know much about–well what it’s like pursuing a PhD, think of it as a kind of an apprenticeship. We (PhD candidates) choose a professor to be our mentor and we essentially work under him/her and eventually make a meaningful contribution to our field at which point we are given the title of a &lt;strong&gt;Doctorate&lt;/strong&gt;.&lt;/p&gt;
@@ -393,19 +426,19 @@
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 24 Mar 2019 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2019/ta-tools/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2019/ta-tools/</guid>
+        <link>http://localhost:4000/2019/ta-tools/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/ta-tools/</guid>
         
         
       </item>
     
       <item>
         <title>Adding git support to Terminal</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2018/post_10/github_helper.jpeg?raw=true&quot; alt=&quot;github_helper&quot; height=&quot;400px&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2018/post_10/github_helper.jpeg?raw=true&quot; alt=&quot;github_helper&quot; height=&quot;400px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to a terminal. This post is more of a &lt;strong&gt;‘How to?’&lt;/strong&gt; post, and not really an introduction to &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;. So if you have no idea what &lt;strong&gt;git&lt;/strong&gt; is all about and you program a lot, then I think you should really consider learning it, and heres why…&lt;/p&gt;
 
@@ -470,9 +503,9 @@ After pulling from a branch, if a merge is required then an additional text as &
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;!--**Next: [Time series prediction with Recurrent Neural Networks](http://dinalherath.com/2018/time-series-prediction/)** \\--&gt;
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;!--**Next: [Time series prediction with Recurrent Neural Networks](http://localhost:4000/2018/time-series-prediction/)** \\--&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!--+ **the current git branch**: The git branch you're checked in is shown in green inside parenthisis. In my case, I'm checked into a branch for this post called **post_10**.
 + **un-commited changes**: If there is any change that is not commited or added, it will be shown as a _green_ **`*`**(asterix) symbol right next to the branch name. In my case, the _feed.xml_ file is modified and not commited, so there is a asterix shown.
@@ -497,8 +530,8 @@ If your reading this part of my post, then I'm assuming you have some familiarit
 But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. --&gt;
 </description>
         <pubDate>Sun, 23 Dec 2018 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2018/git-support/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/git-support/</guid>
+        <link>http://localhost:4000/2018/git-support/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/git-support/</guid>
         
         
       </item>
@@ -609,12 +642,12 @@ But fear no more, in this post I'll be going through three easy steps on how to 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 19 May 2018 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2018/Linked-Lists/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/Linked-Lists/</guid>
+        <link>http://localhost:4000/2018/Linked-Lists/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/Linked-Lists/</guid>
         
         
       </item>
@@ -728,12 +761,12 @@ By substitution of values,
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 15 Jan 2018 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2018/Markov-Chains/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/Markov-Chains/</guid>
+        <link>http://localhost:4000/2018/Markov-Chains/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/Markov-Chains/</guid>
         
         
       </item>
@@ -893,8 +926,8 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</guid>
+        <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
         
         
       </item>
@@ -1035,14 +1068,14 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</guid>
+        <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
         
         
       </item>
     
       <item>
-        <title>Simulation of Hard Disks : Part 2</title>
+        <title>Simulation of Hard Disks: Part 2</title>
         <description>&lt;p&gt;Hello Everyone !!! Hope you all had an amazing week, If you’re in college the new semester probably just started and I hope you’re first few weeks were awesome, I just started grad school and my week was pretty good :). Now moving on with my post, this will be a continuation from my previous post &lt;a href=&quot;https://dherath.github.io/2017/hard-disks-1/&quot; target=&quot;blank&quot;&gt;&lt;strong&gt;‘Simulation of Hard Disks - Part 1’&lt;/strong&gt;&lt;/a&gt; where I tackled this very same problem using &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Newtonian deterministic mechanics&lt;/code&gt;&lt;/strong&gt;. Ok, so if this is the first time you’re hearing the word &lt;em&gt;&lt;strong&gt;Hard disks&lt;/strong&gt;&lt;/em&gt; I do suggest reading my first post where I explain the terms and the rationale behind simulations of this sort.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://teachbesideme.com/wp-content/uploads/2015/02/solid-liquid-gas-1024x346.jpg&quot; alt=&quot;intro-image&quot; /&gt;&lt;/p&gt;
@@ -1173,14 +1206,14 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-1/&quot;&gt;Simulation of Hard Disks : Part 1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hard-disks-2/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-2/</guid>
+        <link>http://localhost:4000/2017/hard-disks-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-2/</guid>
         
         
       </item>
     
       <item>
-        <title>Simulation of Hard Disks : Part 1</title>
+        <title>Simulation of Hard Disks: Part 1</title>
         <description>&lt;p&gt;Hey guys !!! Hope all of you are doing great :), In todays post I’ll be demonstrating a very interesting problem of simulating the behavior of hard disks. Now first of all &lt;code class=&quot;highlighter-rouge&quot;&gt;what are hard disks? and why is this even important?&lt;/code&gt; We all know that matter around us are either solid,liquid or gaseous. All of these states are some combination of particles, without going in too deep we can simply assume these particles are like spheres in 3-dimensions.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://teachbesideme.com/wp-content/uploads/2015/02/solid-liquid-gas-1024x346.jpg&quot; alt=&quot;intro-image&quot; /&gt;&lt;/p&gt;
@@ -1433,166 +1466,8 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/image-pokemon/&quot;&gt;Combining video-game sprites using logical operations&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hard-disks-1/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-1/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Combining video-game sprites using logical operations</title>
-        <description>&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/images/front_matter.png&quot; alt=&quot;front-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Today I’m going to explain how different video-game sprites(&lt;em&gt;or any image&lt;/em&gt;) can be combined together like whats shown above using logical operations like &lt;strong&gt;AND, OR, NOT&lt;/strong&gt; in the realm of &lt;code class=&quot;highlighter-rouge&quot;&gt;Image Processing&lt;/code&gt;. This is an extremely interesting area I got to sample during my undergrad days, and I thought of making my second post from a memorable part of it. For the demonstrations I thought of  using sprites from one of my all time favorite pokemon games, &lt;a href=&quot;https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_Versions&quot; target=&quot;blank&quot;&gt;pokemon silver&lt;/a&gt; from Generation 2 which I played first :).&lt;/p&gt;
-
-&lt;h3 id=&quot;some-basicsskip-if-youre-not-new-to-image-processing&quot;&gt;Some Basics(&lt;a href=&quot;#ref1&quot;&gt;Skip&lt;/a&gt; if you’re not new to Image Processing)&lt;/h3&gt;
-
-&lt;p&gt;First of all a brief introduction to images. I’m sure you all know something about different types of screen resolutions like HD, 488p and so on. The difference between these types of resolutions are the number of &lt;strong&gt;pixels&lt;/strong&gt; in a given view. Think of an image as a 2D grid of small squares where each square represents a dot of color, and higher the resolution the larger the number of squares in a picture. These squares are called &lt;strong&gt;&lt;em&gt;pixels&lt;/em&gt;&lt;/strong&gt;. In a digital image a pixel stores some kind of numeric value, where each numeric value represents some color. &lt;code class=&quot;highlighter-rouge&quot;&gt;For example in grayscale images the value 0 represents black and 255 white and all integers between are shades of gray.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;We all know that the three primary colors are &lt;strong&gt;red, blue and green&lt;/strong&gt;. Likewise color images (RGB) could be represented as a combination of three channels or sub-images for red, blue and green as shown below. Each of these sub-images are represented in &lt;a href=&quot;https://en.wikipedia.org/wiki/Grayscale&quot; target=&quot;blank&quot;&gt;grayscale&lt;/a&gt;. In fact these sub-images don’t really have a color per-say, rather some intensity vale[0-255] which is shown in shades of gray.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/images/rgb_seperated.png&quot; alt=&quot;rgb_seperated&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now if you look closely at the character image it’s mostly red, therefore the red-channel has values closer to 255 which is why that channel looks brighter as opposed to the blue-channel which is very dark. Similarly for the background, the green-channel is the brightest image because the original background shows a forest.&lt;/p&gt;
-
-&lt;h4 id=&quot;logical-operations-in-image-processing&quot;&gt;Logical operations in Image Processing&lt;/h4&gt;
-
-&lt;p&gt;The basic logical operations in image processing are the same as in arithmetic &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AND, NOT and OR&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/4a/Truth_table_for_AND%2C_OR%2C_and_NOT.png&quot; alt=&quot;truth-table&quot; width=&quot;400px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;For logical operations to work on images, the images need to be of a specific type called &lt;code class=&quot;highlighter-rouge&quot;&gt;binary&lt;/code&gt;. As the name suggests the pixels of these images could only have two values &lt;strong&gt;1(for white) or 0(for black)&lt;/strong&gt;. So basically these are the main operations I’ll be using to combine the pokemon game sprites. The images below illustrate the outcome of logical operations on binary images.&lt;/p&gt;
-
-&lt;h4 id=&quot;1-not-operation&quot;&gt;1) NOT operation&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/theory_examples/not_image.png&quot; alt=&quot;not-image-example&quot; height=&quot;200px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;NOT&lt;/strong&gt; operation inverts a given input value(0 to 1 &amp;amp; vice-versa), its the same principle for images where instead of one single point or location entire regions get inverted depending on their pixel values; so a black area become white or a white area becomes black respectively.&lt;/p&gt;
-
-&lt;h4 id=&quot;2-or-operation&quot;&gt;2) OR operation&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/theory_examples/or.png&quot; alt=&quot;or-image-example&quot; height=&quot;200px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;OR&lt;/strong&gt;  operation combines two binary images such that value 1s of both images show up in the final output.  Thats the reason the combination of both the white circles are present in the above output image.&lt;/p&gt;
-
-&lt;h4 id=&quot;3-and-operation&quot;&gt;3) AND operation&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/theory_examples/and.png&quot; alt=&quot;and-image-example&quot; height=&quot;180px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;AND&lt;/strong&gt;  operation functions in a similar fashion as described in the table above. In this example unlike in the &lt;strong&gt;OR&lt;/strong&gt; case, only the intersection of the two circles are shown in the output. Here the output only shows a high value(1) when both images represent a high value for the same (x,y) coordinate respectively.&lt;/p&gt;
-
-&lt;h3 id=&quot;combining-game-sprites&quot;&gt;&lt;a name=&quot;ref1&quot;&gt;Combining game sprites&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;From here on, I’ll be explaining the main steps in combining image sprites. I’ve used the software platform &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Matlab&lt;/code&gt;&lt;/strong&gt; for this demonstration. Also note that in the code examples I’ve used a function, the reason being the steps I explain below need to be operated three times iteratively for all red, blue and green channels of a given image. Instead of repeating the same code, I figured using functions would make my life more easier. &lt;code class=&quot;highlighter-rouge&quot;&gt;If you have no idea about the Matlab image processing toolbox click&lt;/code&gt; &lt;strong&gt;&lt;a href=&quot;https://in.mathworks.com/help/images/getting-started-with-image-processing-toolbox.html&quot; target=&quot;blank&quot;&gt;here&lt;/a&gt;&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;and if you need a refresher on Matlab functions click &lt;/code&gt;&lt;strong&gt;&lt;a href=&quot;https://in.mathworks.com/help/matlab/matlab_prog/create-functions-in-files.html&quot; taget=&quot;blank&quot;&gt;here&lt;/a&gt; :)&lt;/strong&gt;. &lt;strong&gt;&lt;em&gt;&lt;a href=&quot;#ref2&quot;&gt;(Click here to go directly to the CODE)&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;step-1--converting-rgbcolor-images-to-binary-images&quot;&gt;Step 1 : Converting RGB(Color) images to Binary images&lt;/h5&gt;
-
-&lt;p&gt;The first step is to convert our input images to a binary format so that we can use logical operations. Initially we separate the three channels of red, green and blue and afterwards convert them to purely black and white. In &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;matlab&lt;/code&gt;&lt;/strong&gt; we can do this using a function called &lt;code class=&quot;highlighter-rouge&quot;&gt;im2bw()&lt;/code&gt;. The images below show the output for this step.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/step1.png&quot; alt=&quot;binary-images&quot; /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;step-2--create-an-inverted-mask-of-the-binary-background-image&quot;&gt;Step 2 : Create an inverted mask of the binary background image&lt;/h5&gt;
-
-&lt;p&gt;The second step is to create a temporary image or mask which is an inverted output of the binary background image.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/bc226401273ab062b18245a6b9adcf4ab002de4f/2017/post_3_boolean_algebra_pokemon/step2.png&quot; alt=&quot;inverted-binary-background&quot; height=&quot;200px&quot; /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;step-3--create-temporary-mask-1&quot;&gt;Step 3 : Create temporary Mask 1&lt;/h5&gt;
-
-&lt;p&gt;In this step a temporary mask is created using the two output images from steps 1 &amp;amp; 2. The &lt;strong&gt;AND&lt;/strong&gt; operations is used on the &lt;code class=&quot;highlighter-rouge&quot;&gt;inverted-background image and the binary-character&lt;/code&gt; image in order to get a mask with a certain property. If you look closely at the output image, all the pixels describing the character are black &lt;em&gt;(value 0)&lt;/em&gt; where as the rest of the background is the same. Which means any operation done on this mask would only affect the background and the character portion of the image will remain unchanged.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/bc226401273ab062b18245a6b9adcf4ab002de4f/2017/post_3_boolean_algebra_pokemon/step3.png&quot; alt=&quot;Mask-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;step-4--create-temporary-mask-2&quot;&gt;Step 4 : Create temporary Mask 2&lt;/h5&gt;
-
-&lt;p&gt;To get the second temporary mask, the &lt;strong&gt;NOT&lt;/strong&gt; operation is used on the Mask image obtained in the previous step. Here the output image is such that all the background pixels remain in its binary state where as the character portion becomes value 1 or &lt;em&gt;white&lt;/em&gt;. Therefore any operation done to the image will only affect the character and the background will be unaffected.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/bc226401273ab062b18245a6b9adcf4ab002de4f/2017/post_3_boolean_algebra_pokemon/step4.png&quot; alt=&quot;Mask-2&quot; height=&quot;200px&quot; /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;step-5--process-masks-with-original-images&quot;&gt;Step 5 : Process Masks with original images&lt;/h5&gt;
-
-&lt;p&gt;By now we have two separate masks which give the opportunity to manipulate color intensities of the character and the background separately. However these masks are binary, meaning the values are either 1 or 0. The pixel intensities for original images for each channel(red, green or blue) vary between 0 and 255. In order to get this range into the obtained masks, each mask is &lt;code class=&quot;highlighter-rouge&quot;&gt;point-wise multiplied&lt;/code&gt; by the respective input images.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;So what’s this point-wise multiplication?&lt;/em&gt;&lt;/strong&gt; Earlier I explained that images are like a 2D-grid, and they are stored in matlab as a 2-D matrix. Usually in matrix multiplication, a row is multiplied by a column of another matrix and all the individual values are summed together to obtain a value of one cell in a new matrix. &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;However, in point-wise multiplication each cell indexed some (x,y) of matrix A is multiplied by another cell of index (x,y) of some matrix B to obtain the answer.&lt;/code&gt;&lt;/strong&gt; Here there is no summation or rowise/columnwise multiplication.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/bc226401273ab062b18245a6b9adcf4ab002de4f/2017/post_3_boolean_algebra_pokemon/step5.png&quot; alt=&quot;processed-images&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you look closely at the output images. The character image has the original character in the image in addition to a binary representation of the background. In the background output image, the background pixels have the same intensity values as per the input image where as the character section is binary.  Basically, the only step left to take is combine these two separate output images into one single image.&lt;/p&gt;
-
-&lt;h5 id=&quot;step-6--combine-the-character-image-and-background-image&quot;&gt;Step 6 : Combine the character image and background image&lt;/h5&gt;
-
-&lt;p&gt;This step is all about combining the separate outputs into one. There are a couple of ways to go about this step, in my case I opted to go by selecting the maximum pixel intensity for each (x,y) coordinate of both the output images and creating a new image with this maximum value. My rational for this method was that the intensity distribution for every pixel would be definitely between 0 and 255, thus by selecting the maximum at each point I’d minimize the probability of selecting a stray 0 (black) pixel.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/bc226401273ab062b18245a6b9adcf4ab002de4f/2017/post_3_boolean_algebra_pokemon/step6.png&quot; alt=&quot;combined-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And there you go!!! :) This is the combined image for the red channel from separate sprites for a game character and a specific background.&lt;/p&gt;
-
-&lt;h5 id=&quot;step-7--combine-separate-channels-rgb-into-a-colorrgb-image&quot;&gt;Step 7 : Combine separate channels (R,G,B) into a color(RGB) image&lt;/h5&gt;
-
-&lt;p&gt;The final step is all about iterating the above steps from 1-6 for each color channel and combining them together in order to create a color image. This step is crucial for a color image, because the output from step 6 only shows a distribution of intensity values for a given image, The only reason we see the differences in shades of gray is because we map those intensity values to some color scale. Therefore, to combine the separate channels a new image is created of type unit8 and the outputs from step 6  combined into it.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/bc226401273ab062b18245a6b9adcf4ab002de4f/2017/post_3_boolean_algebra_pokemon/step7.png&quot; alt=&quot;final&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;code&quot;&gt;&lt;a name=&quot;ref2&quot;&gt;Code&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h5 id=&quot;the-main-program&quot;&gt;The main program&lt;/h5&gt;
-
-&lt;div class=&quot;language-matlab highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;clc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;man&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;imread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'silver.png'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;% loading images&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;back&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;imread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'background.png'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;man_r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:,:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;% separate input character image to r,g,b channels&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;man_g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:,:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;man_b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:,:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;back_r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:,:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;% separate input background image to r,g,b channels&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;back_g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:,:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;back_b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:,:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;temp_r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;combine_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man_r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back_r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;% process using function()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;temp_g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;combine_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man_g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back_g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;temp_b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;combine_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;final_image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;uint8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;final_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:,:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp_r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;% step 7 -combine output images to a single color image&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;final_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:,:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp_g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;final_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:,:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;figure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;imshow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;final_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;the-function---combine_image&quot;&gt;The Function - combine_image()&lt;/h5&gt;
-&lt;div class=&quot;language-matlab highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;combine_image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;man_b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;im2bw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;%  step 1&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;back_b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;im2bw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;not_back&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;% step 2&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man_b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;not_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;% step 3 - Mask 1&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;com1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;% step 4 - Mask 2&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;with_man&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.*&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;man&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;% step 5&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;with_tree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.*&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;% step 6&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with_man&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with_tree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;uint8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;I know this post was a bit long, but this is a cool example of some basic image processing techniques. If you want to learn more click &lt;a href=&quot;http://onlinelibrary.wiley.com/book/10.1002/9780470689776&quot; target=&quot;blank&quot;&gt;here&lt;/a&gt; for a reference to a great book.&lt;/p&gt;
-
-&lt;h6 id=&quot;so-until-next-time&quot;&gt;So until next time.&lt;/h6&gt;
-&lt;h4 id=&quot;cheers-&quot;&gt;Cheers !!&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-1/&quot;&gt;Simulation of Hard Disks : Part 1&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/serial-snake-robot/&quot;&gt;Simulation of a serial snake robot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 23 Jul 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/image-pokemon/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/image-pokemon/</guid>
+        <link>http://localhost:4000/2017/hard-disks-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/hard-disks-1/</guid>
         
         
       </item>

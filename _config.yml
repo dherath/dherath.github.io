@@ -30,7 +30,7 @@ sass:
 # Author settings
 author:
   name     : "Jerome Dinal Herath"
-  job      : "Computer Science PHD candidate @ State University of New York(SUNY) Binghamton"
+  job      : "Computer Science PHD candidate @ State University of New York (SUNY) Binghamton"
   greeting : ""
   bio      : ""
   thumb    : #/assets/images/sherlock.jpg
