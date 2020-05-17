@@ -80,15 +80,15 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="p">[</span><span class="n">proc_id</span><span class="p">][</span><span class="n">keys</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>  <span class="o">*=</span> <span class="p">(</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">H</span><span class="p">[</span><span class="n">proc_id</span><span class="p">,</span><span class="n">t</span><span class="p">])</span> <span class="p">)</span>
     <span class="k">return</span>
 </code></pre></div></div> <h4 id="3-human-in-the-loop-training">3. Human-in-the-loop Training</h4> <p>Even though RAMp can guess and trains its own parameters there might be instances where the guess itself is wrong. in those instance RAMP needs some external input to rectify any mistake. From a models point of view, the most sure proof way of obtaining external input is from some human operator. Therefore we also develop an optional <strong>Human-In-The-Loop</strong> training module. This component has two functionalities - (1) to rectify any unwanted training resulting because RAMP may have mistakenly modified weights of a true positive anomaly instance thinking its a false alarm and (2) updating the parameters of the uncertainty function based on the number of false alarms reported by RAMP in the recent past. However, it should be noted that this is an optional component and its entirely possible to run RAMP without it.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">human_in_the_loop_training</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">proc_time</span><span class="p">,</span><span class="n">num_fp</span><span class="p">,</span><span class="n">U_TP</span><span class="p">,</span><span class="n">proc_id</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="c">#"""</span>
-    <span class="c">#optional periodic training, if user feedback is given, does not return</span>
-    <span class="c">#because K,W are defined in class</span>
-    <span class="c">#-----------------------</span>
-    <span class="c">#@param proc_time : the time index for the current process [0,..,inf]</span>
-    <span class="c">#@param num_fp : the total number of false positives marked</span>
-    <span class="c">#@param U_TP : the indices for the True Positives [0,..,M-1]</span>
-    <span class="c">#@param proc_id : the process id, default = 0</span>
-    <span class="c">#"""</span>
+    <span class="s">"""
+    optional periodic training, if user feedback is given, does not return
+    because K,W are defined in class
+    -----------------------
+    @param proc_time : the time index for the current process [0,..,inf]
+    @param num_fp : the total number of false positives marked
+    @param U_TP : the indices for the True Positives [0,..,M-1]
+    @param proc_id : the process id, default = 0
+    """</span>
     <span class="c"># update step for the uncertainty function parameter</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">K</span><span class="p">[</span><span class="n">proc_id</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="n">proc_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">K</span><span class="p">[</span><span class="n">proc_id</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">num_fp</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">M</span><span class="p">)</span>
     <span class="c"># weight update step for True Positives</span>
