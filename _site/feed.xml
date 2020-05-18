@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://dinalherath.com/</link>
     <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 May 2020 22:42:20 -0400</pubDate>
-    <lastBuildDate>Sun, 17 May 2020 22:42:20 -0400</lastBuildDate>
+    <pubDate>Sun, 17 May 2020 22:43:55 -0400</pubDate>
+    <lastBuildDate>Sun, 17 May 2020 22:43:55 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -28,7 +28,7 @@
 
 &lt;h4 id=&quot;1-anomaly-detection&quot;&gt;1. Anomaly Detection&lt;/h4&gt;
 
-&lt;p&gt;We built the &lt;strong&gt;Anomaly Detection&lt;/strong&gt; module by improving on an existing time series analysis model called the &lt;a href=&quot;https://www.cs.ucr.edu/~eamonn/MatrixProfile.html&quot;&gt;Matrix Profile&lt;/a&gt; (&lt;strong&gt;super stoked and humbled that our work is also featured in the original MP page :)&lt;/strong&gt; ). Basically, the idea behind Matrix Profile is quite intuitive. Given a time series, the model breaks it into small subsequences of some predefined small length before operating on them.  For example, assume a univariate time series with 50 data points &lt;script type=&quot;math/tex&quot;&gt;T= \{t_1, t_2, ..., t_{50} \}&lt;/script&gt; and the subsequence length &lt;script type=&quot;math/tex&quot;&gt;m = 3&lt;/script&gt;, then the first subsequence will be &lt;script type=&quot;math/tex&quot;&gt;\{t_1,t_2,t_3\} and the final subsequence being&lt;/script&gt;{t_{48}, t_{49}, t_{50} }&lt;script type=&quot;math/tex&quot;&gt;. Then the set of all subsequences are&lt;/script&gt; { {t_1, t_2, t_3 }, {t_2, t_3, t_4 }, …, {t_{48}, t_{49}, t_{50} } } $$. The Matrix Profile (MP) works as follows:&lt;/p&gt;
+&lt;p&gt;We built the &lt;strong&gt;Anomaly Detection&lt;/strong&gt; module by improving on an existing time series analysis model called the &lt;a href=&quot;https://www.cs.ucr.edu/~eamonn/MatrixProfile.html&quot;&gt;Matrix Profile&lt;/a&gt; (&lt;strong&gt;super stoked and humbled that our work is also featured in the original MP page :)&lt;/strong&gt; ). Basically, the idea behind Matrix Profile is quite intuitive. Given a time series, the model breaks it into small subsequences of some predefined small length before operating on them.  For example, assume a univariate time series with 50 data points &lt;script type=&quot;math/tex&quot;&gt;T= \{t_1, t_2, ..., t_{50} \}&lt;/script&gt; and the subsequence length &lt;script type=&quot;math/tex&quot;&gt;m = 3&lt;/script&gt;, then the first subsequence will be &lt;script type=&quot;math/tex&quot;&gt;\{t_1,t_2,t_3\}&lt;/script&gt; and the final subsequence being &lt;script type=&quot;math/tex&quot;&gt;\{t_{48}, t_{49}, t_{50} \}&lt;/script&gt;. Then the set of all subsequences are &lt;script type=&quot;math/tex&quot;&gt;\{ \{t_1, t_2, t_3 \}, \{t_2, t_3, t_4 \}, ..., \{t_{48}, t_{49}, t_{50} \} \}&lt;/script&gt;. The Matrix Profile (MP) works as follows:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;For each subsequence:
   (1) Compute distance between current subsequence and the entire subsequence set
