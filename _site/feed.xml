@@ -5,8 +5,8 @@
     <description>Home</description>
     <link>http://dinalherath.com/</link>
     <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 May 2020 22:43:55 -0400</pubDate>
-    <lastBuildDate>Sun, 17 May 2020 22:43:55 -0400</lastBuildDate>
+    <pubDate>Mon, 18 May 2020 09:00:19 -0400</pubDate>
+    <lastBuildDate>Mon, 18 May 2020 09:00:19 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -130,7 +130,7 @@
 
 &lt;h4 id=&quot;3-human-in-the-loop-training&quot;&gt;3. Human-in-the-loop Training&lt;/h4&gt;
 
-&lt;p&gt;Even though RAMp can guess and trains its own parameters there might be instances where the guess itself is wrong. in those instance RAMP needs some external input to rectify any mistake. From a models point of view, the most sure proof way of obtaining external input is from some human operator. Therefore we also develop an optional &lt;strong&gt;Human-In-The-Loop&lt;/strong&gt; training module. This component has two functionalities - (1) to rectify any unwanted training resulting because RAMP may have mistakenly modified weights of a true positive anomaly instance thinking its a false alarm and (2) updating the parameters of the uncertainty function based on the number of false alarms reported by RAMP in the recent past. However, it should be noted that this is an optional component and its entirely possible to run RAMP without it.&lt;/p&gt;
+&lt;p&gt;Even though RAMP can guess and trains its own parameters there might be instances where the guess itself is wrong. In those instances RAMP needs some external input to rectify any mistake. From a models point of view, the most sure proof way of obtaining external input is from some human operator. Therefore we also develop an optional &lt;strong&gt;Human-In-The-Loop&lt;/strong&gt; training module. This component has two functionalities - (1) to rectify any unwanted training resulting because RAMP may have mistakenly modified weights of a true positive anomaly instance thinking its a false alarm and (2) updating the parameters of the uncertainty function based on the number of false alarms reported by RAMP in the recent past. However, it should be noted that this is an optional component and its entirely possible to run RAMP without it.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;human_in_the_loop_training&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;proc_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_fp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;U_TP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;proc_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; optional periodic training, if user feedback is given, does not return &quot;&quot;&quot;&lt;/span&gt;
