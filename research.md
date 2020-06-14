@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and co-supervision of Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Machine Learning`** and **`Anomaly Detection`**. In my PhD, so far I have worked on developing a model with real-time anomaly detection capability and identifying the adversarial robustness of popular deep learning based anomaly detection models. Additionally, I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
+Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Machine Learning`** and **`Anomaly Detection`**. In my PhD, so far I have worked on developing a model with real-time anomaly detection capability and identifying the adversarial robustness of popular deep learning based anomaly detection models. Additionally, I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
 
 In terms of past research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations.
 
