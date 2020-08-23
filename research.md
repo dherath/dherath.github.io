@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Machine Learning (ML)`** and **`Anomaly Detection (AD)`**. From a ML perspective I work on __adversarial machine learning__ where we ask the questions "are ML models used for anomaly detection robust? can they be fooled?", I also work on __interpretable machine learning__ where we ask the questions "Why/How do ML models for anomaly detection really work?" 
+Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Machine Learning (ML)`** and **`Anomaly Detection (AD)`**. From a ML perspective I work on **`adversarial machine learning`** where we ask the questions "are ML models used for anomaly detection robust? can they be fooled?", I also work on **`interpretable machine learning`** where we ask the questions "Why/How do ML models for anomaly detection really work?" 
 
 In my PhD, so far I have worked on developing a model with real-time anomaly detection capability, followed by testing its ability to provide anomaly root-causes. Additionally, I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
 
