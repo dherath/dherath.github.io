@@ -4,9 +4,11 @@ title: Research
 permalink: /research/
 ---
 
-Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Machine Learning`** and **`Anomaly Detection`**. In my PhD, so far I have worked on developing a model with real-time anomaly detection capability and identifying the adversarial robustness of popular deep learning based anomaly detection models. Additionally, I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
+Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Machine Learning (ML)`** and **`Anomaly Detection (AD)`**. From a ML perspective I work on __adversarial machine learning__ where we ask the questions "are ML models used for anomaly detection robust? can they be fooled?", I also work on __interpretable machine learning__ where we ask the questions "Why/How do ML models for anomaly detection really work?" 
 
-In terms of past research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations.
+In my PhD, so far I have worked on developing a model with real-time anomaly detection capability, followed by testing its ability to provide anomaly root-causes. Additionally, I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
+
+In terms of past research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations. As of August 2020 I am also a member of the [International Research Council (IRC) in Sri Lanka](https://medium.com/@SustainableEduF/meet-sri-lankan-researcher-jerome-dinal-herath-dd4a2614e9da).
 
 #### Publications
 
