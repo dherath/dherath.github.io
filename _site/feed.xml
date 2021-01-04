@@ -5,13 +5,14 @@
     <description>Jerome Dinal Herath</description>
     <link>http://dinalherath.com/</link>
     <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Jan 2021 21:43:37 -0500</pubDate>
-    <lastBuildDate>Sun, 03 Jan 2021 21:43:37 -0500</lastBuildDate>
+    <pubDate>Sun, 03 Jan 2021 21:59:40 -0500</pubDate>
+    <lastBuildDate>Sun, 03 Jan 2021 21:59:40 -0500</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
         <title>Anomaly detection with Deep AutoEncoders</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2020/post_14/AE.jpeg&quot; alt=&quot;ramp-image&quot; width=&quot;550px&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2020/post_14/AE.jpeg&quot; alt=&quot;AE-image&quot; width=&quot;550px&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Today I will be writing about another deep learning model named an &lt;strong&gt;AutoEncoder&lt;/strong&gt;. As shown in the image above, an AutoEncoder model has two main components–1) an &lt;code class=&quot;highlighter-rouge&quot;&gt;Encoder&lt;/code&gt; module and a 2) &lt;code class=&quot;highlighter-rouge&quot;&gt;Decoder&lt;/code&gt; module. The Encoder is given some tensor input, named as &lt;em&gt;Y&lt;/em&gt; in this case and it learns some hidden representation of it usually called a &lt;strong&gt;hidden state&lt;/strong&gt;. The Decoder in turn obtains this hidden state tensor and learns to reconstruct the original input &lt;em&gt;Y&lt;/em&gt;. Given that, a trained model is able to recreate &lt;em&gt;Y&lt;/em&gt; with minimum error, then it stands to reason that the hidden state is in fact some compact representation of the original input &lt;em&gt;Y&lt;/em&gt;. Typically, its possible to obtain a hidden size that is much smaller in size with respect to the original tensor &lt;em&gt;Y&lt;/em&gt;.&lt;/p&gt;
 
