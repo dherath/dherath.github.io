@@ -12,6 +12,8 @@ In terms of past research experience, before my PhD-I have worked on research pr
 
 #### Publications
 
+Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user=vNtiUMwAAAAJ&view_op=list_works&gmla=AJsN-F7CowB4vN1o_UJq8beyKkMU42WStxRA3es-ukqdfMWUIacyLKD4u8liyf47F7Cu1DhXCZ7WxzkU5AscrUVZNdV1-I9msbAFL3y0eCZ8yDsAFFXLtQo) profile for the most up to date version.
+
 9. [Real-Time Evasion Attacks against Deep Learning-Based Anomaly Detection from Distributed System Logs](). By **J. Dinal Herath**, Ping Yang and Guanhua Yan. In: Proceedings of The 11th ACM Conference on Data and Application Security and Privacy (CODASPY) (2021). [[Accepted]]()
 
 8. [RAMP: Real-Time Anomaly Detection in Scientific Workflows]({{site.url}}/papers/2019BigData.pdf). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**[extended version]**]({{site.url}}/papers/2019RAMP_extended_paper.pdf) [[code]](https://github.com/dherath/RAMP)[[slides]](https://www.researchgate.net/publication/337927011_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows)
