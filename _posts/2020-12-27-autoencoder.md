@@ -43,16 +43,16 @@ class AutoEncoderModule(torch.nn.Module):
         super(AutoEncoderModule, self).__init__()
         self.input_dim = input_dim
         self.hidden_size = hidden_size
-        # define the encoder/ decoder layer steps
+        """ define the encoder/ decoder layer steps """
         dec_steps = 2 ** np.arange(max(np.ceil(np.log2(hidden_size)), 2), np.log2(input_dim))
         dec_setup = np.concatenate([[hidden_size], dec_steps.repeat(2), [input_dim]])
         enc_setup = dec_setup[::-1]
 
-        # encoder definition
+        """ encoder definition """
         layers = np.array([[torch.nn.Linear(int(a), int(b), bias = True)] for a, b in enc_setup.reshape(-1, 2)]).flatten()[:-1]
         self._encoder = torch.nn.Sequential(*layers)
 
-        # decoder definition
+        """ decoder definition """
         layers = np.array([[torch.nn.Linear(int(a), int(b), bias = True)] for a, b in dec_setup.reshape(-1, 2)]).flatten()[1:]
         self._decoder = torch.nn.Sequential(*layers)
         return
@@ -90,7 +90,7 @@ class AutoEncoder:
         """ @param learning_rate: learning rate to train model """
         """ @param num_epochs: the #iterations to train """
         """ @param run_in_gpu: True if GPU is used """
-        # AE model parameters
+        """ AE model parameters """
         self.input_dim = input_dim
         self.hidden_size = hidden_size
         self.model = AutoEncoderModule(self.input_dim, self.hidden_size, self.device)
@@ -98,12 +98,12 @@ class AutoEncoder:
         if run_in_gpu:
             self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         
-        # setting the training parameters
+        """ setting the training parameters """
         self.lr = learning_rate
         self.batch_size = batch_size
         self.num_epochs = num_epochs
         
-        # anomaly score normalizing constants
+        """ anomaly score normalizing constants """
         self.max_err = None
         self.min_err = None
         return
@@ -111,7 +111,7 @@ class AutoEncoder:
     def fit(self, X):
         """ training the AutoEncoder model """
         """ @param X: the training data """
-        # (1) the training process
+        """ (1) the training process """
         X = torch.tensor(X, dtype=torch.float)
         train_loader = DataLoader(dataset=X, batch_size=self.batch_size, drop_last=True, shuffle = True, pin_memory=True)
         optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
@@ -123,10 +123,7 @@ class AutoEncoder:
                 loss.backward()
                 optimizer.step()
 
-        # (2) get error values to normalize anomaly score (optional)
-        # gets the anomaly scores for fitted model
-        # this is done to obtain the max/min error value
-        # such that the errors from the model can be normalized [0,~1]
+        """ (2) get error values to normalize anomaly score (optional) """
         train_anomaly_loader = DataLoader(dataset=X, batch_size= X.shape[0])
         with torch.no_grad():
             for idx, ts in enumerate(train_anomaly_loader):
@@ -146,11 +143,11 @@ class AutoEncoder:
         
         with torch.no_grad():
             for idx, ts in enumerate(test_loader):     
-                # does one forward pass
+                """ does one forward pass """
                 output, _ = self.model(self.to_var(ts))
                 error = torch.nn.L1Loss(reduction='none')(output, self.to_var(ts.float()))
                 error = torch.sum(error,1)
-                # gets the anomaly score, normalized
+                """ gets the anomaly score, normalized """
                 anomaly_scores = (error - self.min_err)/(self.max_err - self.min_err)
                 return anomaly_scores.cpu().data
 
