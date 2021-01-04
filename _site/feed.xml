@@ -5,8 +5,8 @@
     <description>Jerome Dinal Herath</description>
     <link>http://dinalherath.com/</link>
     <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Jan 2021 22:12:35 -0500</pubDate>
-    <lastBuildDate>Sun, 03 Jan 2021 22:12:35 -0500</lastBuildDate>
+    <pubDate>Mon, 04 Jan 2021 15:30:20 -0500</pubDate>
+    <lastBuildDate>Mon, 04 Jan 2021 15:30:20 -0500</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -80,7 +80,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 
 &lt;p&gt;Notice, that in the &lt;em&gt;init&lt;/em&gt; function, I have two variables for &lt;code class=&quot;highlighter-rouge&quot;&gt;max_err&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;min_err&lt;/code&gt;. In practice, I usually prefer to normalize the reconstruction error within a specific range(i.e., [0,1]). This can be done by normalizing the reconstruction error within the minimum and maximum error values obtained during its training phase. Then during anomaly detection we can consider a sample to be an anomaly if the normalized reconstructed error (&lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;) is greater than a given threshold (&lt;script type=&quot;math/tex&quot;&gt;\theta&lt;/script&gt;).&lt;/p&gt;
 
-&lt;p&gt;As such, the &lt;em&gt;fit()&lt;/em&gt; function does two tasks. First it trains the model for a given number of epochs on the training data. Afterwards it does on forward pass on the training data and identifies the minimum and maximum reconstruction loss. In this code example I have used the &lt;code class=&quot;highlighter-rouge&quot;&gt;MSELoss&lt;/code&gt; for the training iterations and the &lt;code class=&quot;highlighter-rouge&quot;&gt;L1Loss&lt;/code&gt; for anomaly detection. Its possible to use other loss functions along with more complicated procedures to obtain the anomaly scores depending on the complexity of the application domain. The &lt;em&gt;predict()&lt;/em&gt; function is quite straightforward. It basically does a forward pass on the data and computes anomaly scores. Unlike in the training phase we do not need to calculate the gradients, so using &lt;em&gt;with torch.no_grad()&lt;/em&gt; usually saves time during this phase.&lt;/p&gt;
+&lt;p&gt;As such, the &lt;em&gt;fit()&lt;/em&gt; function does two tasks. First it trains the model for a given number of epochs on the training data. Afterwards it does one forward pass on the training data and identifies the minimum and maximum reconstruction loss. In this code example I have used the &lt;code class=&quot;highlighter-rouge&quot;&gt;MSELoss&lt;/code&gt; for the training iterations and the &lt;code class=&quot;highlighter-rouge&quot;&gt;L1Loss&lt;/code&gt; for anomaly detection. Its possible to use other loss functions along with more complicated procedures to obtain the anomaly scores depending on the complexity of the application domain. The &lt;em&gt;predict()&lt;/em&gt; function is quite straightforward. It basically does a forward pass on the data and computes anomaly scores. Unlike in the training phase we do not need to calculate the gradients, so using &lt;em&gt;with torch.no_grad()&lt;/em&gt; usually saves time during this phase.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AutoEncoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; AutoEncoder model designed for anomaly detection &quot;&quot;&quot;&lt;/span&gt;
