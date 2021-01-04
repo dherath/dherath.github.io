@@ -2,7 +2,7 @@
 layout: post
 title: "Anomaly detection with Deep AutoEncoders"
 comments: false
-description: "post 13"
+description: "post 14"
 keywords: "AutoEncoders, Deep Learning, Pytorch, Encoder, Decoder, autoencoder, deep learning, implementation"
 ---
 
