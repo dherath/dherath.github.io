@@ -36,13 +36,15 @@ class AutoEncoderModule(torch.nn.Module):
     """ The current implementation uses a feed forwarding neural network """
     """ as the encoder and the decoder """
 
-    def __init__(self, input_dim, hidden_size):
+    def __init__(self, input_dim, hidden_size, device):
         """ init function"""
         """ @param input_dim: the input dimension of the tensor """
         """ @param hidden_size: the dimension of the hidden size """
+        """ @param device: cpu or gpu device to run in """
         super(AutoEncoderModule, self).__init__()
         self.input_dim = input_dim
         self.hidden_size = hidden_size
+        self.device = device
         """ define the encoder/ decoder layer steps """
         dec_steps = 2 ** np.arange(max(np.ceil(np.log2(hidden_size)), 2), np.log2(input_dim))
         dec_setup = np.concatenate([[hidden_size], dec_steps.repeat(2), [input_dim]])
@@ -51,10 +53,12 @@ class AutoEncoderModule(torch.nn.Module):
         """ encoder definition """
         layers = np.array([[torch.nn.Linear(int(a), int(b), bias = True)] for a, b in enc_setup.reshape(-1, 2)]).flatten()[:-1]
         self._encoder = torch.nn.Sequential(*layers)
+        self.to_device(self._encoder)
 
         """ decoder definition """
         layers = np.array([[torch.nn.Linear(int(a), int(b), bias = True)] for a, b in dec_setup.reshape(-1, 2)]).flatten()[1:]
         self._decoder = torch.nn.Sequential(*layers)
+        self.to_device(self._decoder)
         return
 
     def forward(self, ts_batch):
@@ -66,6 +70,11 @@ class AutoEncoderModule(torch.nn.Module):
         dec = self._decoder(enc)
         reconstructed_sequence = dec.view(ts_batch.size())
         return reconstructed_sequence, enc
+
+    def to_device(self, module):
+        """ helper code to send to device """
+        module.to(self.device)
+        return
 ```
 
 #### 2. Training and Anomaly Detection
