@@ -93,10 +93,10 @@ class AutoEncoder:
         """ AE model parameters """
         self.input_dim = input_dim
         self.hidden_size = hidden_size
-        self.model = AutoEncoderModule(self.input_dim, self.hidden_size, self.device)
         self.device = torch.device("cpu")
         if run_in_gpu:
             self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.model = AutoEncoderModule(self.input_dim, self.hidden_size, self.device)
         
         """ setting the training parameters """
         self.lr = learning_rate
