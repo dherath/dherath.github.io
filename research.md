@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Machine Learning (ML)`** and **`Cybersecurity`**. From a ML perspective I work on **`adversarial machine learning`** where we ask the questions "are ML models used for anomaly detection robust? can they be fooled?", I also work on **`interpretable machine learning`** where we ask the questions "Why/How do ML models for anomaly detection really work?" 
+Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Machine Learning (ML)`** and **`Cybersecurity`**. From a ML perspective I work on **`adversarial machine learning`** (i.e. "are ML models used for anomaly detection robust? can they be fooled?) and **`interpretable machine learning`** (i.e., "Why/How do ML models for anomaly detection really work?") 
 
 In my PhD, so far I have worked on developing a model with real-time anomaly detection capability, we also tested its ability to provide anomaly root-causes. This was followed by our recent work on understanding the adversarial robustness of Deep Learning based models used for anomaly detection from distributed system logs. Additionally, I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
 
@@ -14,7 +14,7 @@ In terms of past research experience, before my PhD-I have worked on research pr
 
 Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user=vNtiUMwAAAAJ&view_op=list_works&gmla=AJsN-F7CowB4vN1o_UJq8beyKkMU42WStxRA3es-ukqdfMWUIacyLKD4u8liyf47F7Cu1DhXCZ7WxzkU5AscrUVZNdV1-I9msbAFL3y0eCZ8yDsAFFXLtQo) profile for the most up to date version.
 
-9. [Real-Time Evasion Attacks against Deep Learning-Based Anomaly Detection from Distributed System Logs](). By **J. Dinal Herath**, Ping Yang and Guanhua Yan. In: Proceedings of The 11th ACM Conference on Data and Application Security and Privacy (CODASPY) (2021). [[Accepted]]()
+9. [Real-Time Evasion Attacks against Deep Learning-Based Anomaly Detection from Distributed System Logs](). By **J. Dinal Herath**, Ping Yang and Guanhua Yan. In: Proceedings of The 11th ACM Conference on Data and Application Security and Privacy (CODASPY) (2021). [[Accepted]]({{site.url}}/papers/2021codaspy.pdf)
 
 8. [RAMP: Real-Time Anomaly Detection in Scientific Workflows]({{site.url}}/papers/2019BigData.pdf). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**[extended version]**]({{site.url}}/papers/2019RAMP_extended_paper.pdf) [[code]](https://github.com/dherath/RAMP)[[slides]](https://www.researchgate.net/publication/337927011_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows)
 
