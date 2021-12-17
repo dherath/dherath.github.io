@@ -3,15 +3,64 @@
  <!-- <channel>
     <title></title>
     <description>Jerome Dinal Herath</description>
-    <link>http://dinalherath.com/</link>
-    <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 Aug 2021 12:27:06 -0400</pubDate>
-    <lastBuildDate>Tue, 31 Aug 2021 12:27:06 -0400</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 17 Dec 2021 20:51:16 +0530</pubDate>
+    <lastBuildDate>Fri, 17 Dec 2021 20:51:16 +0530</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
+        <title>Log-Anomaly-Mask: Hiding Anomalies in System Logs</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2020/post_14/AE.jpeg&quot; alt=&quot;LAM-image&quot; width=&quot;540px&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hi All!! In todays’ post I will again be presenting findings from one of my own research work I completed as part of my PhD. The entire premise of this work revolves around a popular sub-field in Machine Learning called, &lt;a href=&quot;&quot;&gt;Adversarial Machine Learning&lt;/a&gt;. It’s no suprise that Machine Learning and Deep Learning models are capable of acomplishing a varying range of real-world complex tasks, from image recognition, time series prediction and playing games like GO. However, in recent years researchers have found that even though AI as a whole are pretty great, they do suffer from certain issues.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;intro
+    &lt;ul&gt;
+      &lt;li&gt;adversarial AI&lt;/li&gt;
+      &lt;li&gt;system log anomaly detection &amp;amp; models that work&lt;/li&gt;
+      &lt;li&gt;the adversarial attack
+        &lt;ul&gt;
+          &lt;li&gt;the attack method&lt;/li&gt;
+          &lt;li&gt;
+            &lt;dl&gt;
+              &lt;dt&gt;Reinforcement Learning as an Attack&lt;/dt&gt;
+              &lt;dd&gt;write about main components and why we chose them&lt;/dd&gt;
+              &lt;dd&gt;why reinforcement learning -&amp;gt; what kind of RL? why?&lt;/dd&gt;
+            &lt;/dl&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;images
+    &lt;ul&gt;
+      &lt;li&gt;system log anomlay detection&lt;/li&gt;
+      &lt;li&gt;attack example (logs)&lt;/li&gt;
+      &lt;li&gt;attack example (images)&lt;/li&gt;
+      &lt;li&gt;distributed system log anomaly detection&lt;/li&gt;
+      &lt;li&gt;model&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
+&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Dec 2021 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2021/lam/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/lam/</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Anomaly detection with Deep AutoEncoders</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2020/post_14/AE.jpeg&quot; alt=&quot;AE-image&quot; width=&quot;540px&quot; /&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2020/post_14/AE.jpeg&quot; alt=&quot;AE-image&quot; width=&quot;540px&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Today I will be writing about another deep learning model named an &lt;strong&gt;AutoEncoder&lt;/strong&gt;. As shown in the image above, an AutoEncoder model has two main components–1) an &lt;code class=&quot;highlighter-rouge&quot;&gt;Encoder&lt;/code&gt; module and a 2) &lt;code class=&quot;highlighter-rouge&quot;&gt;Decoder&lt;/code&gt; module. The Encoder is given some tensor input, named as &lt;em&gt;Y&lt;/em&gt; in this case and it learns some hidden representation of it usually called a &lt;strong&gt;hidden state&lt;/strong&gt;. The Decoder in turn obtains this hidden state tensor and learns to reconstruct the original input &lt;em&gt;Y&lt;/em&gt;. Given that, a trained model is able to recreate &lt;em&gt;Y&lt;/em&gt; with minimum error, then it stands to reason that the hidden state is in fact some compact representation of the original input &lt;em&gt;Y&lt;/em&gt;. Typically, its possible to obtain a hidden size that is much smaller in size with respect to the original tensor &lt;em&gt;Y&lt;/em&gt;.&lt;/p&gt;
@@ -174,23 +223,23 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 27 Dec 2020 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2020/autoencoder/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2020/autoencoder/</guid>
+        <pubDate>Sun, 27 Dec 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2020/autoencoder/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/autoencoder/</guid>
         
         
       </item>
     
       <item>
         <title>RAMP: Real-Time Aggregated Matrix Profile</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2020/post_13/ramp_model.jpeg&quot; alt=&quot;ramp-image&quot; width=&quot;540px&quot; /&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2020/post_13/ramp_model.jpeg&quot; alt=&quot;ramp-image&quot; width=&quot;540px&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hi All! Today I thought of writing about some research work that I did as part of my PhD which is an intersection between &lt;a href=&quot;https://en.wikipedia.org/wiki/Machine_learning&quot;&gt;machine learning&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Anomaly_detection&quot;&gt;anomaly detection&lt;/a&gt;. In a nutshell an anomaly is a novel pattern in a dataset that was never observed before or a pattern that is rarely seen. Identifying anomalies in data has a lot of important use cases. For example consider the case of an ECG reading of a heart patient. Automatically identifying anomalous patterns can greatly help doctors diagnose illnesses effectively and efficiently, there by increasing the chance of saving lives. In the recent past Machine learning and AI have been successfully used in many scenarios for anomaly detection. In this piece of work we develop a model called &lt;strong&gt;RAMP&lt;/strong&gt; short of &lt;strong&gt;Real-Time Aggregated Matrix Profile&lt;/strong&gt; that is able to identify anomalous patterns in a multivariate time series (i.e., a time series with many features) in an online real-time manner.&lt;/p&gt;
 
-&lt;p&gt;The image above is the architecture of RAMP. RAMP is designed for applications where the data forms a time series stream, meaning there is a continues flow of data. Streaming data poses an additional challenge for machine learning based anomaly detection models. Usually in machine learning, models generalize patterns in data based on pre-collected training datasets by training on them offline (e.g., most deep learning models). Usually, this offline training process requires substantial amount of time and computational resources. However, in streaming data, the data arrives continuously and patterns are bound to continuously change meaning that models must learn temporal behavior in an online manner on the fly. So that was our challenge, we had to make sure our model is fast enough to keep up with the stream of data while ensuring it can  still learn complex temporal patterns and identify anomalies at the same time. In todays’ post I will be going through a brief overview of RAMPs’ features and its key ideas along with an implementation in python. Full disclosure, this post itself might not be sufficient to completely understand all the inner working of RAMP, rather what I wanted to write about was why we designed RAMP in this way and the challenges it overcomes. If you want more in depth information about our model please refer to the &lt;a href=&quot;https://github.com/dherath/RAMP&quot;&gt;code&lt;/a&gt;, &lt;a href=&quot;http://dinalherath.com/papers/2019RAMP_extended_paper.pdf&quot;&gt;paper&lt;/a&gt; or &lt;a href=&quot;https://www.researchgate.net/publication/337927011_Slides_-_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows&quot;&gt;slides&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The image above is the architecture of RAMP. RAMP is designed for applications where the data forms a time series stream, meaning there is a continues flow of data. Streaming data poses an additional challenge for machine learning based anomaly detection models. Usually in machine learning, models generalize patterns in data based on pre-collected training datasets by training on them offline (e.g., most deep learning models). Usually, this offline training process requires substantial amount of time and computational resources. However, in streaming data, the data arrives continuously and patterns are bound to continuously change meaning that models must learn temporal behavior in an online manner on the fly. So that was our challenge, we had to make sure our model is fast enough to keep up with the stream of data while ensuring it can  still learn complex temporal patterns and identify anomalies at the same time. In todays’ post I will be going through a brief overview of RAMPs’ features and its key ideas along with an implementation in python. Full disclosure, this post itself might not be sufficient to completely understand all the inner working of RAMP, rather what I wanted to write about was why we designed RAMP in this way and the challenges it overcomes. If you want more in depth information about our model please refer to the &lt;a href=&quot;https://github.com/dherath/RAMP&quot;&gt;code&lt;/a&gt;, &lt;a href=&quot;http://localhost:4000/papers/2019RAMP_extended_paper.pdf&quot;&gt;paper&lt;/a&gt; or &lt;a href=&quot;https://www.researchgate.net/publication/337927011_Slides_-_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows&quot;&gt;slides&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;We experimented RAMP on streaming system logs collected from &lt;a href=&quot;https://dataview.org&quot;&gt;DATAVIEW&lt;/a&gt;, a scientific workflow management system used for conducting large scale experiments with the aid of Amazon EC2 virtual machines (e.g., forecasting earthquakes, diagnosing illnesses). By using RAMP we showed that it is possible to identify a variety of anomalies in such systems and possible malicious activity that may have been carried out to falsify research. We selected such a domain because falsified research findings can have serious implications in many areas. For example imagine if fraudulent research was used for drug discovery for some disease, then it could have serious side effects for any patient that use those drugs. Or imagine a governmental policy decision was carried unknowingly based on some falsified research, this again could have serious negative implications on the society at large. Therefore, ensuring that research is credible and reproducible is of great importance in the research community [&lt;a href=&quot;https://nbakay.wordpress.com/2018/10/06/peer-reviewed-scientific-research-losing-credibility-as-studies-show-they-are-rigged-or-false/&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;https://www.press.umich.edu/9717920/fraud_and_misconduct_in_research&quot;&gt;2&lt;/a&gt;]. On another note, scientific workflows run on dedicated machines and hardware. Therefore, capturing anomalies in those systems as they occur is of paramount importance so as to not waste precious computational resources. The system logs form a multivariate time series that reflects the current execution state of any given experiment on the Amazon machines. In the github code, I have also provided an example of how RAMP works for a simple dataset collected on DATAVIEW. As shown in the image RAMP continuously monitors the stream of data and gives an indication of an anomaly to the user. As shown in the image above RAMP works as follows:&lt;/p&gt;
 
@@ -210,7 +259,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
   (3) Append the identified min-distance as the MP value for current subsequence
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;For some subsequence, if the MP value is zero or a very small value then it means that subsequence is a common pattern that occurs within the times series. If the MP value is very large that means the pattern in question is an outlier or an anomaly. In our anomaly detection algorithm, we extend and modify the vanilla Matrix Profile approach to work with a streaming multivariate data source. I won’t go into our exact modifications here, instead I will refer you to the &lt;a href=&quot;https://www.researchgate.net/publication/337927011_Slides_-_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows&quot;&gt;slides&lt;/a&gt; or the &lt;a href=&quot;http://dinalherath.com/papers/2019RAMP_extended_paper.pdf&quot;&gt;paper&lt;/a&gt; for more information. Our anomaly detection algorithm, takes each oncoming subsequence as its input and computes a weighted aggregated anomaly score &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;. If this anomaly score is greater than some user defined threshold (&lt;script type=&quot;math/tex&quot;&gt;\beta &gt; \theta&lt;/script&gt;) then it returns &lt;strong&gt;True&lt;/strong&gt; for anomaly. Additionally, given a multivariate time series, our algorithm also returns the features that contributed towards an identified anomaly instance. Thereby some user or administrator will be able to diagnose the root cause of an anomaly.&lt;/p&gt;
+&lt;p&gt;For some subsequence, if the MP value is zero or a very small value then it means that subsequence is a common pattern that occurs within the times series. If the MP value is very large that means the pattern in question is an outlier or an anomaly. In our anomaly detection algorithm, we extend and modify the vanilla Matrix Profile approach to work with a streaming multivariate data source. I won’t go into our exact modifications here, instead I will refer you to the &lt;a href=&quot;https://www.researchgate.net/publication/337927011_Slides_-_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows&quot;&gt;slides&lt;/a&gt; or the &lt;a href=&quot;http://localhost:4000/papers/2019RAMP_extended_paper.pdf&quot;&gt;paper&lt;/a&gt; for more information. Our anomaly detection algorithm, takes each oncoming subsequence as its input and computes a weighted aggregated anomaly score &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;. If this anomaly score is greater than some user defined threshold (&lt;script type=&quot;math/tex&quot;&gt;\beta &gt; \theta&lt;/script&gt;) then it returns &lt;strong&gt;True&lt;/strong&gt; for anomaly. Additionally, given a multivariate time series, our algorithm also returns the features that contributed towards an identified anomaly instance. Thereby some user or administrator will be able to diagnose the root cause of an anomaly.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;anomaly_detection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;proc_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
         &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; identifies if an anomaly is present in sub-sequence T &quot;&quot;&quot;&lt;/span&gt;
@@ -328,24 +377,24 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;There you have it, my first ever anomaly detection model &lt;strong&gt;RAMP&lt;/strong&gt;.  If you find it interesting please do read the &lt;a href=&quot;http://dinalherath.com/papers/2019RAMP_extended_paper.pdf&quot;&gt;paper&lt;/a&gt;, &lt;a href=&quot;https://www.researchgate.net/publication/337927011_Slides_-_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows&quot;&gt;slides&lt;/a&gt; and play with the &lt;a href=&quot;https://github.com/dherath/RAMP&quot;&gt;code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There you have it, my first ever anomaly detection model &lt;strong&gt;RAMP&lt;/strong&gt;.  If you find it interesting please do read the &lt;a href=&quot;http://localhost:4000/papers/2019RAMP_extended_paper.pdf&quot;&gt;paper&lt;/a&gt;, &lt;a href=&quot;https://www.researchgate.net/publication/337927011_Slides_-_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows&quot;&gt;slides&lt;/a&gt; and play with the &lt;a href=&quot;https://github.com/dherath/RAMP&quot;&gt;code&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2020/autoencoder/&quot;&gt;Anomaly detection with Deep AutoEncoders&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2020/autoencoder/&quot;&gt;Anomaly detection with Deep AutoEncoders&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 09 Apr 2020 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2020/ramp/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2020/ramp/</guid>
+        <pubDate>Thu, 09 Apr 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2020/ramp/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/ramp/</guid>
         
         
       </item>
     
       <item>
         <title>Implementing Deep Recurrent Neural Networks (RNN)</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2019/post_12/model_image.jpeg&quot; alt=&quot;rnn-image&quot; width=&quot;340px&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2019/post_12/model_image.jpeg&quot; alt=&quot;rnn-image&quot; width=&quot;340px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hi All! Today I thought of writing an introductory post on implementing &lt;strong&gt;Deep Learning&lt;/strong&gt; models using &lt;a href=&quot;https://www.tensorflow.org&quot;&gt;Tensorflow&lt;/a&gt;. In recent years you probably have heard about &lt;em&gt;AI&lt;/em&gt; beating players in quite complex games like &lt;a href=&quot;https://deepmind.com/research/alphago/&quot;&gt;GO&lt;/a&gt; and &lt;a href=&quot;https://www.theverge.com/2019/4/13/18309459/openai-five-dota-2-finals-ai-bot-competition-og-e-sports-the-international-champion&quot;&gt;DOTA&lt;/a&gt; and probably thought its really cool. This explosive development in machine intelligence is due to advancements in Deep Learning, which is a branch of machine learning that extends from &lt;em&gt;neural networks&lt;/em&gt;.&lt;/p&gt;
 
@@ -566,13 +615,13 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2019/ta-tools/&quot;&gt;Making TA-life easier: Bash scripts for grading&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2019/ta-tools/&quot;&gt;Making TA-life easier: Bash scripts for grading&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 18 Aug 2019 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2019/rnn/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2019/rnn/</guid>
+        <pubDate>Sun, 18 Aug 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2019/rnn/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/rnn/</guid>
         
         
       </item>
@@ -729,19 +778,19 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 24 Mar 2019 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2019/ta-tools/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2019/ta-tools/</guid>
+        <pubDate>Sun, 24 Mar 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2019/ta-tools/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/ta-tools/</guid>
         
         
       </item>
     
       <item>
         <title>Adding git support to Terminal</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://dinalherath.com/material/2018/post_10/github_helper.jpeg?raw=true&quot; alt=&quot;github_helper&quot; height=&quot;400px&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2018/post_10/github_helper.jpeg?raw=true&quot; alt=&quot;github_helper&quot; height=&quot;400px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; support to a terminal. This post is more of a &lt;strong&gt;‘How to?’&lt;/strong&gt; post, and not really an introduction to &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;. So if you have no idea what &lt;strong&gt;git&lt;/strong&gt; is all about and you program a lot, then I think you should really consider learning it, and heres why…&lt;/p&gt;
 
@@ -806,9 +855,9 @@ After pulling from a branch, if a merge is required then an additional text as &
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;!--**Next: [Time series prediction with Recurrent Neural Networks](http://dinalherath.com/2018/time-series-prediction/)** \\--&gt;
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;!--**Next: [Time series prediction with Recurrent Neural Networks](http://localhost:4000/2018/time-series-prediction/)** \\--&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2019/ta-tools/&quot;&gt;Making TA-life easier : Bash scripts for grading&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!--+ **the current git branch**: The git branch you're checked in is shown in green inside parenthisis. In my case, I'm checked into a branch for this post called **post_10**.
 + **un-commited changes**: If there is any change that is not commited or added, it will be shown as a _green_ **`*`**(asterix) symbol right next to the branch name. In my case, the _feed.xml_ file is modified and not commited, so there is a asterix shown.
@@ -832,9 +881,9 @@ If your reading this part of my post, then I'm assuming you have some familiarit
 
 But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. --&gt;
 </description>
-        <pubDate>Sun, 23 Dec 2018 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2018/git-support/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/git-support/</guid>
+        <pubDate>Sun, 23 Dec 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2018/git-support/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/git-support/</guid>
         
         
       </item>
@@ -945,12 +994,12 @@ But fear no more, in this post I'll be going through three easy steps on how to 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 19 May 2018 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2018/Linked-Lists/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/Linked-Lists/</guid>
+        <pubDate>Sat, 19 May 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2018/Linked-Lists/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/Linked-Lists/</guid>
         
         
       </item>
@@ -1064,12 +1113,12 @@ By substitution of values,
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 15 Jan 2018 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2018/Markov-Chains/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2018/Markov-Chains/</guid>
+        <pubDate>Mon, 15 Jan 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2018/Markov-Chains/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/Markov-Chains/</guid>
         
         
       </item>
@@ -1228,9 +1277,9 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
-        <link>http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</guid>
+        <pubDate>Fri, 15 Dec 2017 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
         
         
       </item>
@@ -1370,147 +1419,9 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Simulation of Hard Disks: Part 2</title>
-        <description>&lt;p&gt;Hello Everyone !!! Hope you all had an amazing week, If you’re in college the new semester probably just started and I hope you’re first few weeks were awesome, I just started grad school and my week was pretty good :). Now moving on with my post, this will be a continuation from my previous post &lt;a href=&quot;https://dherath.github.io/2017/hard-disks-1/&quot; target=&quot;blank&quot;&gt;&lt;strong&gt;‘Simulation of Hard Disks - Part 1’&lt;/strong&gt;&lt;/a&gt; where I tackled this very same problem using &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Newtonian deterministic mechanics&lt;/code&gt;&lt;/strong&gt;. Ok, so if this is the first time you’re hearing the word &lt;em&gt;&lt;strong&gt;Hard disks&lt;/strong&gt;&lt;/em&gt; I do suggest reading my first post where I explain the terms and the rationale behind simulations of this sort.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://teachbesideme.com/wp-content/uploads/2015/02/solid-liquid-gas-1024x346.jpg&quot; alt=&quot;intro-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In my last post I ended on a note that suggested the previous simulation technique has some limitations. So today I’ll start from there, the entire point of simulating hard disks is to predict the behavior of particle systems that we might find in the real world. However such systems have more than 4 particles, and in the previous technique we had to solve the &lt;strong&gt;equations of motion for the entire system for every step&lt;/strong&gt;. While this was possible for 4 particles it would be ridiculously time consuming for a system with 1,000,000s of particles. &lt;code class=&quot;highlighter-rouge&quot;&gt;That in itself is the flaw with this method&lt;/code&gt;. This exponential increase in computational complexity drove many scientists to find better ways of simulating hard disk problems.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;So the questions is, what is this better way to simulate hard disks?&lt;/code&gt;&lt;/strong&gt; that’s what todays post is all about.&lt;/p&gt;
-
-&lt;h3 id=&quot;simulating-hard-disks-using-direct-sampling&quot;&gt;Simulating hard disks using direct sampling&lt;/h3&gt;
-
-&lt;p&gt;As per the title the simulations I will be presenting today are based on a technique called &lt;strong&gt;‘direct sampling’&lt;/strong&gt; which is an interesting concept which stems from the idea of &lt;code class=&quot;highlighter-rouge&quot;&gt;randomness&lt;/code&gt;. So what is this &lt;em&gt;&lt;strong&gt;direct sampling?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In a nutshell, direct sampling is sort of like randomly picking an apple from a basket of apples and hoping its ripe.  However, note that the ripeness of apples will vary according to some distribution(&lt;em&gt;Uniform, Poisson,…&lt;/em&gt;). The interesting thing here being there is always some &lt;strong&gt;probability&lt;/strong&gt; that an apple we picked is ripe, so sometimes we might get a good one sometimes we might not luck out.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This idea of using randomness is a corner stone of modern day statistical mechanics. The gif below shows the output from the simulation technique I’ll be discussing today.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_5_hard_disks_2/directDisks_animation.gif&quot; alt=&quot;hard-disks-gif&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you look closely at the gif above, you would notice a clear difference with respect to the earlier technique.  In Newtonian mechanics the simulation revolves with time which means that some state &lt;em&gt;i&lt;/em&gt; is directly dependent on its previous &lt;em&gt;i-1&lt;/em&gt; state. So in a &lt;code class=&quot;highlighter-rouge&quot;&gt;gif&lt;/code&gt; it looks as if the particles are moving and colliding in real time. However, in this case the the &lt;code class=&quot;highlighter-rouge&quot;&gt;gif&lt;/code&gt; just shows different &lt;em&gt;configurations(or samples)&lt;/em&gt; of some state that could occur at any time. To explain it in a different way, all the samples you see in the &lt;em&gt;gif&lt;/em&gt; above are configurations that the disks could take at some point in time(&lt;em&gt;we don’t know when)&lt;/em&gt; that are valid.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;So what does it mean to have a valid configuration?&lt;/code&gt;&lt;/strong&gt;
- A valid configuration, is some placement of the disks within the boundary of the box that doesn’t overlap with each other.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So basically, the &lt;em&gt;gif&lt;/em&gt; above just shows some set of legal configurations that the disks could take, it doesn’t necessarily show how the system evolves with time. This is both good and bad.  The surprising thing about random sampling is that in terms of simulating hard disks, its possible to replicate the same results we observed from running simulations using Newtonian Mechanics. Before I go into detail about that, first I’ll go through the code for this technique.&lt;/p&gt;
-
-&lt;h4 id=&quot;the-code&quot;&gt;The Code&lt;/h4&gt;
-
-&lt;p&gt;I’ll be demonstrating this technique using Matlab, and unlike the previous method this does not require the use of functions. Since the simulation contains only 4 disks, there can be only 4 possibilities for wall-disk collisions and 6 possibilities for disk-disk collisions as per the table below.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Disk type A&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Disk Type B&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Number of collisions&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2, 3, 4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3, 4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Total No.of collisions&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;6&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Within the code snippet below, the first few lines of the code determine the initial conditions such as the radius, number of disks, their respective locations and the set of possible collisions of all the disks &lt;em&gt;(which is 6 disk-disk collision pairs &amp;amp; 4 wall-disk collision pairs)&lt;/em&gt;. Afterwards for a given number of iterations(&lt;em&gt;defined by n&lt;/em&gt;) a loop is run for each sample state where each turn 4 random locations for the disks are computed such that the &lt;strong&gt;minimum distance between any two disks is greater than the diameter of a disk&lt;/strong&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;This condition ensures that no two disks overlap with each other.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The step for the simulation is not increased until this condition is met, say for an example if the 100th iteration computes an invalid configuration where an overlap is only present between the 1st &amp;amp; 3rd disks where as the 2nd &amp;amp; 4th disks are valid; even then the &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;entire set is rejected resulting in the sample space being completely erased&lt;/code&gt;&lt;/strong&gt;. This form of rejections are called the &lt;strong&gt;&lt;em&gt;tabula rasa rejections&lt;/em&gt;&lt;/strong&gt;. These continues rejections occur until a valid set of configurations are obtained, only then would the iteration &lt;code class=&quot;highlighter-rouge&quot;&gt;count&lt;/code&gt; be increased from 100 to 101.&lt;/p&gt;
-
-&lt;div class=&quot;language-matlab highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;clc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;diamtr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;wall&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;%number of samples&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;distanceVals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;%------positions for disks -----------------------&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.*&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.*&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;dxa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;dya&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;dxb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;dyb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;distanceVals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dxa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dxb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dya&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dyb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
-        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        	
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;distanceVals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diamtr&lt;/span&gt;
-            &lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;the-results&quot;&gt;The Results&lt;/h4&gt;
-
-&lt;p&gt;The biggest question you’d probably have after reading thus far about this technique would be &lt;code class=&quot;highlighter-rouge&quot;&gt;How could this even work?&lt;/code&gt;. Which is a completely reasonable question, because in Newtonian mechanics the actual equations of motion were computed. Therefore, within the classical boundary the simulation replicates particle motion.&lt;/p&gt;
-
-&lt;p&gt;However, here in simple terms all we do is randomly place the particles in a given space for some number of rounds and then bin their locations and now supposedly &lt;strong&gt;I say&lt;/strong&gt; it shows the same behavior as the previous case. The graphs below show a comparison between the histograms for the disk locations for simulations run using Newtonian mechanics and direct sampling for disks 1 &amp;amp; 2(&lt;em&gt;disks 3 &amp;amp; 4 show the same behavior&lt;/em&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;01) histogram of X &amp;amp; Y coordinates for disk 1 (MD-Molecular Dynamics, Direct- direct sampling)&lt;/strong&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_5_hard_disks_2/comparison_disk1.jpg&quot; alt=&quot;disk-1-coordinate-sample&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;02) histogram of X &amp;amp; Y coordinates for disk 2 (MD-Molecular Dynamics, Direct- direct sampling)&lt;/strong&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_5_hard_disks_2/comparison_disk2.jpg&quot; alt=&quot;disk-2-coordinate-sample&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The position distributions show the same behavior where the disks seem to be more attracted towards the edges. As I explained in my previous post the reason behind this phenomena is primarily due to an entropic interaction where at each instance the disks individually try to make more room for the others. The interesting thing here is that even without resorting to complex computations, behavior of complex systems could be replicated using this idea of &lt;code class=&quot;highlighter-rouge&quot;&gt;randomness&lt;/code&gt;. However this technique does have its own limitations.&lt;/p&gt;
-
-&lt;p&gt;Since the simulation doesn’t evolve with time this technique alone is not sufficient to obtain any idea about how the velocities of the disks vary unlike in the previous case where we saw a Boltzmann distribution for the velocities.  Even amidst this, the significant improvement with regards to reducing the computational complexity is very attractive specifically when considering systems with millions of particles. So with that being said I’ll end my post here hoping you all have a newfound appreciation for the power of &lt;code class=&quot;highlighter-rouge&quot;&gt;randomness&lt;/code&gt;. (&lt;em&gt;At least in the realm of scientific computing&lt;/em&gt;)&lt;/p&gt;
-
-&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
-&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
-
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;                                                     &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-1/&quot;&gt;Simulation of Hard Disks : Part 1&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 27 Aug 2017 00:00:00 -0400</pubDate>
-        <link>http://dinalherath.com/2017/hard-disks-2/</link>
-        <guid isPermaLink="true">http://dinalherath.com/2017/hard-disks-2/</guid>
+        <pubDate>Fri, 15 Sep 2017 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
         
         
       </item>
