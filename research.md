@@ -4,11 +4,11 @@ title: Research
 permalink: /research/
 ---
 
-Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Machine Learning (ML)`** and **`Cybersecurity`**. From a ML perspective I work on, 
+Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Applied Machine Learning (ML)`** and **`Cybersecurity`**. From a ML perspective I work on, 
 + **`Adversarial machine learning`** that focuses on the robustness for AI in cybersecurity
 + **`Interpretable machine learning`** that focuses on interpreting and understanding AI in cybersecurity
 
-In my PhD, so far I have developed a real-time adversarial attack using deep reinforcement learning that can be used to evaluate the robustness for deep learning based anomaly detection from distributed system logs. Additionally, I have worked on developing a model with real-time anomaly detection capability for scientific workflows which also provides insights on anomaly root-causes. I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
+In my PhD, so far I have developed a real-time adversarial attack using **deep reinforcement learning** that can be used to evaluate the robustness for deep learning based anomaly detection from distributed system logs. Additionally, I have worked on developing a model with real-time **anomaly detection** capability for scientific workflows which also provides insights on anomaly root-causes. I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
 
 In terms of past research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations. As of August 2020 I am also a member of the [International Research Council (IRC) in Sri Lanka](https://medium.com/@SustainableEduF/meet-sri-lankan-researcher-jerome-dinal-herath-dd4a2614e9da).
 
