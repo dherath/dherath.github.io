@@ -5,16 +5,35 @@
     <description>Jerome Dinal Herath</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Dec 2021 13:22:40 +0530</pubDate>
-    <lastBuildDate>Wed, 29 Dec 2021 13:22:40 +0530</lastBuildDate>
+    <pubDate>Wed, 29 Dec 2021 14:07:58 +0530</pubDate>
+    <lastBuildDate>Wed, 29 Dec 2021 14:07:58 +0530</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
-        <title>Log-Anomaly-Mask: Hiding Anomalies in System Logs</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2020/post_14/AE.jpeg&quot; alt=&quot;LAM-image&quot; width=&quot;540px&quot; /&gt;
+        <title>Fooling AI-based System Log Anomaly Detection</title>
+        <description>&lt;p&gt;Hi All!! In today’s post I will again be writing about one of my own research work I completed as part of my PhD. The entire premise of this work revolves around a popular sub-field in Machine Learning called, &lt;a href=&quot;&quot;&gt;Adversarial Machine Learning&lt;/a&gt;. It’s no surprise that Machine Learning and Deep Learning models are capable of accomplishing a varying range of real-world complex tasks, from image recognition, time series prediction and playing games like GO. However, in recent years researchers have shown that AI can be, in fact &lt;strong&gt;fooled&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2021/post_15/adv_attack.jpeg&quot; alt=&quot;attack-image&quot; width=&quot;640px&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hi All!! In todays’ post I will again be presenting findings from one of my own research work I completed as part of my PhD. The entire premise of this work revolves around a popular sub-field in Machine Learning called, &lt;a href=&quot;&quot;&gt;Adversarial Machine Learning&lt;/a&gt;. It’s no suprise that Machine Learning and Deep Learning models are capable of acomplishing a varying range of real-world complex tasks, from image recognition, time series prediction and playing games like GO. However, in recent years researchers have found that even though AI as a whole are pretty great, they do suffer from certain issues.&lt;/p&gt;
+&lt;p&gt;The image above is a prime example for that. In the seminal work by &lt;a href=&quot;&quot;&gt;Goodfellow et al&lt;/a&gt;, it is shown that a Deep Learning model trained to recognize an image can be fooled by making extremely small changes to the original image. In this example, as you can see the model classifies an image of a Panda as a Gibbon. From that point on wards, many researchers have identified ways to &lt;a href=&quot;&quot;&gt;exploit weaknesses in AI models&lt;/a&gt;, both Machine Learning and Deep Learning based.&lt;/p&gt;
+
+&lt;p&gt;This growing concern is specifically important for AI used in the cybersecurity domain, because if models can be fooled then it would be possible for an attacker to engineer methods in evading automated threat detection. Thereby wrecking havoc without a care of being caught.&lt;/p&gt;
+
+&lt;p&gt;So today I will be talking about our own contribution towards Adversarial AI in the application of anomaly detection from distributed system logs. In this work, we put on the hat of an attacker, where our goal was to find an automated method that can evade anomaly detection by even state-of-the-art system log anomaly detection models such as &lt;a href=&quot;&quot;&gt;DeepLog&lt;/a&gt;. I won’t be gong into minute details about our attack method, instead I will provide an overview of the challenges and the design of our attack. For algorithmic details, please refer to our &lt;a href=&quot;&quot;&gt;paper&lt;/a&gt; and the &lt;a href=&quot;&quot;&gt;code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;1-anomaly-detection-from-distributed-system-logs&quot;&gt;1. Anomaly Detection from Distributed System Logs&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2021/post_15/log_anomaly_detection_example.jpeg&quot; alt=&quot;anomaly-detection&quot; width=&quot;600px&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2-our-attack-log-anomaly-mask-lam&quot;&gt;2. Our Attack: Log-Anomaly-Mask (LAM)&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2021/post_15/LAM_image.jpg&quot; alt=&quot;lam&quot; width=&quot;600px&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2021/post_15/log_attack_example.jpeg&quot; alt=&quot;attack-example&quot; width=&quot;660px&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;intro
@@ -37,7 +56,7 @@
   &lt;/li&gt;
   &lt;li&gt;images
     &lt;ul&gt;
-      &lt;li&gt;system log anomlay detection&lt;/li&gt;
+      &lt;li&gt;system log anomaly detection&lt;/li&gt;
       &lt;li&gt;attack example (logs)&lt;/li&gt;
       &lt;li&gt;attack example (images)&lt;/li&gt;
       &lt;li&gt;distributed system log anomaly detection&lt;/li&gt;
