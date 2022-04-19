@@ -170,4 +170,5 @@ There you go, a speedy run through on how to code up an AutoEncoder model using 
 ##### So until next time,
 ##### Cheers!
 
+**Next: [Fooling AI-based System Log Anomaly Detection]({{site.url}}/2021/lam/)** \\
 **Prev: [RAMP: Real-Time Aggregated Matrix Profile]({{site.url}}/2020/ramp/)**

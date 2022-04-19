@@ -8,13 +8,15 @@ Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab
 + **`Adversarial machine learning`** that focuses on the robustness for AI in cybersecurity
 + **`Interpretable machine learning`** that focuses on interpreting and understanding AI in cybersecurity
 
-In my PhD, so far I have developed a real-time adversarial attack using **deep reinforcement learning** that can be used to evaluate the robustness for deep learning based anomaly detection from distributed system logs. Additionally, I have worked on developing a model with real-time **anomaly detection** capability for scientific workflows which also provides insights on anomaly root-causes. I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
+During my PhD, I have developed a method that explains malware classification made by **graph neural networks**, designed a real-time adversarial evasion attack using **deep reinforcement learning** that can be used to evaluate the robustness for deep learning based anomaly detection from distributed system logs, and also in developing a model with real-time **anomaly detection** capability for scientific workflows. I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
 
 In terms of past research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations. As of August 2020 I am also a member of the [International Research Council (IRC) in Sri Lanka](https://medium.com/@SustainableEduF/meet-sri-lankan-researcher-jerome-dinal-herath-dd4a2614e9da).
 
 #### Publications
 
 Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user=vNtiUMwAAAAJ&view_op=list_works&gmla=AJsN-F7CowB4vN1o_UJq8beyKkMU42WStxRA3es-ukqdfMWUIacyLKD4u8liyf47F7Cu1DhXCZ7WxzkU5AscrUVZNdV1-I9msbAFL3y0eCZ8yDsAFFXLtQo) profile for the most up to date version.
+
+10. [CFGExplainer: Explaining Graph Neural Network-Based Malware Classification from Control Flow Graphs](). By **Jerome Dinal Herath**, Priti Prabhakar Wakodikar, Ping Yang and Guanhua Yan. In: IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) (2022). [[code]]()
 
 9. [Real-Time Evasion Attacks against Deep Learning-Based Anomaly Detection from Distributed System Logs]({{site.url}}/papers/2021codaspy.pdf). By **J. Dinal Herath**, Ping Yang and Guanhua Yan. In: Proceedings of The 11th ACM Conference on Data and Application Security and Privacy (CODASPY) (2021). [[presentation-video]](https://dl.acm.org/doi/10.1145/3422337.3447833)[[code]](https://github.com/dherath/Log_Anomaly_Mask)
 

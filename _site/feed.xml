@@ -5,72 +5,56 @@
     <description>Jerome Dinal Herath</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Dec 2021 14:07:58 +0530</pubDate>
-    <lastBuildDate>Wed, 29 Dec 2021 14:07:58 +0530</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2022 21:10:18 -0400</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2022 21:10:18 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
         <title>Fooling AI-based System Log Anomaly Detection</title>
-        <description>&lt;p&gt;Hi All!! In today’s post I will again be writing about one of my own research work I completed as part of my PhD. The entire premise of this work revolves around a popular sub-field in Machine Learning called, &lt;a href=&quot;&quot;&gt;Adversarial Machine Learning&lt;/a&gt;. It’s no surprise that Machine Learning and Deep Learning models are capable of accomplishing a varying range of real-world complex tasks, from image recognition, time series prediction and playing games like GO. However, in recent years researchers have shown that AI can be, in fact &lt;strong&gt;fooled&lt;/strong&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;Hi All!! today I will be writing about a piece of research I completed as part of my PhD. The entire premise of this work revolves around a popular sub-field in machine learning called, &lt;a href=&quot;https://en.wikipedia.org/wiki/Adversarial_machine_learning&quot;&gt;adversarial machine learning&lt;/a&gt;. It’s no surprise that machine learning and deep learning models are capable of accomplishing a varying range of real-world complex tasks, from image recognition, time series prediction and playing massive multiplayer games. However, in recent years researchers have shown that machine/deep learning models can be &lt;strong&gt;fooled&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2021/post_15/adv_attack.jpeg&quot; alt=&quot;attack-image&quot; width=&quot;640px&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;The image above is a prime example for that. In the seminal work by &lt;a href=&quot;&quot;&gt;Goodfellow et al&lt;/a&gt;, it is shown that a Deep Learning model trained to recognize an image can be fooled by making extremely small changes to the original image. In this example, as you can see the model classifies an image of a Panda as a Gibbon. From that point on wards, many researchers have identified ways to &lt;a href=&quot;&quot;&gt;exploit weaknesses in AI models&lt;/a&gt;, both Machine Learning and Deep Learning based.&lt;/p&gt;
+&lt;p&gt;The image above is a prime example for that. In the seminal work by &lt;a href=&quot;https://arxiv.org/pdf/1412.6572.pdf&quot;&gt;Goodfellow et al&lt;/a&gt;, it is shown that a deep learning model trained for image recognition can be fooled by making extremely small changes to the original image. In this example, as you can see the model classifies an image of a Panda as a Gibbon, even though the two images (original:left and modified:right) are indistinguishable to the naked eye. From that point on-wards, many researchers have identified ways to &lt;a href=&quot;https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8269-draft.pdf?ref=https://githubhelp.com&quot;&gt;exploit weaknesses in Artificial Intelligence (AI)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This growing concern is specifically important for AI used in the cybersecurity domain, because if models can be fooled then it would be possible for an attacker to engineer methods in evading automated threat detection. Thereby wrecking havoc without a care of being caught.&lt;/p&gt;
 
-&lt;p&gt;So today I will be talking about our own contribution towards Adversarial AI in the application of anomaly detection from distributed system logs. In this work, we put on the hat of an attacker, where our goal was to find an automated method that can evade anomaly detection by even state-of-the-art system log anomaly detection models such as &lt;a href=&quot;&quot;&gt;DeepLog&lt;/a&gt;. I won’t be gong into minute details about our attack method, instead I will provide an overview of the challenges and the design of our attack. For algorithmic details, please refer to our &lt;a href=&quot;&quot;&gt;paper&lt;/a&gt; and the &lt;a href=&quot;&quot;&gt;code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So today I will be talking about our own contribution towards Adversarial AI in the application of anomaly detection from distributed system logs. In this work, we put on the hat of an attacker, where our goal was to find an automated method that can evade anomaly detection by even state-of-the-art system log anomaly detection models such as &lt;a href=&quot;https://www.cs.utah.edu/~lifeifei/papers/deeplog.pdf&quot;&gt;DeepLog&lt;/a&gt;. I won’t be describing minute details about our attack method, instead I will provide an overview of the design of our attack. For algorithmic details, please refer to our &lt;a href=&quot;https://www.dinalherath.com/papers/2021codaspy.pdf&quot;&gt;paper&lt;/a&gt; and the &lt;a href=&quot;https://github.com/dherath/Log_Anomaly_Mask&quot;&gt;code&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;1-anomaly-detection-from-distributed-system-logs&quot;&gt;1. Anomaly Detection from Distributed System Logs&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2021/post_15/log_anomaly_detection_example.jpeg&quot; alt=&quot;anomaly-detection&quot; width=&quot;600px&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
+&lt;p&gt;Anomaly detection using distributed system logs usually occur in two steps–1) a parsing step and 2) a detection step. First the logs generated by the distributed system are collected and converted into numeric values called &lt;strong&gt;logkeys&lt;/strong&gt;. Unlike in typical Natural Language Processing (NLP) tasks, logs generated by systems have predefined templates, as such it is possible to assign some numeric identifier for each log type.&lt;/p&gt;
+
+&lt;p&gt;Therefore, a stream of logs generated can be converted into a time series with numeric values. In the above image it is denoted by &lt;script type=&quot;math/tex&quot;&gt;X = \{ x_{T}, ..., x_{t}, x_{t-1}, x_{t-2}, ..., x_{0}\}&lt;/script&gt; for a time series of $T$ values where each &lt;script type=&quot;math/tex&quot;&gt;x_{t}&lt;/script&gt; corresponds to the log event that occurred at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;. Afterthat, the logkeys are sent to some anomaly detection model. The anomaly detection model processes the logkey stream and detect anomalies in a sliding window format using a window of &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; logkeys with a step-size of 1 value per time step.&lt;/p&gt;
+
 &lt;h4 id=&quot;2-our-attack-log-anomaly-mask-lam&quot;&gt;2. Our Attack: Log-Anomaly-Mask (LAM)&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2021/post_15/LAM_image.jpg&quot; alt=&quot;lam&quot; width=&quot;600px&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
+&lt;p&gt;Here, I will go through our proposed attack, which is called &lt;strong&gt;Log Anomaly Mask&lt;/strong&gt; (LAM) and an example of its working. LAM operates by intercepting the logkeys streamed towards the anomaly detection model. LAM works in two stages, first, it observes a fixed sequence of the logkeys denoted by the &lt;strong&gt;observation window&lt;/strong&gt; as in the image above. Then, LAM uses a &lt;strong&gt;surrogate anomaly detection model&lt;/strong&gt; to identify if there are any potential anomalies in the observed logkey window. Afterthat, in the second step, if any potential anomalies are identified in the earlier step LAM uses a component called the &lt;strong&gt;perturber&lt;/strong&gt; to intercept and change the most recent observed logkey (&lt;script type=&quot;math/tex&quot;&gt;x_{t}&lt;/script&gt; at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;).&lt;/p&gt;
+
+&lt;p&gt;We use deep reinforcement learning to design the perturber. Because, for this attack to work, LAM should be able to intercept and attack in real-time, owing to the fact that anomaly detection models can process and detect anomalies in an online manner. Additionally, there may be many possible combinations for modifications to &lt;script type=&quot;math/tex&quot;&gt;x_{t}&lt;/script&gt;, but not all of them can fool the anomaly detection model. So LAM should be able to directly identify some type of modification that fools the anomaly detection model without the luxury of trying many attack combinations.&lt;/p&gt;
+
+&lt;p&gt;It is possible to train a reinforcement learning agent to learn an optimal policy for identifying whats the most likely perturbation to &lt;script type=&quot;math/tex&quot;&gt;x_{t}&lt;/script&gt; so that anomaly detection fails later on. Additionally, in this attack setting LAM must make a split second attack decision while not knowing future variations in the logs that it hasn’t seen yet. Reinforcement learning agents are designed to work in partially observable environments, like deciding a move in a game even though it may not know what an opponent may do in the future. Similarly, we design our agent to fool some anomaly detection model even though it doesn’t know the variation in future logs. Please refer our &lt;a href=&quot;https://www.dinalherath.com/papers/2021codaspy.pdf&quot;&gt;paper&lt;/a&gt; if you want to know an in-depth working of our attack.&lt;/p&gt;
+
+&lt;h5 id=&quot;an-attack-example&quot;&gt;An Attack Example:&lt;/h5&gt;
+
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/material/2021/post_15/log_attack_example.jpeg&quot; alt=&quot;attack-example&quot; width=&quot;660px&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;intro
-    &lt;ul&gt;
-      &lt;li&gt;adversarial AI&lt;/li&gt;
-      &lt;li&gt;system log anomaly detection &amp;amp; models that work&lt;/li&gt;
-      &lt;li&gt;the adversarial attack
-        &lt;ul&gt;
-          &lt;li&gt;the attack method&lt;/li&gt;
-          &lt;li&gt;
-            &lt;dl&gt;
-              &lt;dt&gt;Reinforcement Learning as an Attack&lt;/dt&gt;
-              &lt;dd&gt;write about main components and why we chose them&lt;/dd&gt;
-              &lt;dd&gt;why reinforcement learning -&amp;gt; what kind of RL? why?&lt;/dd&gt;
-            &lt;/dl&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;images
-    &lt;ul&gt;
-      &lt;li&gt;system log anomaly detection&lt;/li&gt;
-      &lt;li&gt;attack example (logs)&lt;/li&gt;
-      &lt;li&gt;attack example (images)&lt;/li&gt;
-      &lt;li&gt;distributed system log anomaly detection&lt;/li&gt;
-      &lt;li&gt;model&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The example above is an attack on a distributed workflow that is designed to diagnose a patients illness. There are five automated tasks that are carried out for this diagnosis (i.e., T1-Feature-Extraction,…,T5-Diagnosis-Recommendation). Lets say an attacker modifies this workflow by adding some task that intercepts the result from T2 and modifies it before it arrives at T3. In the original logs before the attack you can see that variation in the structure of the workflow has changed corresponding to this attack (highlighted in red). And when these logs are processed by an anomaly detection model, it is possible to identify the presence of the attack. However, after LAM is used, the logs pertaining to the attack are modified to values that indicate an idle state of the distributed machines, which in turn fool the operational anomaly detection model. For more in-depth details please check our &lt;a href=&quot;https://www.dinalherath.com/papers/2021codaspy.pdf&quot;&gt;paper&lt;/a&gt; and the &lt;a href=&quot;https://github.com/dherath/Log_Anomaly_Mask&quot;&gt;code&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2020/autoencoder/&quot;&gt;Anomaly detection with Deep AutoEncoders&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 15 Dec 2021 00:00:00 +0530</pubDate>
+        <pubDate>Wed, 15 Dec 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2021/lam/</link>
         <guid isPermaLink="true">http://localhost:4000/2021/lam/</guid>
         
@@ -242,9 +226,10 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2021/lam/&quot;&gt;Fooling AI-based System Log Anomaly Detection&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 27 Dec 2020 00:00:00 +0530</pubDate>
+        <pubDate>Sun, 27 Dec 2020 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2020/autoencoder/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/autoencoder/</guid>
         
@@ -404,7 +389,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2020/autoencoder/&quot;&gt;Anomaly detection with Deep AutoEncoders&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 09 Apr 2020 00:00:00 +0530</pubDate>
+        <pubDate>Thu, 09 Apr 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2020/ramp/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/ramp/</guid>
         
@@ -638,7 +623,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2019/ta-tools/&quot;&gt;Making TA-life easier: Bash scripts for grading&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 18 Aug 2019 00:00:00 +0530</pubDate>
+        <pubDate>Sun, 18 Aug 2019 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2019/rnn/</link>
         <guid isPermaLink="true">http://localhost:4000/2019/rnn/</guid>
         
@@ -800,7 +785,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 24 Mar 2019 00:00:00 +0530</pubDate>
+        <pubDate>Sun, 24 Mar 2019 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2019/ta-tools/</link>
         <guid isPermaLink="true">http://localhost:4000/2019/ta-tools/</guid>
         
@@ -900,7 +885,7 @@ If your reading this part of my post, then I'm assuming you have some familiarit
 
 But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. --&gt;
 </description>
-        <pubDate>Sun, 23 Dec 2018 00:00:00 +0530</pubDate>
+        <pubDate>Sun, 23 Dec 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2018/git-support/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/git-support/</guid>
         
@@ -1016,7 +1001,7 @@ But fear no more, in this post I'll be going through three easy steps on how to 
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 19 May 2018 00:00:00 +0530</pubDate>
+        <pubDate>Sat, 19 May 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2018/Linked-Lists/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/Linked-Lists/</guid>
         
@@ -1135,7 +1120,7 @@ By substitution of values,
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 15 Jan 2018 00:00:00 +0530</pubDate>
+        <pubDate>Mon, 15 Jan 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2018/Markov-Chains/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/Markov-Chains/</guid>
         
@@ -1296,7 +1281,7 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 15 Dec 2017 00:00:00 +0530</pubDate>
+        <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
         
@@ -1438,7 +1423,7 @@ to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 15 Sep 2017 00:00:00 +0530</pubDate>
+        <pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
         
