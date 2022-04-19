@@ -6,7 +6,7 @@ description: "post 14"
 keywords: "AutoEncoders, Deep Learning, Pytorch, Encoder, Decoder, autoencoder, deep learning, implementation, neural network"
 ---
 
-![AE-image]({{site.url}}/material/2020/post_14/AE.jpeg){:width="540px"}
+![AE-image]({{site.baseurl}}/material/2020/post_14/AE.jpeg?raw=true){:width="540px"}
 <br>
 
 Today I will be writing about another deep learning model named an **AutoEncoder**. As shown in the image above, an AutoEncoder model has two main components--1) an `Encoder` module and a 2) `Decoder` module. The Encoder is given some tensor input, named as _Y_ in this case and it learns some hidden representation of it usually called a **hidden state**. The Decoder in turn obtains this hidden state tensor and learns to reconstruct the original input _Y_. Given that, a trained model is able to recreate _Y_ with minimum error, then it stands to reason that the hidden state is in fact some compact representation of the original input _Y_. Typically, its possible to obtain a hidden size that is much smaller in size with respect to the original tensor _Y_. 
@@ -170,5 +170,5 @@ There you go, a speedy run through on how to code up an AutoEncoder model using 
 ##### So until next time,
 ##### Cheers!
 
-**Next: [Fooling AI-based System Log Anomaly Detection]({{site.url}}/2021/lam/)** \\
-**Prev: [RAMP: Real-Time Aggregated Matrix Profile]({{site.url}}/2020/ramp/)**
+**Next: [Fooling AI-based System Log Anomaly Detection]({{site.baseurl}}/2021/lam/)** \\
+**Prev: [RAMP: Real-Time Aggregated Matrix Profile]({{site.baseurl}}/2020/ramp/)**

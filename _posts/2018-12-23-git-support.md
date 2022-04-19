@@ -5,7 +5,7 @@ comments: false
 description: "post 10"
 keywords: "git, github, terminal, support, Github"
 ---
-![github_helper]({{site.url}}/material/2018/post_10/github_helper.jpeg?raw=true){:height="400px"}
+![github_helper]({{site.baseurl}}/material/2018/post_10/github_helper.jpeg?raw=true){:height="400px"}
 
 Hello Everyone!! Hope everything is going great, I know its been sometime since I last posted anything, had a super busy semester. Anyways in todays post I thought of writing about adding `git` support to a terminal. This post is more of a **'How to?'** post, and not really an introduction to `git`. So if you have no idea what **git** is all about and you program a lot, then I think you should really consider learning it, and heres why...
 
@@ -65,9 +65,9 @@ After all these steps are complete, then restart a new terminal and this should 
 ##### So until next time,
 ##### Cheers!
 
-<!--**Next: [Time series prediction with Recurrent Neural Networks]({{site.url}}/2018/time-series-prediction/)** \\-->
-**Next: [Making TA-life easier : Bash scripts for grading]({{site.url}}/2019/ta-tools/)** \\
-**Prev: [Finding cycles in linked lists]({{site.url}}/2018/Linked-Lists/)**
+<!--**Next: [Time series prediction with Recurrent Neural Networks]({{site.baseurl}}/2018/time-series-prediction/)** \\-->
+**Next: [Making TA-life easier : Bash scripts for grading]({{site.baseurl}}/2019/ta-tools/)** \\
+**Prev: [Finding cycles in linked lists]({{site.baseurl}}/2018/Linked-Lists/)**
 
 
 <!--+ **the current git branch**: The git branch you're checked in is shown in green inside parenthisis. In my case, I'm checked into a branch for this post called **post_10**.
