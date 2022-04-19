@@ -8,7 +8,7 @@ Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab
 + **`Adversarial machine learning`** that focuses on the robustness for AI in cybersecurity
 + **`Interpretable machine learning`** that focuses on interpreting and understanding AI in cybersecurity
 
-During my PhD, I have developed a method that explains malware classification made by **graph neural networks**, designed a real-time adversarial evasion attack using **deep reinforcement learning** that can be used to evaluate the robustness for deep learning based anomaly detection from distributed system logs, and also in developing a model with real-time **anomaly detection** capability for scientific workflows. I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
+During my PhD, I have developed a method that explains malware classification made by **graph neural networks**, designed a real-time adversarial evasion attack using **deep reinforcement learning** that can be used to evaluate the robustness for deep learning based anomaly detection from distributed system logs, and also developed a model with real-time **anomaly detection** capability for scientific workflows. I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
 
 In terms of past research experience, before my PhD-I have worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Optimizations, Deep Learning and Robotic simulations. As of August 2020 I am also a member of the [International Research Council (IRC) in Sri Lanka](https://medium.com/@SustainableEduF/meet-sri-lankan-researcher-jerome-dinal-herath-dd4a2614e9da).
 
@@ -24,9 +24,9 @@ Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user
 
 7. [SciBlock: A Blockchain-Based Tamper-Proof Non-Repudiable Storage for Scientific Workflow Provenance]({{site.url}}/papers/2019_CIC_sciblock.pdf). By Dinuni Fernando, Siddharth Kulshrestha, **J. Dinal Herath**, Nitin Mahadik, Yanzhe Ma, Changxin Bai, Ping Yang, Guanhua Yan, Shiyong Lu. In: IEEE International Conference on Collaboration and Internet Computing (2019). [[slides]](https://www.researchgate.net/publication/337927108_SciBlock_A_Blockchain-Based_Tamper-Proof_Non-_Repudiable_Storage_for_Scientific_Workflow_Provenance)
 
-6. [DeepChannel: Wireless Channel Quality Prediction using Deep Learning]({{site.url}}/papers/2019tvt.pdf). By Adita Kulkarni, Anand Seetharam, Arti Ramesh, **J. Dinal Herath**. In: IEEE Transactions in Vehicular Technology (TVT) (2019).
+6. [DeepChannel: Wireless Channel Quality Prediction using Deep Learning]({{site.url}}/papers/2019tvt.pdf). By Adita Kulkarni, Anand Seetharam, Arti Ramesh, **J. Dinal Herath**. In: IEEE Transactions in Vehicular Technology (TVT) (2019). [[code]](https://github.com/dherath/DeepLearning_for_Wireless_Signal_Strength_Prediction)
 
-5. [A Deep Learning Model for Wireless Channel Quality Prediction]({{site.url}}/papers/2019ICC.pdf) by **J. Dinal Herath**, Anand Seetharam and Arti Ramesh. In: IEEE International Conference on Communications (ICC) (2019).
+5. [A Deep Learning Model for Wireless Channel Quality Prediction]({{site.url}}/papers/2019ICC.pdf) by **J. Dinal Herath**, Anand Seetharam and Arti Ramesh. In: IEEE International Conference on Communications (ICC) (2019). [[code]](https://github.com/dherath/DeepLearning_for_Wireless_Signal_Strength_Prediction)
 
 4. [A Markovian Model for Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/papers/2018tvt.pdf) by **J. Dinal Herath** and Anand Seetharam. In: IEEE Transactions in Vehicular Technology (TVT) (2018). [[code]](https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing) [[project]](https://www.researchgate.net/project/Models-for-Opportunistic-Request-Routing-in-Cache-Networks) [[slides]](https://www.researchgate.net/publication/337438870_A_Markovian_Model_for_Analyzing_Opportunistic_Request_Routing_in_Wireless_Cache_Networks)
 
