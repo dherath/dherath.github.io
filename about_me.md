@@ -21,7 +21,7 @@ Before my PhD-I worked on research projects spanning the areas of wireless commu
 
 Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user=vNtiUMwAAAAJ&view_op=list_works&gmla=AJsN-F7CowB4vN1o_UJq8beyKkMU42WStxRA3es-ukqdfMWUIacyLKD4u8liyf47F7Cu1DhXCZ7WxzkU5AscrUVZNdV1-I9msbAFL3y0eCZ8yDsAFFXLtQo) profile for the most up to date version.
 
-10. [CFGExplainer: Explaining Graph Neural Network-Based Malware Classification from Control Flow Graphs]({{site.url}}/papers/2022dsn.pdf). By **Jerome Dinal Herath**, Priti Prabhakar Wakodikar, Ping Yang and Guanhua Yan. In: IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) (2022). [[Accepted]]() [[code]](https://github.com/dherath/CFGExplainer)
+10. [CFGExplainer: Explaining Graph Neural Network-Based Malware Classification from Control Flow Graphs]({{site.url}}/papers/2022dsn.pdf). By **Jerome Dinal Herath**, Priti Prabhakar Wakodikar, Ping Yang and Guanhua Yan. In: IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) (2022). [[code]](https://github.com/dherath/CFGExplainer)
 
 9. [Real-Time Evasion Attacks against Deep Learning-Based Anomaly Detection from Distributed System Logs]({{site.url}}/papers/2021codaspy.pdf). By **J. Dinal Herath**, Ping Yang and Guanhua Yan. In: Proceedings of The 11th ACM Conference on Data and Application Security and Privacy (CODASPY) (2021). [[presentation-video]](https://dl.acm.org/doi/10.1145/3422337.3447833)[[code]](https://github.com/dherath/Log_Anomaly_Mask)
 
