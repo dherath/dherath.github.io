@@ -5,9 +5,57 @@
     <description>Jerome Dinal Herath</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Jul 2022 09:42:14 -0700</pubDate>
-    <lastBuildDate>Sat, 02 Jul 2022 09:42:14 -0700</lastBuildDate>
+    <pubDate>Sat, 03 Sep 2022 07:06:52 -0400</pubDate>
+    <lastBuildDate>Sat, 03 Sep 2022 07:06:52 -0400</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>Explaining Graph Neural Network (GNN) based Malware Classification</title>
+        <description>&lt;p&gt;Hello everyone&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/material/2022/post_16/expl.jpeg?raw=true&quot; alt=&quot;graph-explanations&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Malware classification with GNNs&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/material/2022/post_16/acfg.jpeg?raw=true&quot; alt=&quot;acfg&quot; width=&quot;560px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/material/2022/post_16/gnn.jpeg?raw=true&quot; alt=&quot;acfg&quot; width=&quot;580px&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;CFGExplainer&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/material/2022/post_16/cfgexpl.jpeg?raw=true&quot; alt=&quot;cfgexplainer&quot; width=&quot;740px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/material/2022/post_16/learning.jpeg?raw=true&quot; alt=&quot;forward-pass&quot; width=&quot;600px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/material/2022/post_16/training.jpeg?raw=true&quot; alt=&quot;backward-pass&quot; width=&quot;600px&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The kind of results we got&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
+&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;/2021/lam/&quot;&gt;Fooling AI-based System Log Anomaly Detection&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 03 Sep 2022 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2022/cfgexplainer/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/cfgexplainer/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Fooling AI-based System Log Anomaly Detection</title>
@@ -54,7 +102,7 @@
 
 &lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;/2020/autoencoder/&quot;&gt;Anomaly detection with Deep AutoEncoders&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 15 Dec 2021 00:00:00 -0800</pubDate>
+        <pubDate>Wed, 15 Dec 2021 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2021/lam/</link>
         <guid isPermaLink="true">http://localhost:4000/2021/lam/</guid>
         
@@ -229,7 +277,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2021/lam/&quot;&gt;Fooling AI-based System Log Anomaly Detection&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 27 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 27 Dec 2020 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2020/autoencoder/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/autoencoder/</guid>
         
@@ -389,7 +437,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2020/autoencoder/&quot;&gt;Anomaly detection with Deep AutoEncoders&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 09 Apr 2020 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 09 Apr 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2020/ramp/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/ramp/</guid>
         
@@ -623,7 +671,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;strong&gt;Prev: &lt;a href=&quot;/2019/ta-tools/&quot;&gt;Making TA-life easier: Bash scripts for grading&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 18 Aug 2019 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 18 Aug 2019 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2019/rnn/</link>
         <guid isPermaLink="true">http://localhost:4000/2019/rnn/</guid>
         
@@ -785,7 +833,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 24 Mar 2019 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 24 Mar 2019 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2019/ta-tools/</link>
         <guid isPermaLink="true">http://localhost:4000/2019/ta-tools/</guid>
         
@@ -885,7 +933,7 @@ If your reading this part of my post, then I'm assuming you have some familiarit
 
 But fear no more, in this post I'll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn't my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. --&gt;
 </description>
-        <pubDate>Sun, 23 Dec 2018 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 23 Dec 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2018/git-support/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/git-support/</guid>
         
@@ -1001,7 +1049,7 @@ But fear no more, in this post I'll be going through three easy steps on how to 
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://localhost:4000/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 19 May 2018 00:00:00 -0700</pubDate>
+        <pubDate>Sat, 19 May 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2018/Linked-Lists/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/Linked-Lists/</guid>
         
@@ -1120,7 +1168,7 @@ By substitution of values,
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://localhost:4000/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 15 Jan 2018 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 15 Jan 2018 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2018/Markov-Chains/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/Markov-Chains/</guid>
         
@@ -1281,151 +1329,9 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 15 Dec 2017 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 15 Dec 2017 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/Proving-Correctness-of-Algorithms/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>From Computational Physics to Computer Science</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://phdcomics.com/comics/archive/phd091903s.gif&quot; alt=&quot;phd-comic-strip&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hello Everyone !! Sorry I was MIA &lt;strong&gt;:)&lt;/strong&gt;, as you all probably know if you read my previous posts I’ve just started grad school. While everything I learn here is extremely interesting it’s kind of a grind so I haven’t had time to write anything new. Now coming back to my post a lot of my friends and students from  Sri Lanka have been asking about my experience about switching fields from Computational Physics to Computer Science. To those who don’t know I have a bachelors degree in Computational Physics and I switched to Computer Science for my PHD.&lt;/p&gt;
-
-&lt;p&gt;This post is for you if you’re a &lt;strong&gt;student following a bachelors degree or someone who just finished a degree and planing to apply for grad school, but don’t really like your current field and wants to switch&lt;/strong&gt;(&lt;em&gt;I emphasize on CS&lt;/em&gt;). Now first of all switching fields is not an easy thing, and it requires a lot of planing and preparation. But thats not the hardest part, the &lt;code class=&quot;highlighter-rouge&quot;&gt;hardest part is deciding that you want to switch&lt;/code&gt;. Because most everyone you will meet or ask advice from would tell you it’s risky and hard. &lt;strong&gt;Yes&lt;/strong&gt; it is &lt;em&gt;risky and hard&lt;/em&gt; but not impossible. I decided for my own personal reasons to switch fields back in 2015 and it was one of the best decisions I’ve taken so far :).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Disclaimer: like any form  of advice, what I’ll be telling today is 30% actual advice and 70% from my own experience. So some things may or may not apply to you, so do take everything with a grain of salt.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Now back to my post. If you &lt;em&gt;googled&lt;/em&gt; a bit on &lt;code class=&quot;highlighter-rouge&quot;&gt;steps for applying for a PHD&lt;/code&gt; you would get a considerable number of results containing a lot of useful advice. However, its my opinion that the same approach doesn’t work for everyone simply because we are at different stages of life(&lt;em&gt;by life I mean different years at university&lt;/em&gt;) when we do decide to apply for a PHD. So depending on what stage of your bachelors degree the approach to prepare for the application process would change. Now obviously I’ll be making some assumptions about you, since even my advice shouldn’t be applied to all cases.&lt;/p&gt;
-
-&lt;h2 id=&quot;assumptions-about-you&quot;&gt;Assumptions about you&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;You really &lt;em&gt;really&lt;/em&gt; want to do a PHD. This ones a given, because if you didn’t you wouldn’t be reading this.&lt;/li&gt;
-  &lt;li&gt;You are thinking of switching fields, but unsure if thats possible. Now, what I’ll be telling will relate mostly to a switch to &lt;strong&gt;Computer Science&lt;/strong&gt;, but some of it might be applicable to other fields as well.&lt;/li&gt;
-  &lt;li&gt;You are a student following a bachelors degree(&lt;em&gt;maybe masters, but it’s geared towards bachelors more&lt;/em&gt;) &lt;strong&gt;OR&lt;/strong&gt; just completed one.&lt;/li&gt;
-  &lt;li&gt;Since I’m from Sri Lanka It’ll mostly apply to students from Sri Lanka, or a country with a similar university system. From where I’m from the university year starts from January and ends in December. However in the west usually the academic calender starts in August(Fall).&lt;/li&gt;
-  &lt;li&gt;Since I will be specifically covering a switch to &lt;em&gt;Computer Science&lt;/em&gt;, I’m assuming you have a double major with CS in it or you’ve taken some courses in CS and really like it.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;case-1--youre-a-freshman-1st-year-or-a-sophomore-2nd-year&quot;&gt;Case 1 : You’re a Freshman (1st year) or a Sophomore (2nd year)&lt;/h3&gt;
-
-&lt;p&gt;If you are a Sophomore or a Freshman my biggest advice is to focus on grades. There is a debate about the influence GPA has on your application. Because most PHD candidates would agree that grades alone wouldn’t be enough. Now heres the catch, GPA has a disproportional impact on your application. Say you have an amazing GPA(4.0/4.0), thats great!!! while it wouldn’t ensure you’re success at getting in it certainly is positive. However lets say your GPA is 2.0/4.0 then it definitely would have a negative impact on your application.&lt;/p&gt;
-
-&lt;p&gt;GPA isn’t really a measure of your intelligence(&lt;em&gt;well to a certain extent it is&lt;/em&gt;), but its more an indication of your dedication and capacity to plan and work. PHDs aren’t achieved in a couple of months, it usually takes years. So they definitely check for an applicants ability to persevere. Your cumulative GPA is a summation of 4 years, and the fact that you have been able to maintain it shows you have &lt;strong&gt;focus&lt;/strong&gt; and thats essential for a PHD.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;In a nutshell if you are a freshman or Sophomore focus on your grades&lt;/code&gt;. You don’t need to worry about what area you want to apply for or the universities you’d want to attend for grad school. Because a lot of things change, I remember back when I was in 1st year I wanted to specialize in &lt;strong&gt;chemistry&lt;/strong&gt; and look where I am now. :)&lt;/p&gt;
-
-&lt;h3 id=&quot;case-2-youre-a-junior3rd-year-or-a-senior4th-year&quot;&gt;Case 2: You’re a Junior(3rd year) or a Senior(4th year)&lt;/h3&gt;
-
-&lt;p&gt;Alright, now if you are a junior(3rd year) or Senior(4th year) then you are either following some major or have an area you like. The workload you probably have now far exceeds what you were used to during the first two years in university. So prioritizing tasks would be an intelligent way to go about it. This all depends on these factors,&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Your GPA&lt;/code&gt;. Ask yourself the question “&lt;em&gt;is my GPA good?&lt;/em&gt;”, what do I mean by &lt;strong&gt;good&lt;/strong&gt;. Imagine a worse case scenario, where you perform extremely poorly during some examination, then what is the capacity of your GPA to buffer the new results such that your &lt;strong&gt;class&lt;/strong&gt;(&lt;em&gt;I am assuming you have some class, if not you should really focus on your grades&lt;/em&gt;) is still maintained.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;You have some idea of what you like, but you definitely know what you don't like&lt;/code&gt;. This is the building block of deciding whether a switch to some other field is necessary or not. Most of the time its really hard to find what we like, but more often than not a simple &lt;strong&gt;process of elimination&lt;/strong&gt;  can get us very close. In my case I remember my &lt;em&gt;sub-fields I didn’t like in physics(like astronomy)&lt;/em&gt; kept on increasing and where as I remember being drawn to all the &lt;code class=&quot;highlighter-rouge&quot;&gt;Computer Science&lt;/code&gt; courses I took.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;When will you apply for grad school?&lt;/code&gt;. This all depends on you, either you can apply during 4th year or wait until you have a complete transcript.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Depending on the above factors there could be a couple of scenarios,&lt;/p&gt;
-
-&lt;h4 id=&quot;my-gpa-isnt-good&quot;&gt;“My GPA isn’t &lt;em&gt;good&lt;/em&gt;”&lt;/h4&gt;
-
-&lt;p&gt;Alright, now if this is the case then I strongly recommend to focus on grades. Because It’s just my opinion it will be too big of a risk to prioritize on the application process provided that your grades could sink anytime. Besides you might even not want to apply for grad school later on, in such a case having a &lt;em&gt;class&lt;/em&gt; in your bachelors degree would definitely help(&lt;code class=&quot;highlighter-rouge&quot;&gt;in someway&lt;/code&gt;) in landing a job.&lt;/p&gt;
-
-&lt;p&gt;Also just think about it, Imagine you’re a &lt;strong&gt;professor&lt;/strong&gt; going through applications for potential students. You see two applications(&lt;code class=&quot;highlighter-rouge&quot;&gt;application A &amp;amp; B&lt;/code&gt;) with partially complete degrees(&lt;em&gt;so both these students have applied without a full transcript&lt;/em&gt;), meaning that maybe the final semester results aren’t in it. student A has a GPA above 3.5 and student B has one above 3.0, whose application would be more convincing(&lt;code class=&quot;highlighter-rouge&quot;&gt;on grades alone&lt;/code&gt;)? you(&lt;strong&gt;as a professor :O&lt;/strong&gt;) would need to &lt;em&gt;sort of&lt;/em&gt; have an idea about how well these applicants might perform in their last semester simply based on their current transcripts. So of course student &lt;strong&gt;A&lt;/strong&gt; makes a stronger case, since his current performance is &lt;em&gt;good&lt;/em&gt; it’s plausible that he will perform well in his final semester.(&lt;em&gt;whether it actually happens is a different story&lt;/em&gt; &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;;)&lt;/code&gt;&lt;/strong&gt;)&lt;/p&gt;
-
-&lt;p&gt;Obviously it can be counter argued that other factors like actual research experience, GRE scores and recommendation far out-weight grades. Which is true to a certain extent, but all I’m saying is know when to take calculated risks. If you already have publications with high GRE scores and 100% positive of getting amazing recommendation letters then grades might not factor in. However, at the end of the day the decision to prioritize is on you.&lt;/p&gt;
-
-&lt;h4 id=&quot;i-want-to-switch-to-computer-science&quot;&gt;“I want to switch to Computer Science”&lt;/h4&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Do note, that some of what I say here might even apply for applicants who don’t intend
-to switch, But it’ll be up to you to filter it out :)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So you want to switch to CS, &lt;code class=&quot;highlighter-rouge&quot;&gt;great !!!&lt;/code&gt; now that you have already decided lets start prepping for it. As you might have probably heard &lt;em&gt;Computer Science&lt;/em&gt; is an extremely competitive field so acceptance rates are pretty low, and since you will be from some other field native CS students would definitely have an edge. But, with a bit of planning its manageable. The table below summarizes the key factors in building a strong application and on specifically bridging the gap.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;1. GPA&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;As I’ve mentioned multiple times make sure your GPA is &lt;em&gt;good&lt;/em&gt; . In my case I applied from pending results, and the fact I had a decently &lt;em&gt;good&lt;/em&gt; GPA really helped alot.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;2. Research Experience&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;It will be great if you can build some research experience, but more specifically try to get published. Now the idea here is not to do ground breaking work, but rather to build some experience in research. So the publications themselves don’t need to be of really high standard(&lt;em&gt;not that I’m saying to do inferior work&lt;/em&gt;). The point is, your application looks better when you can show prior experience in research, and with a publication(&lt;em&gt;or publications&lt;/em&gt;) it would certainly look better. When it comes to undergraduate research projects, simply due to the time constraint it’s simply impossible to get started fast. What I used to do was to have a fixed schedule to meet with my supervisor every week, and have specific time-slots allocated to do &lt;em&gt;research&lt;/em&gt; work irrespective of course work.  So, every week I worked on the project and had something to show my supervisor, and I found out that it’s &lt;code class=&quot;highlighter-rouge&quot;&gt;ok&lt;/code&gt; to tell that &lt;em&gt;nothing worked out&lt;/em&gt;, because most of the time things don’t work out in research. However, the fact I was working on it incrementally paid off in the long run. By the time I graduated, I actually had around two publications which greatly helped in my application.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;3. Take additional  Computer Science Courses&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Now this is something I didn’t do, but should  have done. Back then I didn’t think it was important, but later found out that it was one big flaw in my application. One of the first things that gets reviewed in an application is whether that student has taken sufficient course in that subject. Even though I had a taken a substantial amount of Computer Science courses it didn’t meet the same standard compared with a native CS applicant. For example, if 90 lecture hours were needed for Algorithms , I might have take only 60 of it. So if you are seriously considering a switch to CS, do keep in mind to take additional CS courses so that you cover the basic requirements. It might be the case that you can’t follow those courses &lt;em&gt;officially&lt;/em&gt;, in such a  case talk to that &lt;strong&gt;professor&lt;/strong&gt; in charge of that course, and arrange for you to just &lt;em&gt;read&lt;/em&gt; it without taking the exams. This shows you are proactive, and something you can build on in your &lt;code class=&quot;highlighter-rouge&quot;&gt;Statement of Purpose&lt;/code&gt;(SOP).&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;4.Have a killer SOP &amp;amp; recommendation letters&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;This is something you can easily find advice on &lt;em&gt;google&lt;/em&gt; so I won’t go into detail here. Try the website &lt;a href=&quot;https://thegradcafe.com&quot; target=&quot;new&quot;&gt;gradcafe&lt;/a&gt;, it should have a large number of useful insight on this. Specifically, for a case when you will be switching fields, do tell that to the people who will be writing recommendation letters for you. In my case the &lt;em&gt;professors&lt;/em&gt; who wrote me recommendation letters were very helpful and gave really valuable advice.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;5.Build your programming skills&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Make sure you know a couple of programming languages really well. In my case I had prior experience in Java, C++ &amp;amp; Python but wasn’t  &lt;em&gt;really good&lt;/em&gt; at them. So I took some free on-line courses to build my programming skills. I followed free courses on &lt;a href=&quot;https://www.udacity.com/course/intro-to-java-programming--cs046&quot; target=&quot;new&quot;&gt;Java&lt;/a&gt;, &lt;a href=&quot;https://www.udacity.com/course/programming-foundations-with-python--ud036&quot; target=&quot;new&quot;&gt;Python&lt;/a&gt; and on how to use &lt;a href=&quot;https://www.udacity.com/course/how-to-use-git-and-github--ud775&quot; target=&quot;new&quot;&gt;github&lt;/a&gt; from &lt;a href=&quot;https://www.udacity.com&quot; target=&quot;new&quot;&gt;udacity&lt;/a&gt;. Provided, you are already good at programming and want to polish your skills then try &lt;a href=&quot;http://codingbat.com/java&quot; target=&quot;new&quot;&gt;codingBat&lt;/a&gt;, which has coding puzzles for both Python and Java or &lt;a href=&quot;https://www.codingame.com/start&quot; target=&quot;new&quot;&gt;codingGame&lt;/a&gt; which is a vast collection of game like puzzles for a variety of languages. And these are somethings I’m glad I did, because right now the only reason I’m able to follow through with the work is because I started preparing from back then. So if you are serious about CS, and you are not natively from CS then I do suggest building a sufficient programming experience and learn how to use &lt;em&gt;git&lt;/em&gt; if you don’t know already. If not the workload will simply overwhelm you once you do get into grad school. Because lets face it, once you do get in, It wouldn’t matter if you majored in CS or Geography.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;5.GRE &amp;amp; the English exam&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Again, advice on acing the standardize tests are abundantly on-line. So, &lt;em&gt;google&lt;/em&gt; is your best friend. Do check on &lt;a href=&quot;https://thegradcafe.com&quot; target=&quot;new&quot;&gt;gradcafe&lt;/a&gt; because it has recent applicant information for grad schools for various fields for the previous years in addition to information on their acceptance and their standardize exam scores. So if there are some universities you like, searching for them in &lt;a href=&quot;https://thegradcafe.com&quot; target=&quot;new&quot;&gt;gradcafe&lt;/a&gt; would give a decent idea about the expected GRE scores for a specific university or program.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;With all this said, I think I’ll end my &lt;em&gt;pretty long&lt;/em&gt; post here. If you have any specific questions on getting ready to apply for grad school, please do email me or send a message through my facebook page. I’d be happy to help any way I can.&lt;/p&gt;
-
-&lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
-&lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
-
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/hard-disks-2/&quot;&gt;Simulation of Hard Disks : Part 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 15 Sep 2017 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/Computational-Physics-to-Computer-Science/</guid>
         
         
       </item>

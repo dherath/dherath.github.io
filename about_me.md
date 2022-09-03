@@ -44,4 +44,6 @@ Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user
 
 #### Thesis
 
-- [Simulation of a Snake Robot](https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot){:target="blank"} by **J. Dinal Herath** (2016).(Undergraduate Thesis: University of Colombo, Sri Lanka) [[slides]](https://www.researchgate.net/publication/337439030_Simulation_of_a_Snake_Robot)
+- [Empowering Artificial Intelligence for Cybersecurity Applications](https://www.proquest.com/openview/7e409b079816d581792cdb2a2e5a9870/1.pdf?pq-origsite=gscholar&cbl=18750&diss=y){:target="blank"} by **Jerome Dinal Herath** (2022). (PhD Thesis: State University of New York (SUNY) at Binghamton, USA)
+
+- [Simulation of a Snake Robot](https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot){:target="blank"} by **Jerome Dinal Herath** (2016).(Undergraduate Thesis: University of Colombo, Sri Lanka) [[slides]](https://www.researchgate.net/publication/337439030_Simulation_of_a_Snake_Robot)
