@@ -1,18 +1,15 @@
 ---
 layout: post
-title: "Hello World :)"
+title: "Hello World!"
 comments: false
 description: "My first blog post"
-keywords: "Hello World, Dinal Herath"
+keywords: "Hello World, Jerome Dinal Herath"
 ---
 
-Hello Everyone, My name is **_Dinal Herath_** and welcome to my blog. Here I’ll  essentially be writing about projects I work on , my experiences and well anything I feel I’d be interested to read on-line. I’m natively from **Sri Lanka** a beautiful tropical island in the middle of the Indian ocean. If you don't know anything about Sri Lanka  click 
-[here](http://bestoflanka.com/best-things-to-do-in-sri-lanka.php){:target="blank"} & if your planning you're next vacation to a tropical paradise you should definitely visit.
+Hello Everyone, My name is **_Jerome Dinal Herath_** and welcome to my blog! I graduated from **University of Colombo with a specialization in Computational Physics** and now in the processes of migrating to _Computer Science_ for my PHD. I’m natively from **Sri Lanka**, a beautiful tropical island in the middle of the Indian ocean. If you don't know anything about Sri Lanka  click 
+[here](https://www.lonelyplanet.com/sri-lanka){:target="blank"} & if you plan on visiting a tropical paradise you would love Sri Lanka. Most of what I'll be writing in my blog would be related to my course work, research and anything related to technology that I find interesting.
 
-I’m a graduate from **University of Colombo with a specialization in Computational Physics** and now in the processes of migrating to _Computer Science_ for my PHD. This being the case most of the projects I work on would have some code in them, so I'll be posting links to my github for anyone who wants to work on them more. This blog will probably be the place where I'll share most of the experiences that I'm bound to face while I make this transition and I hope would probably help anyone out there, who like me would want to switch.
-
-So there you have it, my first blog post :).  I guess thats a sufficient introduction about what my blog will be all about :) I hope you find the upcoming posts informative and enjoyable.
-
+#### Happy Reading!
 #### Cheers!
 
-**Next: [Simulation of a serial snake robot](http://dinalherath.com/2017/serial-snake-robot/)**
+**Next: [Simulation of a serial snake robot]({{site.baseurl}}/2017/serial-snake-robot/)**

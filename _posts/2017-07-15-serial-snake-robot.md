@@ -7,19 +7,16 @@ keywords: "Gazebo ,snake robot ,serial ,simulation"
 ---
 ![gazebo](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/gazebo.png){: width="500px"}
 
-I've always been fascinated by robots and well snakes. When it came to selecting a theme for my undergraduate research project I naturally ended up selecting an option which fits well with both. What started out as a research project sort of ended up being one my hobbies, so I'll time and again update on my snake robot progress through my blog.
+I've always been fascinated by robots of all kind, and through my undergraduate research project at **University of Colombo** I was able to explore simulating the movement of a snake-like robot. Before I dive into the weeds of how this was carried out, below are some prerequisites on the simulation platform **Gazebo**  used in this work.
 
-Now first to start off, essentially what I have been trying to do is to replicate serpentine motion in robots using simulations. Note that none of the methods I have developed have been experimentally tested. Maybe I'll do it someday but there is still a long way to go before that... u'll see why.
+#### Prerequisites
 
-#### Prerequisites (<a href="#ref1">Skip</a> if you've used Gazebo or know some robotics)
+**Gazebo** is an open source software platform widely used in robotic simulations. If you've never used Gazebo then click [here](http://gazebosim.org){:target="blank"}. The official website has all the instruction on how to install Gazebo and tutorials on how to get started. If you are new to robotics in general I'd suggest following through the book [Theory of Applied Robotics: Kinematics, Dynamics and Control](https://www.amazon.com/Theory-Applied-Robotics-Kinematics-Dynamics/dp/1441917497){:target="blank"}.
 
-Before I go further into what I've done, here are some things you'll need to know.
-+ All my simulations were carried out using **Gazebo**, an open source software platform widely used in robotic simulations. Simulations are a cool way of testing out new ideas with minimal cost, and  its way more cooler since it involves robots. If you've never used Gazebo then click [here](http://gazebosim.org){:target="blank"}. The official website has all the instruction on how to install Gazebo and tutorials on how to get started.
-+ Also you'll need to have some idea about robotics in general. [Theory of Applied Robotics: Kinematics, Dynamics and Control](https://www.amazon.com/Theory-Applied-Robotics-Kinematics-Dynamics/dp/1441917497){:target="blank"} is a great book you could use as a reference, but for now just knowing how to use Gazebo would be sufficient to understand what I've done.
 
 #### <a name="ref1">The serial snake robot model</a>
 
-I made some assumptions when designing my initial snake robots purely to reduce the complexity of the motion. I assume that biological snakes move in a planar surface (2D) replicating a sinusoidal pattern, that scales don't contribute to overall motion (_which is false :)_)  and that a snakes body could be approximated by a linear combination of cuboids which are linked by revolute joints which rotate about the _Z axis_ as shown below.
+I made some assumptions when designing this initial snake robot, purely to reduce the complexity of the motion. I assumed that biological snakes move in a planar surface (2D) replicating a sinusoidal pattern, that scales don't contribute to overall motion and that a snakes body could be approximated by a linear combination of cuboids which are linked by revolute joints which rotate about the _Z axis_ as shown below.
 
 ![compound](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/jpg_serial/compound.jpg){: width="250px"}
 ``` xml
@@ -53,7 +50,9 @@ I made some assumptions when designing my initial snake robots purely to reduce 
     </visual>
   </link>
 ```
-I defined four main operations for the twist motion namely **+2** and **-2** which represent the maximum/minimum twist to the left and right respectively and **+1**,**-1** which represents the twist to the left & right for half the maximum angle.  For each cuboid I've defined a hard limit of maximum and minimum twist angles in the model description itself as shown below.
+
+
+The twist motion of the joints in the robot is numerically identified by integer values from **+2** and **-2**, that represent the maximum/minimum twist to the left and right respectively and **+1**,**-1** which represents the twist to the left & right for half the maximum angle. For this preliminary study, the maximum and minimum twist angles are defined as below.
 
 ![combined_right_left](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/jpg_serial/combined_right_left.jpg){: width="500px"}
 
@@ -111,9 +110,9 @@ void movementPlugin::shrinkJoint(int _jointPos) // -1 & +1 orientation
 }
 ```
 
-Instead of defining a sinusoidal movement pattern for the overall robot, I replicated that movement by creating **8 states or orientations** for the complete snake robot, where those states would be iteratively executed until we need the robot to stop. Now note that there is no feedback loop here, and neither dose the robot know where its going. The idea I wanted to test out here was the possibility of creating complex motion patterns ([Lateral Undulation](https://en.wikipedia.org/wiki/Undulatory_locomotion){: target="blank"} in this case) without the need for equations of motion or any sort of computation.
+Instead of defining a sinusoidal movement pattern for the overall robot, the movement is replicated by creating **8 states or orientations** for the complete snake robot, where those states would be iteratively executed until we need the robot to stop. Note that there is no feedback loop here, and neither dose the robot know where its going. The idea I wanted to test out here was the possibility of creating complex motion patterns ([Lateral Undulation](https://en.wikipedia.org/wiki/Undulatory_locomotion){: target="blank"} in this case) without the need for equations of motion or any sort of computation.
 
-As per the code below for ease of execution I broke down the 20 joints into 4 main segments namely `head(M1-M5), body1(M6-M10), body2(M11-M15), tail(M16-M21)` where the operations of either **_moveJointRight(), moveJointLeft() or shrinkJoint()_** would be executed for a complete segment at a given iteration of the loop.
+As per the code below for ease of execution the entire snakes body of 20 joints is broken into 4 main segments, namely `head(M1-M5), body1(M6-M10), body2(M11-M15), tail(M16-M21)` where the operations of either **_moveJointRight(), moveJointLeft() or shrinkJoint()_** would be executed for a complete segment at a given iteration of the loop.
 
 ``` csharp
 // for all these functions k represents the index to start
@@ -145,7 +144,7 @@ void movementPlugin::shrink(int k,int limit)
 	}
 }
 ```
- The Table below represents the states and the code for the counter method I used to transition from one state to another. For every 150 iterations the sequence jumps one step forward(1->2 ect). Of all the 8 states, the first 4 are the initial configurations. These configurations **_(Config 1-4)_** were used to set initial positions of the links such that a stationary sine wave was shown when considering the overall snake robot shape. Afterwards the configurations from **_5-8_** were iteratively looped with each update cycle in the plugin.
+ The Table below represents the states and the code that transitions each segment of the robot. For every 150 iterations the sequence jumps one step forward(1->2 ect). Of all the 8 states, the first 4 are the initial configurations. These configurations **_(Config 1-4)_** were used to set initial positions of the links such that a stationary sine wave was shown when considering the overall snake robot shape. Afterwards the configurations from **_5-8_** were iteratively looped with each update cycle in the plugin.
 
 |---------------------|:----------------:|:------------------:|:-------------------:|:------------------:|
 | **Configurations**  | **Head (M1-M5)** | **Body1 (M6-M10)** | **Body2 (M11-M15)** | **Tail (M16-M21)** |
@@ -219,14 +218,11 @@ void movementPlugin::OnUpdate()
 }
 ```
 
-And thats it, The `gif` below shows the snake robot simulation as described by the code above. So basically it is in-fact possible to replicate complex biological motion from simple methods like this instead of relying purely on mathematical computations. However this is far from perfect. Right now this snake has no idea where its going, and neither is it capable of controlling its speed or optimizing its movement based on environmental constraints. So in future I'd probably try to implement this method on other designs and try to increase the efficiency of the movement.
+And thats it, The `gif` below shows the snake robot simulation as described by the code above. This proof-of-concept shows that it is in-fact possible to replicate complex biological motion from simple methods like. However this is far from perfect, right now this snake has no idea where its going, and neither is it capable of controlling its speed or optimizing its movement based on environmental constraints. If you'd like to work on this code or need this for some other project feel free to get it from [here](https://github.com/dherath/Snake_Robots/tree/master/serial_snake_robot){: target="blank"}.
 
 ![snakeRobot2](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/snakeRobot2.gif){: width="500px"}
 
-If you'd like to work on this code or need this for some other project feel free to get it from [here](https://github.com/dherath/Snake_Robots/tree/master/serial_snake_robot){: target="blank"} and if you want more recent updates on my snake robots before it becomes a post follow the project on [ResearchGate](https://www.researchgate.net/project/Snake-Robots){: target="blank"}.
-
-So until next time,
 ##### Cheers!
 
-**Next: [Combining video-game sprites using logical operations](http://dinalherath.com/2017/image-pokemon/)**                                                           
-**Prev: [Hello world :)](http://dinalherath.com/2017/hello-world/)**
+**Next: [Combining video-game sprites using logical operations]({{site.baseurl}}/2017/image-pokemon/)**                                                           
+**Prev: [Hello world :)]({{site.baseurl}}/2017/hello-world/)**
