@@ -224,5 +224,5 @@ And thats it, The `gif` below shows the snake robot simulation as described by t
 
 ##### Cheers!
 
-**Next: [Combining video-game sprites using logical operations]({{site.baseurl}}/2017/image-pokemon/)**                                                           
+**Next: [Image processing with Matlab: Combining video-game sprites]({{site.baseurl}}/2017/image-pokemon/)**                                                           
 **Prev: [Hello world :)]({{site.baseurl}}/2017/hello-world/)**

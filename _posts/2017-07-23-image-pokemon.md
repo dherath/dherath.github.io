@@ -1,23 +1,24 @@
 ---
 layout: post
-title: "Combining video-game sprites using logical operations"
+title: "Image processing with Matlab: Combining video-game sprites"
 comments: false
 description: "post 3"
-keywords: "image processing, logic, operations, AND, NOT, OR, example"
+keywords: "image processing, logic, operations, AND, NOT, OR, example, pokemon"
 ---
 ![front-image](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/images/front_matter.png)
 
-Today I'm going to explain how different video-game sprites(_or any image_) can be combined together like whats shown above using logical operations like **AND, OR, NOT** in the realm of `Image Processing`. This is an extremely interesting area I got to sample during my undergrad days, and I thought of making my second post from a memorable part of it. For the demonstrations I thought of  using sprites from one of my all time favorite pokemon games, [pokemon silver](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_Versions){: target="blank"} from Generation 2 which I played first :).
 
-### Some Basics(<a href="#ref1">Skip</a> if you're not new to Image Processing)
+Hello Everyone! Today I'll be writing about how we can combine game sprites together using basic logical operations like **AND, OR and NOT**. For this simple example I'll be using video game sprites from one of my all time favorite games, [pokemon silver](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_Versions). Before that, below are some basics on logical operations that I'll be using,
+
+### Some Basics(<a href="#ref1">Skip</a> to pokemon example)
 
 First of all a brief introduction to images. I'm sure you all know something about different types of screen resolutions like HD, 488p and so on. The difference between these types of resolutions are the number of **pixels** in a given view. Think of an image as a 2D grid of small squares where each square represents a dot of color, and higher the resolution the larger the number of squares in a picture. These squares are called **_pixels_**. In a digital image a pixel stores some kind of numeric value, where each numeric value represents some color. `For example in grayscale images the value 0 represents black and 255 white and all integers between are shades of gray.`
 
- We all know that the three primary colors are **red, blue and green**. Likewise color images (RGB) could be represented as a combination of three channels or sub-images for red, blue and green as shown below. Each of these sub-images are represented in [grayscale](https://en.wikipedia.org/wiki/Grayscale){: target="blank"}. In fact these sub-images don't really have a color per-say, rather some intensity vale[0-255] which is shown in shades of gray.
+We all know that the three primary colors are **red, blue and green**. Likewise color images (RGB) are represented as a combination of three channels or sub-images for red, blue and green as shown below. Each of these sub-images are represented in [grayscale](https://en.wikipedia.org/wiki/Grayscale){: target="blank"}. In fact these sub-images don't really have a color per-say, rather some intensity vale[0-255] which is shown in shades of gray.
 
 ![rgb_seperated](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/images/rgb_seperated.png)
 
-Now if you look closely at the character image it's mostly red, therefore the red-channel has values closer to 255 which is why that channel looks brighter as opposed to the blue-channel which is very dark. Similarly for the background, the green-channel is the brightest image because the original background shows a forest.
+The character image above is mostly red, therefore the red-channel has values closer to 255 which is why that channel looks brighter as opposed to the blue-channel which is very dark. Similarly for the background, the green-channel is the brightest image because the original background shows a forest.
 
 #### Logical operations in Image Processing
 
@@ -25,7 +26,7 @@ The basic logical operations in image processing are the same as in arithmetic *
 
 ![truth-table](https://upload.wikimedia.org/wikipedia/commons/4/4a/Truth_table_for_AND%2C_OR%2C_and_NOT.png){: width="400px"}
 
-For logical operations to work on images, the images need to be of a specific type called `binary`. As the name suggests the pixels of these images could only have two values **1(for white) or 0(for black)**. So basically these are the main operations I'll be using to combine the pokemon game sprites. The images below illustrate the outcome of logical operations on binary images.
+For logical operations to work on images, the images need to be of a specific type called `binary`. As the name suggests the pixels of these images could only have two values **1 (for white) or 0 (for black)**.
 
 #### 1) NOT operation
 
@@ -43,13 +44,13 @@ The **OR**  operation combines two binary images such that value 1s of both imag
 
 ![and-image-example](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_3_boolean_algebra_pokemon/theory_examples/and.png){:height="180px"}
 
-The **AND**  operation functions in a similar fashion as described in the table above. In this example unlike in the **OR** case, only the intersection of the two circles are shown in the output. Here the output only shows a high value(1) when both images represent a high value for the same (x,y) coordinate respectively.
+The **AND**  operation functions in a similar fashion as described in the table above. In this example unlike in the **OR** case, only the intersection of the two circles are shown in the output. Here the output only shows a high value (i.e., 1) when both images represent a high value for the same (x,y) coordinate respectively.
 
 ### <a name="ref1">Combining game sprites</a>
 
-From here on, I'll be explaining the main steps in combining image sprites. I've used the software platform **`Matlab`** for this demonstration. Also note that in the code examples I've used a function, the reason being the steps I explain below need to be operated three times iteratively for all red, blue and green channels of a given image. Instead of repeating the same code, I figured using functions would make my life more easier. `If you have no idea about the Matlab image processing toolbox click` **[here](https://in.mathworks.com/help/images/getting-started-with-image-processing-toolbox.html){:target="blank"}** `and if you need a refresher on Matlab functions click `**[here](https://in.mathworks.com/help/matlab/matlab_prog/create-functions-in-files.html){:taget="blank"} :)**. **_<a href="#ref2">(Click here to go directly to the CODE)</a>_**
+From here on, I'll be explaining the main steps in combining image sprites. I've used the software platform **`Matlab`** for this demonstration. Also note that in the code examples I've used a function, the reason being the steps I explain below need to be operated three times iteratively for all red, blue and green channels of a given image. `If you aren't familiar with Matlab image processing toolbox click` **[here](https://in.mathworks.com/help/images/getting-started-with-image-processing-toolbox.html){:target="blank"}** `and if you need a refresher on Matlab functions click `**[here](https://in.mathworks.com/help/matlab/matlab_prog/create-functions-in-files.html){:taget="blank"} :)**. **_<a href="#ref2">(Click here to go directly to the CODE)</a>_**
 
-##### Step 1 : Converting RGB(Color) images to Binary images
+##### Step 1 : Converting RGB images to Binary images
 
 The first step is to convert our input images to a binary format so that we can use logical operations. Initially we separate the three channels of red, green and blue and afterwards convert them to purely black and white. In **`matlab`** we can do this using a function called `im2bw()`. The images below show the output for this step.
 
@@ -61,13 +62,13 @@ The second step is to create a temporary image or mask which is an inverted outp
 
 ![inverted-binary-background](https://raw.githubusercontent.com/dherath/WebsiteMaterial/bc226401273ab062b18245a6b9adcf4ab002de4f/2017/post_3_boolean_algebra_pokemon/step2.png){:height="200px"}
 
-##### Step 3 : Create temporary Mask 1
+##### Step 3 : Create the first temporary mask
 
 In this step a temporary mask is created using the two output images from steps 1 & 2. The **AND** operations is used on the `inverted-background image and the binary-character` image in order to get a mask with a certain property. If you look closely at the output image, all the pixels describing the character are black _(value 0)_ where as the rest of the background is the same. Which means any operation done on this mask would only affect the background and the character portion of the image will remain unchanged.
 
 ![Mask-1](https://raw.githubusercontent.com/dherath/WebsiteMaterial/bc226401273ab062b18245a6b9adcf4ab002de4f/2017/post_3_boolean_algebra_pokemon/step3.png)
 
-##### Step 4 : Create temporary Mask 2
+##### Step 4 : Create the second temporary mask
 
 To get the second temporary mask, the **NOT** operation is used on the Mask image obtained in the previous step. Here the output image is such that all the background pixels remain in its binary state where as the character portion becomes value 1 or _white_. Therefore any operation done to the image will only affect the character and the background will be unaffected.
 
@@ -75,7 +76,7 @@ To get the second temporary mask, the **NOT** operation is used on the Mask imag
 
 ##### Step 5 : Process Masks with original images
 
-By now we have two separate masks which give the opportunity to manipulate color intensities of the character and the background separately. However these masks are binary, meaning the values are either 1 or 0. The pixel intensities for original images for each channel(red, green or blue) vary between 0 and 255. In order to get this range into the obtained masks, each mask is `point-wise multiplied` by the respective input images.
+By now we have two separate binary masks that are used to manipulate color intensities of the character and the background separately. The pixel intensities for the original images for each channel(red, green or blue) vary between 0 and 255. In order to get this range into the obtained masks, each mask is `point-wise multiplied` by the respective input images.
 
 **_So what's this point-wise multiplication?_** Earlier I explained that images are like a 2D-grid, and they are stored in matlab as a 2-D matrix. Usually in matrix multiplication, a row is multiplied by a column of another matrix and all the individual values are summed together to obtain a value of one cell in a new matrix. **`However, in point-wise multiplication each cell indexed some (x,y) of matrix A is multiplied by another cell of index (x,y) of some matrix B to obtain the answer.`** Here there is no summation or rowise/columnwise multiplication.
 
@@ -99,7 +100,7 @@ The final step is all about iterating the above steps from 1-6 for each color ch
 
 ### <a name="ref2">Code</a>
 
-##### The main program
+##### The driver code
 
 ``` matlab
 clc;
@@ -129,7 +130,7 @@ imshow(final_image);
 
 ```
 
-##### The Function - combine_image()
+##### The Function
 ``` matlab
 function temp = combine_image(man,back)
     man_b= im2bw(man,0.99); %  step 1
@@ -153,5 +154,5 @@ I know this post was a bit long, but this is a cool example of some basic image 
 ###### So until next time.
 #### Cheers !!
 
-**Next: [Simulation of Hard Disks : Part 1](http://dinalherath.com/2017/hard-disks-1/)**                                                          
-**Prev: [Simulation of a serial snake robot](http://dinalherath.com/2017/serial-snake-robot/)**
+**Next: [Simulation of Hard Disks: Part 1]({{site.baseurl}}/2017/hard-disks-1/)**                                                          
+**Prev: [Simulation of a serial snake robot]({{site.baseurl}}/2017/serial-snake-robot/)**
