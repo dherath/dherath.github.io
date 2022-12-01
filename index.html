@@ -8,11 +8,10 @@ title: Home
   <div class="container">
   	<!--<h4><a href="{{site.url}}/about"><span style="background-color: #f7f7f7;color: #3885B5">[Research]</span></a> <a href="{{site.url}}/dinal_cv.pdf"><span style="background-color: #f7f7f7;color:#3885B5">[Curriculum Vitae]</span></a> </h4>-->
     
-    <h3> Experience </h3>
+    <h4> Experience </h4>
     <ul>
       <li> Security Data Scientist [Obsidian Security, USA. (2022-present)]</li>
         <ol></ol>
-        
 
       <li> PhD Research [SUNY Binghamton, USA. (2018-2022)]</li>
         <ol>
@@ -29,7 +28,12 @@ title: Home
         </ol>  
       </ul>
 
-    <h3> Recent Blog Posts </h3>
+    <h4>Applied AI Research</h4>
+    <ul>
+      <li>Machine learning and Deep Learning-based solid waste prediction: <span style="background-color: #e5e6e8"><a href="https://ieeexplore.ieee.org/document/9950270">[IEEE Access'22]</a></span></li>
+    </ul>
+
+    <h4> Recent Blog Posts </h4>
     {% assign postCounter = 0 %}
     {% assign postLimit = 8 %}
       {% for post in site.posts %}
@@ -44,29 +48,47 @@ title: Home
         {% endif %}
       {% endfor %}
 
-
-    <h3> Recent Publications </h3>
-    <ul>
-      <!--C”. By Jerome Dinal Herath, Priti Prabhakar Wakodikar, Ping Yang, Guanhua Yan. In:
-IEEE/IFIP International Conference on Dependable Systems and Networks (DSN-2022) [Accepted].-->
-      <li><span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2022dsn.pdf">CFGExplainer: Explaining Graph Neural Network-Based Malware Classification from Control Flow Graphs</a></span> by <strong>Jerome Dinal Herath</strong>, Priti Prabhakar Wakodikar, Ping Yang and Guanhua Yan. In: IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) (2022).
-      <li><span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2021codaspy.pdf">Real-Time Evasion Attacks against Deep Learning-Based Anomaly Detection from Distributed System Logs</a></span> by <strong>J. Dinal Herath</strong>, Ping Yang and Guanhua Yan. In: Proceedings of The 11th ACM Conference on Data and Application Security and Privacy (CODASPY) (2021).<a href="https://dl.acm.org/doi/10.1145/3422337.3447833"><strong>[presentation video]</strong></a></li>
-      <li><span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2019BigData.pdf">RAMP: Real-Time Anomaly Detection in Scientific Workflows</a></span> by <strong>J. Dinal Herath</strong>, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). <a href="{{site.url}}/papers/2019RAMP_extended_paper.pdf"><strong>[extended version]</strong></a> </li>
-    </ul>
-
-    <h3> Awards and Scholarships </h3>
-    <ul>
-      <li>Award for Academic Excellence in PhD (State University of New York at Binghamton-2022).</li>
-      <li>Student travel grant to attend IEEE International Conference on Collaboration and Internet Computing (CIC-2019).</li>
-      <li>Secure and Private AI scholarship Challenge Recipient by Udacity and Facebook (2019).</li>
-      <li>Student travel grant to attend ACM/IEEE Symposium on Architectures for Networking and Communications (ANCS-2018).</li>
-      <li>NSF Student travel grant to attend International Conference on Communications (ICC-2018).</li>
-      <li>Recipient of Dr. Sarath Gunapala Gold Medal for Computational Physics (University of Colombo-2017).</li>
-      <li>MIND (Munasinghe Institute for Development) scholarship (2015-2016).</li>
-    </ul>
-
-
-
+      <h4> Recent Publications </h4>
+      <ul>
+        <li>
+          <span style="background-color: #e5e6e8">
+            <a href="https://ieeexplore.ieee.org/document/9950270">
+              Exploring Machine Learning and Deep Learning Approaches for Multi-Step Forecasting in Municipal Solid Waste Generation
+            </a>
+          </span> by Oshan Mudannayake, Disni Rathnayake, <strong>Jerome Dinal Herath</strong>, Dinuni K. Fernando and Mgnas Fernando. In: IEEE Access (2022).
+                 
+        </li>
+        <li>
+          <span style="background-color: #e5e6e8">
+            <a href="{{site.url}}/papers/2022dsn.pdf">
+              CFGExplainer: Explaining Graph Neural Network-Based Malware Classification from Control Flow Graphs
+            </a>
+          </span> by <strong>Jerome Dinal Herath</strong>, Priti Prabhakar Wakodikar, Ping Yang and Guanhua Yan. In: IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) (2022).
+        </li>
+        <li>
+          <span style="background-color: #e5e6e8">
+            <a href="{{site.url}}/papers/2021codaspy.pdf">
+              Real-Time Evasion Attacks against Deep Learning-Based Anomaly Detection from Distributed System Logs
+            </a>
+          </span> by <strong>J. Dinal Herath</strong>, Ping Yang and Guanhua Yan. 
+          In: Proceedings of The 11th ACM Conference on Data and Application Security and Privacy (CODASPY) (2021).
+          <a href="https://dl.acm.org/doi/10.1145/3422337.3447833">
+            <strong>[presentation video]</strong>
+          </a>
+        </li>
+      </ul>
+  
+      <h3> Awards and Scholarships </h3>
+      <ul>
+        <li>Award for Academic Excellence in PhD (State University of New York at Binghamton-2022).</li>
+        <li>Student travel grant to attend IEEE International Conference on Collaboration and Internet Computing (CIC-2019).</li>
+        <!--<li>Secure and Private AI scholarship Challenge Recipient by Udacity and Facebook (2019).</li> -->
+        <li>Student travel grant to attend ACM/IEEE Symposium on Architectures for Networking and Communications (ANCS-2018).</li>
+        <li>Student travel grant to attend International Conference on Communications (ICC-2018).</li>
+        <li>Recipient of Dr. Sarath Gunapala Gold Medal for Computational Physics (University of Colombo-2017).</li>
+        <li>MIND (Munasinghe Institute for Development) scholarship (2015-2016).</li>
+      </ul>
+  
     <!--
       <li> Simulating Snake Robot Movement [Undergraduate Reserach Project, University of Colombo, Sri Lanka.(2016-2017)]: <span style="background-color: #e5e6e8"><a href="https://www.researchgate.net/publication/311716282_Comparison_of_Serial_and_Parallel_Snake_Robots_for_Lateral_Undulation_Motion_using_Gazebo">[ICIAFS'16]</a></span>  <span style="background-color: #e5e6e8"><a href="https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots">[ICCMS'17]</a></span> <span style="background-color: #e5e6e8"><a href="https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot">[Undergraduate Thesis]</a></span></li>
     </ul>
