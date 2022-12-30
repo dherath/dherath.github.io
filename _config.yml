@@ -8,7 +8,8 @@ url: http://dinalherath.com # site url
 baseurl: "" # apply repo name if use it under gh-pages branch
 # baseurl: null # apply null if repo name is something like username.github.io
 
-google_analytics: UA-99988883-1
+google_analytics: G-JMGDT16E1T
+# google_analytics: UA-99988883-1
 # repo:
 # disqus_shortname: ""
 # twitter_username: ""
