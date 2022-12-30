@@ -4,8 +4,8 @@ title: Blog Posts
 permalink : /blog/
 ---
 
-Hi All! Thank you for stopping by, down below is a list of my blog posts that I have written over time. I try to be periodic in my writing and tend to churn out a new post every couple of months. Happy reading !!!
-
+<!--Hi All! Thank you for stopping by, down below is a list of my blog posts that I have written over time. I try to be periodic in my writing and tend to churn out a new post every couple of months. Happy reading !!!
+-->
 <br>
 
 <ul class="post-list">
