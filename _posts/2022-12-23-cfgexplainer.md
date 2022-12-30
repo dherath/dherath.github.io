@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Explaining Graph Neural Network (GNN) based Malware Classification"
+title: "Explaining Graph Neural Network (GNN)-based Malware Classification"
 comments: false
 description: "post 16"
-keywords: "gnn, graph, neural, network, classification, malware, control flow graph, cfg, deep learning, explainable AI, AI, machine learning"
+keywords: "gnn, graph, neural, network, classification, malware, control flow graph, cfg, deep learning, explainable AI, AI, machine learning, cybersecurity"
 ---
 
 Hi All!! today I will be writing about another piece of research I completed as part of my PhD. The entire premise of this work revolves around [explainable-AI](https://en.wikipedia.org/wiki/Explainable_artificial_intelligence), specifically in the domain of cybersecurity. In recent years there has been an increasing effort of utilizing Machine Learning and Deep Learning models for cybersecurity applications, ranging from intrusion detection to malware classification.
