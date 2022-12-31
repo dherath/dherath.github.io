@@ -5,42 +5,43 @@
     <description>Jerome Dinal Herath</description>
     <link>http://dinalherath.com/</link>
     <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 30 Dec 2022 13:52:35 -0800</pubDate>
-    <lastBuildDate>Fri, 30 Dec 2022 13:52:35 -0800</lastBuildDate>
+    <pubDate>Sat, 31 Dec 2022 11:44:08 -0800</pubDate>
+    <lastBuildDate>Sat, 31 Dec 2022 11:44:08 -0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
         <title>Explaining Graph Neural Network (GNN)-based Malware Classification</title>
-        <description>&lt;p&gt;Hi All!! today I will be writing about another piece of research I completed as part of my PhD. The entire premise of this work revolves around &lt;a href=&quot;https://en.wikipedia.org/wiki/Explainable_artificial_intelligence&quot;&gt;explainable-AI&lt;/a&gt;, specifically in the domain of cybersecurity. In recent years there has been an increasing effort of utilizing Machine Learning and Deep Learning models for cybersecurity applications, ranging from intrusion detection to malware classification.&lt;/p&gt;
+        <description>&lt;p&gt;Hi All!! today I will be writing about another piece of research I completed as part of my PhD. The premise of this work revolves around &lt;a href=&quot;https://en.wikipedia.org/wiki/Explainable_artificial_intelligence&quot;&gt;explainable-AI&lt;/a&gt;, specifically in the domain of cybersecurity. In recent years there has been an increasing effort of utilizing Machine Learning and Deep Learning models for cybersecurity applications, ranging from intrusion detection to malware classification.&lt;/p&gt;
+
+&lt;p&gt;However, most of these state-of-the-art deep learning models are treated as black-boxes, meaning that we aren’t able to explain why a given model predicts some malicious activity, which makes it hard for an analyst or threat hunter to identify if an alert is truly malicious. To circumvent this issue there has been a growing interest in explaining deep learning models used for cybersecurity tasks.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/material/2022/post_16/expl.jpeg?raw=true&quot; alt=&quot;graph-explanations&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;However, most of these state-of-the-art deep learning models are treated as black-boxes, meaning that we aren’t able to explain why a given model predicts some malicious activity, which makes it hard for an analyst or threat hunter to identify if an alert is truly malicious. To circumvent this issue there has been a growing interest in explaining deep learning models used for cybersecurity tasks. In my PhD work we pushed the boundary in explaining deep-learning based malware classification by introducing an explainer named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CFGExplainer&lt;/code&gt; (&lt;a href=&quot;https://www.dinalherath.com/papers/2022dsn.pdf&quot;&gt;paper&lt;/a&gt;, &lt;a href=&quot;https://github.com/dherath/CFGExplainer&quot;&gt;code&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blogs.nvidia.com/blog/2022/10/24/what-are-graph-neural-networks/&quot;&gt;Graph Neural Networks&lt;/a&gt; have shown great promise in malware classification tasks, where the malware source code is processed and presented in a graph format called a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Attributed Control Flow Graph (ACFG)&lt;/code&gt;. However explaining how these detections work is hard, mainly because a given malware graph can have over thousands of nodes and edges. Identifying which exact portion of the graph (i.e., subgraph) represents malicious code while pruning out the less important bits is the main challenge addressed in this work.&lt;/p&gt;
+&lt;p&gt;In my PhD work we pushed the boundary in explaining deep-learning based malware classification by introducing an explainer named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CFGExplainer&lt;/code&gt; (&lt;a href=&quot;https://www.dinalherath.com/papers/2022dsn.pdf&quot;&gt;paper&lt;/a&gt;, &lt;a href=&quot;https://github.com/dherath/CFGExplainer&quot;&gt;code&lt;/a&gt;). &lt;a href=&quot;https://blogs.nvidia.com/blog/2022/10/24/what-are-graph-neural-networks/&quot;&gt;Graph Neural Networks&lt;/a&gt; have shown great promise in malware classification tasks, where the malware source code is processed and presented in a graph format called an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Attributed Control Flow Graph (ACFG)&lt;/code&gt;. However explaining how these detections work is hard, mainly because a given malware graph can have over thousands of nodes and edges. Identifying which exact portion of the graph (i.e., subgraph) represents malicious code while pruning out the less important bits efficiently is the main challenge addressed in this work.&lt;/p&gt;
 
 &lt;h3 id=&quot;malware-classification-with-gnns&quot;&gt;Malware classification with GNNs&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/material/2022/post_16/acfg.jpeg?raw=true&quot; alt=&quot;acfg&quot; width=&quot;640px&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In this first section, I will go through a brief overview of how source code is converted to a graph format for our detection task. Typically, in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Attributed Control Flow Graph&lt;/code&gt; nodes represent basic blocks of code that have atomic executions as shown in the image above. The edges between these basic blocks are the connectivity through &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;call&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jump&lt;/code&gt; instructions or of how the code flows through from one block to another. For each node, we define node features based on the type of instructions present within the code block.&lt;/p&gt;
+&lt;p&gt;In this first section, I will go through a brief overview of how source code is converted to a graph format for our detection task. Typically, in an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Attributed Control Flow Graph&lt;/code&gt; nodes represent basic blocks of code that have atomic executions as shown in the image above. The edges between these basic blocks are the connectivity through &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;call&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jump&lt;/code&gt; instructions or of how the code flows through from one block to another. For each node, we define node features based on the type of instructions present within the code block.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/material/2022/post_16/gnn.jpeg?raw=true&quot; alt=&quot;acfg&quot; width=&quot;600px&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;After this step, the graphs are processed by the Graph Neural Network model. A GNN model usually operates in two stages. First it processes the node/edge features and the spatial connectivity in the graph to produce &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node embeddings&lt;/code&gt;. These node embeddings are latent representations of nodes that capture information useful for some subsequent task, in our case the node embeddings contain important information with respect to malware classification. Then in the next stage the node embeddings are processed by a feed forwarding neural network that produces classification probabilities based on the malware types.&lt;/p&gt;
+&lt;p&gt;After this step, the graphs are processed by a Graph Neural Network (GNN) model. A GNN model usually operates in two stages. First it processes the node/edge features and the spatial connectivity in the graph to produce &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node embeddings&lt;/code&gt;. These node embeddings are latent representations of nodes that capture information useful for some subsequent task, in our case the node embeddings contain important information with respect to malware classification. Then in the next stage the node embeddings are processed by a feed forwarding neural network that produces classification probabilities based on the malware types.&lt;/p&gt;
 
 &lt;h3 id=&quot;cfgexplainer&quot;&gt;CFGExplainer&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/material/2022/post_16/cfgexpl.jpeg?raw=true&quot; alt=&quot;cfgexplainer&quot; width=&quot;780px&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The figure above shows the architecture of our solution. In our work, we assume that there exists some GNN model that is capable of classifying control flow graphs into their respective malware types. Initially the graph sample to be explained is processed by the GNN classifier, which produces both the node embeddings and the malware class label. Then these embeddings, label and the original graph is provided to CFGExplainer.&lt;/p&gt;
+&lt;p&gt;The figure above shows the architecture of our solution. In our work, we assume that there exists some GNN model that is capable of classifying attributed control flow graphs into their respective malware types. Initially the graph samples to be explained are processed by the GNN classifier, which produces both the node embeddings and the malware class labels. Then these embeddings, labels and the original graphs are provided to CFGExplainer.&lt;/p&gt;
 
 &lt;p&gt;CFGExplainer operates in two stages. First in an &lt;strong&gt;initial learning stage&lt;/strong&gt;, the explainer learns to score nodes with respect to their contribution towards malware classification. Then in the second stage the explainer prunes out nodes that have the least importance. This pruned subgraph is provided as an explanation to the analyst along with an ordering of nodes based on importance to classification.&lt;/p&gt;
 
-&lt;p&gt;The learning stage is carried out through two interconnected neural network components (a node scoring module and a surrogate classifier) that are jointly trained to identify important nodes. In the forward pass in this algorithm,&lt;/p&gt;
+&lt;p&gt;The learning stage is carried out through two interconnected neural network components (a node scoring module and a surrogate classifier) that are jointly trained to identify important nodes.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/material/2022/post_16/learning.jpeg?raw=true&quot; alt=&quot;forward-pass&quot; width=&quot;620px&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;In the forward pass in this algorithm,&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;First the node embeddings are processed and a score is produced for each embedding. Here a larger score correspond to the node being viewed as more important.&lt;/li&gt;
   &lt;li&gt;Then the scores are multiplied against the original node embeddings to produce a weighted node embedding per node.&lt;/li&gt;
@@ -51,7 +52,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/material/2022/post_16/training.jpeg?raw=true&quot; alt=&quot;backward-pass&quot; width=&quot;620px&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Once this training is completed using all the graphs to be explained, the explainer can directly prune out nodes with smaller scores. What is left after that is a subgraph that contributes the most towards the malware classification task.&lt;/p&gt;
+&lt;p&gt;Once this training is completed using all the graphs to be explained, the explainer can directly prune out nodes with smaller scores, leaving a subgraph that contributes most towards the malware classification task.&lt;/p&gt;
 
 &lt;p&gt;In our experiments we found that CFGExplainer is able to produce subgraphs (~20% original size) that indicate malicious patterns such as obfuscation tricks and code manipulations that would have been harder to manually identify by analyzing the complete malware graph. If you want to learn more about &lt;strong&gt;CFGExplainer&lt;/strong&gt; please check our &lt;a href=&quot;https://www.dinalherath.com/papers/2022dsn.pdf&quot;&gt;paper&lt;/a&gt; and &lt;a href=&quot;https://github.com/dherath/CFGExplainer&quot;&gt;code&lt;/a&gt;.&lt;/p&gt;
 
@@ -71,7 +72,7 @@
     
       <item>
         <title>Fooling AI-based System Log Anomaly Detection</title>
-        <description>&lt;p&gt;Hi All!! today I will be writing about a piece of research I completed as part of my PhD. The entire premise of this work revolves around a popular sub-field in machine learning called, &lt;a href=&quot;https://en.wikipedia.org/wiki/Adversarial_machine_learning&quot;&gt;adversarial machine learning&lt;/a&gt;. It’s no surprise that machine learning and deep learning models are capable of accomplishing a varying range of real-world complex tasks, from image recognition, time series prediction and playing massive multiplayer games. However, in recent years researchers have shown that machine/deep learning models can be &lt;strong&gt;fooled&lt;/strong&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;Hi All!! today I will be writing about a piece of research I completed as part of my PhD. The premise of this work revolves around a popular sub-field in machine learning called, &lt;a href=&quot;https://en.wikipedia.org/wiki/Adversarial_machine_learning&quot;&gt;adversarial machine learning&lt;/a&gt;. It’s no surprise that machine learning and deep learning models are capable of accomplishing a varying range of real-world complex tasks, from image recognition, time series prediction and playing massive multiplayer games. However, in recent years researchers have shown that machine/deep learning models can be &lt;strong&gt;fooled&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/material/2021/post_15/adv_attack.jpeg?raw=true&quot; alt=&quot;attack-image&quot; width=&quot;640px&quot; /&gt;
 &lt;br /&gt;&lt;/p&gt;
