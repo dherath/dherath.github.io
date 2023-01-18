@@ -50,3 +50,8 @@ __(*authors contributed equally to work)__
 - [Empowering Artificial Intelligence for Cybersecurity Applications](https://www.proquest.com/openview/7e409b079816d581792cdb2a2e5a9870/1.pdf?pq-origsite=gscholar&cbl=18750&diss=y) by **Jerome Dinal Herath** (2022). (PhD Dissertation: State University of New York at Binghamton)
 
 - [Simulation of a Snake Robot](https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot) by **Jerome Dinal Herath** (2016).(Undergraduate Dissertation: University of Colombo, Sri Lanka) <!-- [[slides]](https://www.researchgate.net/publication/337439030_Simulation_of_a_Snake_Robot) -->
+
+#### Certifications
+
++ Coursera: [Introduction to Machine Learning in Production](https://www.coursera.org/account/accomplishments/certificate/HLBPBLKZTYAF)
+
