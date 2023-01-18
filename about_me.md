@@ -53,5 +53,5 @@ __(*authors contributed equally to work)__
 
 #### Certifications
 
-+ Coursera: [Introduction to Machine Learning in Production](https://www.coursera.org/account/accomplishments/certificate/HLBPBLKZTYAF)
++ Coursera (DeepLearning.AI): [Introduction to Machine Learning in Production](https://www.coursera.org/account/accomplishments/certificate/HLBPBLKZTYAF)
 
