@@ -8,7 +8,7 @@ keywords: "Markov, Chains, pebble, game, chains, chain,introduction"
 
 ![markov-image](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2018/Post_8_MarkovCHains/first_image.jpeg){:height="300px"}
 
-Hello Everyone!! in todays post I thought of writing an introduction for [Markov Chains](https://en.wikipedia.org/wiki/Markov_chain){:target="blank"}. Simply put, Markov chains are used to model systems that change randomly where a _current state_ is only dependent on the _previous state_.(_I'll explain what states are in a  minute_) In fact, its a pretty powerful technique used in fields ranging from **computer networks** to **statistical physics**. I'll explain the basics of Markov chains using a simple example called the _pebble game_ as illustrated above.
+Hello Everyone!! in today's post I thought of writing an introduction for [Markov Chains](https://en.wikipedia.org/wiki/Markov_chain){:target="blank"}. Simply put, Markov chains are used to model systems that change randomly where a _current state_ is only dependent on the _previous state_.(_I'll explain what states are in a  minute_) In fact, its a pretty powerful technique used in fields ranging from **computer networks** to **statistical physics**. I'll explain the basics of Markov chains using a simple example called the _pebble game_ as illustrated above.
 
 Now imagine we have a 3x3 grid just like the image above, with the **black dot** being a pebble. At each instance in time a person picks the pebble up and tries to throw to some other directly linked cell randomly.(Note that throwing the pebble to diagonal cells is not possible) The image below shows the three types of throws possible:
 

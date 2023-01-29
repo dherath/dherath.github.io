@@ -110,7 +110,7 @@ void movementPlugin::shrinkJoint(int _jointPos) // -1 & +1 orientation
 }
 ```
 
-Instead of defining a sinusoidal movement pattern for the overall robot, the movement is replicated by creating **8 states or orientations** for the complete snake robot, where those states would be iteratively executed until we need the robot to stop. Note that there is no feedback loop here, and neither dose the robot know where its going. The idea I wanted to test out here was the possibility of creating complex motion patterns ([Lateral Undulation](https://en.wikipedia.org/wiki/Undulatory_locomotion){: target="blank"} in this case) without the need for equations of motion or any sort of computation.
+Instead of defining a sinusoidal movement pattern for the overall robot, the movement is replicated by creating **8 states or orientations** for the complete snake robot, where those states would be iteratively executed until we need the robot to stop. Note that there is no feedback loop here, and neither dose the robot know where it's going. The idea I wanted to test out here was the possibility of creating complex motion patterns ([Lateral Undulation](https://en.wikipedia.org/wiki/Undulatory_locomotion){: target="blank"} in this case) without the need for equations of motion or any sort of computation.
 
 As per the code below for ease of execution the entire snakes body of 20 joints is broken into 4 main segments, namely `head(M1-M5), body1(M6-M10), body2(M11-M15), tail(M16-M21)` where the operations of either **_moveJointRight(), moveJointLeft() or shrinkJoint()_** would be executed for a complete segment at a given iteration of the loop.
 
@@ -218,7 +218,7 @@ void movementPlugin::OnUpdate()
 }
 ```
 
-And thats it, The `gif` below shows the snake robot simulation as described by the code above. This proof-of-concept shows that it is in-fact possible to replicate complex biological motion from simple methods like. However this is far from perfect, right now this snake has no idea where its going, and neither is it capable of controlling its speed or optimizing its movement based on environmental constraints. If you'd like to work on this code or need this for some other project feel free to get it from [here](https://github.com/dherath/Snake_Robots/tree/master/serial_snake_robot){: target="blank"}.
+And that's it, The `gif` below shows the snake robot simulation as described by the code above. This proof-of-concept shows that it is in-fact possible to replicate complex biological motion from simple methods like. However, this is far from perfect, right now this snake has no idea where it's going, and neither is it capable of controlling its speed or optimizing its movement based on environmental constraints. If you'd like to work on this code or need this for some other project feel free to get it from [here](https://github.com/dherath/Snake_Robots/tree/master/serial_snake_robot){: target="blank"}.
 
 ![snakeRobot2](https://raw.githubusercontent.com/dherath/WebsiteMaterial/master/2017/post_2_serial_snake_robot/snakeRobot2.gif){: width="500px"}
 
