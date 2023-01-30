@@ -5,8 +5,8 @@
     <description>Jerome Dinal Herath</description>
     <link>http://dinalherath.com/</link>
     <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Jan 2023 22:24:00 -0800</pubDate>
-    <lastBuildDate>Sun, 29 Jan 2023 22:24:00 -0800</lastBuildDate>
+    <pubDate>Sun, 29 Jan 2023 22:31:00 -0800</pubDate>
+    <lastBuildDate>Sun, 29 Jan 2023 22:31:00 -0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -449,7 +449,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2020/autoencoder/&quot;&gt;Anomaly detection with Deep AutoEncoders&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;Prev: &lt;a href=&quot;/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;strong&gt;Prev: &lt;a href=&quot;/2019/rnn/&quot;&gt;Time series prediction with Recurrent Neural Networks (RNNs)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 09 Apr 2020 00:00:00 -0700</pubDate>
         <link>http://dinalherath.com/2020/ramp/</link>
@@ -459,7 +459,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
       </item>
     
       <item>
-        <title>Implementing Deep Recurrent Neural Networks (RNN)</title>
+        <title>Time series prediction with Recurrent Neural Networks (RNNs)</title>
         <description>&lt;p&gt;&lt;img src=&quot;/material/2019/post_12/model_image.jpeg?raw=true&quot; alt=&quot;rnn-image&quot; width=&quot;340px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hi All! Today I thought of writing an introductory post on implementing &lt;strong&gt;Deep Learning&lt;/strong&gt; models using &lt;a href=&quot;https://www.tensorflow.org&quot;&gt;Tensorflow&lt;/a&gt;. In recent years you probably have heard about &lt;em&gt;AI&lt;/em&gt; beating players in quite complex games like &lt;a href=&quot;https://deepmind.com/research/alphago/&quot;&gt;GO&lt;/a&gt; and &lt;a href=&quot;https://www.theverge.com/2019/4/13/18309459/openai-five-dota-2-finals-ai-bot-competition-og-e-sports-the-international-champion&quot;&gt;DOTA&lt;/a&gt; and probably thought it’s really cool. This explosive development in machine intelligence is due to advancements in Deep Learning, which is a branch of machine learning that extends from &lt;em&gt;neural networks&lt;/em&gt;.&lt;/p&gt;
@@ -844,7 +844,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;h5 id=&quot;so-until-next-time&quot;&gt;So until next time,&lt;/h5&gt;
 &lt;h5 id=&quot;cheers&quot;&gt;Cheers!&lt;/h5&gt;
 
-&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2019/rnn/&quot;&gt;Implementing Deep Recurrent Neural Networks (RNN)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2019/rnn/&quot;&gt;Time series prediction with Recurrent Neural Networks (RNNs)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 24 Mar 2019 00:00:00 -0700</pubDate>
