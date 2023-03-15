@@ -55,3 +55,4 @@ __(*authors contributed equally to work)__
 
 + Coursera (DeepLearning.AI): [Introduction to Machine Learning in Production](https://www.coursera.org/account/accomplishments/certificate/HLBPBLKZTYAF)
 + Coursera (DeepLearning.AI): [Machine Learning Data Lifecycle in Production](https://www.coursera.org/account/accomplishments/certificate/MPPAE2RQLVJR)
++ Coursera (DeepLearning.AI): [Machine Learning Modeling Pipelines in Production](https://www.coursera.org/account/accomplishments/certificate/76E5WQDWNMQC)
