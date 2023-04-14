@@ -53,6 +53,8 @@ __(*authors contributed equally to work)__
 
 #### Certifications
 
-+ Coursera (DeepLearning.AI): [Introduction to Machine Learning in Production](https://www.coursera.org/account/accomplishments/certificate/HLBPBLKZTYAF)
-+ Coursera (DeepLearning.AI): [Machine Learning Data Lifecycle in Production](https://www.coursera.org/account/accomplishments/certificate/MPPAE2RQLVJR)
-+ Coursera (DeepLearning.AI): [Machine Learning Modeling Pipelines in Production](https://www.coursera.org/account/accomplishments/certificate/76E5WQDWNMQC)
++ [Machine Learning Engineering for Production (MLOps)](https://www.coursera.org/account/accomplishments/specialization/certificate/48J59XZB8CG2) Specialization by Coursera (DeepLearning.AI)
+  1. [Introduction to Machine Learning in Production](https://www.coursera.org/account/accomplishments/certificate/HLBPBLKZTYAF)
+  2. [Machine Learning Data Lifecycle in Production](https://www.coursera.org/account/accomplishments/certificate/MPPAE2RQLVJR)
+  3. [Machine Learning Modeling Pipelines in Production](https://www.coursera.org/account/accomplishments/certificate/76E5WQDWNMQC)
+  4. [Deploying Machine Learning Models in Production](https://www.coursera.org/account/accomplishments/certificate/H6AQT6QT5JC7)
