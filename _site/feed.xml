@@ -5,8 +5,8 @@
     <description>Jerome Dinal Herath</description>
     <link>http://dinalherath.com/</link>
     <atom:link href="http://dinalherath.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Jun 2023 09:43:59 -0700</pubDate>
-    <lastBuildDate>Sat, 17 Jun 2023 09:43:59 -0700</lastBuildDate>
+    <pubDate>Sun, 03 Mar 2024 12:37:16 -0600</pubDate>
+    <lastBuildDate>Sun, 03 Mar 2024 12:37:16 -0600</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -63,7 +63,7 @@
 
 &lt;p&gt;&lt;strong&gt;Prev: &lt;a href=&quot;/2021/lam/&quot;&gt;Fooling AI-based System Log Anomaly Detection&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 23 Dec 2022 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 23 Dec 2022 00:00:00 -0600</pubDate>
         <link>http://dinalherath.com/2022/cfgexplainer/</link>
         <guid isPermaLink="true">http://dinalherath.com/2022/cfgexplainer/</guid>
         
@@ -116,7 +116,7 @@
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2022/cfgexplainer/&quot;&gt;Explaining Graph Neural Network (GNN)-based Malware Classification&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;/2020/autoencoder/&quot;&gt;Anomaly detection with Deep AutoEncoders&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 15 Dec 2021 00:00:00 -0800</pubDate>
+        <pubDate>Wed, 15 Dec 2021 00:00:00 -0600</pubDate>
         <link>http://dinalherath.com/2021/lam/</link>
         <guid isPermaLink="true">http://dinalherath.com/2021/lam/</guid>
         
@@ -291,7 +291,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2021/lam/&quot;&gt;Fooling AI-based System Log Anomaly Detection&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;/2020/ramp/&quot;&gt;RAMP: Real-Time Aggregated Matrix Profile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 27 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 27 Dec 2020 00:00:00 -0600</pubDate>
         <link>http://dinalherath.com/2020/autoencoder/</link>
         <guid isPermaLink="true">http://dinalherath.com/2020/autoencoder/</guid>
         
@@ -451,7 +451,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2020/autoencoder/&quot;&gt;Anomaly detection with Deep AutoEncoders&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;/2019/rnn/&quot;&gt;Time series prediction with Recurrent Neural Networks (RNNs)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 09 Apr 2020 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 09 Apr 2020 00:00:00 -0500</pubDate>
         <link>http://dinalherath.com/2020/ramp/</link>
         <guid isPermaLink="true">http://dinalherath.com/2020/ramp/</guid>
         
@@ -685,7 +685,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;strong&gt;Prev: &lt;a href=&quot;/2019/ta-tools/&quot;&gt;Making TA-life easier: Bash scripts for grading&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 18 Aug 2019 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 18 Aug 2019 00:00:00 -0500</pubDate>
         <link>http://dinalherath.com/2019/rnn/</link>
         <guid isPermaLink="true">http://dinalherath.com/2019/rnn/</guid>
         
@@ -847,7 +847,7 @@ The initialization of the AutoEncoder is similar to a typical deep learning mode
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;/2019/rnn/&quot;&gt;Time series prediction with Recurrent Neural Networks (RNNs)&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 24 Mar 2019 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 24 Mar 2019 00:00:00 -0500</pubDate>
         <link>http://dinalherath.com/2019/ta-tools/</link>
         <guid isPermaLink="true">http://dinalherath.com/2019/ta-tools/</guid>
         
@@ -947,7 +947,7 @@ If your reading this part of my post, then I&apos;m assuming you have some famil
 
 But fear no more, in this post I&apos;ll be going through three easy steps on how to add text that automatically show the repository status, whether there are any changed not commited, the branch your on, if a merge is needed and so on. The code Im presenting here isn&apos;t my own, and I came across it myself when I was learning on how to use git and it really has made it easy for me to control versions of my code. --&gt;
 </description>
-        <pubDate>Sun, 23 Dec 2018 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 23 Dec 2018 00:00:00 -0600</pubDate>
         <link>http://dinalherath.com/2018/git-support/</link>
         <guid isPermaLink="true">http://dinalherath.com/2018/git-support/</guid>
         
@@ -1063,7 +1063,7 @@ But fear no more, in this post I&apos;ll be going through three easy steps on ho
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/git-support/&quot;&gt;Adding git support to Terminal&lt;/a&gt;&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 19 May 2018 00:00:00 -0700</pubDate>
+        <pubDate>Sat, 19 May 2018 00:00:00 -0500</pubDate>
         <link>http://dinalherath.com/2018/Linked-Lists/</link>
         <guid isPermaLink="true">http://dinalherath.com/2018/Linked-Lists/</guid>
         
@@ -1182,7 +1182,7 @@ By substitution of values,
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Linked-Lists/&quot;&gt;Finding cycles in linked lists&lt;/a&gt;&lt;/strong&gt;  &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/&quot;&gt;Proving correctness of Algorithms&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 15 Jan 2018 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 15 Jan 2018 00:00:00 -0600</pubDate>
         <link>http://dinalherath.com/2018/Markov-Chains/</link>
         <guid isPermaLink="true">http://dinalherath.com/2018/Markov-Chains/</guid>
         
@@ -1343,7 +1343,7 @@ At the start of each iteration of the for loop of lines 1-7, the subset A[1 … 
 &lt;p&gt;&lt;strong&gt;Next: &lt;a href=&quot;http://dinalherath.com/2018/Markov-Chains/&quot;&gt;Markov Chains 101&lt;/a&gt;&lt;/strong&gt;                                                        &lt;br /&gt;
 &lt;strong&gt;Prev: &lt;a href=&quot;http://dinalherath.com/2017/Computational-Physics-to-Computer-Science/&quot;&gt;From Computational Physics to Computer Science&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 15 Dec 2017 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 15 Dec 2017 00:00:00 -0600</pubDate>
         <link>http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</link>
         <guid isPermaLink="true">http://dinalherath.com/2017/Proving-Correctness-of-Algorithms/</guid>
         

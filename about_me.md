@@ -53,17 +53,12 @@ __(*authors contributed equally to work)__
 
 ### Mentoring
 
-#### Research
-
-+ Maheeka Solangaarachchige (University of Colombo, Sri Lanka, 2023-present)
-+ Achini Wijayathunge (University of Colombo, Sri Lanka, 2023-present)
-+ Oshan Ivantha (University of Colombo, Sri Lanka, 2021-present)
-+ Disni Rathnayake (University of Colombo, Sri Lanka, 2021-present)
-
-#### Undergraduate
-
-+ Pratheek Senevirathne (University of Colombo, Sri Lanka, 2023)
-+ Austin Barr (State University of New York at Brockport, USA, 2022-present)
++ Pratheek Senevirathne (University of Colombo, Sri Lanka, 2023-present)
++ Maheeka Solangaarachchige (University of Colombo, Sri Lanka, 2023)
++ Achini Wijayathunge (University of Colombo, Sri Lanka, 2023)
++ Oshan Ivantha (University of Colombo, Sri Lanka, 2021-2023)
++ Disni Rathnayake (University of Colombo, Sri Lanka, 2021-2023)
++ Austin Barr (State University of New York at Brockport, USA, 2022-2023)
 
 ### Certifications
 
