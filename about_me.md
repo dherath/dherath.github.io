@@ -21,6 +21,8 @@ Before my PhD-I worked on research projects spanning the areas of wireless commu
 
 Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user=vNtiUMwAAAAJ&view_op=list_works&gmla=AJsN-F7CowB4vN1o_UJq8beyKkMU42WStxRA3es-ukqdfMWUIacyLKD4u8liyf47F7Cu1DhXCZ7WxzkU5AscrUVZNdV1-I9msbAFL3y0eCZ8yDsAFFXLtQo) profile for the most up to date version.
 
+1. [Virtual Machine Proactive Fault Tolerance using Log-based Anomaly Detection](https://ieeexplore.ieee.org/document/10767421). By Pratheek Senevirathne, Samindu Cooray, **Jerome Dinal Herath** and Dinuni K. Fernando. In: IEEE Access (2024).
+
 1.  [Exploring Machine Learning and Deep Learning Approaches for Multi-Step Forecasting in Municipal Solid Waste Generation](https://ieeexplore.ieee.org/document/9950270). By Oshan Mudannayake\*, Disni Rathnayake\*, **Jerome Dinal Herath**, Dinuni K. Fernando and Mgnas Fernando. In: IEEE Access (2022). [[code]](https://github.com/UCloudMl/solid-waste-prediction)
 __(*authors contributed equally to work)__
 
