@@ -55,7 +55,7 @@ __(*authors contributed equally to work)__
 
 ### Mentoring
 
-+ Pratheek Senevirathne (University of Colombo, Sri Lanka, 2023-present)
++ Pratheek Senevirathne (University of Colombo, Sri Lanka, 2023-2024)
 + Maheeka Solangaarachchige (University of Colombo, Sri Lanka, 2023)
 + Achini Wijayathunge (University of Colombo, Sri Lanka, 2023)
 + Oshan Ivantha (University of Colombo, Sri Lanka, 2021-2023)
