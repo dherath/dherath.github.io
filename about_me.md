@@ -17,7 +17,7 @@ I completed my PhD in Computer Science under the supervision of Professor [Ping 
 
 Before my PhD-I worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Deep Learning and Robotic simulations. As of August 2020 I am also a member of the [International Research Council (IRC) in Sri Lanka](https://medium.com/@SustainableEduF/meet-sri-lankan-researcher-jerome-dinal-herath-dd4a2614e9da).
 
-#### Publications
+#### Research
 
 Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user=vNtiUMwAAAAJ&view_op=list_works&gmla=AJsN-F7CowB4vN1o_UJq8beyKkMU42WStxRA3es-ukqdfMWUIacyLKD4u8liyf47F7Cu1DhXCZ7WxzkU5AscrUVZNdV1-I9msbAFL3y0eCZ8yDsAFFXLtQo) profile for the most up to date version.
 
@@ -53,7 +53,7 @@ __(*authors contributed equally to work)__
 
 - [Simulation of a Snake Robot](https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot) by **Jerome Dinal Herath** (2016).(Undergraduate Dissertation: University of Colombo, Sri Lanka) <!-- [[slides]](https://www.researchgate.net/publication/337439030_Simulation_of_a_Snake_Robot) -->
 
-### Mentoring
+#### Mentoring
 
 + Pratheek Senevirathne (University of Colombo, Sri Lanka, 2023-2024)
 + Maheeka Solangaarachchige (University of Colombo, Sri Lanka, 2023)
@@ -62,7 +62,27 @@ __(*authors contributed equally to work)__
 + Disni Rathnayake (University of Colombo, Sri Lanka, 2021-2023)
 + Austin Barr (State University of New York at Brockport, USA, 2022-2023)
 
-### Certifications
+#### Writing
+
+<ul class="post-list">
+    {% for post in site.posts %}
+      <!--{% unless post.next %}
+        <h3 class="category-title">{{ post.date | date: '%Y' }}</h3>
+      {% else %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+        {% if year != nyear %}
+          <h3 class="category-title">{{ post.date | date: '%Y' }}</h3>
+        {% endif %}
+      {% endunless %}-->
+      <article class="post-item">
+        <span class="post-meta date-label">{{ post.date | date: "%b %d %Y" }}</span>
+        <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
+      </article>
+    {% endfor %}
+</ul>
+
+#### Certifications
 
 + [Machine Learning Engineering for Production (MLOps) Specialization](https://www.coursera.org/account/accomplishments/specialization/certificate/48J59XZB8CG2) by Coursera (DeepLearning.AI)
   1. [Introduction to Machine Learning in Production](https://www.coursera.org/account/accomplishments/certificate/HLBPBLKZTYAF)

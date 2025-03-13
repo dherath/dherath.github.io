@@ -55,8 +55,8 @@ plugins:
 navbar:
   - slug : about
     title: About
-  - slug : blog
-    title: Blog
+  #- slug : blog
+  #  title: Blog
   - slug : contact
     title: Contact
 
