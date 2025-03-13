@@ -8,20 +8,38 @@ permalink: /about me/
 + **`Adversarial machine learning`** that focuses on the robustness for AI in cybersecurity
 + **`Interpretable machine learning`** that focuses on interpreting and understanding AI in cybersecurity
 
-During my PhD, I have developed a method that explains malware classification made by **graph neural networks**, designed a real-time adversarial evasion attack using **deep reinforcement learning** that can be used to evaluate the robustness for deep learning based anomaly detection from distributed system logs, and also developed a model with real-time **anomaly detection** capability for scientific workflows. I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. -->
+During my PhD, I have developed a method that explains malware classification made by **graph neural networks**, designed a real-time adversarial evasion attack using **deep reinforcement learning** that can be used to evaluate the robustness for deep learning based anomaly detection from distributed system logs, and also developed a model with real-time **anomaly detection** capability for scientific workflows. I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
+-->
 
-
+<!--
 I currently work as a **`Security Data Scientist`** at **`Obsidian Security, USA`**. I like working on **applied machine learning problems** spanning the areas of anomaly detection, time series and graph-based tasks.
 
 I completed my PhD in Computer Science under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) at the State University of New York (SUNY)-Binghamton, USA. My research there focused on improving the intersection between **`Applied Machine Learning (AML)`** and **`Cybersecurity`**, with a focus on **adversarial** and **interpretable** machine learning. Before that I completed my Bachelors Degree in Science (BS) specializing in Computational Physics from the University of Colombo, Sri Lanka.
 
 Before my PhD-I worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Deep Learning and Robotic simulations. As of August 2020 I am also a member of the [International Research Council (IRC) in Sri Lanka](https://medium.com/@SustainableEduF/meet-sri-lankan-researcher-jerome-dinal-herath-dd4a2614e9da).
+-->
+
+I’m currently a **`Security Data Scientist at Obsidian Security, USA`**, where I apply data science and machine learning techniques to help secure SaaS applications against evolving cyber threats. 
+My work spans across **[security-oriented generative AI applications, anomaly detection, time series analysis, and graph-based modeling]()**. 
+I also actively collaborate on applied AI research projects.
+
+I hold a **`PhD in Computer Science`** from the **`State University of New York (SUNY) at Binghamton, USA`**, completed under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/), 
+where my research was centered on the intersection of **`Machine Learning (ML)`** and **`Cybersecurity`** — with an emphasis on **Explainable AI** and **Adversarial Machine Learning**. 
+My doctoral work included applications in **malware classification** and **anomaly detection**.
+
+Prior to my PhD, I earned a **`Bachelor’s degree in Computational Physics`** from the **University of Colombo, Sri Lanka**. 
+Earlier in my career, I worked on a range of research projects in **robotics, wireless communications, and blockchain-based secure distributed systems**. 
+These experiences helped me build foundations in **Markovian modeling, deep learning, simulations**, 
+and **scientific workflow management** using blockchain technologies.
+
+<!--Since **August 2020**, I’ve also been a member of the [International Research Council (IRC) in Sri Lanka](https://medium.com/@SustainableEduF/meet-sri-lankan-researcher-jerome-dinal-herath-dd4a2614e9da), 
+contributing to the advancement of science and technology initiatives.-->
 
 #### Research
 
 Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user=vNtiUMwAAAAJ&view_op=list_works&gmla=AJsN-F7CowB4vN1o_UJq8beyKkMU42WStxRA3es-ukqdfMWUIacyLKD4u8liyf47F7Cu1DhXCZ7WxzkU5AscrUVZNdV1-I9msbAFL3y0eCZ8yDsAFFXLtQo) profile for the most up to date version.
 
-1. [Virtual Machine Proactive Fault Tolerance using Log-based Anomaly Detection](https://ieeexplore.ieee.org/document/10767421). By Pratheek Senevirathne, Samindu Cooray, **Jerome Dinal Herath** and Dinuni K. Fernando. In: IEEE Access (2024).
+1. [Virtual Machine Proactive Fault Tolerance using Log-based Anomaly Detection](https://ieeexplore.ieee.org/document/10767421). By Pratheek Senevirathne, Samindu Cooray, **Jerome Dinal Herath** and Dinuni K. Fernando. In: IEEE Access (2024). [[code]](https://github.com/CloudnetUCSC/VMFT-LAD)
 
 1.  [Exploring Machine Learning and Deep Learning Approaches for Multi-Step Forecasting in Municipal Solid Waste Generation](https://ieeexplore.ieee.org/document/9950270). By Oshan Mudannayake\*, Disni Rathnayake\*, **Jerome Dinal Herath**, Dinuni K. Fernando and Mgnas Fernando. In: IEEE Access (2022). [[code]](https://github.com/UCloudMl/solid-waste-prediction)
 __(*authors contributed equally to work)__
@@ -55,6 +73,8 @@ __(*authors contributed equally to work)__
 
 #### Mentoring
 
++ Dinushan Vimukthi (University of Colombo, Sri Lanka, 2024-present)
++ Nadeesha Epa (University of Colombo, Sri Lanka, 2024-present)
 + Pratheek Senevirathne (University of Colombo, Sri Lanka, 2023-2024)
 + Maheeka Solangaarachchige (University of Colombo, Sri Lanka, 2023)
 + Achini Wijayathunge (University of Colombo, Sri Lanka, 2023)
