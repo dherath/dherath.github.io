@@ -929,7 +929,7 @@ hr {
 
 .highlight {
   font-weight: bold;
-  color: #e53935;
+  color: #e95e45;
   /* Red color for emphasis */
 }
 
@@ -996,6 +996,19 @@ hr {
 
 .awards-list li {
   margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.highlight-label {
+  background-color: #e5e6e8;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.research-list li {
+  margin-bottom: 10px;
   line-height: 1.6;
 }
 

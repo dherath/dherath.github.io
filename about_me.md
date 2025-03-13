@@ -4,23 +4,8 @@ title: About Me
 permalink: /about me/
 ---
 
-<!--Currently, I am part of the [SVR Lab](http://www.cs.binghamton.edu/~pyang/seclab.html) @ SUNY Binghamton under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) where my current research focuses on improving the intersection between **`Applied Machine Learning (ML)`** and **`Cybersecurity`**. From a ML perspective I work on, 
-+ **`Adversarial machine learning`** that focuses on the robustness for AI in cybersecurity
-+ **`Interpretable machine learning`** that focuses on interpreting and understanding AI in cybersecurity
-
-During my PhD, I have developed a method that explains malware classification made by **graph neural networks**, designed a real-time adversarial evasion attack using **deep reinforcement learning** that can be used to evaluate the robustness for deep learning based anomaly detection from distributed system logs, and also developed a model with real-time **anomaly detection** capability for scientific workflows. I have also worked on research projects which utilize **`Ethereum-Blockchain`** for building secure, distributed systems. 
--->
-
-<!--
-I currently work as a **`Security Data Scientist`** at **`Obsidian Security, USA`**. I like working on **applied machine learning problems** spanning the areas of anomaly detection, time series and graph-based tasks.
-
-I completed my PhD in Computer Science under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/) at the State University of New York (SUNY)-Binghamton, USA. My research there focused on improving the intersection between **`Applied Machine Learning (AML)`** and **`Cybersecurity`**, with a focus on **adversarial** and **interpretable** machine learning. Before that I completed my Bachelors Degree in Science (BS) specializing in Computational Physics from the University of Colombo, Sri Lanka.
-
-Before my PhD-I worked on research projects spanning the areas of wireless communications and robotics. During which, I gained experience in Markovian modeling, Deep Learning and Robotic simulations. As of August 2020 I am also a member of the [International Research Council (IRC) in Sri Lanka](https://medium.com/@SustainableEduF/meet-sri-lankan-researcher-jerome-dinal-herath-dd4a2614e9da).
--->
-
 I’m currently a **`Security Data Scientist at Obsidian Security, USA`**, where I apply data science and machine learning techniques to help secure SaaS applications against evolving cyber threats. 
-My work spans across **[security-oriented generative AI applications, anomaly detection, time series analysis, and graph-based modeling]()**. 
+My work spans across <span class="highlight">security-oriented generative AI applications, anomaly detection, time series analysis, and graph-based modeling</span>. 
 I also actively collaborate on applied AI research projects.
 
 I hold a **`PhD in Computer Science`** from the **`State University of New York (SUNY) at Binghamton, USA`**, completed under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/), 
@@ -35,54 +20,190 @@ and **scientific workflow management** using blockchain technologies.
 <!--Since **August 2020**, I’ve also been a member of the [International Research Council (IRC) in Sri Lanka](https://medium.com/@SustainableEduF/meet-sri-lankan-researcher-jerome-dinal-herath-dd4a2614e9da), 
 contributing to the advancement of science and technology initiatives.-->
 
-#### Research
+## Research
 
-Please refer my [Google scholar](https://scholar.google.com/citations?hl=en&user=vNtiUMwAAAAJ&view_op=list_works&gmla=AJsN-F7CowB4vN1o_UJq8beyKkMU42WStxRA3es-ukqdfMWUIacyLKD4u8liyf47F7Cu1DhXCZ7WxzkU5AscrUVZNdV1-I9msbAFL3y0eCZ8yDsAFFXLtQo) profile for the most up to date version.
+<p>
+  Please refer to my
+  <a href="https://scholar.google.com/citations?hl=en&user=vNtiUMwAAAAJ&view_op=list_works" target="_blank">
+    Google Scholar profile
+  </a>
+  for the most up-to-date list of publications.
+</p>
 
-1. [Virtual Machine Proactive Fault Tolerance using Log-based Anomaly Detection](https://ieeexplore.ieee.org/document/10767421). By Pratheek Senevirathne, Samindu Cooray, **Jerome Dinal Herath** and Dinuni K. Fernando. In: IEEE Access (2024). [[code]](https://github.com/CloudnetUCSC/VMFT-LAD)
+<ul class="research-list">
+  <li>
+    <span class="pub-title">
+      <a href="https://ieeexplore.ieee.org/document/10767421">
+        Virtual Machine Proactive Fault Tolerance using Log-based Anomaly Detection
+      </a>
+    </span><br>
+    <span class="pub-authors">Pratheek Senevirathne, Samindu Cooray, <span class="author-highlight">Jerome Dinal Herath</span>, Dinuni K. Fernando</span><br>
+    <span class="pub-venue">IEEE Access, 2024</span><br>
+    <a href="https://github.com/CloudnetUCSC/VMFT-LAD"><em>[code]</em></a>
+  </li>
 
-1.  [Exploring Machine Learning and Deep Learning Approaches for Multi-Step Forecasting in Municipal Solid Waste Generation](https://ieeexplore.ieee.org/document/9950270). By Oshan Mudannayake\*, Disni Rathnayake\*, **Jerome Dinal Herath**, Dinuni K. Fernando and Mgnas Fernando. In: IEEE Access (2022). [[code]](https://github.com/UCloudMl/solid-waste-prediction)
-__(*authors contributed equally to work)__
+  <li>
+    <span class="pub-title">
+      <a href="https://ieeexplore.ieee.org/document/9950270">
+        Exploring Machine Learning and Deep Learning Approaches for Multi-Step Forecasting in Municipal Solid Waste Generation
+      </a>
+    </span><br>
+    <span class="pub-authors">Oshan Mudannayake<sup>*</sup>, Disni Rathnayake<sup>*</sup>, <span class="author-highlight">Jerome Dinal Herath</span>, Dinuni K. Fernando, Mgnas Fernando</span><br>
+    <span class="pub-venue">IEEE Access, 2022</span><br>
+    <a href="https://github.com/UCloudMl/solid-waste-prediction"><em>[code]</em></a><br>
+    <small><em>*Authors contributed equally to the work</em></small>
+  </li>
 
-1.  [CFGExplainer: Explaining Graph Neural Network-Based Malware Classification from Control Flow Graphs]({{site.url}}/papers/2022dsn.pdf). By **Jerome Dinal Herath**, Priti Prabhakar Wakodikar, Ping Yang and Guanhua Yan. In: IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) (2022). [[code]](https://github.com/dherath/CFGExplainer)
+  <li>
+    <span class="pub-title">
+      <a href="{{site.url}}/papers/2022dsn.pdf">
+        CFGExplainer: Explaining Graph Neural Network-Based Malware Classification from Control Flow Graphs
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, Priti Prabhakar Wakodikar, Ping Yang, Guanhua Yan</span><br>
+    <span class="pub-venue">IEEE/IFIP DSN, 2022</span><br>
+    <a href="https://github.com/dherath/CFGExplainer"><em>[code]</em></a>
+  </li>
 
-2. [Real-Time Evasion Attacks against Deep Learning-Based Anomaly Detection from Distributed System Logs]({{site.url}}/papers/2021codaspy.pdf). By **J. Dinal Herath**, Ping Yang and Guanhua Yan. In: Proceedings of The 11th ACM Conference on Data and Application Security and Privacy (CODASPY) (2021). [[presentation-video]](https://dl.acm.org/doi/10.1145/3422337.3447833)[[code]](https://github.com/dherath/Log_Anomaly_Mask)
+  <li>
+    <span class="pub-title">
+      <a href="{{site.url}}/papers/2021codaspy.pdf">
+        Real-Time Evasion Attacks Against DL-Based Anomaly Detection from Distributed System Logs
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, Ping Yang, Guanhua Yan</span><br>
+    <span class="pub-venue">ACM CODASPY, 2021</span><br>
+    <a href="https://dl.acm.org/doi/10.1145/3422337.3447833"><em>[presentation video]</em></a>
+    <a href="https://github.com/dherath/Log_Anomaly_Mask"><em>[code]</em></a>
+  </li>
 
-3. [RAMP: Real-Time Anomaly Detection in Scientific Workflows]({{site.url}}/papers/2019BigData.pdf). By **J. Dinal Herath**, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu. In: IEEE International Conference on Big Data (2019). [**[extended version]**]({{site.url}}/papers/2019RAMP_extended_paper.pdf)[[code]](https://github.com/dherath/RAMP)[[slides]](https://www.researchgate.net/publication/337927011_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows)
+  <li>
+    <span class="pub-title">
+      <a href="{{site.url}}/papers/2019BigData.pdf">
+        RAMP: Real-Time Anomaly Detection in Scientific Workflows
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, Changxin Bai, Guanhua Yan, Ping Yang, Shiyong Lu</span><br>
+    <span class="pub-venue">IEEE Big Data, 2019</span><br>
+    <a href="{{site.url}}/papers/2019RAMP_extended_paper.pdf"><em>[extended]</em></a>
+    <a href="https://github.com/dherath/RAMP"><em>[code]</em></a>
+    <a href="https://www.researchgate.net/publication/337927011_RAMP_Real-Time_Anomaly_Detection_in_Scientific_Workflows"><em>[slides]</em></a>
+  </li>
 
-4. [SciBlock: A Blockchain-Based Tamper-Proof Non-Repudiable Storage for Scientific Workflow Provenance]({{site.url}}/papers/2019_CIC_sciblock.pdf). By Dinuni Fernando, Siddharth Kulshrestha, **J. Dinal Herath**, Nitin Mahadik, Yanzhe Ma, Changxin Bai, Ping Yang, Guanhua Yan, Shiyong Lu. In: IEEE International Conference on Collaboration and Internet Computing (2019). [[slides]](https://www.researchgate.net/publication/337927108_SciBlock_A_Blockchain-Based_Tamper-Proof_Non-_Repudiable_Storage_for_Scientific_Workflow_Provenance)
+  <li>
+    <span class="pub-title">
+      <a href="{{site.url}}/papers/2019_CIC_sciblock.pdf">
+        SciBlock: A Blockchain-Based Tamper-Proof Non-Repudiable Storage for Scientific Workflow Provenance
+      </a>
+    </span><br>
+    <span class="pub-authors">Dinuni Fernando, Siddharth Kulshrestha, <span class="author-highlight">Jerome Dinal Herath</span>, Nitin Mahadik, Yanzhe Ma, Changxin Bai, Ping Yang, Guanhua Yan, Shiyong Lu</span><br>
+    <span class="pub-venue">IEEE CIC, 2019</span><br>
+    <a href="https://www.researchgate.net/publication/337927108_SciBlock_A_Blockchain-Based_Tamper-Proof_Non-_Repudiable_Storage_for_Scientific_Workflow_Provenance"><em>[slides]</em></a>
+  </li>
 
-5. [DeepChannel: Wireless Channel Quality Prediction using Deep Learning]({{site.url}}/papers/2019tvt.pdf). By Adita Kulkarni, Anand Seetharam, Arti Ramesh, **J. Dinal Herath**. In: IEEE Transactions in Vehicular Technology (TVT) (2019). [[code]](https://github.com/dherath/DeepLearning_for_Wireless_Signal_Strength_Prediction)
+  <li>
+    <span class="pub-title">
+      <a href="{{site.url}}/papers/2019tvt.pdf">
+        DeepChannel: Wireless Channel Quality Prediction using Deep Learning
+      </a>
+    </span><br>
+    <span class="pub-authors">Adita Kulkarni, Anand Seetharam, Arti Ramesh, <span class="author-highlight">Jerome Dinal Herath</span></span><br>
+    <span class="pub-venue">IEEE TVT, 2019</span><br>
+    <a href="https://github.com/dherath/DeepLearning_for_Wireless_Signal_Strength_Prediction"><em>[code]</em></a>
+  </li>
 
-6. [A Deep Learning Model for Wireless Channel Quality Prediction]({{site.url}}/papers/2019ICC.pdf) by **J. Dinal Herath**, Anand Seetharam and Arti Ramesh. In: IEEE International Conference on Communications (ICC) (2019). [[code]](https://github.com/dherath/DeepLearning_for_Wireless_Signal_Strength_Prediction)
+  <li>
+    <span class="pub-title">
+      <a href="{{site.url}}/papers/2019ICC.pdf">
+        A Deep Learning Model for Wireless Channel Quality Prediction
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, Anand Seetharam, Arti Ramesh</span><br>
+    <span class="pub-venue">IEEE ICC, 2019</span><br>
+    <a href="https://github.com/dherath/DeepLearning_for_Wireless_Signal_Strength_Prediction"><em>[code]</em></a>
+  </li>
 
-7. [A Markovian Model for Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/papers/2018tvt.pdf) by **J. Dinal Herath** and Anand Seetharam. In: IEEE Transactions in Vehicular Technology (TVT) (2018). [[code]](https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing) [[project]](https://www.researchgate.net/project/Models-for-Opportunistic-Request-Routing-in-Cache-Networks) [[slides]](https://www.researchgate.net/publication/337438870_A_Markovian_Model_for_Analyzing_Opportunistic_Request_Routing_in_Wireless_Cache_Networks)
+  <li>
+    <span class="pub-title">
+      <a href="{{site.url}}/papers/2018tvt.pdf">
+        A Markovian Model for Analyzing Opportunistic Request Routing in Wireless Cache Networks
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, Anand Seetharam</span><br>
+    <span class="pub-venue">IEEE TVT, 2018</span><br>
+    <a href="https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing"><em>[code]</em></a>
+    <a href="https://www.researchgate.net/publication/337438870_A_Markovian_Model_for_Analyzing_Opportunistic_Request_Routing_in_Wireless_Cache_Networks"><em>[slides]</em></a>
+  </li>
 
-8. [Analyzing Opportunistic Request Routing in Wireless Cache Networks]({{site.url}}/papers/2018ICC.pdf) by **J. Dinal Herath** and Anand Seetharam. In: IEEE International Conference on Communications (ICC) (2018). [[code]](https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing) [[project]](https://www.researchgate.net/project/Models-for-Opportunistic-Request-Routing-in-Cache-Networks)
+  <li>
+    <span class="pub-title">
+      <a href="{{site.url}}/papers/2018ICC.pdf">
+        Analyzing Opportunistic Request Routing in Wireless Cache Networks
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, Anand Seetharam</span><br>
+    <span class="pub-venue">IEEE ICC, 2018</span><br>
+    <a href="https://github.com/dherath/Markovian_model_for_Opportunistic_Request_Routing"><em>[code]</em></a>
+  </li>
 
-9. [Simulation of Symmetric and Asymmetric movement gaits for Lateral Undulation in Serial Snake Robots](https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots){:target="blank"} by **J. Dinal Herath** and K. Jayananda. In: International Conference on Computational Modeling & Simulation (ICCMS) (2017). [[project]](https://www.researchgate.net/project/Snake-Robots)
+  <li>
+    <span class="pub-title">
+      <a href="https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots" target="_blank">
+        Simulation of Symmetric and Asymmetric Movement Gaits for Lateral Undulation in Serial Snake Robots
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, K. Jayananda</span><br>
+    <span class="pub-venue">ICCMS, 2017</span><br>
+  </li>
 
-10. [Comparison of Serial and Parallel Snake Robots for Lateral Undulation Motion Using Gazebo](https://www.researchgate.net/publication/311716282_Comparison_of_Serial_and_Parallel_Snake_Robots_for_Lateral_Undulation_Motion_using_Gazebo){:target="blank"} by **J. Dinal Herath** and K. Jayananda. In: IEEE International Conference on Information and Automation for Sustainability (ICIAfS) (2016). (DOI - 10.1109/ICIAFS.2016.7946540) [[code]](https://github.com/dherath/Snake_Robots) [[project]](https://www.researchgate.net/project/Snake-Robots)
-
+  <li>
+    <span class="pub-title">
+      <a href="https://www.researchgate.net/publication/311716282_Comparison_of_Serial_and_Parallel_Snake_Robots_for_Lateral_Undulation_Motion_using_Gazebo" target="_blank">
+        Comparison of Serial and Parallel Snake Robots for Lateral Undulation Motion Using Gazebo
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, K. Jayananda</span><br>
+    <span class="pub-venue">IEEE ICIAfS, 2016</span><br>
+    <a href="https://github.com/dherath/Snake_Robots"><em>[code]</em></a>
+  </li>
+</ul>
 
 #### Dissertations
 
-- [Empowering Artificial Intelligence for Cybersecurity Applications](https://www.proquest.com/openview/7e409b079816d581792cdb2a2e5a9870/1.pdf?pq-origsite=gscholar&cbl=18750&diss=y) by **Jerome Dinal Herath** (2022). (PhD Dissertation: State University of New York at Binghamton)
+<ul class="research-list">
+  <li>
+    <span class="pub-title">
+      <a href="https://www.proquest.com/openview/7e409b079816d581792cdb2a2e5a9870/1.pdf?pq-origsite=gscholar&cbl=18750&diss=y">
+        Empowering Artificial Intelligence for Cybersecurity Applications
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span></span> (2022).<br>
+    <span class="pub-venue"><em>PhD Dissertation, State University of New York (SUNY) at Binghamton, USA</em></span>
+  </li>
+  <li>
+    <span class="pub-title">
+      <a href="https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot">
+        Simulation of a Snake Robot
+      </a>
+    </span><br>
+    <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span></span> (2016).<br>
+    <span class="pub-venue"><em>Undergraduate Dissertation, University of Colombo, Sri Lanka</em></span>
+  </li>
+</ul>
 
-- [Simulation of a Snake Robot](https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot) by **Jerome Dinal Herath** (2016).(Undergraduate Dissertation: University of Colombo, Sri Lanka) <!-- [[slides]](https://www.researchgate.net/publication/337439030_Simulation_of_a_Snake_Robot) -->
 
-#### Mentoring
+### Mentoring
 
-+ Dinushan Vimukthi (University of Colombo, Sri Lanka, 2024-present)
-+ Nadeesha Epa (University of Colombo, Sri Lanka, 2024-present)
-+ Pratheek Senevirathne (University of Colombo, Sri Lanka, 2023-2024)
-+ Maheeka Solangaarachchige (University of Colombo, Sri Lanka, 2023)
-+ Achini Wijayathunge (University of Colombo, Sri Lanka, 2023)
-+ Oshan Ivantha (University of Colombo, Sri Lanka, 2021-2023)
-+ Disni Rathnayake (University of Colombo, Sri Lanka, 2021-2023)
-+ Austin Barr (State University of New York at Brockport, USA, 2022-2023)
+- Dinushan Vimukthi – University of Colombo (2024–present)
+- Nadeesha Epa – University of Colombo (2024–present)
+- Pratheek Senevirathne – University of Colombo (2023–2024)
+- Maheeka Solangaarachchige – University of Colombo (2023)
+- Achini Wijayathunge – University of Colombo (2023)
+- Oshan Ivantha – University of Colombo (2021–2023)
+- Disni Rathnayake – University of Colombo (2021–2023)
+- Austin Barr – SUNY Brockport (2022–2023)
 
-#### Writing
+## Writing
 
 <ul class="post-list">
     {% for post in site.posts %}
@@ -102,7 +223,7 @@ __(*authors contributed equally to work)__
     {% endfor %}
 </ul>
 
-#### Certifications
+<h2>Certifications</h2>
 
 + [Machine Learning Engineering for Production (MLOps) Specialization](https://www.coursera.org/account/accomplishments/specialization/certificate/48J59XZB8CG2) by Coursera (DeepLearning.AI)
   1. [Introduction to Machine Learning in Production](https://www.coursera.org/account/accomplishments/certificate/HLBPBLKZTYAF)
