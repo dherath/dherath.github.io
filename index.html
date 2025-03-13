@@ -7,115 +7,100 @@ title: Home
 <section class="post-list">
   <div class="container">
   	<!--<h4><a href="{{site.url}}/about"><span style="background-color: #f7f7f7;color: #3885B5">[Research]</span></a> <a href="{{site.url}}/dinal_cv.pdf"><span style="background-color: #f7f7f7;color:#3885B5">[Curriculum Vitae]</span></a> </h4>-->
-    
-    <h4> Experience </h4>
+
+  <h2>Experience</h2>
+  <p class="section-intro">Here are some of the key roles I have held across various fields, including cybersecurity, research, and applied AI in industry.</p>
+
+  <!-- Obsidian Security -->
+  <div class="experience-entry">
+    <h5><span class="role">Security Data Scientist</span></h5>
+    <p><span class="institution">Obsidian Security, USA</span> &nbsp;|&nbsp; (2022 – Present)</p>
+    <p class="section-intro">As a Security Data Scientist at Obsidian Security, I have focused on developing advanced threat detection models, alert monitoring systems, and collaborating on applied AI research for cybersecurity solutions in SaaS environments.</p>
     <ul>
-      <li> Security Data Scientist [Obsidian Security, USA. (2022-present)]</li>
-        <ol></ol>
+      <li><span class="highlight">Researched, designed, and implemented multiple threat detection models</span> for SaaS (Software as a Service) environments.</li>
+      <li><span class="highlight">Developed and maintained monitoring solutions</span> to assess the ongoing performance of threat detection models.</li>
+      <li>Contributed to data-driven security posture management solutions, including data extraction, modeling, and orchestration tasks.</li>
+      <li>Collaborated on security-focused applied AI research initiatives within Obsidian.</li>
+    </ul>
+  </div>
 
-      <li> PhD Research [SUNY Binghamton, USA. (2018-2022)]</li>
-        <ol>
-          <li> Explainable AI for Malware Classification: <span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2022dsn.pdf">[DSN'22]</a></span> </li>
-          <li> Real-Time and Adversarial Anomaly Detection: 
-            <span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2019RAMP_extended_paper.pdf">[BIGDATA'19]</a></span> <span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2021codaspy.pdf">[CODASPY'21]</a></span></li>
-          <li> Blockchain based tamper proof storage of Scientific Workflows: <span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2019_CIC_sciblock.pdf">[CIC'19]</a></span></li>
-        </ol>
-
-      <li> Graduate Research Assistant [SUNY Binghamton, USA. (2017-2018)] </li>
-        <ol>
-          <li> Deep Learning for Wireless Channel Quality Prediction: <span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2019ICC.pdf">[ICC'19]</a></span> <span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2019tvt.pdf">[TVT'19]</a></span></li>
-          <li> Modeling Wireless Cache Networks: <span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2018ICC.pdf">[ICC'18]</a></span> <span style="background-color: #e5e6e8"><a href="{{site.url}}/papers/2018tvt.pdf">[TVT'18]</a></span> </li>
-        </ol>  
-      </ul>
-
-    <!--
-    <h4>Research Collaborations</h4>
+  <!-- PhD Research -->
+  <div class="experience-entry">
+    <h5><span class="role">PhD Researcher</span></h5>
+    <p><span class="institution">State University of New York at Binghamton, USA</span> &nbsp;|&nbsp; (2018 – 2022)</p>
+    <p><em>Dissertation: "Empowering Artificial Intelligence for Cybersecurity Applications"</em></p>
+    <p class="section-intro">During my PhD, I focused on using AI and machine learning for improving cybersecurity. My research aimed to design real-time models for anomaly detection, improving explainable malware classification, and applying blockchain to enhance data integrity in scientific workflows.</p>
     <ul>
-      <li>Virtual Machine (VM) Fault Tolerance: <span style="background-color: #e5e6e8"><a href="https://ieeexplore.ieee.org/document/10767421">[IEEE Access'24]</a></span></li>
-      <li>Applying AI for Cleaner Cities: <span style="background-color: #e5e6e8"><a href="https://ieeexplore.ieee.org/document/9950270">[IEEE Access'22]</a></span></li>
+      <li><span class="highlight">CFGExplainer:</span> Developed a model that explains malware classification decisions made by Graph Neural Networks (GNNs).</li>
+      <li><span class="highlight">Log-Anomaly-Mask:</span> Designed a real-time adversarial evasion attack against deep learning-based system log anomaly detection.</li>
+      <li><span class="highlight">RAMP:</span> Built a real-time machine learning model for anomaly detection in streaming multivariate time series data.</li>
+      <li><span class="highlight">SciBlock:</span> Utilized blockchain technology to enable tamper-proof storage and improved reproducibility in scientific workflows.</li>
     </ul>
-    -->
+  </div>
 
-    <!--
-    <h4> Recent Blog Posts </h4>
-    {% assign postCounter = 0 %}
-    {% assign postLimit = 8 %}
-      {% for post in site.posts %}
-        {% if postCounter < postLimit %}
-          <article class="post-item">
-            <span class="post-meta date-label">{{ post.date | date: "%y %b %d" }}</span>
-            <div class="article-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
-          </article>
-          {% assign postCounter = postCounter | plus: 1 %}
-        {% else %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-      -->
-
-      <h4> Recent Research </h4>
-      <ul>
-        <li>
-          <span style="background-color: #e5e6e8">
-            <a href="https://ieeexplore.ieee.org/document/10767421">
-              Virtual Machine Proactive Fault Tolerance using Log-based Anomaly Detection
-            </a>
-          </span> by Pratheek Senevirathne, Samindu Cooray, <strong>Jerome Dinal Herath</strong> and Dinuni K. Fernando. In: IEEE Access (2024).
-
-        </li>
-        <li>
-          <span style="background-color: #e5e6e8">
-            <a href="https://ieeexplore.ieee.org/document/9950270">
-              Exploring Machine Learning and Deep Learning Approaches for Multi-Step Forecasting in Municipal Solid Waste Generation
-            </a>
-          </span> by Oshan Mudannayake, Disni Rathnayake, <strong>Jerome Dinal Herath</strong>, Dinuni K. Fernando and Mgnas Fernando. In: IEEE Access (2022).
-                 
-        </li>
-        <li>
-          <span style="background-color: #e5e6e8">
-            <a href="{{site.url}}/papers/2022dsn.pdf">
-              CFGExplainer: Explaining Graph Neural Network-Based Malware Classification from Control Flow Graphs
-            </a>
-          </span> by <strong>Jerome Dinal Herath</strong>, Priti Prabhakar Wakodikar, Ping Yang and Guanhua Yan. In: IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) (2022).
-        </li>
-        <li>
-          <span style="background-color: #e5e6e8">
-            <a href="{{site.url}}/papers/2021codaspy.pdf">
-              Real-Time Evasion Attacks against Deep Learning-Based Anomaly Detection from Distributed System Logs
-            </a>
-          </span> by <strong>J. Dinal Herath</strong>, Ping Yang and Guanhua Yan. 
-          In: Proceedings of The 11th ACM Conference on Data and Application Security and Privacy (CODASPY) (2021).
-          <a href="https://dl.acm.org/doi/10.1145/3422337.3447833">
-            <strong>[presentation video]</strong>
-          </a>
-        </li>
-      </ul>
-  
-      <h4> Awards and Scholarships </h4>
-      <ul>
-        <li>Award for Academic Excellence in PhD (State University of New York at Binghamton-2022).</li>
-        <li>Student travel grant to attend IEEE International Conference on Collaboration and Internet Computing (CIC-2019).</li>
-        <li>Secure and Private AI scholarship Challenge Recipient by Udacity and Facebook (2019).</li>
-        <li>Student travel grant to attend ACM/IEEE Symposium on Architectures for Networking and Communications (ANCS-2018).</li>
-        <li>Student travel grant to attend International Conference on Communications (ICC-2018).</li>
-        <li>Recipient of Dr. Sarath Gunapala Prize for Computational Physics (University of Colombo, Sri Lanka-2017).</li>
-        <li>MIND (Munasinghe Institute for Development, Sri Lanka) scholarship (2015-2016).</li>
-      </ul>
-  
-    <!--
-      <li> Simulating Snake Robot Movement [Undergraduate Reserach Project, University of Colombo, Sri Lanka.(2016-2017)]: <span style="background-color: #e5e6e8"><a href="https://www.researchgate.net/publication/311716282_Comparison_of_Serial_and_Parallel_Snake_Robots_for_Lateral_Undulation_Motion_using_Gazebo">[ICIAFS'16]</a></span>  <span style="background-color: #e5e6e8"><a href="https://www.researchgate.net/publication/317015239_Simulation_of_Symmetric_and_Asymmetric_movement_gaits_for_Lateral_Undulation_in_Serial_Snake_Robots">[ICCMS'17]</a></span> <span style="background-color: #e5e6e8"><a href="https://www.researchgate.net/publication/316471922_Simulation_of_a_Snake_Robot">[Undergraduate Thesis]</a></span></li>
-    </ul>
-    <h3> Teaching Experience </h3>
+  <!-- Graduate Research Assistant -->
+  <div class="experience-entry">
+    <h5><span class="role">Graduate Research Assistant</span></h5>
+    <p><span class="institution">State University of New York at Binghamton, USA</span> &nbsp;|&nbsp; (2017 – 2018)</p>
+    <p class="section-intro">In this role, I conducted research in wireless networks, focusing on deep learning for wireless channel quality prediction and Markov models for routing in cache networks.</p>
     <ul>
-      <li> Graduate Teaching Assistant, SUNY Binghamton, USA.</li>
-        <ol>
-		      <li> CS 571 : Programming Languages (Spring-2020, Fall-2020) </li>
-          <li> CS 480N/580N : Data Science with Applications in Social Media (Fall-2019) </li>
-          <li> CS 220 : Introduction to Computer Systems (Spring-2019, Fall-2020, Spring-2021, Fall-2021) </li>
-          <li> CS 428/528 : Computer Networks (Fall-2018) </li>
-        </ol>
-      <li> Assistant Lecturer, University of Colombo, Sri Lanka.(2017) </li>
+      <li><span class="highlight">DeepChannel:</span> Developed an LSTM/GRU-based deep learning model for wireless channel quality prediction.</li>
+      <li><span class="highlight">Opportunistic Routing in Cached Wireless Networks:</span> Designed a Markov model to analyze routing behavior in wireless cache networks.</li>
     </ul>
-  -->
+  </div>
+
+  <h2>Recent Research</h2>
+  <ul class="publication-list">
+    <li>
+      <span class="pub-title">
+        <a href="https://ieeexplore.ieee.org/document/10767421">
+          Virtual Machine Proactive Fault Tolerance using Log-based Anomaly Detection
+        </a>
+      </span><br>
+      <span class="pub-authors">Pratheek Senevirathne, Samindu Cooray, <span class="author-highlight">Jerome Dinal Herath</span>, Dinuni K. Fernando</span><br>
+      <span class="pub-venue">IEEE Access, 2024</span>
+    </li>
+
+    <li>
+      <span class="pub-title">
+        <a href="https://ieeexplore.ieee.org/document/9950270">
+          Exploring ML and DL Approaches for Multi-Step Forecasting in Municipal Solid Waste Generation
+        </a>
+      </span><br>
+      <span class="pub-authors">Oshan Mudannayake, Disni Rathnayake, <span class="author-highlight">Jerome Dinal Herath</span>, Dinuni K. Fernando, Mgnas Fernando</span><br>
+      <span class="pub-venue">IEEE Access, 2022</span>
+    </li>
+
+    <li>
+      <span class="pub-title">
+        <a href="{{site.url}}/papers/2022dsn.pdf">
+          CFGExplainer: Explaining GNN-Based Malware Classification from Control Flow Graphs
+        </a>
+      </span><br>
+      <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, Priti P. Wakodikar, Ping Yang, Guanhua Yan</span><br>
+      <span class="pub-venue">IEEE/IFIP DSN, 2022</span>
+    </li>
+
+    <li>
+      <span class="pub-title">
+        <a href="{{site.url}}/papers/2021codaspy.pdf">
+          Real-Time Evasion Attacks Against DL-Based Anomaly Detection from Distributed System Logs
+        </a>
+      </span><br>
+      <span class="pub-authors"><span class="author-highlight">Jerome Dinal Herath</span>, Ping Yang, Guanhua Yan</span><br>
+      <span class="pub-venue">ACM CODASPY, 2021</span><br>
+      <a href="https://dl.acm.org/doi/10.1145/3422337.3447833"><em>[presentation video]</em></a>
+    </li>
+  </ul>
+
+
+  <h2>Awards and Scholarships</h2>
+  <ul class="awards-list">
+    <li><span class="award-label">Academic Excellence:</span> Award for Academic Excellence in PhD – State University of New York at Binghamton, USA (2022).</li>
+    <li><span class="award-label">Travel Grants:</span> IEEE CIC-2019, ANCS-2018, ICC-2018.</li>
+    <li><span class="award-label">Scholarships:</span> Secure and Private AI Scholarship by Udacity and Facebook (2019).</li>
+    <li><span class="award-label">Early Achievements:</span> Dr. Sarath Gunapala Prize for Computational Physics – University of Colombo, Sri Lanka (2017); MIND Scholarship (2015–2016).</li>
+  </ul>
+
   </div>
 </section>

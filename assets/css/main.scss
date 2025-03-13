@@ -3,3 +3,67 @@
 ---
 @charset "utf-8";
 @import "main";
+
+.highlight {
+  font-weight: bold;
+  color: #e53935; /* Red color for emphasis */
+}
+
+.role {
+  font-weight: bold;
+  background-color: #ffe0e0; /* Light red background for subtle highlight */
+  padding: 2px 4px;
+  border-radius: 3px; /* Rounded corners for a smooth look */
+}
+
+.institution {
+  font-weight: bold;
+  background-color: #f8f8f8; /* Light gray background */
+  padding: 2px 4px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-left: 6px; /* slight spacing after role title */
+}
+
+.publication-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.pub-title a {
+  font-weight: bold;
+  color: #333;
+  background-color: #f2f2f2;
+  padding: 2px 4px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.pub-authors {
+  font-size: 0.95em;
+  color: #444;
+}
+
+.author-highlight {
+  font-weight: bold;
+  color: #e53935; /* red tone to highlight your name */
+}
+
+.pub-venue {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+}
+
+.award-label {
+  background-color: #f0f0f0; /* Light gray highlight */
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+.awards-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}

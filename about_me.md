@@ -27,7 +27,7 @@ I hold a **`PhD in Computer Science`** from the **`State University of New York 
 where my research was centered on the intersection of **`Machine Learning (ML)`** and **`Cybersecurity`** — with an emphasis on **Explainable AI** and **Adversarial Machine Learning**. 
 My doctoral work included applications in **malware classification** and **anomaly detection**.
 
-Prior to my PhD, I earned a **`Bachelor’s degree in Computational Physics`** from the **University of Colombo, Sri Lanka**. 
+Prior to my PhD, I earned a **`Bachelor’s degree (Hons) in Computational Physics`** from the **University of Colombo, Sri Lanka**. 
 Earlier in my career, I worked on a range of research projects in **robotics, wireless communications, and blockchain-based secure distributed systems**. 
 These experiences helped me build foundations in **Markovian modeling, deep learning, simulations**, 
 and **scientific workflow management** using blockchain technologies.
