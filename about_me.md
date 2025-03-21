@@ -33,7 +33,7 @@ contributing to the advancement of science and technology initiatives.-->
 <ul class="research-list">
   <li>
     <span class="pub-title">
-      <a href="https://ieeexplore.ieee.org/document/10767421">
+      <a href="{{site.url}}/papers/2024access.pdf">
         Virtual Machine Proactive Fault Tolerance using Log-based Anomaly Detection
       </a>
     </span><br>
@@ -44,7 +44,7 @@ contributing to the advancement of science and technology initiatives.-->
 
   <li>
     <span class="pub-title">
-      <a href="https://ieeexplore.ieee.org/document/9950270">
+      <a href="{{site.url}}/papers/2022access.pdf">
         Exploring Machine Learning and Deep Learning Approaches for Multi-Step Forecasting in Municipal Solid Waste Generation
       </a>
     </span><br>
