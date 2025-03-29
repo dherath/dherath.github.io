@@ -4,7 +4,7 @@ title: About Me
 permalink: /about me/
 ---
 
-I’m currently a **`Security Data Scientist at Obsidian Security, USA`**, where I apply data science and machine learning techniques to help secure SaaS applications against evolving cyber threats. 
+I’m currently a **`Staff Data Scientist at Obsidian Security, USA`**, where I apply data science and machine learning techniques to help secure SaaS applications against evolving cyber threats. 
 My work spans across <span class="highlight">security-oriented generative AI applications, anomaly detection, time series analysis, and graph-based modeling</span>. 
 I also actively collaborate on applied AI research projects.
 
