@@ -194,8 +194,8 @@ contributing to the advancement of science and technology initiatives.-->
 
 ### Mentoring
 
-- Dinushan Vimukthi – University of Colombo (2024–present)
-- Nadeesha Epa – University of Colombo (2024–present)
+- Dinushan Vimukthi – University of Colombo (2024–2025)
+- Nadeesha Epa – University of Colombo (2024–2025)
 - Pratheek Senevirathne – University of Colombo (2023–2024)
 - Maheeka Solangaarachchige – University of Colombo (2023)
 - Achini Wijayathunge – University of Colombo (2023)
