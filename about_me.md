@@ -4,12 +4,12 @@ title: About Me
 permalink: /about me/
 ---
 
-I’m currently a **`Staff Data Scientist at Obsidian Security, USA`**, where I apply data science and machine learning techniques to help secure SaaS applications against evolving cyber threats. 
-My work spans across <span class="highlight">security-oriented generative AI applications, anomaly detection, time series analysis, and graph-based modeling</span>. 
-I also actively collaborate on applied AI research projects.
+I'm currently a **`Principal AI Engineer at Spacewalk AI`**, where I build AI-powered incident response solutions that help security teams investigate and manage complex breaches through automated analysis and intelligent reporting.
+
+Previously, I was a **Staff Data Scientist at Obsidian Security**, where I was a core contributor to Generative AI initiatives including the **Obsidian AI Assistant**, a governed multi-agent AI system for SaaS security. My work spanned <span class="highlight">generative AI applications, threat detection, anomaly detection, behavioral modeling, and security posture management</span> in cloud and SaaS environments.
 
 I hold a **`PhD in Computer Science`** from the **`State University of New York (SUNY) at Binghamton, USA`**, completed under the supervision of Professor [Ping Yang](http://www.cs.binghamton.edu/~pyang/) and Professor [Guanhua Yan](http://www.cs.binghamton.edu/~ghyan/), 
-where my research was centered on the intersection of **`Machine Learning (ML)`** and **`Cybersecurity`** — with an emphasis on **Explainable AI** and **Adversarial Machine Learning**. 
+where my research was centered on the intersection of **`Machine Learning (ML)`** and **`Cybersecurity`** with an emphasis on **Explainable AI** and **Adversarial Machine Learning**. 
 My doctoral work included applications in **malware classification** and **anomaly detection**.
 
 Prior to my PhD, I earned a **`Bachelor’s degree (Hons) in Computational Physics`** from the **University of Colombo, Sri Lanka**. 
@@ -194,8 +194,10 @@ contributing to the advancement of science and technology initiatives.-->
 
 ### Mentoring
 
+- Senuri Wickramasignhe - University of Colombo (2025–present)
+- Chathura Lakshan - University of Colombo (2025–present)
+- Nadeesha Epa – University of Colombo (2024–present)
 - Dinushan Vimukthi – University of Colombo (2024–2025)
-- Nadeesha Epa – University of Colombo (2024–2025)
 - Pratheek Senevirathne – University of Colombo (2023–2024)
 - Maheeka Solangaarachchige – University of Colombo (2023)
 - Achini Wijayathunge – University of Colombo (2023)

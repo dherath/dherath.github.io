@@ -3,7 +3,7 @@
 title: ""
 title2: "" # default: ""
 description: "Jerome Dinal Herath"
-keywords: "jerome, dinal, herath, Sri Lanka, Binghamton, colombo, university, uoc, computer, science, blog, SUNY, data, scientist, staff data scientist, principle data scientist, founding data scientist, machine learning, data science, obsidian security"
+keywords: "jerome, dinal, herath, Sri Lanka, Binghamton, colombo, university, uoc, computer, science, blog, SUNY, data, scientist, staff data scientist, principal data scientist, principal AI engineer, machine learning, data science, obsidian security, spacewalk ai, incident response, generative AI"
 url: http://dinalherath.com # site url
 baseurl: "" # apply repo name if use it under gh-pages branch
 # baseurl: null # apply null if repo name is something like username.github.io
@@ -31,7 +31,7 @@ sass:
 # Author settings
 author:
   name     : "Jerome Dinal Herath"
-  job      : "Staff Data Scientist @ Obsidian Security"
+  job      : "Principal AI Engineer @ Spacewalk AI"
   greeting : ""
   bio      : ""
   thumb    : #/assets/images/sherlock.jpg
